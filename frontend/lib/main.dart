@@ -7,20 +7,6 @@ import 'package:leturn/screens/home_screen/home_screen.dart';
 
 void main() {
   runApp(MyApp());
-/*    MaterialApp(
-      //디버그 삭제
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [
-        Locale('ko'),
-      ],
-      home: HomeScreen(),
-    )
-  );*/
   WidgetsFlutterBinding.ensureInitialized();
   //화면 가로 고정
   SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
