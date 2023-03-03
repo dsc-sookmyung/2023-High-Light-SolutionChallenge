@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:leturn/screens/home_screen/page_read.dart';
 import 'package:leturn/screens/login/login_page.dart';
+
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen({Key? key}) : super(key: key);
@@ -88,7 +90,11 @@ class _Buttons extends StatelessWidget{
                   )
                 ],
               ),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (_) => PageRead()));
+              },
             ),
           ),
           //2. 카카오 로그인
