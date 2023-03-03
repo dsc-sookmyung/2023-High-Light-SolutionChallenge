@@ -9,16 +9,19 @@ void main() {
   runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   //화면 가로 고정
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+  //SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
   //풀화면 (로테이션 불가능)
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  //SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);*/
 }
 
 class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return ScreenUtilInit(
+
       designSize: Size(1180, 820),
       builder: (context ,child) => MaterialApp(
         debugShowCheckedModeBanner: false,
