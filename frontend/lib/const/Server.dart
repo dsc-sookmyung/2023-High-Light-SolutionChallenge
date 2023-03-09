@@ -1,0 +1,1 @@
+const serverHttp = 'https://d20c3449-14bb-40db-bd13-c175af10c348.mock.pstmn.io';
