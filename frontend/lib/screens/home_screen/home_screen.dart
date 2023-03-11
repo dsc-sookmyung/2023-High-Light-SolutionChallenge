@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:leturn/screens/page_read.dart';
+import 'package:leturn/screens/page_view.dart';
 import 'package:leturn/screens/login/login_page.dart';
 
 
@@ -91,9 +91,9 @@ class _Buttons extends StatelessWidget{
                 ],
               ),
               onPressed: (){
-                Navigator.push(context,
+/*                Navigator.push(context,
                     MaterialPageRoute(
-                      builder: (_) => PageRead()));
+                      builder: (_) => _PageView().createState()));*/
               },
             ),
           ),
