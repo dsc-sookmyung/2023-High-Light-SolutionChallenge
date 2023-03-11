@@ -1,18 +1,20 @@
 class TextUnit {
-  late final int idx;
+  late final String audioUrl;
   late final int fontSize;
-  late final String text;
+  late final String textLine;
 
   TextUnit({
-    required this.idx,
+    required this.audioUrl,
     required this.fontSize,
-    required this.text
+    required this.textLine
   });
 
   factory TextUnit.fromJson(Map<dynamic, dynamic> json){
+    //logger.e("TextUnit>>> ${json["text"]}");
+    //logger.e("TextUnit>>> ${json["idx"]}");
     return TextUnit(
-        idx: json['idx'],
+        audioUrl: json['audio_url'],
         fontSize: json['font_size'],
-        text: json['text']);
+        textLine: json['text']);
   }
 }
