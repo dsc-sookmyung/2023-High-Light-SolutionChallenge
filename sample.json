@@ -1,1592 +1,2401 @@
 {
-	"1": [
-		{
-			"full-text": "4장 쓰레드(thread)\n"
-		},
-		{
-			"size": 40,
-			"line-text": "4장 쓰레드(thread)\n"
-		}
-	],
-	"2": [
-		{
-			"full-text": "4장의 학습 목표\n• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n설명할 수 있다. \n• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n• Android의 쓰레드 관리 기능을 설명할 수 있다.\n2\n"
-		},
-		{
-			"size": 32,
-			"line-text": "4장의 학습 목표\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n"
-		},
-		{
-			"size": 24,
-			"line-text": "설명할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Android의 쓰레드 관리 기능을 설명할 수 있다.\n"
-		},
-		{
-			"size": 12,
-			"line-text": "2\n"
-		}
-	],
-	"3": [
-		{
-			"full-text": "목 차\n4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n3\n"
-		},
-		{
-			"size": 32,
-			"line-text": "목 차\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.1 프로세스 및 쓰레드(Thread)\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.2 쓰레드의 유형\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.3 멀티코어와 멀티쓰레딩\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.4 Windows의 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.5 Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.6 Linux 프로세스 및 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.7 ANDROID의 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "4.8 Mac OS X의 Grand Central Dispatch\n"
-		},
-		{
-			"size": 12,
-			"line-text": "3\n"
-		}
-	],
-	"4": [
-		{
-			"full-text": "프로세스와 쓰레드(thread)\n• 프로세스\n– 실행 중인 프로그램(A program in execution)\n4\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드(thread)\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 프로세스\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 실행 중인 프로그램(A program in execution)\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n"
-		},
-		{
-			"size": 20,
-			"line-text": " 자원 소유권 (resource ownership)\n 수행/스케줄링\n"
-		},
-		{
-			"size": 20,
-			"line-text": "(execution/scheduling) 개체\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "라는 두 객체(특성)로 분리\n– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
-		},
-		{
-			"size": 18,
-			"line-text": " 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n"
-		},
-		{
-			"size": 12,
-			"line-text": "4\n"
-		}
-	],
-	"5": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \n"
-		},
-		{
-			"size": 24,
-			"line-text": "threading)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n"
-		},
-		{
-			"size": 12,
-			"line-text": "5\n"
-		}
-	],
-	"6": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 사례\n– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n멀티 쓰레드를 지원한다.\n– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n멀티 프로세스를 사용한다.\n6\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 사례\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n"
-		},
-		{
-			"size": 20,
-			"line-text": "지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n"
-		},
-		{
-			"size": 20,
-			"line-text": "멀티 쓰레드를 지원한다.\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n"
-		},
-		{
-			"size": 20,
-			"line-text": "멀티 프로세스를 사용한다.\n"
-		},
-		{
-			"size": 12,
-			"line-text": "6\n"
-		}
-	],
-	"7": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 멀티쓰레딩 환경\n– 태스크 (또는 프로세스) 관련 사항\n• 프로세스 이미지를 유지하는 가상 주소 공간\n• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n제어\n– 쓰레드 관련 사항\n• 실행 상태 (수행, 준비, 블록, …)\n• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n• 실행 스택\n• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n(storage)\n• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n유\n7\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 멀티쓰레딩 환경\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 태스크 (또는 프로세스) 관련 사항\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 프로세스 이미지를 유지하는 가상 주소 공간\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n"
-		},
-		{
-			"size": 18,
-			"line-text": "제어\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 쓰레드 관련 사항\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 실행 상태 (수행, 준비, 블록, …)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 실행 스택\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n"
-		},
-		{
-			"size": 18,
-			"line-text": "(storage)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n"
-		},
-		{
-			"size": 20,
-			"line-text": "유\n"
-		},
-		{
-			"size": 12,
-			"line-text": "7\n"
-		}
-	],
-	"8": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드 모델 (그림 4.2)\n8\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드 모델 (그림 4.2)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "8\n"
-		}
-	],
-	"9": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드의 장점(benefits)\n– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n9\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드의 장점(benefits)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n"
-		},
-		{
-			"size": 20,
-			"line-text": "드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n"
-		},
-		{
-			"size": 20,
-			"line-text": "문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "9\n"
-		}
-	],
-	"10": [
-		{
-			"full-text": "프로세스와 쓰레드\n•\n단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n-\n전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n•\n예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n-\n비동기(asynchronous) 처리: \n•\n프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n-\n빠른 수행: \n•\n멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n–\n모듈 프로그램 구조: \n•\n다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n10\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n"
-		},
-		{
-			"size": 17,
-			"line-text": "- 전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n"
-		},
-		{
-			"size": 14,
-			"line-text": "• 예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n"
-		},
-		{
-			"size": 17,
-			"line-text": "- 비동기(asynchronous) 처리: \n"
-		},
-		{
-			"size": 14,
-			"line-text": "• 프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n"
-		},
-		{
-			"size": 17,
-			"line-text": "- 빠른 수행: \n"
-		},
-		{
-			"size": 14,
-			"line-text": "• 멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n"
-		},
-		{
-			"size": 17,
-			"line-text": "– 모듈 프로그램 구조: \n"
-		},
-		{
-			"size": 14,
-			"line-text": "• 다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n"
-		},
-		{
-			"size": 14,
-			"line-text": "경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n"
-		},
-		{
-			"size": 12,
-			"line-text": "10\n"
-		}
-	],
-	"11": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n11\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n"
-		},
-		{
-			"size": 12,
-			"line-text": "11\n"
-		}
-	],
-	"12": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드의 기능(thread functionality)\n– 쓰레드 상태\n• 수행, 준비, 블록\n• 기본적인 쓰레드 연산:\n– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n종료(Finish)\n• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n12\n 보류(Suspended)고 가능 ?\n단일처리기\n환경\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드의 기능(thread functionality)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 쓰레드 상태\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 수행, 준비, 블록\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 기본적인 쓰레드 연산:\n"
-		},
-		{
-			"size": 18,
-			"line-text": " 보류(Suspended)고 가능 ?\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n"
-		},
-		{
-			"size": 18,
-			"line-text": "종료(Finish)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n"
-		},
-		{
-			"size": 16,
-			"line-text": "단일처리기\n"
-		},
-		{
-			"size": 16,
-			"line-text": "환경\n"
-		},
-		{
-			"size": 12,
-			"line-text": "12\n"
-		}
-	],
-	"13": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드 기능\n– 쓰레드 동기화(synchronization)\n• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n을 공유\n• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n법 필요\n– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n연산은 한 순간에 하나만 가능\n– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n13\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 28,
-			"line-text": "• 쓰레드 기능\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 쓰레드 동기화(synchronization)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n"
-		},
-		{
-			"size": 20,
-			"line-text": "을 공유\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n"
-		},
-		{
-			"size": 20,
-			"line-text": "법 필요\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n"
-		},
-		{
-			"size": 18,
-			"line-text": "연산은 한 순간에 하나만 가능\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n"
-		},
-		{
-			"size": 12,
-			"line-text": "13\n"
-		}
-	],
-	"14": [
-		{
-			"full-text": "쓰레드의 유형\n• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n14\n"
-		},
-		{
-			"size": 32,
-			"line-text": "쓰레드의 유형\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 커널 수준 쓰레드(Kernel-level thread, KLT)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "14\n"
-		}
-	],
-	"15": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n– 사용자 수준 쓰레드\n• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n• 커널은 쓰레드의 존재를 모름\n• 이러한 접근 방법의 예로 cthread 및 pthread 등이 있음.\n– 커널 수준 쓰레드\n• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n• 이러한 접근 방법의 예로 Windows가 있음\n– 결합된 접근 방법 (Combined approach)\n• 대표적인 예로 Solaris가 있음\n15\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 사용자 수준 쓰레드\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n"
-		},
-		{
-			"size": 18,
-			"line-text": "성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 커널은 쓰레드의 존재를 모름\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 이러한 접근 방법의 예로 cthread및 pthread등이 있음.\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 커널 수준 쓰레드\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 이러한 접근 방법의 예로 Windows가 있음\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 결합된 접근 방법 (Combined approach)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 대표적인 예로 Solaris가 있음\n"
-		},
-		{
-			"size": 12,
-			"line-text": "15\n"
-		}
-	],
-	"16": [
-		{
-			"full-text": "프로세스와 쓰레드\n•\n사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n– 사용자 수준 쓰레드의 장점\n• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n헤드를 절약 가능)\n• 특정 응용에 적합한 스케줄링 적용 가능\n• 모든 OS에서 수행 가능\n– 사용자 수준 쓰레드의 단점\n• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n• 다중처리기의 장점을 살리지 못함.\n• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n16\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 사용자 수준 쓰레드의 장점\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n"
-		},
-		{
-			"size": 16,
-			"line-text": "헤드를 절약 가능)\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 특정 응용에 적합한 스케줄링 적용 가능\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 모든 OS에서 수행 가능\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 사용자 수준 쓰레드의 단점\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n"
-		},
-		{
-			"size": 16,
-			"line-text": "아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 다중처리기의 장점을 살리지 못함.\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n"
-		},
-		{
-			"size": 12,
-			"line-text": "16\n"
-		}
-	],
-	"17": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 상태들의 예\n17\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 사용자 수준 쓰레드 상태들의 예\n"
-		},
-		{
-			"size": 12,
-			"line-text": "17\n"
-		}
-	],
-	"18": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 쓰레드와 프로세스 간의 관계\n18\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 쓰레드와 프로세스 간의 관계\n"
-		},
-		{
-			"size": 12,
-			"line-text": "18\n"
-		}
-	],
-	"19": [
-		{
-			"full-text": "멀티코어와 멀티쓰레딩\n• Amdahl의 법칙\n19\n"
-		},
-		{
-			"size": 32,
-			"line-text": "멀티코어와 멀티쓰레딩\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Amdahl의 법칙\n"
-		},
-		{
-			"size": 12,
-			"line-text": "19\n"
-		}
-	],
-	"20": [
-		{
-			"full-text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n20\n"
-		},
-		{
-			"size": 32,
-			"line-text": "멀티코어와 멀티쓰레딩\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 멀티코어가 성능에 미치는 영향\n"
-		},
-		{
-			"size": 12,
-			"line-text": "20\n"
-		}
-	],
-	"21": [
-		{
-			"full-text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n21\n"
-		},
-		{
-			"size": 32,
-			"line-text": "멀티코어와 멀티쓰레딩\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 멀티코어가 성능에 미치는 영향\n"
-		},
-		{
-			"size": 12,
-			"line-text": "21\n"
-		}
-	],
-	"22": [
-		{
-			"full-text": "멀티코어와 멀티쓰레딩\n• 멀티코어 성능 향상이 많은 응용\n– 멀티쓰레드화된 네이티브 응용: \n• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n– 자바 응용: \n• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n– 멀티인스턴스 응용: \n• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n22\n"
-		},
-		{
-			"size": 32,
-			"line-text": "멀티코어와 멀티쓰레딩\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 멀티코어 성능 향상이 많은 응용\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 멀티쓰레드화된 네이티브 응용: \n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 멀티프로세스 응용: \n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 자바 응용: \n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n"
-		},
-		{
-			"size": 16,
-			"line-text": "티쓰레드화된 프로세스임\n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 멀티인스턴스 응용: \n"
-		},
-		{
-			"size": 16,
-			"line-text": "• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n"
-		},
-		{
-			"size": 12,
-			"line-text": "22\n"
-		}
-	],
-	"23": [
-		{
-			"full-text": "응용 예제: Valve 게임 소프트웨어\n23\n"
-		},
-		{
-			"size": 32,
-			"line-text": "응용 예제: Valve 게임 소프트웨어\n"
-		},
-		{
-			"size": 12,
-			"line-text": "23\n"
-		}
-	],
-	"24": [
-		{
-			"full-text": "Windows 8의 프로세스와 쓰레드 관리\n•\n응용은 하나 또는 그 이\n상의 프로세스로 구성\n•\n각 프로세스는 프로그램\n실행을 위한 자원을 제공\n•\n쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n•\n작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n•\n쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n•\n파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n•\n사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n24\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Windows 8의 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 응용은 하나 또는 그 이\n상의 프로세스로 구성\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 각 프로세스는 프로그램\n실행을 위한 자원을 제공\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n"
-		},
-		{
-			"size": 12,
-			"line-text": "24\n"
-		}
-	],
-	"25": [
-		{
-			"full-text": "Windows 8의 프로세스와 쓰레드 관리\n• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n25\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Windows 8의 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\n"
-		},
-		{
-			"size": 24,
-			"line-text": "ows 접근 방법과 차이가 있음\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n"
-		},
-		{
-			"size": 24,
-			"line-text": "관리해야 할 책임이 있음\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n"
-		},
-		{
-			"size": 22,
-			"line-text": "프로그램의 프로세스 생명주기를 관리\n• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 하나의 Store 응용 프로그램만이 차례대로 수행\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n"
-		},
-		{
-			"size": 24,
-			"line-text": "프로그램의 외관을 보여줌\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n"
-		},
-		{
-			"size": 12,
-			"line-text": "25\n"
-		}
-	],
-	"26": [
-		{
-			"full-text": "Metro 인터페이스\n• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n• 응용 개발자가 이를 처리해야 함\n• Windows 8은 후면 응용을 종료시킴\n• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n26\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Metro 인터페이스\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n"
-		},
-		{
-			"size": 24,
-			"line-text": "장하기 위한 이벤트가 발생됨\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 응용 개발자가 이를 처리해야 함\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Windows 8은 후면 응용을 종료시킴\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n"
-		},
-		{
-			"size": 22,
-			"line-text": "• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n"
-		},
-		{
-			"size": 22,
-			"line-text": "의 상태를 가져오는 이벤트가 발생\n"
-		},
-		{
-			"size": 12,
-			"line-text": "26\n"
-		}
-	],
-	"27": [
-		{
-			"full-text": "윈도우 프로세스\nWindows 커널에 의해 제공되는 프로세스와 서비스는\n상대적으로 단순하고 범용성을 가짐\n• 객체로 구현되어 있음\n• 새로운 프로세스로 생성되거나 기존의\n프로세스를 복사\n• 수행 가능한 프로세스는 하나 이상의\n쓰레드를 가지고 있음\n• 프로세스와 쓰레드 객체는 동기화\n능력을 내장하고 있음\n27\n"
-		},
-		{
-			"size": 32,
-			"line-text": "윈도우 프로세스\n"
-		},
-		{
-			"size": 20,
-			"line-text": "Windows 커널에 의해 제공되는 프로세스와 서비스는\n"
-		},
-		{
-			"size": 20,
-			"line-text": "상대적으로 단순하고 범용성을 가짐\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 객체로 구현되어 있음\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 새로운 프로세스로 생성되거나 기존의\n"
-		},
-		{
-			"size": 20,
-			"line-text": "프로세스를 복사\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 수행 가능한 프로세스는 하나 이상의\n"
-		},
-		{
-			"size": 20,
-			"line-text": "쓰레드를 가지고 있음\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 프로세스와 쓰레드 객체는 동기화\n"
-		},
-		{
-			"size": 20,
-			"line-text": "능력을 내장하고 있음\n"
-		},
-		{
-			"size": 12,
-			"line-text": "27\n"
-		}
-	],
-	"28": [
-		{
-			"full-text": "윈도우 프로세스와 자원\n28\n"
-		},
-		{
-			"size": 32,
-			"line-text": "윈도우 프로세스와 자원\n"
-		},
-		{
-			"size": 12,
-			"line-text": "28\n"
-		}
-	],
-	"29": [
-		{
-			"full-text": "윈도우 프로세스 객체 속성\n29\n"
-		},
-		{
-			"size": 32,
-			"line-text": "윈도우 프로세스 객체 속성\n"
-		},
-		{
-			"size": 12,
-			"line-text": "29\n"
-		}
-	],
-	"30": [
-		{
-			"full-text": "윈도우 쓰레드 객체 속성\n30\n"
-		},
-		{
-			"size": 32,
-			"line-text": "윈도우 쓰레드 객체 속성\n"
-		},
-		{
-			"size": 12,
-			"line-text": "30\n"
-		}
-	],
-	"31": [
-		{
-			"full-text": "윈도우 쓰레드 상태\n31\n"
-		},
-		{
-			"size": 32,
-			"line-text": "윈도우 쓰레드 상태\n"
-		},
-		{
-			"size": 12,
-			"line-text": "31\n"
-		}
-	],
-	"32": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• 다단계 쓰레드 구조\n– 프로세스: 보통의 UNIX 프로세스\n• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n– 사용자 수준 쓰레드 (ULT)\n• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n– 경량 프로세스 (Lightweight processes ≡ LWP)\n• ULT와 커널 쓰레드 사이의 사상(mapping)\n– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n• 처리기에 수행되는 기본 개체\n 그림 4.15 참조\n32\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 다단계 쓰레드 구조\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 프로세스: 보통의 UNIX 프로세스\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 사용자 수준 쓰레드 (ULT)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 경량 프로세스 (Lightweight processes ≡ LWP)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• ULT와 커널 쓰레드 사이의 사상(mapping)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 처리기에 수행되는 기본 개체\n"
-		},
-		{
-			"size": 20,
-			"line-text": " 그림 4.15 참조\n"
-		},
-		{
-			"size": 12,
-			"line-text": "32\n"
-		}
-	],
-	"33": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n•\n프로세스와 쓰레드 관계\n33\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 프로세스와 쓰레드 관계\n"
-		},
-		{
-			"size": 12,
-			"line-text": "33\n"
-		}
-	],
-	"34": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• Solaris 다중쓰레드 구조의 예\n34\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Solaris 다중쓰레드 구조의 예\n"
-		},
-		{
-			"size": 12,
-			"line-text": "34\n"
-		}
-	],
-	"35": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• 동기 (motivations)\n– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n• 예: 병렬 배열 계산 (parallel array computation)\n– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n– 순수 커널 쓰레드\n35\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 동기 (motivations)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n"
-		},
-		{
-			"size": 20,
-			"line-text": "경우에는 다수의 LWP를 이용하는 것이 효과적\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 예: 병렬 배열 계산 (parallel array computation)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n"
-		},
-		{
-			"size": 18,
-			"line-text": "수(background functions)을 수행\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 순수 커널 쓰레드\n"
-		},
-		{
-			"size": 12,
-			"line-text": "35\n"
-		}
-	],
-	"36": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n36\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "36\n"
-		}
-	],
-	"37": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• Solaris thread state\n37\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Solaris thread state\n"
-		},
-		{
-			"size": 12,
-			"line-text": "37\n"
-		}
-	],
-	"38": [
-		{
-			"full-text": "Solaris 쓰레드 및 SMP 관리\n• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n– 동기화 필요: 수면(sleeping) 상태로 전이\n• 예: 5장에서 기술될 상호배제 필요\n– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n– 양보(yielding): \n• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n38\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Solaris 쓰레드 및 SMP 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n"
-		},
-		{
-			"size": 24,
-			"line-text": "전이의 예\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 동기화 필요: 수면(sleeping) 상태로 전이\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 예: 5장에서 기술될 상호배제 필요\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n"
-		},
-		{
-			"size": 20,
-			"line-text": "이\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 선점(preemption): \n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 양보(yielding): \n"
-		},
-		{
-			"size": 18,
-			"line-text": "• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n"
-		},
-		{
-			"size": 18,
-			"line-text": " Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
-		},
-		{
-			"size": 12,
-			"line-text": "38\n"
-		}
-	],
-	"39": [
-		{
-			"full-text": "Linux 프로세스와 쓰레드 관리\n• Linux 태스크 (task_struct 자료구조)\n– 상태\n• Running, Interruptable, Uninterruptable, Stopped, Zombie\n– 스케줄링 정보\n• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n39\n Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Linux 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Linux 태스크 (task_struct 자료구조)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 상태\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• Running, Interruptable, Uninterruptable, Stopped, Zombie\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 스케줄링 정보\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n"
-		},
-		{
-			"size": 18,
-			"line-text": "• O(1) scheduler in Linux 2.6.*\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 식별자(pid, uid, gid)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 프로세스간 통신 (IPC) \n"
-		},
-		{
-			"size": 18,
-			"line-text": "– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 시간과 타이머\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 파일 시스템\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 주소 공간\n"
-		},
-		{
-			"size": 18,
-			"line-text": " Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n"
-		},
-		{
-			"size": 20,
-			"line-text": "보\n"
-		},
-		{
-			"size": 12,
-			"line-text": "39\n"
-		}
-	],
-	"40": [
-		{
-			"full-text": "Linux 프로세스와 쓰레드 관리\n• 프로세스/쓰레드 모델\n– 정지(stopped)\n– 수행 중(executing)\n– 좀비 (zombie)\n 시그널(signal)\n 사건(event)\n40\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Linux 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 프로세스/쓰레드 모델\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 정지(stopped)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 수행 중(executing)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "– 좀비 (zombie)\n"
-		},
-		{
-			"size": 20,
-			"line-text": " 시그널(signal)\n"
-		},
-		{
-			"size": 20,
-			"line-text": " 사건(event)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "40\n"
-		}
-	],
-	"41": [
-		{
-			"full-text": "Android 프로세스와 쓰레드 관리\n• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n41\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Android 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Android 응용은 앱을 구현한 소프트웨어\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n"
-		},
-		{
-			"size": 24,
-			"line-text": "여러 인스턴스로 구성\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n"
-		},
-		{
-			"size": 24,
-			"line-text": "할을 수행\n"
-		},
-		{
-			"size": 24,
-			"line-text": "• 네 가지 유형의 컴포넌트:\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 엑티비티(Activity)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 서비스 (Service)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 콘텐트 프로바이더(Content provider)\n"
-		},
-		{
-			"size": 20,
-			"line-text": "• 브로드캐스트 리시버(Broadcast receiver)\n"
-		},
-		{
-			"size": 12,
-			"line-text": "41\n"
-		}
-	],
-	"42": [
-		{
-			"full-text": "Android 프로세스와 쓰레드 관리\n42\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Android 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 12,
-			"line-text": "42\n"
-		}
-	],
-	"43": [
-		{
-			"full-text": "Android 프로세스와 쓰레드 관리\n43\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Android 프로세스와 쓰레드 관리\n"
-		},
-		{
-			"size": 12,
-			"line-text": "43\n"
-		}
-	],
-	"44": [
-		{
-			"full-text": "프로세스와 쓰레드\n• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n44\n전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
-		},
-		{
-			"size": 32,
-			"line-text": "프로세스와 쓰레드\n"
-		},
-		{
-			"size": 26,
-			"line-text": "• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n"
-		},
-		{
-			"size": 26,
-			"line-text": "• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n"
-		},
-		{
-			"size": 26,
-			"line-text": "• 계층 구조상에서의\n우선순위는 다음과\n같음:\n"
-		},
-		{
-			"size": 19,
-			"line-text": "전면 프로세스\n"
-		},
-		{
-			"size": 19,
-			"line-text": "가시적인 프로세스\n"
-		},
-		{
-			"size": 19,
-			"line-text": "서비스 프로세스\n"
-		},
-		{
-			"size": 19,
-			"line-text": "후면 프로세스\n"
-		},
-		{
-			"size": 19,
-			"line-text": "빈 프로세스\n"
-		},
-		{
-			"size": 12,
-			"line-text": "44\n"
-		}
-	],
-	"45": [
-		{
-			"full-text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 가용 쓰레드 풀을 제공\n• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n량에 따라 결정됨\n45\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
-		},
-		{
-			"size": 28,
-			"line-text": "• 가용 쓰레드 풀을 제공\n"
-		},
-		{
-			"size": 28,
-			"line-text": "• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n"
-		},
-		{
-			"size": 28,
-			"line-text": "• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n"
-		},
-		{
-			"size": 28,
-			"line-text": "량에 따라 결정됨\n"
-		},
-		{
-			"size": 12,
-			"line-text": "45\n"
-		}
-	],
-	"46": [
-		{
-			"full-text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 블록\n– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n46\n"
-		},
-		{
-			"size": 32,
-			"line-text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
-		},
-		{
-			"size": 28,
-			"line-text": "• 블록\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 프로그래밍 언어를 단순 확장한 것임\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 하나의 블록은 자족적인(self-contained) 작업 단위를\n"
-		},
-		{
-			"size": 24,
-			"line-text": "정의\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 큐를 사용하여 스케줄링하고 디스패치 함\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 선입 선출 기반으로 디스패치 됨\n"
-		},
-		{
-			"size": 24,
-			"line-text": "– 타이머, 네트워크 소켓, 파일 디스크립터와\n"
-		},
-		{
-			"size": 24,
-			"line-text": "같은 이벤트 소스와 연동\n"
-		},
-		{
-			"size": 12,
-			"line-text": "46\n"
-		}
-	]
+	"1": {
+		"page_id": 1,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "4장 쓰레드(thread)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 40,
+				"text": "4장 쓰레드(thread)\n"
+			}
+		]
+	},
+	"2": {
+		"page_id": 2,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "4장의 학습 목표\n• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n설명할 수 있다. \n• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n• Android의 쓰레드 관리 기능을 설명할 수 있다.\n2\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "4장의 학습 목표\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n설명할 수 있다. \n• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n• Android의 쓰레드 관리 기능을 설명할 수 있다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "2\n"
+			}
+		]
+	},
+	"3": {
+		"page_id": 3,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "목 차\n4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n3\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "목 차\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.1 프로세스 및 쓰레드(Thread)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.2 쓰레드의 유형\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.3 멀티코어와 멀티쓰레딩\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.4 Windows의 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.5 Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.6 Linux 프로세스 및 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.7 ANDROID의 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "3\n"
+			}
+		]
+	},
+	"4": {
+		"page_id": 4,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드(thread)\n• 프로세스\n– 실행 중인 프로그램(A program in execution)\n4\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드(thread)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 실행 중인 프로그램(A program in execution)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– CPU 레지스터 정보, 스케줄링 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": " 자원 소유권 (resource ownership)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": " 수행/스케줄링\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 실행 중인 프로그램(A program in execution)\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "4\n"
+			}
+		]
+	},
+	"5": {
+		"page_id": 5,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "5\n"
+			}
+		]
+	},
+	"6": {
+		"page_id": 6,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 사례\n– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n멀티 쓰레드를 지원한다.\n– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n멀티 프로세스를 사용한다.\n6\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사례\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "멀티 쓰레드를 지원한다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n멀티 쓰레드를 지원한다.\n– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n멀티 프로세스를 사용한다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "6\n"
+			}
+		]
+	},
+	"7": {
+		"page_id": 7,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 멀티쓰레딩 환경\n– 태스크 (또는 프로세스) 관련 사항\n• 프로세스 이미지를 유지하는 가상 주소 공간\n• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n제어\n– 쓰레드 관련 사항\n• 실행 상태 (수행, 준비, 블록, …)\n• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n• 실행 스택\n• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n(storage)\n• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n유\n7\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 멀티쓰레딩 환경\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 태스크 (또는 프로세스) 관련 사항\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스 이미지를 유지하는 가상 주소 공간\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스 이미지를 유지하는 가상 주소 공간\n• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n제어\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 쓰레드 관련 사항\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 실행 상태 (수행, 준비, 블록, …)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 실행 스택\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "(storage)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 실행 상태 (수행, 준비, 블록, …)\n• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n• 실행 스택\n• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n(storage)\n• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n유\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "7\n"
+			}
+		]
+	},
+	"8": {
+		"page_id": 8,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드 모델 (그림 4.2)\n8\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드 모델 (그림 4.2)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "8\n"
+			}
+		]
+	},
+	"9": {
+		"page_id": 9,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드의 장점(benefits)\n– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n9\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드의 장점(benefits)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "드 생성시간은 프로세스보다 수십 배 빠르다.)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 한 프로그램의 구조(structure)를 단순화\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 다중처리기(multiprocessor)의 효율적 사용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "9\n"
+			}
+		]
+	},
+	"10": {
+		"page_id": 10,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n•\n단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n-\n전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n•\n예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n-\n비동기(asynchronous) 처리: \n•\n프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n-\n빠른 수행: \n•\n멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n–\n모듈 프로그램 구조: \n•\n다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n10\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 17,
+				"text": "- 전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 17,
+				"text": "- 비동기(asynchronous) 처리: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 17,
+				"text": "- 빠른 수행: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 17,
+				"text": "– 모듈 프로그램 구조: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "• 다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "10\n"
+			}
+		]
+	},
+	"11": {
+		"page_id": 11,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n11\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "11\n"
+			}
+		]
+	},
+	"12": {
+		"page_id": 12,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드의 기능(thread functionality)\n– 쓰레드 상태\n• 수행, 준비, 블록\n• 기본적인 쓰레드 연산:\n– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n종료(Finish)\n• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n12\n 보류(Suspended)고 가능 ?\n단일처리기\n환경\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드의 기능(thread functionality)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 쓰레드 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행, 준비, 블록\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 기본적인 쓰레드 연산:\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " 보류(Suspended)고 가능 ?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "종료(Finish)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행, 준비, 블록\n• 기본적인 쓰레드 연산:\n 보류(Suspended)고 가능 ?\n– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n종료(Finish)\n• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "단일처리기\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "단일처리기\n환경\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "12\n"
+			}
+		]
+	},
+	"13": {
+		"page_id": 13,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드 기능\n– 쓰레드 동기화(synchronization)\n• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n을 공유\n• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n법 필요\n– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n연산은 한 순간에 하나만 가능\n– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n13\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 쓰레드 기능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 쓰레드 동기화(synchronization)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "을 공유\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n을 공유\n• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n법 필요\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "연산은 한 순간에 하나만 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n연산은 한 순간에 하나만 가능\n– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "13\n"
+			}
+		]
+	},
+	"14": {
+		"page_id": 14,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "쓰레드의 유형\n• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n14\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "쓰레드의 유형\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "14\n"
+			}
+		]
+	},
+	"15": {
+		"page_id": 15,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n– 사용자 수준 쓰레드\n• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n• 커널은 쓰레드의 존재를 모름\n• 이러한 접근 방법의 예로 cthread 및 pthread 등이 있음.\n– 커널 수준 쓰레드\n• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n• 이러한 접근 방법의 예로 Windows가 있음\n– 결합된 접근 방법 (Combined approach)\n• 대표적인 예로 Solaris가 있음\n15\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 사용자 수준 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 커널은 쓰레드의 존재를 모름\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n• 커널은 쓰레드의 존재를 모름\n• 이러한 접근 방법의 예로 cthread및 pthread등이 있음.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 커널 수준 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n• 이러한 접근 방법의 예로 Windows가 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 결합된 접근 방법 (Combined approach)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 대표적인 예로 Solaris가 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "15\n"
+			}
+		]
+	},
+	"16": {
+		"page_id": 16,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n•\n사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n– 사용자 수준 쓰레드의 장점\n• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n헤드를 절약 가능)\n• 특정 응용에 적합한 스케줄링 적용 가능\n• 모든 OS에서 수행 가능\n– 사용자 수준 쓰레드의 단점\n• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n• 다중처리기의 장점을 살리지 못함.\n• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n16\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 사용자 수준 쓰레드의 장점\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "헤드를 절약 가능)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 특정 응용에 적합한 스케줄링 적용 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n헤드를 절약 가능)\n• 특정 응용에 적합한 스케줄링 적용 가능\n• 모든 OS에서 수행 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 사용자 수준 쓰레드의 단점\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 다중처리기의 장점을 살리지 못함.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n• 다중처리기의 장점을 살리지 못함.\n• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "16\n"
+			}
+		]
+	},
+	"17": {
+		"page_id": 17,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 상태들의 예\n17\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 수준 쓰레드 상태들의 예\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "17\n"
+			}
+		]
+	},
+	"18": {
+		"page_id": 18,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 쓰레드와 프로세스 간의 관계\n18\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 쓰레드와 프로세스 간의 관계\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "18\n"
+			}
+		]
+	},
+	"19": {
+		"page_id": 19,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "멀티코어와 멀티쓰레딩\n• Amdahl의 법칙\n19\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "멀티코어와 멀티쓰레딩\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Amdahl의 법칙\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "19\n"
+			}
+		]
+	},
+	"20": {
+		"page_id": 20,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n20\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "멀티코어와 멀티쓰레딩\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 멀티코어가 성능에 미치는 영향\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "20\n"
+			}
+		]
+	},
+	"21": {
+		"page_id": 21,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n21\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "멀티코어와 멀티쓰레딩\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 멀티코어가 성능에 미치는 영향\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "21\n"
+			}
+		]
+	},
+	"22": {
+		"page_id": 22,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어 성능 향상이 많은 응용\n– 멀티쓰레드화된 네이티브 응용: \n• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n– 자바 응용: \n• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n– 멀티인스턴스 응용: \n• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n22\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "멀티코어와 멀티쓰레딩\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 멀티코어 성능 향상이 많은 응용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 멀티쓰레드화된 네이티브 응용: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 자바 응용: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 멀티인스턴스 응용: \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "22\n"
+			}
+		]
+	},
+	"23": {
+		"page_id": 23,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "응용 예제: Valve 게임 소프트웨어\n23\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "응용 예제: Valve 게임 소프트웨어\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "23\n"
+			}
+		]
+	},
+	"24": {
+		"page_id": 24,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Windows 8의 프로세스와 쓰레드 관리\n•\n응용은 하나 또는 그 이\n상의 프로세스로 구성\n•\n각 프로세스는 프로그램\n실행을 위한 자원을 제공\n•\n쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n•\n작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n•\n쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n•\n파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n•\n사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n24\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Windows 8의 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 응용은 하나 또는 그 이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "상의 프로세스로 구성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 각 프로세스는 프로그램\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "실행을 위한 자원을 제공\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 쓰레드는 실행을 위해 스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "케줄링 될 수 있는 프로\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "세스 내의 개체\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 작업 객체는 프로세스들\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "의 그룹을 하나의 단위로\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "써 관리할 수 있게 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 쓰레드 풀은 응용을 대신\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "하여 비동기적인 콜백을\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "효과적으로 실행하는 작\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "업 쓰레드의 집합\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 파이버는 응용 프로그램\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "에 의해 수동으로 스케줄\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "링되는 실행 단위\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 사용자모드 스케줄링 (U\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "MS) 은 응용이 자신의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "쓰레드를 통해 스케줄링\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 응용은 하나 또는 그 이\n상의 프로세스로 구성\n• 각 프로세스는 프로그램\n실행을 위한 자원을 제공\n• 쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n• 작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n• 쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n• 파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n• 사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "24\n"
+			}
+		]
+	},
+	"25": {
+		"page_id": 25,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Windows 8의 프로세스와 쓰레드 관리\n• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n25\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Windows 8의 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "ows 접근 방법과 차이가 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "관리해야 할 책임이 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "25\n"
+			}
+		]
+	},
+	"26": {
+		"page_id": 26,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Metro 인터페이스\n• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n• 응용 개발자가 이를 처리해야 함\n• Windows 8은 후면 응용을 종료시킴\n• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n26\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Metro 인터페이스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 응용 개발자가 이를 처리해야 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Windows 8은 후면 응용을 종료시킴\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "할 필요가 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 22,
+				"text": "• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "26\n"
+			}
+		]
+	},
+	"27": {
+		"page_id": 27,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "윈도우 프로세스\nWindows 커널에 의해 제공되는 프로세스와 서비스는\n상대적으로 단순하고 범용성을 가짐\n• 객체로 구현되어 있음\n• 새로운 프로세스로 생성되거나 기존의\n프로세스를 복사\n• 수행 가능한 프로세스는 하나 이상의\n쓰레드를 가지고 있음\n• 프로세스와 쓰레드 객체는 동기화\n능력을 내장하고 있음\n27\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "윈도우 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "Windows 커널에 의해 제공되는 프로세스와 서비스는\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "상대적으로 단순하고 범용성을 가짐\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 객체로 구현되어 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 새로운 프로세스로 생성되거나 기존의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "프로세스를 복사\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 수행 가능한 프로세스는 하나 이상의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "쓰레드를 가지고 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 프로세스와 쓰레드 객체는 동기화\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "Windows 커널에 의해 제공되는 프로세스와 서비스는\n상대적으로 단순하고 범용성을 가짐\n• 객체로 구현되어 있음\n• 새로운 프로세스로 생성되거나 기존의\n프로세스를 복사\n• 수행 가능한 프로세스는 하나 이상의\n쓰레드를 가지고 있음\n• 프로세스와 쓰레드 객체는 동기화\n능력을 내장하고 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "27\n"
+			}
+		]
+	},
+	"28": {
+		"page_id": 28,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "윈도우 프로세스와 자원\n28\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "윈도우 프로세스와 자원\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "28\n"
+			}
+		]
+	},
+	"29": {
+		"page_id": 29,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "윈도우 프로세스 객체 속성\n29\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "윈도우 프로세스 객체 속성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "29\n"
+			}
+		]
+	},
+	"30": {
+		"page_id": 30,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "윈도우 쓰레드 객체 속성\n30\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "윈도우 쓰레드 객체 속성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "30\n"
+			}
+		]
+	},
+	"31": {
+		"page_id": 31,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "윈도우 쓰레드 상태\n31\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "윈도우 쓰레드 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "31\n"
+			}
+		]
+	},
+	"32": {
+		"page_id": 32,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 다단계 쓰레드 구조\n– 프로세스: 보통의 UNIX 프로세스\n• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n– 사용자 수준 쓰레드 (ULT)\n• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n– 경량 프로세스 (Lightweight processes ≡ LWP)\n• ULT와 커널 쓰레드 사이의 사상(mapping)\n– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n• 처리기에 수행되는 기본 개체\n 그림 4.15 참조\n32\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 다단계 쓰레드 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스: 보통의 UNIX 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 사용자 수준 쓰레드 (ULT)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 경량 프로세스 (Lightweight processes ≡ LWP)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• ULT와 커널 쓰레드 사이의 사상(mapping)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 처리기에 수행되는 기본 개체\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": " 그림 4.15 참조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "32\n"
+			}
+		]
+	},
+	"33": {
+		"page_id": 33,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n•\n프로세스와 쓰레드 관계\n33\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 프로세스와 쓰레드 관계\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "33\n"
+			}
+		]
+	},
+	"34": {
+		"page_id": 34,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• Solaris 다중쓰레드 구조의 예\n34\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Solaris 다중쓰레드 구조의 예\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "34\n"
+			}
+		]
+	},
+	"35": {
+		"page_id": 35,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 동기 (motivations)\n– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n• 예: 병렬 배열 계산 (parallel array computation)\n– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n– 순수 커널 쓰레드\n35\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 동기 (motivations)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "경우에는 다수의 LWP를 이용하는 것이 효과적\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 예: 병렬 배열 계산 (parallel array computation)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 순수 커널 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "35\n"
+			}
+		]
+	},
+	"36": {
+		"page_id": 36,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n36\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "36\n"
+			}
+		]
+	},
+	"37": {
+		"page_id": 37,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• Solaris thread state\n37\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Solaris thread state\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "37\n"
+			}
+		]
+	},
+	"38": {
+		"page_id": 38,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n– 동기화 필요: 수면(sleeping) 상태로 전이\n• 예: 5장에서 기술될 상호배제 필요\n– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n– 양보(yielding): \n• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n38\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Solaris 쓰레드 및 SMP 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 동기화 필요: 수면(sleeping) 상태로 전이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 예: 5장에서 기술될 상호배제 필요\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 양보(yielding): \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " Solaris: Interrupts as Threads\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "38\n"
+			}
+		]
+	},
+	"39": {
+		"page_id": 39,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Linux 프로세스와 쓰레드 관리\n• Linux 태스크 (task_struct 자료구조)\n– 상태\n• Running, Interruptable, Uninterruptable, Stopped, Zombie\n– 스케줄링 정보\n• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n39\n Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Linux 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Linux 태스크 (task_struct 자료구조)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Running, Interruptable, Uninterruptable, Stopped, Zombie\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 스케줄링 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 식별자(pid, uid, gid)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 시간과 타이머\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 파일 시스템\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " Linux: 다른 플래그(flag)를 갖는 clone()\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": " Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "39\n"
+			}
+		]
+	},
+	"40": {
+		"page_id": 40,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Linux 프로세스와 쓰레드 관리\n• 프로세스/쓰레드 모델\n– 정지(stopped)\n– 수행 중(executing)\n– 좀비 (zombie)\n 시그널(signal)\n 사건(event)\n40\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Linux 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스/쓰레드 모델\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 정지(stopped)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 수행 중(executing)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 좀비 (zombie)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": " 시그널(signal)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 정지(stopped)\n– 수행 중(executing)\n– 좀비 (zombie)\n 시그널(signal)\n 사건(event)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "40\n"
+			}
+		]
+	},
+	"41": {
+		"page_id": 41,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Android 프로세스와 쓰레드 관리\n• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n41\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Android 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Android 응용은 앱을 구현한 소프트웨어\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "여러 인스턴스로 구성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "할을 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 엑티비티(Activity)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 서비스 (Service)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 콘텐트 프로바이더(Content provider)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "41\n"
+			}
+		]
+	},
+	"42": {
+		"page_id": 42,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Android 프로세스와 쓰레드 관리\n42\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Android 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "42\n"
+			}
+		]
+	},
+	"43": {
+		"page_id": 43,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Android 프로세스와 쓰레드 관리\n43\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Android 프로세스와 쓰레드 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "43\n"
+			}
+		]
+	},
+	"44": {
+		"page_id": 44,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스와 쓰레드\n• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n44\n전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스와 쓰레드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "• 필요한 자원을 회수\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "하기 위해서 어떤 프\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "로세스를 종료 시킬\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "것인지에 대한 결정\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "은 우선순위 계층구\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "조를 사용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "• 가장 낮은 우선순위\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "를 갖는 프로세스부\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "터 종료\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "• 계층 구조상에서의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "우선순위는 다음과\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 26,
+				"text": "• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 19,
+				"text": "전면 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 19,
+				"text": "가시적인 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 19,
+				"text": "서비스 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 19,
+				"text": "후면 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 19,
+				"text": "전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "44\n"
+			}
+		]
+	},
+	"45": {
+		"page_id": 45,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 가용 쓰레드 풀을 제공\n• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n량에 따라 결정됨\n45\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 가용 쓰레드 풀을 제공\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "적으로 실행 가능한 ‘블록’으로 응용을 구분\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 가용 쓰레드 풀을 제공\n• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n량에 따라 결정됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "45\n"
+			}
+		]
+	},
+	"46": {
+		"page_id": 46,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 블록\n– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n46\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 28,
+				"text": "• 블록\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 프로그래밍 언어를 단순 확장한 것임\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 하나의 블록은 자족적인(self-contained) 작업 단위를\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "정의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 큐를 사용하여 스케줄링하고 디스패치 함\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 선입 선출 기반으로 디스패치 됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 타이머, 네트워크 소켓, 파일 디스크립터와\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "46\n"
+			}
+		]
+	}
 }
