@@ -1,4 +1,4 @@
-package com.SollutionChallenge.HighLight.Entity;
+package com.SollutionChallenge.HighLight.Text;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,20 +10,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.SollutionChallenge.HighLight.File.File;
+import com.SollutionChallenge.HighLight.Page.Page;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "image")
+@Table(name = "text")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class Image {
+public class Text {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "image_id", unique = true, nullable = false)
+	@Column(name = "text_id", unique = true, nullable = false)
 	@Getter
 	private Long id;
 
@@ -35,17 +38,20 @@ public class Image {
 	@JoinColumn(name = "page_id", nullable = false)
 	private Page pageId;
 
-	@Column(nullable = false)
-	private String imageDescription;
-
-	@Column(nullable = false)
-	private String imageUrl;
+	@Column(nullable = false, columnDefinition = "TEXT")
+	private String content;
 
 	@Column(nullable = false)
 	private String voiceUrl;
 
-	private static Image createImage(Long id, File fileId, Page pageId, String imageDescription, String imageUrl,
-		String voiceUrl) {
-		return new Image(id, fileId, pageId, imageDescription, imageUrl, voiceUrl);
+	private static Text createText(Long id, File fileId, Page pageId, String content, String voiceUrl) {
+		Text text = new Text();
+		text.id=id;
+		text.fileId=fileId;
+		text.pageId=pageId;
+		text.content=content;
+
+		return new Text();
 	}
+
 }

@@ -1,4 +1,4 @@
-package com.SollutionChallenge.HighLight.Entity;
+package com.SollutionChallenge.HighLight.Folder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,28 +10,34 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.SollutionChallenge.HighLight.User.Entity.User;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "page")
+@Table(name = "folder")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class Page {
+public class Folder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "page_id", unique = true, nullable = false)
-	@Getter
+	@Column(name = "folder_id",nullable = false, unique = true)
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "file_id", nullable = false)
-	private File fileId;
+	@JoinColumn(name = "user_id", nullable = false)
+	private User userId;
 
-	private static Page createPage(Long id, File fileId) {
-		return new Page(id, fileId);
+	private static Folder createFolder(Long id, User userId){
+		Folder folder = new Folder();
+		folder.id = id;
+		folder.userId=userId;
+
+		return new Folder();
 	}
+
 }

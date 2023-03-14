@@ -1,4 +1,4 @@
-package com.SollutionChallenge.HighLight.Entity;
+package com.SollutionChallenge.HighLight.Page;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,35 +10,33 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.SollutionChallenge.HighLight.File.File;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "file")
+@Table(name = "page")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class File {
+public class Page {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "file_id", unique = true, nullable = false)
+	@Column(name = "page_id", unique = true, nullable = false)
 	@Getter
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", nullable = false)
-	private User userId;
+	@JoinColumn(name = "file_id", nullable = false)
+	private File fileId;
 
-	@Column(nullable = false)
-	private String fileName;
-
-	@Column(nullable = false)
-	private String fileUrl;
-
-	private static File createFile(Long id, User userId, String fileName, String fileAddress) {
-		return new File(id, userId, fileName, fileAddress);
+	private static Page createPage(Long id, File fileId) {
+		Page page = new Page();
+		page.id=id;
+		page.fileId=fileId;
+		return new Page();
 	}
-
 }
