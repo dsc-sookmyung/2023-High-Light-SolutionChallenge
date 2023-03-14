@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:leturn/api/google_signin_api.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leturn/screens/page_view.dart';
@@ -90,11 +92,7 @@ class _Buttons extends StatelessWidget{
                   )
                 ],
               ),
-              onPressed: (){
-/*                Navigator.push(context,
-                    MaterialPageRoute(
-                      builder: (_) => _PageView().createState()));*/
-              },
+              onPressed: signIn,
             ),
           ),
           //2. 카카오 로그인
@@ -138,4 +136,18 @@ class _Buttons extends StatelessWidget{
       ),
     );
   }
+
+  Future signIn() async{
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+    if(googleAuth == null){
+      print("auth is null");
+    }else{
+      var acct = googleAuth!.accessToken;
+      print("success: ${acct.toString()}");
+    }
+
+  }
+
 }
