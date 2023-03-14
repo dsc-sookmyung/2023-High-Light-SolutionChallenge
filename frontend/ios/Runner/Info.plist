@@ -12,6 +12,16 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+      <!-- google login -->
+        <string>com.googleusercontent.apps.264061539706-2h2ol2v6o4ckud8gcvrialhcmnli82mc</string>
+      </array>
+      </dict>
+    </array>
 	<key>CFBundleName</key>
 	<string>leturn</string>
 	<key>CFBundlePackageType</key>
