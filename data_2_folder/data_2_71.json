@@ -1,0 +1,54 @@
+{
+	"page_id": 71,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(Ex) Mutual Information\n▪ Suppose we have two sets of values x and y to compare\n– x = (–3, –2, –1, 0, 1, 2, 3), y = (9, 4, 1, 0, 1, 4, 9)\n– Although there is a relationship yk = xk\n2, their correlation is 0\n▪ However, their mutual information I(x, y) = 1.9502\n– I(x, y) = H(x) + H(y) – H(x, y) = 2.8074 + 1.9502 – 2.8074\n71\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(Ex) Mutual Information\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Suppose we have two sets of values x and y to compare\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– x = (–3, –2, –1, 0, 1, 2, 3), y = (9, 4, 1, 0, 1, 4, 9)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 13,
+			"text": "– Although there is a relationship yk = xk\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "2, their correlation is 0\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ However, their mutual information I(x, y) = 1.9502\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– I(x, y) = H(x) + H(y) – H(x, y) = 2.8074 + 1.9502 – 2.8074\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "71\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

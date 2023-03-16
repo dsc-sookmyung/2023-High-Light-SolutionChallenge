@@ -1,0 +1,34 @@
+{
+	"page_id": 29,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Disciplines Related to Data Mining\n▪ Data mining employs techniques from many disciplines\n– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\n29\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Disciplines Related to Data Mining\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Data mining employs techniques from many disciplines\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "29\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"page_id": 41,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Feature Extraction\n▪ The creation of a new set of features from the original raw data\n▪ Example\n– We want to classify historical artifacts with respect to their materials\n• (ex) wood, clay, bronze, gold\n– In this case, a density feature constructed from the mass and volume \nfeatures would most directly yield an accurate classification \nArtifact\nMass\nVolume\nArtifact\nMass\nVolume Density (Mass/Volume)\n▪ Unfortunately, the most common approach is to use domain \nexpertise\n41\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Feature Extraction\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The creation of a new set of features from the original raw data\n▪ Example\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– We want to classify historical artifacts with respect to their materials\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) wood, clay, bronze, gold\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– In this case, a density feature constructed from the mass and volume \nfeatures would most directly yield an accurate classification \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 16,
+			"text": "Artifact\nMass\nVolume\nArtifact\nMass\nVolume Density (Mass/Volume)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Unfortunately, the most common approach is to use domain \nexpertise\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "41\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

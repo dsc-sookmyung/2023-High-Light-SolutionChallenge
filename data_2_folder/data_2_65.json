@@ -1,0 +1,29 @@
+{
+	"page_id": 65,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(Ex) Comparing Proximity Measures\nObjects\nMeasure\nx = (1, 2, 4, 3, 0, 0, 0)\ny = (1, 2, 3, 4, 0, 0, 0)\nx = (1, 2, 4, 3, 0, 0, 0)\nys = (2, 4, 6, 8, 0, 0, 0)\n(ys = 2y)\nx = (1, 2, 4, 3, 0, 0, 0)\nyt = (6, 7, 8, 9, 5, 5, 5)\n(yt = y + 5)\ncos(x, y)\n0.9667\n0.9667\n0.7940\ncorr(x, y)\n0.9429\n0.9429\n0.9429\nEuclidean\ndistance(x, y)\n1.4142\n5.8310\n14.2127\n65\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(Ex) Comparing Proximity Measures\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "Objects\nMeasure\nx = (1, 2, 4, 3, 0, 0, 0)\ny = (1, 2, 3, 4, 0, 0, 0)\nx = (1, 2, 4, 3, 0, 0, 0)\nys = (2, 4, 6, 8, 0, 0, 0)\n(ys = 2y)\nx = (1, 2, 4, 3, 0, 0, 0)\nyt = (6, 7, 8, 9, 5, 5, 5)\n(yt = y + 5)\ncos(x, y)\n0.9667\n0.9667\n0.7940\ncorr(x, y)\n0.9429\n0.9429\n0.9429\nEuclidean\ndistance(x, y)\n1.4142\n5.8310\n14.2127\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "65\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"page_id": 2,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Terminology\nData set\nStudent ID\n1042129\n1034262\n1052663\n1082246\nYear\nJunior\nSenior\nSophomore\nFreshman\nGPA\n3.85\n3.24\n3.51\n3.62\n…\n…\n…\n…\n…\nAttribute\nData\nobject\n▪ Data object: an entity with measurable properties\n– Also called record, point, vector, case, sample, instance, observation, …\n▪ Attribute: a property or characteristic of a data object\n– Also called variable, field, feature, dimension, …\n▪ Data set: a collection of data objects\n– Commonly stored in flat files or database tables \n2\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Terminology\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "Data set\nStudent ID\n1042129\n1034262\n1052663\n1082246\nYear\nJunior\nSenior\nSophomore\nFreshman\nGPA\n3.85\n3.24\n3.51\n3.62\n…\n…\n…\n…\n…\nAttribute\nData\nobject\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Data object: an entity with measurable properties\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Also called record, point, vector, case, sample, instance, observation, …\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Attribute: a property or characteristic of a data object\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Also called variable, field, feature, dimension, …\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Data set: a collection of data objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Commonly stored in flat files or database tables \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "2\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

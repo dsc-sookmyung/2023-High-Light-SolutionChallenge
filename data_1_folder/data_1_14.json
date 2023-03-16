@@ -1,0 +1,49 @@
+{
+	"page_id": 14,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Course Information (3/3)\n▪ Textbook\n– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n▪ Grading policy\n– Mid-term Exam : 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\n14\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Course Information (3/3)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Textbook\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Grading policy\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Mid-term Exam : 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "14\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

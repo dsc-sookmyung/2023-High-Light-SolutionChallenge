@@ -1,0 +1,49 @@
+{
+	"page_id": 36,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "The Curse of Dimensionality (2/2)\n▪ Problem for classification\n– There are not enough data objects to allow the creation of a model that \nreliably assigns a class to all possible objects\n▪ Problem for clustering\n– The distance between objects become less meaningful\n1. The amount of training \ndata needed to cover \n80% of the space \ngrows exponentially\n2. Nearly all objects \nbecome far from each \nother\n36\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "The Curse of Dimensionality (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Problem for classification\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– There are not enough data objects to allow the creation of a model that \nreliably assigns a class to all possible objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Problem for clustering\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The distance between objects become less meaningful\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "1. The amount of training \ndata needed to cover \n80% of the space \ngrows exponentially\n2. Nearly all objects \nbecome far from each \nother\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "36\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

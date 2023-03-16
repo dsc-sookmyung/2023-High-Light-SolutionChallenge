@@ -1,0 +1,69 @@
+{
+	"page_id": 4,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Data-Related Issues for Data Mining (2/2)\n3.  Preprocessing \n– Often, the raw data must be processed to make it suitable for analysis\n• (ex) continuous attribute (e.g., length) → categorical attribute (e.g., S/M/L)\n• (ex) dimensionality reduction (e.g., 100 attributes → 10 attributes)\n– The goal is to modify the data so that it better fits a specific technique\n4.  Measures of similarity\n– Data mining tasks often need to measure the similarity between objects\n• (ex) clustering, classification, or anomaly detection\n– There are many similarity or distance measures\n• The proper choice depends on the type of data and the particular application\n4\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Data-Related Issues for Data Mining (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "3.  Preprocessing \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Often, the raw data must be processed to make it suitable for analysis\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) continuous attribute (e.g., length) → categorical attribute (e.g., S/M/L)\n• (ex) dimensionality reduction (e.g., 100 attributes → 10 attributes)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The goal is to modify the data so that it better fits a specific technique\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "4.  Measures of similarity\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Data mining tasks often need to measure the similarity between objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) clustering, classification, or anomaly detection\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– There are many similarity or distance measures\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• The proper choice depends on the type of data and the particular application\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "4\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

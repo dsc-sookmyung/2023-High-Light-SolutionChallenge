@@ -1,0 +1,29 @@
+{
+	"page_id": 19,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 상태\n• 보류 상태를 가진 프로세스 상태 전이도\n19\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 상태\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 보류 상태를 가진 프로세스 상태 전이도\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "19\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

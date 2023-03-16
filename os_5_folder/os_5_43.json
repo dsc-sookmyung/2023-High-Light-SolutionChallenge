@@ -1,0 +1,29 @@
+{
+	"page_id": 43,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "메시지 전달\n• 메시지 전달을 이용한 상호 배제\n43\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "메시지 전달\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 메시지 전달을 이용한 상호 배제\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "43\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

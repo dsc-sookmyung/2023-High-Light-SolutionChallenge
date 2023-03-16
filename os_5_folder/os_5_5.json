@@ -1,0 +1,59 @@
+{
+	"page_id": 5,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "병행성 원리\n• 병행성: 다음과 같은 3가지 상황에서 발생\n다수의 응용\n다수의 활동 중인 응용들\n간에 처리시간의 동적\n공유를 위해\n멀티프로그래밍이 발전\n구조화된 응용\n모듈화된 설계 원칙과\n구조적인 프로그램이\n발전되면서 일부 응용이\n병행 프로세스의 집합\n운영체제 구조\n운영체제도 다수의\n프로세스와 쓰레드의\n집합으로 구현\n5\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 병행성: 다음과 같은 3가지 상황에서 발생\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 25,
+			"text": "다수의 응용\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "다수의 활동 중인 응용들\n간에 처리시간의 동적\n공유를 위해\n멀티프로그래밍이 발전\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 25,
+			"text": "구조화된 응용\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "모듈화된 설계 원칙과\n구조적인 프로그램이\n발전되면서 일부 응용이\n병행 프로세스의 집합\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 25,
+			"text": "운영체제 구조\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "운영체제도 다수의\n프로세스와 쓰레드의\n집합으로 구현\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "5\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

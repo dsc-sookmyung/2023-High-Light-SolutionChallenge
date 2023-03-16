@@ -1,0 +1,34 @@
+{
+	"page_id": 9,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Before the Lecture…\n▪ Clustering\n– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\n9\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Clustering\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "9\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

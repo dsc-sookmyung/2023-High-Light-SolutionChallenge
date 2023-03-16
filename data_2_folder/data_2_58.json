@@ -1,0 +1,64 @@
+{
+	"page_id": 58,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "2. Similarity Coefficients (1/2)\n▪ Similarity measures between objects that contain only binary \nattributes\n– Typically have values between 0 and 1\n• 0: the objects are not at all similar\n• 1: the objects are completely similar\nx = (1, 0, 0, 1, 0, 1, 0, 0, 0, 1) \nSimilarity?\ny = (0, 1, 0, 1, 1, 0, 0, 0, 1, 0)\n▪ Notations\n– Let x = (x1, x2, …, xn) and y = (y1, y2, …, yn) be two objects\n• where xk and yk are binary attributes (k = 1, 2, …, n)\n– f00 = the number of attributes where x is 0 and y is 0\n– f01 = the number of attributes where x is 0 and y is 1\n– f10 = the number of attributes where x is 1 and y is 0\n– f11 = the number of attributes where x is 1 and y is 1\n58\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "2. Similarity Coefficients (1/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Similarity measures between objects that contain only binary \nattributes\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Typically have values between 0 and 1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 0: the objects are not at all similar\n• 1: the objects are completely similar\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "x = (1, 0, 0, 1, 0, 1, 0, 0, 0, 1) \nSimilarity?\ny = (0, 1, 0, 1, 1, 0, 0, 0, 1, 0)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Notations\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Let x = (x1, x2, …, xn) and y = (y1, y2, …, yn) be two objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• where xk and yk are binary attributes (k = 1, 2, …, n)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– f00 = the number of attributes where x is 0 and y is 0\n– f01 = the number of attributes where x is 0 and y is 1\n– f10 = the number of attributes where x is 1 and y is 0\n– f11 = the number of attributes where x is 1 and y is 1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "58\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

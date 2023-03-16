@@ -1,0 +1,79 @@
+{
+	"page_id": 42,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 제어: 프로세스 교환\n• 프로세스 교환을 유발하는 사건들\n– Clock interrupt:  최대 허용된 시간단위(time slice)가 지나면 발\n생\n• 수행  준비\n– I/O interrupt\n• 블록  준비\n– 메모리 폴트 (페이지 부재)\n• 수행  블록\n– 트랩 (Trap)\n• 수행 중에 발생한 오류 및 예외상황(exception)\n• 해당 프로세스가 종료될 수도 있음  복구 불가능한 상황\n– 수퍼바이저 호출 (Supervisor call)\n• file open 등\n• 이 때 모드 전환 발생, 필요하면 프로세스 교환\n42\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 제어: 프로세스 교환\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 교환을 유발하는 사건들\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Clock interrupt:  최대 허용된 시간단위(time slice)가 지나면 발\n생\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 수행  준비\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– I/O interrupt\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 블록  준비\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 메모리 폴트 (페이지 부재)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 수행  블록\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 트랩 (Trap)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 수행 중에 발생한 오류 및 예외상황(exception)\n• 해당 프로세스가 종료될 수도 있음  복구 불가능한 상황\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 수퍼바이저 호출 (Supervisor call)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• file open 등\n• 이 때 모드 전환 발생, 필요하면 프로세스 교환\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "42\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

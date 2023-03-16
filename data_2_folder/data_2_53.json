@@ -1,0 +1,59 @@
+{
+	"page_id": 53,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Examples of Proximity Measures\n1.\n[Dissimilarity] Distances\n– Manhattan distance (L1 distance)\n– Euclidean distance (L2 distance)\n– Supremum distance (L∞ distance)\n2.\n[Similarity] Similarity coefficients\n– Simple matching coefficient\n– Jaccard coefficient\n3.\n[Similarity] Cosine similarity\n4.\n[Similarity] Correlation\nx = (1, 3, 6, 2, 9, 7, 5, 4, 10, 8) \nproximity?\ny = (7, 2, 5, 8, 1, 6, 10, 4, 3, 9)\n5.\n[Similarity] Mutual information\n53\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Examples of Proximity Measures\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "1.\n[Dissimilarity] Distances\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Manhattan distance (L1 distance)\n– Euclidean distance (L2 distance)\n– Supremum distance (L∞ distance)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "2.\n[Similarity] Similarity coefficients\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Simple matching coefficient\n– Jaccard coefficient\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "3.\n[Similarity] Cosine similarity\n4.\n[Similarity] Correlation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "x = (1, 3, 6, 2, 9, 7, 5, 4, 10, 8) \nproximity?\ny = (7, 2, 5, 8, 1, 6, 10, 4, 3, 9)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "5.\n[Similarity] Mutual information\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "53\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

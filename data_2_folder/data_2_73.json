@@ -1,0 +1,54 @@
+{
+	"page_id": 73,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Issues in Proximity Calculation (2/2)\n▪ (Issue 2) Using weights\n– In some cases, some attributes are more important than others\n• (ex) When comparing two people, Age may be more important than Height\n– We can assign each attribute a different weight wk\nAttribute\nWeight\nAge\n0.5\nHeight\nWeight\nSalary\n0.2\n0.2\n0.1\n– The definition of the Minkowski distance can also be modified as follows:\n73\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Issues in Proximity Calculation (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ (Issue 2) Using weights\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– In some cases, some attributes are more important than others\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) When comparing two people, Age may be more important than Height\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 13,
+			"text": "– We can assign each attribute a different weight wk\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "Attribute\nWeight\nAge\n0.5\nHeight\nWeight\nSalary\n0.2\n0.2\n0.1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The definition of the Minkowski distance can also be modified as follows:\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "73\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"page_id": 20,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "카운팅(counting) 세마포어\n• 여러 개의 공유 자원에 대한 액세스를 제어할 목적\n– 일반 세마포어에 해당\n P, V operations\nProberen: to try\nVerhogen: to increase\n20\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "카운팅(counting) 세마포어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 여러 개의 공유 자원에 대한 액세스를 제어할 목적\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 일반 세마포어에 해당\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": " P, V operations\nProberen: to try\nVerhogen: to increase\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "20\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"page_id": 13,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "상호배제\n• 상호배제 해결방법\n– 어느 한 순간에는 오직 하나의 프로세스만이 임계영역에 진입\n– Illustration of Mutual Exclusion\n13\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "상호배제\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 상호배제 해결방법\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 어느 한 순간에는 오직 하나의 프로세스만이 임계영역에 진입\n– Illustration of Mutual Exclusion\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "13\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

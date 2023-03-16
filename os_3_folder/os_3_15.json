@@ -1,0 +1,34 @@
+{
+	"page_id": 15,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 상태\n• 5-상태 프로세스 모델(5-state model)\n– 수행 (Running)\n– 준비 (Ready)\n– 블록 (Blocked)\n– 생성 (New)\n– 종료 (Exit)\n15\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 상태\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 5-상태 프로세스 모델(5-state model)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 수행 (Running)\n– 준비 (Ready)\n– 블록 (Blocked)\n– 생성 (New)\n– 종료 (Exit)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "15\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

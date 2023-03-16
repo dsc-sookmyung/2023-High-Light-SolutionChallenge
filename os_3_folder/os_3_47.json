@@ -1,0 +1,34 @@
+{
+	"page_id": 47,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "운영체제의 실행\n• OS와 사용자 프로세스와의 관계 (그림 3.15)\n 기능 = function = 함수\n47\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "운영체제의 실행\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• OS와 사용자 프로세스와의 관계 (그림 3.15)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": " 기능 = function = 함수\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "47\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

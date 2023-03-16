@@ -1,0 +1,64 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "4. Anomaly Detection\n▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n– Such observations are called anomalies or outliers\noutlier\n▪ Goal\n– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n• A high detection rate\n• A low false alarm rate\n▪ Application examples\n– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "4. Anomaly Detection\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Such observations are called anomalies or outliers\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "outlier\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Goal\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• A high detection rate\n• A low false alarm rate\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Application examples\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "39\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

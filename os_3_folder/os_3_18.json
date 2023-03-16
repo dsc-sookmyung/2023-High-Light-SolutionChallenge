@@ -1,0 +1,54 @@
+{
+	"page_id": 18,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 상태\n• 보류 상태의 프로세스(Suspended process) 도입\n• Swapping\n– 스왑-인(swap-in) 및 스왑-아웃(swap-out)\n– 스왑-아웃\n• 종료되지 않은 프로세스의 전체 이미지 (또는 일부 이미지)를 주기\n억장치로부터 ‘스왑 공간’(디스크의 일부로 swap space 또는 swap \narea)으로 이동시키는 것\n– 스왑-인\n• 스왑-아웃된 프로세스의 전체 이미지 (또는 일부 이미지)를 스왑 공\n간으로부터 주기억장치로 적재하는 것\n• Swapping도 I/O 연산임\n18\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 상태\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 보류 상태의 프로세스(Suspended process) 도입\n• Swapping\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 스왑-인(swap-in) 및 스왑-아웃(swap-out)\n– 스왑-아웃\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 종료되지 않은 프로세스의 전체 이미지 (또는 일부 이미지)를 주기\n억장치로부터 ‘스왑 공간’(디스크의 일부로 swap space 또는 swap \narea)으로 이동시키는 것\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 스왑-인\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 스왑-아웃된 프로세스의 전체 이미지 (또는 일부 이미지)를 스왑 공\n간으로부터 주기억장치로 적재하는 것\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• Swapping도 I/O 연산임\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "18\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

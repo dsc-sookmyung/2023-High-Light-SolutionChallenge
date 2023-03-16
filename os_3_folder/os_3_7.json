@@ -1,0 +1,34 @@
+{
+	"page_id": 7,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 구성요소(element)\n• 프로그램이 실행될 때, 해당 프로세스는 여러 구성요소\n들에 의해 유일하게 특징지어질 수 있음\n식별자\n(identifier)\n우선순위\n(priority)\n상태\n(state)\n프로그램 카운터\n(program counter)\n메모리 포인터\n문맥 데이터\n(memory pointers)\n(context data)\n입출력 상태 정보\n어카운팅 정보\n(I/O status \ninformation)\n(accounting \ninformation)\n7\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 구성요소(element)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로그램이 실행될 때, 해당 프로세스는 여러 구성요소\n들에 의해 유일하게 특징지어질 수 있음\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 16,
+			"text": "식별자\n(identifier)\n우선순위\n(priority)\n상태\n(state)\n프로그램 카운터\n(program counter)\n메모리 포인터\n문맥 데이터\n(memory pointers)\n(context data)\n입출력 상태 정보\n어카운팅 정보\n(I/O status \ninformation)\n(accounting \ninformation)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "7\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

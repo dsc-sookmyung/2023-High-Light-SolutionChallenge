@@ -1,0 +1,54 @@
+{
+	"page_id": 51,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Definitions\n▪ Similarity: a numerical measure of the degree to which two \nobjects are alike\n– The more alike, the higher the similarity is\n• (ex) 0 (no similarity) → 1 (complete similarity)\n▪ Dissimilarity: a numerical measure of the degree to which two \nobjects are different\n– The more similar, the lower the dissimilarity is\n• (ex) 0 (complete similarity) → 1 or  (no similarity)\nSimilarity = 1\nDissimilarity = 0\nSimilarity = 0\nDissimilarity = 1\n51\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Definitions\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Similarity: a numerical measure of the degree to which two \nobjects are alike\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The more alike, the higher the similarity is\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) 0 (no similarity) → 1 (complete similarity)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Dissimilarity: a numerical measure of the degree to which two \nobjects are different\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The more similar, the lower the dissimilarity is\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) 0 (complete similarity) → 1 or  (no similarity)\nSimilarity = 1\nDissimilarity = 0\nSimilarity = 0\nDissimilarity = 1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "51\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

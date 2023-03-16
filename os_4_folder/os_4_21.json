@@ -1,0 +1,29 @@
+{
+	"page_id": 21,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n21\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "멀티코어와 멀티쓰레딩\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 멀티코어가 성능에 미치는 영향\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "21\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

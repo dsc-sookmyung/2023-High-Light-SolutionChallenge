@@ -1,0 +1,39 @@
+{
+	"page_id": 25,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Motivating Challenges (1/4)\n▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n25\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Motivating Challenges (1/4)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "25\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

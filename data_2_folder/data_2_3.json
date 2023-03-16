@@ -1,0 +1,74 @@
+{
+	"page_id": 3,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Data-Related Issues for Data Mining (1/2)\n1.  The types of data\n– The attributes can be of different types\n• (ex) categorical (city, gender, genre, …), numeric (temperature, age, price, …)\n– Data sets often have different characteristics\n• (ex) record data, graph data (social network), ordered data (time series), …\n– The type of data determines which methods and techniques can be used\n2.  The quality of the data\n– Data is often far from perfect\n• (ex) noise, outliers, missing data, inconsistent data, duplicate data\n• (ex) biased or unrepresentative data\n– Understanding and improving data quality typically improves the quality \nof the resulting analysis\n3\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Data-Related Issues for Data Mining (1/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "1.  The types of data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The attributes can be of different types\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) categorical (city, gender, genre, …), numeric (temperature, age, price, …)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Data sets often have different characteristics\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) record data, graph data (social network), ordered data (time series), …\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The type of data determines which methods and techniques can be used\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "2.  The quality of the data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Data is often far from perfect\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) noise, outliers, missing data, inconsistent data, duplicate data\n• (ex) biased or unrepresentative data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Understanding and improving data quality typically improves the quality \nof the resulting analysis\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "3\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

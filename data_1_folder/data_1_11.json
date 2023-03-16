@@ -1,0 +1,44 @@
+{
+	"page_id": 11,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Two Objectives of This Course\n1. Understanding existing data mining algorithms\n– Classification, association analysis, clustering, anomaly detection\n2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n– For a new problem you are facing\n11\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Two Objectives of This Course\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "1. Understanding existing data mining algorithms\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Classification, association analysis, clustering, anomaly detection\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– For a new problem you are facing\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "11\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

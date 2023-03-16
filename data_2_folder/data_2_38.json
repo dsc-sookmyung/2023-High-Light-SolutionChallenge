@@ -1,0 +1,54 @@
+{
+	"page_id": 38,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Approaches to Feature Selection\n1. Use common sense or domain knowledge\n2. Embedded approaches\n– The data mining algorithm itself decides which attributes to use\n– (ex) decision trees\n3. Filter approaches\n– Features are selected before the data mining algorithm is run\n– (ex) select attributes whose pairwise correlation is as low as possible\n4. Wrapper approaches\n– Use the target data mining algorithm as a black box to find the best\nsubset of attributes\n– (ex) add attributes one by one as long as the performance improves\n38\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Approaches to Feature Selection\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "1. Use common sense or domain knowledge\n2. Embedded approaches\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The data mining algorithm itself decides which attributes to use\n– (ex) decision trees\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "3. Filter approaches\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Features are selected before the data mining algorithm is run\n– (ex) select attributes whose pairwise correlation is as low as possible\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "4. Wrapper approaches\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Use the target data mining algorithm as a black box to find the best\nsubset of attributes\n– (ex) add attributes one by one as long as the performance improves\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "38\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

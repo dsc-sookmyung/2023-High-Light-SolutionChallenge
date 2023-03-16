@@ -1,0 +1,34 @@
+{
+	"page_id": 5,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스와 쓰레드\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "5\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"page_id": 47,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "7. Variable Transformation (1/2)\n▪ Apply a transformation to all the values of a variable (attribute)\n▪ (Type 1) Simple functions\n– Apply a simple mathematical function to each value individually\n• (ex) xk, log x, ex,  𝑥, 1/x, sin x, or |x|\n– Examples\n• log10 x is used when the range of values is very huge (e.g., 108, 109 → 8, 9)\n•\n𝑥, log x, and 1/x are often used to transform data into a normal distribution\nx\n𝑥\n47\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "7. Variable Transformation (1/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Apply a transformation to all the values of a variable (attribute)\n▪ (Type 1) Simple functions\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Apply a simple mathematical function to each value individually\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) xk, log x, ex,  𝑥, 1/x, sin x, or |x|\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Examples\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• log10 x is used when the range of values is very huge (e.g., 108, 109 → 8, 9)\n•\n𝑥, log x, and 1/x are often used to transform data into a normal distribution\nx\n𝑥\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "47\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"page_id": 35,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "The Curse of Dimensionality (1/2)\n▪ The phenomenon that data analysis becomes significantly harder \nas the dimensionality of the data increases\n▪ Because, as dimensionality increases, the data becomes \nincreasingly sparse in the space\n– Also the distances between objects become very large\n– Eventually the distances between objects become almost the same\n1D (50% of data)\n2D (25% of data)\n3D (12.5% of data)\n35\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "The Curse of Dimensionality (1/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The phenomenon that data analysis becomes significantly harder \nas the dimensionality of the data increases\n▪ Because, as dimensionality increases, the data becomes \nincreasingly sparse in the space\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Also the distances between objects become very large\n– Eventually the distances between objects become almost the same\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "1D (50% of data)\n2D (25% of data)\n3D (12.5% of data)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "35\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"page_id": 43,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 제어: 프로세스 교환\n• 프로세스 상태 변경(change)\n1. 프로그램 카운터 및 다른 레지스터들을 포함하여 처리기의 문\n맥을 저장\n2. 현재 수행 상태에 있는 프로세스(예로 PA)의 PCB를 갱신\n3. 그 PCB를 준비큐, 블록큐, 또는 준비/보류큐 중의 하나에 삽입\n4. 실행할 다른 프로세스(예로 PB)를 선택\n5. 새로 선택된 프로세스(PB)의 PCB를 갱신\n6. 메모리 관리 자료구조를 갱신\n7. 선택된 프로세스(PB)의 문맥을 복원(restore)\n context switch (문맥 교환)\n mode switch may occur without changing the state of \nthe current running process\n43\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 제어: 프로세스 교환\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 상태 변경(change)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "1. 프로그램 카운터 및 다른 레지스터들을 포함하여 처리기의 문\n맥을 저장\n2. 현재 수행 상태에 있는 프로세스(예로 PA)의 PCB를 갱신\n3. 그 PCB를 준비큐, 블록큐, 또는 준비/보류큐 중의 하나에 삽입\n4. 실행할 다른 프로세스(예로 PB)를 선택\n5. 새로 선택된 프로세스(PB)의 PCB를 갱신\n6. 메모리 관리 자료구조를 갱신\n7. 선택된 프로세스(PB)의 문맥을 복원(restore)\n context switch (문맥 교환)\n mode switch may occur without changing the state of \nthe current running process\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "43\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

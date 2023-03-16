@@ -1,0 +1,34 @@
+{
+	"page_id": 27,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Data Preprocessing\n▪ Additional steps to make the data more suitable for data mining\n▪ A broad area and consists of a number of different strategies \nand techniques that are interrelated in complex ways\n▪ We will discuss the following topics:\n– Aggregation\n– Sampling\n– Dimensionality reduction\n– Feature selection\n– Feature creation\n– Discretization and binarization\n– Variable transformation\n27\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Data Preprocessing\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Additional steps to make the data more suitable for data mining\n▪ A broad area and consists of a number of different strategies \nand techniques that are interrelated in complex ways\n▪ We will discuss the following topics:\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Aggregation\n– Sampling\n– Dimensionality reduction\n– Feature selection\n– Feature creation\n– Discretization and binarization\n– Variable transformation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "27\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

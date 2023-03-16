@@ -1,0 +1,49 @@
+{
+	"page_id": 32,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Progressive (or Adaptive) Sampling\n▪ Used when the proper sample size can be difficult to determine\n▪ Basic technique\n– Starts with a small sample\n– Increase the sample size until a sample of sufficient size has been obtained\n▪ Important point\n– There must be a way to evaluate the sample to judge if it is large enough\n• (ex) Stop increasing the sample size if the increase in accuracy levels off\n32\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Progressive (or Adaptive) Sampling\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Used when the proper sample size can be difficult to determine\n▪ Basic technique\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Starts with a small sample\n– Increase the sample size until a sample of sufficient size has been obtained\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Important point\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– There must be a way to evaluate the sample to judge if it is large enough\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) Stop increasing the sample size if the increase in accuracy levels off\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "32\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

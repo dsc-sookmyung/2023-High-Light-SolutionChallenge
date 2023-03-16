@@ -1,0 +1,64 @@
+{
+	"page_id": 10,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "General Characteristics of Data Sets\n▪ Dimensionality\n– The number of attributes in the data set\n– The curse of dimensionality\n• The difficulties associated with high-dimensional data\n• Because of this, dimensionality reduction is often used\n▪ Distribution\n– The frequency of various values for the attributes\n• (ex) Gaussian (normal) distribution\n– However, many data sets have distributions that are \nnot well captured by standard statistical distributions\n– Skewness in the distribution can make mining difficult \n• (ex) Male : Female = 5 : 95\n10\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "General Characteristics of Data Sets\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Dimensionality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The number of attributes in the data set\n– The curse of dimensionality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• The difficulties associated with high-dimensional data\n• Because of this, dimensionality reduction is often used\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Distribution\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The frequency of various values for the attributes\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) Gaussian (normal) distribution\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– However, many data sets have distributions that are \nnot well captured by standard statistical distributions\n– Skewness in the distribution can make mining difficult \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) Male : Female = 5 : 95\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "10\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

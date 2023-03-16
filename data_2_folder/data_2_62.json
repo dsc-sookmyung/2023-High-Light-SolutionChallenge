@@ -1,0 +1,49 @@
+{
+	"page_id": 62,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "4. Correlation\n▪ Measure the linear relationship between two sets of values\n– Examples\n• x = (1, 2, 3, 4, 5), y = (2, 4, 6, 8, 10) → perfect positive correlation (= 1)\n• x = (1, 2, 3, 4, 5), y = (5, 4, 3, 2, 1) → perfect negative correlation (= –1)\n▪ There are many types of correlation\n– In this course, we focus on Pearson’s correlation\n62\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "4. Correlation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Measure the linear relationship between two sets of values\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Examples\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• x = (1, 2, 3, 4, 5), y = (2, 4, 6, 8, 10) → perfect positive correlation (= 1)\n• x = (1, 2, 3, 4, 5), y = (5, 4, 3, 2, 1) → perfect negative correlation (= –1)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ There are many types of correlation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– In this course, we focus on Pearson’s correlation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "62\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

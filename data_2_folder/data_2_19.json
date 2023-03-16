@@ -1,0 +1,54 @@
+{
+	"page_id": 19,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Data Quality\n▪ It is unrealistic to expect that data will be perfect\n– Human error\n– Limitations of measuring devices\n– Flaws in the data collection process, etc.\n▪ Examples: data quality problems\n– Values or even entire data objects can be missing\n– Spurious or duplicate objects (e.g., multiple records for a single person)\n– Inconsistencies (e.g., a person has a height of 2 m, but weights only 2 kg)\n▪ To prevent data quality problems, data mining focuses on\n① The detection and correction of data quality problems → data cleaning\n② The use of algorithms that can tolerate poor data quality\n19\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Data Quality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ It is unrealistic to expect that data will be perfect\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Human error\n– Limitations of measuring devices\n– Flaws in the data collection process, etc.\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Examples: data quality problems\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Values or even entire data objects can be missing\n– Spurious or duplicate objects (e.g., multiple records for a single person)\n– Inconsistencies (e.g., a person has a height of 2 m, but weights only 2 kg)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ To prevent data quality problems, data mining focuses on\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "① The detection and correction of data quality problems → data cleaning\n② The use of algorithms that can tolerate poor data quality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "19\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

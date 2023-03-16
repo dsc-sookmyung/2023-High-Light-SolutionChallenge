@@ -1,0 +1,59 @@
+{
+	"page_id": 35,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "2. Association Analysis\n▪ Discover patterns that describe strongly associated items in the \ndata\n– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n▪ Goal\n– Extract the most interesting patterns in an efficient manner\n• Because of the exponential size of its search space\n35\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "2. Association Analysis\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Discover patterns that describe strongly associated items in the \ndata\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Goal\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Extract the most interesting patterns in an efficient manner\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Because of the exponential size of its search space\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "35\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

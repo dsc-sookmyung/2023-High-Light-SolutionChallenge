@@ -1,0 +1,34 @@
+{
+	"page_id": 21,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 상태\n• 보류 프로세스를 포함한 상태 전이\n– Blocked  Blocked/Suspend: 보류, 즉 스왑-아웃\n– Blocked/Suspend  Ready/Suspend: 보류 상태에서 깨움\n– Ready/Suspend  Ready: 활성화(activate), 즉 스왑-인\n– Ready  Ready/Suspend: 보류, 즉 스왑-아웃\n– New  Ready/Suspended \n– Blocked/Suspend  Blocked\n– Running  Ready/Suspend\n– 임의 상태  Exit\n21\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 상태\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 보류 프로세스를 포함한 상태 전이\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Blocked  Blocked/Suspend: 보류, 즉 스왑-아웃\n– Blocked/Suspend  Ready/Suspend: 보류 상태에서 깨움\n– Ready/Suspend  Ready: 활성화(activate), 즉 스왑-인\n– Ready  Ready/Suspend: 보류, 즉 스왑-아웃\n– New  Ready/Suspended \n– Blocked/Suspend  Blocked\n– Running  Ready/Suspend\n– 임의 상태  Exit\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "21\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

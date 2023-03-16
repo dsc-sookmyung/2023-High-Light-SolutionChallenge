@@ -1,0 +1,39 @@
+{
+	"page_id": 56,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(Ex) Minkowski Distance\n▪ Consider the following four two-dimensional points\nL2\nL1 distance matrix\nL2 distance matrix\nL∞ distance matrix\n56\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(Ex) Minkowski Distance\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Consider the following four two-dimensional points\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 11,
+			"text": "L2\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "L1 distance matrix\nL2 distance matrix\nL∞ distance matrix\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "56\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

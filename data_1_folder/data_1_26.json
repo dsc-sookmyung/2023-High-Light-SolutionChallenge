@@ -1,0 +1,59 @@
+{
+	"page_id": 26,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Motivating Challenges (2/4)\n2. High Dimensionality\n– It is common for data sets to have hundreds or thousands of attributes\n• (ex) In bioinformatics, gene expression data involve thousands of features\n– Problems\n• Curse of dimensionality\n– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n• The computational complexity increases rapidly \nAn example of many attributes (features)\n26\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Motivating Challenges (2/4)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "2. High Dimensionality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– It is common for data sets to have hundreds or thousands of attributes\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) In bioinformatics, gene expression data involve thousands of features\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Problems\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Curse of dimensionality\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 16,
+			"text": "– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• The computational complexity increases rapidly \nAn example of many attributes (features)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "26\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

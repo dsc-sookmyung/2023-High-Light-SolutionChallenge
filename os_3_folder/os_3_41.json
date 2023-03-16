@@ -1,0 +1,29 @@
+{
+	"page_id": 41,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 제어: 모드 전환(Mode Switch)\n• 수행 모드가 전환(switch)될 때는?\n41\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 제어: 모드 전환(Mode Switch)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "• 수행 모드가 전환(switch)될 때는?\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "41\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

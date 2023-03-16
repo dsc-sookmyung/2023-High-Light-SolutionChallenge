@@ -1,0 +1,34 @@
+{
+	"page_id": 26,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 제어 블록: process table\n• 프로세스 테이블(계속)\n– OS는 각 프로세스의 PCB를 가리키는 포인터들의 테이블\n– OS로 하여금 PCB를 빠르게 참조할 수 있게 해준다.\n– 프로세스가 종료될 때, OS는 프로세스 테이블에서 종료되는 프로\n세스에 해당하는 PCB 포인터를 지우고, 그 프로세스가 가지고 있\n던 모든 자원들을 반납한다.\n26\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 제어 블록: process table\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 테이블(계속)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– OS는 각 프로세스의 PCB를 가리키는 포인터들의 테이블\n– OS로 하여금 PCB를 빠르게 참조할 수 있게 해준다.\n– 프로세스가 종료될 때, OS는 프로세스 테이블에서 종료되는 프로\n세스에 해당하는 PCB 포인터를 지우고, 그 프로세스가 가지고 있\n던 모든 자원들을 반납한다.\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "26\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

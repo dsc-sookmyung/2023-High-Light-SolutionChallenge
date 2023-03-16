@@ -1,0 +1,39 @@
+{
+	"page_id": 5,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Before the Lecture…\n▪ What is “data mining”?\n– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n• Computer science (esp. databases), statistics, machine learning, …\n5\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ What is “data mining”?\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Computer science (esp. databases), statistics, machine learning, …\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "5\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"page_id": 24,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Inconsistent Values\n▪ Values that violate given consistency constraints\n▪ Examples\n– Different zip codes for the same area\nName\nCity\nTel\n– A person’s height is negative\n– Nonexistent name\n– 6-digit telephone number \nLee\nKim\nPark\nSeoul\n031-710-4112\nDaejeon 042-270-4615\nBusan\n051-200-1679\n▪ It is important to detect and, if possible, correct such problems\n– The correction may require additional or external information\n24\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Inconsistent Values\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Values that violate given consistency constraints\n▪ Examples\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Different zip codes for the same area\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "Name\nCity\nTel\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– A person’s height is negative\n– Nonexistent name\n– 6-digit telephone number \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "Lee\nKim\nPark\nSeoul\n031-710-4112\nDaejeon 042-270-4615\nBusan\n051-200-1679\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ It is important to detect and, if possible, correct such problems\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The correction may require additional or external information\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "24\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

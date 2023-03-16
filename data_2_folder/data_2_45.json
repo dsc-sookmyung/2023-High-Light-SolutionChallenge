@@ -1,0 +1,59 @@
+{
+	"page_id": 45,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Discretization\n▪ Basic steps\n– Decide how many categories, n, to have\n– Divide the values of the continuous attribute into n intervals\n– Map all the values in one interval to the same categorical value\nx0\nx1\nx2\nx3\nx4\n…\nxn-1\nxn\nv1\nv2\nv3\nv4\nvn-1\nvn\n▪ Several simple approaches\n– Equal width discretization\n– Equal frequency discretization\n– Clustering-based discretization (e.g., k-means)\n45\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Discretization\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Basic steps\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Decide how many categories, n, to have\n– Divide the values of the continuous attribute into n intervals\n– Map all the values in one interval to the same categorical value\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "x0\nx1\nx2\nx3\nx4\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "…\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "xn-1\nxn\nv1\nv2\nv3\nv4\nvn-1\nvn\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Several simple approaches\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Equal width discretization\n– Equal frequency discretization\n– Clustering-based discretization (e.g., k-means)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "45\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

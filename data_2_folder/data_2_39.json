@@ -1,0 +1,59 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Feature Weighting\n▪ An alternative to keeping or eliminating features\n– Assign more important features a higher weight, while giving less \nimportant features a lower weight\n▪ Two approaches\n– Use domain knowledge about the relative importance of features\n– The data mining algorithm determines the weights automatically\n▪ (ex) support vector machine (SVM)\n– Produces classification models in which each feature is given a weight\n– (ex) y = 100x1 + 0.01x2 + 20x3 + 4\n• x1 is the most important feature, while x2 is the least important feature\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Feature Weighting\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ An alternative to keeping or eliminating features\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Assign more important features a higher weight, while giving less \nimportant features a lower weight\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Two approaches\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Use domain knowledge about the relative importance of features\n– The data mining algorithm determines the weights automatically\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ (ex) support vector machine (SVM)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Produces classification models in which each feature is given a weight\n– (ex) y = 100x1 + 0.01x2 + 20x3 + 4\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• x1 is the most important feature, while x2 is the least important feature\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "39\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

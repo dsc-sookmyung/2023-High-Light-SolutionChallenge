@@ -1,0 +1,49 @@
+{
+	"page_id": 9,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "2. Types of Data Sets\n▪ There are many types of data sets\n– As the field of data mining develops and matures, a greater variety of \ndata sets become available for analysis\n▪ We focus on some of the most common types:\n(1) Record data\n(2) Graph-based data\n(3) Ordered data\n▪ However, these categories do not cover all possibilities and \nother types are certainly possible\n9\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "2. Types of Data Sets\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ There are many types of data sets\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– As the field of data mining develops and matures, a greater variety of \ndata sets become available for analysis\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ We focus on some of the most common types:\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "(1) Record data\n(2) Graph-based data\n(3) Ordered data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ However, these categories do not cover all possibilities and \nother types are certainly possible\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "9\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

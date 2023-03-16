@@ -1,0 +1,74 @@
+{
+	"page_id": 52,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Transformations\n▪ A similarity can be converted to a dissimilarity, or vice versa\n▪ Examples\n– Let s ∈ [0, 1] and d ∈ [0, 1] be a similarity and a dissimilarity, respectively\n– s can be converted to d as follows:\n– Subtract: d = 1 – s\n• (ex) s = 0 → d = 1, s = 1 → d = 0\n– Reciprocal: d = 2/(s + 1) – 1\n• (ex) s = 0 → d = 1, s = 1 → d = 0\n– Exponent: d = e–s\n• (ex) s = 0 → d = 1, s = 1 → d = 0.37\nd\n▪ In general, any monotonic decreasing function can be used\ns\n52\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Transformations\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ A similarity can be converted to a dissimilarity, or vice versa\n▪ Examples\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Let s ∈ [0, 1] and d ∈ [0, 1] be a similarity and a dissimilarity, respectively\n– s can be converted to d as follows:\n– Subtract: d = 1 – s\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) s = 0 → d = 1, s = 1 → d = 0\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Reciprocal: d = 2/(s + 1) – 1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) s = 0 → d = 1, s = 1 → d = 0\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 13,
+			"text": "– Exponent: d = e–s\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) s = 0 → d = 1, s = 1 → d = 0.37\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "d\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ In general, any monotonic decreasing function can be used\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "s\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "52\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

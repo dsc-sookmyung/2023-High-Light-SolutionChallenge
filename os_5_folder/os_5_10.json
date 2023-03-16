@@ -1,0 +1,29 @@
+{
+	"page_id": 10,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "병행성 원리\n• 프로세스 상호작용: 경쟁, 공유, 통신\n10\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 상호작용: 경쟁, 공유, 통신\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "10\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

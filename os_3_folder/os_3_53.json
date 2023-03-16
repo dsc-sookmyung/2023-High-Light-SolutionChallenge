@@ -1,0 +1,49 @@
+{
+	"page_id": 53,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "UNIX SVR4의 프로세스 관리\n• 프로세스 제어\n– fork()\n• 프로세스 테이블에 한 슬롯(slot, 엔트리)를 할당\n• 유일한 프로세스 ID (PID)를 할당\n• 부모의 프로세스 이미지를 복사\n• 부모가 소유하고 있는 모든 파일들의 참조계수(count)를 증가\n• 자식 프로세스를 준비 상태로 설정\n• 부모 프로세스에는 자식의 PID를, 자식 프로세스에는 0을 반환\n– 디스패처(Dispatcher)는 다음 중 하나를 수행\n• 제어를 부모 프로세스가 유지\n• 자식 프로세스에 제어를 넘김\n• 다른 프로세스에게 제어를 넘김\n53\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "UNIX SVR4의 프로세스 관리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 제어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– fork()\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 프로세스 테이블에 한 슬롯(slot, 엔트리)를 할당\n• 유일한 프로세스 ID (PID)를 할당\n• 부모의 프로세스 이미지를 복사\n• 부모가 소유하고 있는 모든 파일들의 참조계수(count)를 증가\n• 자식 프로세스를 준비 상태로 설정\n• 부모 프로세스에는 자식의 PID를, 자식 프로세스에는 0을 반환\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 디스패처(Dispatcher)는 다음 중 하나를 수행\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 제어를 부모 프로세스가 유지\n• 자식 프로세스에 제어를 넘김\n• 다른 프로세스에게 제어를 넘김\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "53\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"page_id": 30,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "2. Sampling\n▪ Select a subset of the data objects to be analyzed\n▪ Motivations for sampling\n– Statisticians: obtaining the entire data set is too expensive\n– Data miner: processing the entire data set is too expensive\n• In terms of memory or processing time\n▪ Key principle for effective sampling\n– Use a representative sample\n• It should have approximately the same property as the original data set\n• (ex) the mean of a sample  the mean of the original data set\n30\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "2. Sampling\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Select a subset of the data objects to be analyzed\n▪ Motivations for sampling\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Statisticians: obtaining the entire data set is too expensive\n– Data miner: processing the entire data set is too expensive\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• In terms of memory or processing time\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Key principle for effective sampling\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Use a representative sample\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• It should have approximately the same property as the original data set\n• (ex) the mean of a sample  the mean of the original data set\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "30\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"page_id": 42,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Mapping the Data to a New Space\n▪ A totally different view of the data can reveal important and \ninteresting features\n▪ Example\n– The following points represented in the Euclidean space (x, y) are difficult \nfor decision trees to classify\n– However, if we represent the points in the polar coordinate system (r, θ), \nit is easy for decision trees to classify the points\n42\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Mapping the Data to a New Space\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ A totally different view of the data can reveal important and \ninteresting features\n▪ Example\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The following points represented in the Euclidean space (x, y) are difficult \nfor decision trees to classify\n– However, if we represent the points in the polar coordinate system (r, θ), \nit is easy for decision trees to classify the points\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "42\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

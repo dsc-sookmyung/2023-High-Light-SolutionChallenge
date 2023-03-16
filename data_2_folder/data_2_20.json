@@ -1,0 +1,54 @@
+{
+	"page_id": 20,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Measurement and Data Collection Errors\n▪ Measurement error\n– Any problem resulting from the measurement process\n• (ex) the numerical difference of the measured and true value (i.e., error)\n▪ Data collection error\n– Errors such as omitting data objects or attribute values, or \ninappropriately including a data object\n• (ex) including similar but unrelated data objects\n?\n?\n?\n?\n?\n?\n20\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Measurement and Data Collection Errors\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Measurement error\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Any problem resulting from the measurement process\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) the numerical difference of the measured and true value (i.e., error)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Data collection error\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Errors such as omitting data objects or attribute values, or \ninappropriately including a data object\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) including similar but unrelated data objects\n?\n?\n?\n?\n?\n?\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "20\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"page_id": 23,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 기술(description)\n• OS 제어 구조(control structures)\n– 각 프로세스 및 자원의 현재 상태에 대한 정보를 유지\n– 보통, OS가 관리하는 각 개체(entity)를 위한 테이블이 구성됨\n• 메모리 테이블\n• I/O 테이블 = 입출력 테이블\n• 파일 테이블\n• 프로세스 테이블\n– 메모리 테이블\n• 프로세스들에 할당된 주기억장치 정보\n• 프로세스들에 할당된 2차 메모리(디스크) 정보\n• 공유 메모리 영역에 접근하기 위한 보호 속성(Protection attributes)\n• 가상 메모리(virtual memory)를 관리하는 필요한 정보\n23\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 기술(description)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• OS 제어 구조(control structures)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 각 프로세스 및 자원의 현재 상태에 대한 정보를 유지\n– 보통, OS가 관리하는 각 개체(entity)를 위한 테이블이 구성됨\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 메모리 테이블\n• I/O 테이블 = 입출력 테이블\n• 파일 테이블\n• 프로세스 테이블\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 메모리 테이블\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• 프로세스들에 할당된 주기억장치 정보\n• 프로세스들에 할당된 2차 메모리(디스크) 정보\n• 공유 메모리 영역에 접근하기 위한 보호 속성(Protection attributes)\n• 가상 메모리(virtual memory)를 관리하는 필요한 정보\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "23\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"page_id": 21,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "이진(binary) 세마포어\n• 이진 세마포어\n– mutex의 역할\n21\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "이진(binary) 세마포어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 이진 세마포어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– mutex의 역할\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "21\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

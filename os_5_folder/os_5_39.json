@@ -1,0 +1,34 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Mesa 모니터\n• 변경 사항\n– csignal()  cnotify()\n– if  while\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Mesa 모니터\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 변경 사항\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– csignal()  cnotify()\n– if  while\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "39\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

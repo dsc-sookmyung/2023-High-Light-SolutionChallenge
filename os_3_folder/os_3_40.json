@@ -1,0 +1,44 @@
+{
+	"page_id": 40,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "프로세스 제어\n• 모드 전환(mode switching) ≡ 모드 전이\n• 처리기 실행 모드\n– 대부분의 처리기는 최소한 두 가지의 수행 모드를 제공\n– 사용자 모드(user mode)\n– 시스템 모드(system mode, control mode, kernel mode)\n• 프로세스 교환 (Process switching)\n– 선점(preemption) 및 디스패치(dispatch)\n– 문맥 교환(context switch)\n40\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "프로세스 제어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 모드 전환(mode switching) ≡ 모드 전이\n• 처리기 실행 모드\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 대부분의 처리기는 최소한 두 가지의 수행 모드를 제공\n– 사용자 모드(user mode)\n– 시스템 모드(system mode, control mode, kernel mode)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 프로세스 교환 (Process switching)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– 선점(preemption) 및 디스패치(dispatch)\n– 문맥 교환(context switch)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "40\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"page_id": 3,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "목 차\n3.1 프로세스(process)란?\n3.2 프로세스 상태 (Process States)\n3.3 프로세스 기술 (Process Description)\n3.4 프로세스 제어 (Process Control)\n3.5 운영체제의 실행 (Execution of the Operating \nSystem) \n3.6 UNIX SVR4의 프로세스 관리\n3\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "목 차\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "3.1 프로세스(process)란?\n3.2 프로세스 상태 (Process States)\n3.3 프로세스 기술 (Process Description)\n3.4 프로세스 제어 (Process Control)\n3.5 운영체제의 실행 (Execution of the Operating \nSystem) \n3.6 UNIX SVR4의 프로세스 관리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "3\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

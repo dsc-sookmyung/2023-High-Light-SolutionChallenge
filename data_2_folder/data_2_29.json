@@ -1,0 +1,64 @@
+{
+	"page_id": 29,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Motivations for Aggregation\n1. The smaller data sets require less memory and processing time\n– Hence, it enables the use of more expensive data mining algorithms\n2. Aggregation can provide a high-level view of the data\n– (ex) each store’s sales → each location’s sales\n3. The behavior of groups of objects is often more stable than \nthat of individual objects\n– (ex) hourly temperature → daily temperature (on average)\n▪ Disadvantage: the potential loss of interesting details\n– (ex) aggregating over months → which day has the highest sales?\n29\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Motivations for Aggregation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "1. The smaller data sets require less memory and processing time\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Hence, it enables the use of more expensive data mining algorithms\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "2. Aggregation can provide a high-level view of the data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) each store’s sales → each location’s sales\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "3. The behavior of groups of objects is often more stable than \nthat of individual objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) hourly temperature → daily temperature (on average)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Disadvantage: the potential loss of interesting details\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) aggregating over months → which day has the highest sales?\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "29\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

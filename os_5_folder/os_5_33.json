@@ -1,0 +1,29 @@
+{
+	"page_id": 33,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "세마포어 구현\n• semWait와 semSignal은 원자적으로 구현되어야 함\n• 하드웨어 또는 펌웨어로 구현 가능\n• Dekker’s 또는 Peterson’s 알고리즘 같은 소프트웨어적\n인 기법으로도 구현 가능\n• 상호 배제를 위해 하드웨어 지원 기법 중에 하나를 사용\n33\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "세마포어 구현\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• semWait와 semSignal은 원자적으로 구현되어야 함\n• 하드웨어 또는 펌웨어로 구현 가능\n• Dekker’s 또는 Peterson’s 알고리즘 같은 소프트웨어적\n인 기법으로도 구현 가능\n• 상호 배제를 위해 하드웨어 지원 기법 중에 하나를 사용\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "33\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

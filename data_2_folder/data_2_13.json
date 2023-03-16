@@ -1,0 +1,54 @@
+{
+	"page_id": 13,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(2) Graph-Based Data\n▪ The data is represented as one or more graphs\n▪ (Case 1) Data with relationships among objects\n– The graph captures relationships among data objects \n• Nodes: data objects\n• Links: the relationships among objects\n– (ex) World Wide Web, social networks\n▪ (Case 2) Data with objects that are graphs\n– Each data object is represented as a graph\n– (ex) chemical compounds\n13\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(2) Graph-Based Data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The data is represented as one or more graphs\n▪ (Case 1) Data with relationships among objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The graph captures relationships among data objects \n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Nodes: data objects\n• Links: the relationships among objects\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) World Wide Web, social networks\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ (Case 2) Data with objects that are graphs\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Each data object is represented as a graph\n– (ex) chemical compounds\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "13\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"page_id": 38,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "신호 기반 모니터\n• 모니터를 이용한 생산자/소비자 문제 해결 방법(계속)\n38\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "신호 기반 모니터\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 모니터를 이용한 생산자/소비자 문제 해결 방법(계속)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "38\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

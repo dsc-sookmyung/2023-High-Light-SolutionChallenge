@@ -1,0 +1,44 @@
+{
+	"page_id": 25,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Duplicate Data\n▪ Data objects that are duplicates of one another\n▪ Two main issues\n① If there are two objects that actually represent a single object, then it is \nimportant to resolve inconsistent values\n② Care needs to be taken to avoid accidentally combining data objects that\nare similar, but not duplicates (e.g., two people with identical names)\n▪ Deduplication\n– The process of dealing with these issues\n25\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Duplicate Data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Data objects that are duplicates of one another\n▪ Two main issues\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "① If there are two objects that actually represent a single object, then it is \nimportant to resolve inconsistent values\n② Care needs to be taken to avoid accidentally combining data objects that\nare similar, but not duplicates (e.g., two people with identical names)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Deduplication\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– The process of dealing with these issues\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "25\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"page_id": 40,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "5. Feature Creation\n▪ It is frequently possible to create, from the original attributes, \nnew attributes\n– That captures the important information in a data set much more \neffectively\n▪ Two related methodologies\n① Feature extraction\n② Mapping the data to a new space\n40\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "5. Feature Creation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ It is frequently possible to create, from the original attributes, \nnew attributes\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– That captures the important information in a data set much more \neffectively\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Two related methodologies\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "① Feature extraction\n② Mapping the data to a new space\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "40\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"page_id": 2,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Before the Lecture…\nData Mining\n2\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "Data Mining\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "2\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

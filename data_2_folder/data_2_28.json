@@ -1,0 +1,49 @@
+{
+	"page_id": 28,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "1. Aggregation\n▪ Combine two or more objects into a single object\n– Because sometimes “less is more”\n▪ Example: customer purchase data set\n① Replace all the transactions of a single store location with a single object\n② Reduce the possible values for Date from 365 days to 12 months\n①\n②\nItems\nStore Location\nTotal Price\n:\n:\n:\nWatch, Battery, …\nChicago\n$428.98\nShoes, …\nMinneapolis\n$195.02\nItems\n:\nDate\nTotal Price\n:\n:\nWatch, Battery, Shoes, …\n09/06\n$1523.75\n…\n:\n…\n…\n…\n:\n…\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "1. Aggregation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Combine two or more objects into a single object\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Because sometimes “less is more”\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Example: customer purchase data set\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "① Replace all the transactions of a single store location with a single object\n② Reduce the possible values for Date from 365 days to 12 months\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "①\n②\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "…\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

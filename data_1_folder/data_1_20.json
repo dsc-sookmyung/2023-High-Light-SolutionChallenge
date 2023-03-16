@@ -1,0 +1,54 @@
+{
+	"page_id": 20,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Applications: Business and Industry (2/2)\n▪ Also, there are massive amounts of data on the Internet\n– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n• Product recommendation\n• Spam filtering\n• Social connection suggestion\n▪ Mobile sensors and devices also generate large amounts of data\n– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\n20\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Applications: Business and Industry (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Also, there are massive amounts of data on the Internet\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Product recommendation\n• Spam filtering\n• Social connection suggestion\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Mobile sensors and devices also generate large amounts of data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "20\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

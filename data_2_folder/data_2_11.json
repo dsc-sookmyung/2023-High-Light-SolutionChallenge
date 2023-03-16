@@ -1,0 +1,44 @@
+{
+	"page_id": 11,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(1) Record Data\n▪ The data set is a collection of records (data objects)\n– Each record consists of a fixed set of fields (attributes)\n▪ There is no explicit relationship among records or fields\n▪ Usually stored either in flat files or in relational databases\n– However, data mining often does not use any of the additional \ninformation available in a relational database\n– Rather, the database serves as a convenient place to find records\n11\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(1) Record Data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The data set is a collection of records (data objects)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Each record consists of a fixed set of fields (attributes)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ There is no explicit relationship among records or fields\n▪ Usually stored either in flat files or in relational databases\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– However, data mining often does not use any of the additional \ninformation available in a relational database\n– Rather, the database serves as a convenient place to find records\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "11\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

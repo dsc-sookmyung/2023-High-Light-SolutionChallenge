@@ -1,0 +1,34 @@
+{
+	"page_id": 7,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "병행성 원리\n• 병행성과 관련된 주요 용어\n 그 외: 공유 자원(Shared Resource), 동기화(Synchronization)\n7\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 병행성과 관련된 주요 용어\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": " 그 외: 공유 자원(Shared Resource), 동기화(Synchronization)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "7\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

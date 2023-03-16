@@ -1,0 +1,64 @@
+{
+	"page_id": 15,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "(3) Ordered Data (1/2)\n▪ The attribute values have order relationships in time or space\n▪ (Case 1) Sequential transaction data\n– Each transaction has a timestamp associated with it\n– It is possible to find sequential patterns\n• (ex) people who buy DVD players tend to buy DVDs\n– (ex) retail transaction data, purchase history\n▪ (Case 2) Time series data\n– Each record is a time series (i.e., a series of measurements taken over time)\n– It is important to consider temporal autocorrelation\n• i.e., two values close in time are often very similar\n– (ex) the daily prices of stocks, temperature data\n15\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "(3) Ordered Data (1/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ The attribute values have order relationships in time or space\n▪ (Case 1) Sequential transaction data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Each transaction has a timestamp associated with it\n– It is possible to find sequential patterns\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) people who buy DVD players tend to buy DVDs\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) retail transaction data, purchase history\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ (Case 2) Time series data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Each record is a time series (i.e., a series of measurements taken over time)\n– It is important to consider temporal autocorrelation\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• i.e., two values close in time are often very similar\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– (ex) the daily prices of stocks, temperature data\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "15\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

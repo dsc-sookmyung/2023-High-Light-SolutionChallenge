@@ -1,0 +1,59 @@
+{
+	"page_id": 55,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "1. Distances (2/2)\n▪ Generalization of the Euclidean distance (Minkowski distance)\n– r = 1: Manhattan distance (L1 norm)\n• d(x, y) = |x1 – y1| + |x2 – y2| + … + |xn – yn|\n– r = 2: Euclidean distance (L2 norm)\n– r = ∞: Supremum distance (Lmax or L∞ norm)\n•\n= max\n𝑘\n(|𝑥𝑘 − 𝑦𝑘|)\n55\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "1. Distances (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ Generalization of the Euclidean distance (Minkowski distance)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– r = 1: Manhattan distance (L1 norm)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• d(x, y) = |x1 – y1| + |x2 – y2| + … + |xn – yn|\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– r = 2: Euclidean distance (L2 norm)\n– r = ∞: Supremum distance (Lmax or L∞ norm)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "•\n= max\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 13,
+			"text": "𝑘\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "(|𝑥𝑘 − 𝑦𝑘|)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "55\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

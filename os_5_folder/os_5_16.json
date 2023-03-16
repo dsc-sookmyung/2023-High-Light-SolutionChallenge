@@ -1,0 +1,29 @@
+{
+	"page_id": 16,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "하드웨어 지원\n• 특별한 기계 명령어 사용 예\n16\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "하드웨어 지원\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 특별한 기계 명령어 사용 예\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "16\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

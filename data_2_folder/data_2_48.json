@@ -1,0 +1,59 @@
+{
+	"page_id": 48,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "7. Variable Transformation (2/2)\n▪ (Type 2) Normalization or standardization\n– Make an entire set of values have a particular property\n– (ex) “Standardizing a variable” in statistics 𝑥′ = (𝑥 − ҧ𝑥)/𝑠𝑥\n•\nҧ𝑥: the mean of the attribute values\n• 𝑠𝑥: the standard deviation of the attribute values\n• Creates a new variable that has a mean of 0 and a standard deviation of 1\n– Often used to avoid having a variable with large values dominate the \nresults of analysis\n• (ex) Consider comparing people based on age and income\n• The comparison between people will be dominated by differences in income\n– (ex) person1 = (24, 25000),  person2 = (67, 25050),  person3 = (25, 25100)\n48\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "7. Variable Transformation (2/2)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "▪ (Type 2) Normalization or standardization\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Make an entire set of values have a particular property\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 15,
+			"text": "– (ex) “Standardizing a variable” in statistics 𝑥′ = (𝑥 − ҧ𝑥)/𝑠𝑥\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "•\nҧ𝑥: the mean of the attribute values\n• 𝑠𝑥: the standard deviation of the attribute values\n• Creates a new variable that has a mean of 0 and a standard deviation of 1\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 20,
+			"text": "– Often used to avoid having a variable with large values dominate the \nresults of analysis\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 18,
+			"text": "• (ex) Consider comparing people based on age and income\n• The comparison between people will be dominated by differences in income\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 16,
+			"text": "– (ex) person1 = (24, 25000),  person2 = (67, 25050),  person3 = (25, 25100)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 14,
+			"text": "48\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}
