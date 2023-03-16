@@ -1,0 +1,1654 @@
+{
+	"1": {
+		"page_id": 1,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3장 프로세스 기술(Description) 및\n제어(Control)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 40,
+				"text": "제어(Control)\n"
+			}
+		]
+	},
+	"2": {
+		"page_id": 2,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3장의 학습 목표\n• 프로세스(process)를 정의하고, 프로세스들과 프로세스\n제어 블록들 사이의 관계를 설명할 수 있다. \n• 프로세스 상태의 개념을 설명하고, 프로세스들의 상태\n전이에 대해 설명할 수 있다. \n• 프로세스들을 관리하기 위해, 운영체제가 사용하는 자료\n구조 및 자료구조 구성요소들의 목적을 나열하고 설명할\n수 있다. \n• 운영체제에서 프로세스 제어를 위한 요구사항들을 평가\n할 수 있다. \n• OS 코드의 실행에 관련된 이슈들을 이해할 수 있다. \n• UNIX SVR4의 프로세스 관리 기법을 설명할 수 있다. \n2\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "3장의 학습 목표\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스(process)를 정의하고, 프로세스들과 프로세스\n제어 블록들 사이의 관계를 설명할 수 있다. \n• 프로세스 상태의 개념을 설명하고, 프로세스들의 상태\n전이에 대해 설명할 수 있다. \n• 프로세스들을 관리하기 위해, 운영체제가 사용하는 자료\n구조 및 자료구조 구성요소들의 목적을 나열하고 설명할\n수 있다. \n• 운영체제에서 프로세스 제어를 위한 요구사항들을 평가\n할 수 있다. \n• OS 코드의 실행에 관련된 이슈들을 이해할 수 있다. \n• UNIX SVR4의 프로세스 관리 기법을 설명할 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "2\n"
+			}
+		]
+	},
+	"3": {
+		"page_id": 3,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3\n목 차\n3.1 프로세스(process)란?\n3.2 프로세스 상태 (Process States)\n3.3 프로세스 기술 (Process Description)\n3.4 프로세스 제어 (Process Control)\n3.5 운영체제의 실행 (Execution of the Operating \nSystem) \n3.6 UNIX SVR4의 프로세스 관리\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "목 차\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "3.1 프로세스(process)란?\n3.2 프로세스 상태 (Process States)\n3.3 프로세스 기술 (Process Description)\n3.4 프로세스 제어 (Process Control)\n3.5 운영체제의 실행 (Execution of the Operating \nSystem) \n3.6 UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "3\n"
+			}
+		]
+	},
+	"4": {
+		"page_id": 4,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "운영체제 요구조건\n• 프로세스 관리: 기본 요구 조건\n– 운영체제는 적절한 응답 시간을 제공하면서 처리기 이용률을\n극대화할 수 있도록 여러 프로세스 수행을 인터리빙(interleaving)\n해야 한다. \n– 운영체제는 교착상태를 회피함과 동시에 특정 정책(예를 들어\n어떤 함수 또는 응용에 보다 높은 우선순위를 부여)에 부합하도\n록 자원을 프로세스에게 할당해야 한다. \n– 운영체제는 프로세스 간 통신(Interprocess Communication)과\n사용자의 프로세스 생성을 지원해야 하는데, 이들 모두 응용을\n구조화하는데 도움이 될 수 있다. \n4\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "운영체제 요구조건\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 관리: 기본 요구 조건\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 운영체제는 적절한 응답 시간을 제공하면서 처리기 이용률을\n극대화할 수 있도록 여러 프로세스 수행을 인터리빙(interleaving)\n해야 한다. \n– 운영체제는 교착상태를 회피함과 동시에 특정 정책(예를 들어\n어떤 함수 또는 응용에 보다 높은 우선순위를 부여)에 부합하도\n록 자원을 프로세스에게 할당해야 한다. \n– 운영체제는 프로세스 간 통신(Interprocess Communication)과\n사용자의 프로세스 생성을 지원해야 하는데, 이들 모두 응용을\n구조화하는데 도움이 될 수 있다. \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "4\n"
+			}
+		]
+	},
+	"5": {
+		"page_id": 5,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3.1 프로세스란?\n• 배경 지식\n– 컴퓨터 플랫폼은 하드웨어 자원들의 집합으로 구성\n– 컴퓨터 응용은 어떤 업무를 수행하기 위해 개발됨\n– 주어진 하드웨어 플랫폼 상에서 직접 응용을 작성하는 것은 비효율\n적\n• 공통 루틴 (common routines) 개발 유도\n• 자원 공유 (resource sharing)를 위한 소프트웨어 필요\n• 자원 보호 (resource protection) 기법 필요\n– OS는 응용이 사용할 수 있는 편리하고, 풍부하고, 안전하고, 일관성\n있는 인터페이스를 제공\n– OS는 자원들에 대해 균일하고 추상화된 표현(representation)을 제\n공\n• 응용은 해당 자원을 요청하고 접근 가능\n5\n☞ Process models the execution of applications \n(main concept for multiprogramming, time sharing system) \n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "3.1 프로세스란?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 배경 지식\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 컴퓨터 플랫폼은 하드웨어 자원들의 집합으로 구성\n– 컴퓨터 응용은 어떤 업무를 수행하기 위해 개발됨\n– 주어진 하드웨어 플랫폼 상에서 직접 응용을 작성하는 것은 비효율\n적\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 공통 루틴 (common routines) 개발 유도\n• 자원 공유 (resource sharing)를 위한 소프트웨어 필요\n• 자원 보호 (resource protection) 기법 필요\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– OS는 응용이 사용할 수 있는 편리하고, 풍부하고, 안전하고, 일관성\n있는 인터페이스를 제공\n– OS는 자원들에 대해 균일하고 추상화된 표현(representation)을 제\n공\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 응용은 해당 자원을 요청하고 접근 가능\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "☞ Process models the execution of applications \n(main concept for multiprogramming, time sharing system) \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "5\n"
+			}
+		]
+	},
+	"6": {
+		"page_id": 6,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3.1 프로세스란? (계속)\n• 정의\n– 수행 중인 프로그램 (A program in execution): active entity\n– 컴퓨터에서 수행 중인 한 프로그램의 인스턴스(instance)\n– 한 처리기 상에 할당되어 실행될 수 있는 개체\n– 명령들의 순차 실행, 현재 상태, 연관되어 있는 시스템 명령들의\n집합 등으로 특징지어지는 ‘활동의 단위’(a unit of activity)\n6\n• 구조 (Structures)\n– 프로그램 코드 (program code)\n– 일련의 데이터 (a set of data), stack (user stack vs. kernel stack)\n– 문맥: 프로세스 정보 (process information)\n• Program\n– Passive entity (code and data in a file system)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "3.1 프로세스란? (계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 정의\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 수행 중인 프로그램 (A program in execution): active entity\n– 컴퓨터에서 수행 중인 한 프로그램의 인스턴스(instance)\n– 한 처리기 상에 할당되어 실행될 수 있는 개체\n– 명령들의 순차 실행, 현재 상태, 연관되어 있는 시스템 명령들의\n집합 등으로 특징지어지는 ‘활동의 단위’(a unit of activity)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 구조 (Structures)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로그램 코드 (program code)\n– 일련의 데이터 (a set of data), stack (user stack vs. kernel stack)\n– 문맥: 프로세스 정보 (process information)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Program\n– Passive entity (code and data in a file system)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "6\n"
+			}
+		]
+	},
+	"7": {
+		"page_id": 7,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 구성요소(element)\n• 프로그램이 실행될 때, 해당 프로세스는 여러 구성요소\n들에 의해 유일하게 특징지어질 수 있음\n7\n식별자\n(identifier)\n상태\n(state)\n우선순위\n(priority)\n프로그램 카운터\n(program counter)\n메모리 포인터\n(memory pointers)\n문맥 데이터\n(context data)\n입출력 상태 정보\n(I/O status \ninformation)\n어카운팅 정보\n(accounting \ninformation)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 구성요소(element)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로그램이 실행될 때, 해당 프로세스는 여러 구성요소\n들에 의해 유일하게 특징지어질 수 있음\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "식별자\n(identifier)\n우선순위\n(priority)\n상태\n(state)\n프로그램 카운터\n(program counter)\n메모리 포인터\n문맥 데이터\n(memory pointers)\n(context data)\n입출력 상태 정보\n어카운팅 정보\n(I/O status \ninformation)\n(accounting \ninformation)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "7\n"
+			}
+		]
+	},
+	"8": {
+		"page_id": 8,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태: 수행 궤적 (1/3)\n• A, B, C 프로세스들의 수행 궤적\n8\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태: 수행 궤적 (1/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• A, B, C 프로세스들의 수행 궤적\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "8\n"
+			}
+		]
+	},
+	"9": {
+		"page_id": 9,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태: 수행 궤적 (2/3)\n9\n• 처리기 관점에서 본 프로\n세스들의 수행 궤적\n1 \n5000 \n2 \n5001 \n3 \n5002 \n4 \n5003 \n5 \n5004 \n6 \n5005 \n-------------------- Timeout \n7 \n100 \n8 \n101 \n9 \n102 \n10 \n103 \n11 \n104 \n12 \n105 \n13 \n8000 \n14 \n8001 \n15 \n8002 \n16 \n8003 \n----------------I/O Request \n17 \n100 \n18 \n101 \n19 \n102 \n20 \n103 \n21 \n104 \n22 \n105 \n23 \n12000 \n24 \n12001 \n25 \n12002 \n26 \n12003 \n \n27 \n12004 \n28 \n12005 \n--------------------Timeout \n29 \n100 \n30 \n101 \n31 \n102 \n32 \n103 \n33 \n104 \n34 \n105 \n35 \n5006 \n36 \n5007 \n37 \n5008 \n38 \n5009 \n39 \n5010 \n40 \n5011 \n--------------------Timeout \n41 \n100 \n42 \n101 \n43 \n102 \n44 \n103 \n45 \n104 \n46 \n105 \n47 \n12006 \n48 \n12007 \n49 \n12008 \n50 \n12009 \n51 \n12010 \n52 \n12011 \n--------------------Timeout \n \n \n \n100 = Starting address of dispatcher program \n \nShaded areas indicate execution of dispatcher process; \n \nfirst and third columns count instruction cycles; \n \nsecond and fourth columns show address of instruction being executed \n \nFigure 3.4  Combined Trace of Processes of Figure 3.2 \n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태: 수행 궤적 (2/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 처리기 관점에서 본 프로\n세스들의 수행 궤적\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "9\n"
+			}
+		]
+	},
+	"10": {
+		"page_id": 10,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태: 수행 궤적 (3/3)\n10\n• Timing Diagram: 프로세스 상태 도입\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태: 수행 궤적 (3/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Timing Diagram: 프로세스 상태 도입\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "10\n"
+			}
+		]
+	},
+	"11": {
+		"page_id": 11,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n• 2-상태 프로세스 모델\n– 수행(Running) 및 비수행(Not-running)\n11\n each entry of the queue is a pointer to the PCB or linked \nlist of PCBs\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 2-상태 프로세스 모델\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 수행(Running) 및 비수행(Not-running)\n each entry of the queue is a pointer to the PCB or linked \nlist of PCBs\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "11\n"
+			}
+		]
+	},
+	"12": {
+		"page_id": 12,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n12\n• 프로세스 생성:  주소공간 생성 및 자료구조 구축\n– fork (Linux) 또는 CreateProcess (Windows)를 이용함\n– 부모 프로세스 대 자식 프로세스\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 생성:  주소공간 생성 및 자료구조 구축\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– fork(Linux) 또는 CreateProcess(Windows)를 이용함\n– 부모 프로세스 대 자식 프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "12\n"
+			}
+		]
+	},
+	"13": {
+		"page_id": 13,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n13\n• 프로세스 종료\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 종료\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "13\n"
+			}
+		]
+	},
+	"14": {
+		"page_id": 14,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n14\n• 프로세스 종료 (계속)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 종료 (계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "14\n"
+			}
+		]
+	},
+	"15": {
+		"page_id": 15,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n• 5-상태 프로세스 모델(5-state model)\n– 수행 (Running)\n– 준비 (Ready)\n– 블록 (Blocked)\n– 생성 (New)\n– 종료 (Exit)\n15\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 5-상태 프로세스 모델(5-state model)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 수행 (Running)\n– 준비 (Ready)\n– 블록 (Blocked)\n– 생성 (New)\n– 종료 (Exit)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "15\n"
+			}
+		]
+	},
+	"16": {
+		"page_id": 16,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n• 5-상태 프로세스 모델:  상태 전이\n– Null  생성(New): 생성(create)\n– 생성  준비(Ready): 승인(admit)\n– 준비  수행(Running): 디스패치(dispatch)\n– 수행  준비: 선점 (시간만료 또는 높은 우선순위)\n– 수행  블록(Blocked): 사건 대기 (수면)\n– 블록  준비: 사건 발생 (깨움)\n– 수행  종료(Exit): 종료 (또는 완료)\n– 준비  종료\n– 블록  종료\n16\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 5-상태 프로세스 모델:  상태 전이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Null  생성(New): 생성(create)\n– 생성  준비(Ready): 승인(admit)\n– 준비  수행(Running): 디스패치(dispatch)\n– 수행  준비: 선점 (시간만료 또는 높은 우선순위)\n– 수행  블록(Blocked): 사건 대기 (수면)\n– 블록  준비: 사건 발생 (깨움)\n– 수행  종료(Exit): 종료 (또는 완료)\n– 준비  종료\n– 블록  종료\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "16\n"
+			}
+		]
+	},
+	"17": {
+		"page_id": 17,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n17\n• 5-상태 프로세스 모델\n– 여러 큐를 사용\n– 특히, 여러 개의 블록 큐\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 5-상태 프로세스 모델\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 여러 큐를 사용\n– 특히, 여러 개의 블록 큐\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "17\n"
+			}
+		]
+	},
+	"18": {
+		"page_id": 18,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n18\n• 보류 상태의 프로세스(Suspended process) 도입\n• Swapping\n– 스왑-인(swap-in) 및 스왑-아웃(swap-out)\n– 스왑-아웃\n• 종료되지 않은 프로세스의 전체 이미지 (또는 일부 이미지)를 주기\n억장치로부터 ‘스왑 공간’(디스크의 일부로 swap space 또는 swap \narea)으로 이동시키는 것\n– 스왑-인\n• 스왑-아웃된 프로세스의 전체 이미지 (또는 일부 이미지)를 스왑 공\n간으로부터 주기억장치로 적재하는 것\n• Swapping도 I/O 연산임\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 보류 상태의 프로세스(Suspended process) 도입\n• Swapping\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 스왑-인(swap-in) 및 스왑-아웃(swap-out)\n– 스왑-아웃\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 종료되지 않은 프로세스의 전체 이미지 (또는 일부 이미지)를 주기\n억장치로부터 ‘스왑 공간’(디스크의 일부로 swap space 또는 swap \narea)으로 이동시키는 것\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 스왑-인\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 스왑-아웃된 프로세스의 전체 이미지 (또는 일부 이미지)를 스왑 공\n간으로부터 주기억장치로 적재하는 것\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• Swapping도 I/O 연산임\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "18\n"
+			}
+		]
+	},
+	"19": {
+		"page_id": 19,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n19\n• 보류 상태를 가진 프로세스 상태 전이도\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 보류 상태를 가진 프로세스 상태 전이도\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "19\n"
+			}
+		]
+	},
+	"20": {
+		"page_id": 20,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n• 스와핑의 필요성\n– 더 많은 가용 메모리(free memory)를 확보하기 위해\n– 주기억장치에 준비 상태의 프로세스가 없을 때\n20\n• 보류 (Suspension)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 스와핑의 필요성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 더 많은 가용 메모리(free memory)를 확보하기 위해\n– 주기억장치에 준비 상태의 프로세스가 없을 때\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 보류 (Suspension)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "20\n"
+			}
+		]
+	},
+	"21": {
+		"page_id": 21,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 상태\n• 보류 프로세스를 포함한 상태 전이\n– Blocked  Blocked/Suspend: 보류, 즉 스왑-아웃\n– Blocked/Suspend  Ready/Suspend: 보류 상태에서 깨움\n– Ready/Suspend  Ready: 활성화(activate), 즉 스왑-인\n– Ready  Ready/Suspend: 보류, 즉 스왑-아웃\n– New  Ready/Suspended \n– Blocked/Suspend  Blocked\n– Running  Ready/Suspend\n– 임의 상태  Exit\n21\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 상태\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 보류 프로세스를 포함한 상태 전이\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Blocked  Blocked/Suspend: 보류, 즉 스왑-아웃\n– Blocked/Suspend  Ready/Suspend: 보류 상태에서 깨움\n– Ready/Suspend  Ready: 활성화(activate), 즉 스왑-인\n– Ready  Ready/Suspend: 보류, 즉 스왑-아웃\n– New  Ready/Suspended \n– Blocked/Suspend  Blocked\n– Running  Ready/Suspend\n– 임의 상태  Exit\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "21\n"
+			}
+		]
+	},
+	"22": {
+		"page_id": 22,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술(description)\n22\n• OS: 프로세스가 사용하는 자원을 관리\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술(description)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS: 프로세스가 사용하는 자원을 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "22\n"
+			}
+		]
+	},
+	"23": {
+		"page_id": 23,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술(description)\n• OS 제어 구조(control structures)\n– 각 프로세스 및 자원의 현재 상태에 대한 정보를 유지\n– 보통, OS가 관리하는 각 개체(entity)를 위한 테이블이 구성됨\n• 메모리 테이블\n• I/O 테이블 = 입출력 테이블\n• 파일 테이블\n• 프로세스 테이블\n– 메모리 테이블\n• 프로세스들에 할당된 주기억장치 정보\n• 프로세스들에 할당된 2차 메모리(디스크) 정보\n• 공유 메모리 영역에 접근하기 위한 보호 속성(Protection attributes)\n• 가상 메모리(virtual memory)를 관리하는 필요한 정보\n23\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술(description)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS 제어 구조(control structures)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 각 프로세스 및 자원의 현재 상태에 대한 정보를 유지\n– 보통, OS가 관리하는 각 개체(entity)를 위한 테이블이 구성됨\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 메모리 테이블\n• I/O 테이블 = 입출력 테이블\n• 파일 테이블\n• 프로세스 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 메모리 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스들에 할당된 주기억장치 정보\n• 프로세스들에 할당된 2차 메모리(디스크) 정보\n• 공유 메모리 영역에 접근하기 위한 보호 속성(Protection attributes)\n• 가상 메모리(virtual memory)를 관리하는 필요한 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "23\n"
+			}
+		]
+	},
+	"24": {
+		"page_id": 24,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: OS\n24\n• OS 제어 테이블의 일반적인 구조 (그림 3.11)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: OS\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS 제어 테이블의 일반적인 구조 (그림 3.11)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "24\n"
+			}
+		]
+	},
+	"25": {
+		"page_id": 25,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: OS\n• OS 제어 구조 (계속)\n– I/O 테이블\n• I/O 연산에 필요한 정보 유지\n– I/O 장치 이용 가능 여부 또는 특정 프로세스에 할당되어 있음을\n표시\n• I/O 전송에서 소스(source) 또는 목적지 주소로 사용될 주기억장치에\n서의 위치\n– 파일 테이블\n• 2차 메모리에서의 위치\n• 현재 상태, 속성(Attributes)\n• 파일 시스템을 관리하는데 필요한 정보\n– 프로세스 테이블\n• 프로세스의 위치 정보\n• 각 프로세스들의 프로세스 제어 블록(PCB) 목록을 갖고 있다.\n25\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: OS\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS 제어 구조 (계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– I/O 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• I/O 연산에 필요한 정보 유지\n– I/O 장치 이용 가능 여부 또는 특정 프로세스에 할당되어 있음을\n표시\n• I/O 전송에서 소스(source) 또는 목적지 주소로 사용될 주기억장치에\n서의 위치\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 파일 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 2차 메모리에서의 위치\n• 현재 상태, 속성(Attributes)\n• 파일 시스템을 관리하는데 필요한 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스의 위치 정보\n• 각 프로세스들의 프로세스 제어 블록(PCB) 목록을 갖고 있다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "25\n"
+			}
+		]
+	},
+	"26": {
+		"page_id": 26,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "26\n프로세스 제어 블록: process table\n• 프로세스 테이블(계속)\n– OS는 각 프로세스의 PCB를 가리키는 포인터들의 테이블\n– OS로 하여금 PCB를 빠르게 참조할 수 있게 해준다.\n– 프로세스가 종료될 때, OS는 프로세스 테이블에서 종료되는 프로\n세스에 해당하는 PCB 포인터를 지우고, 그 프로세스가 가지고 있\n던 모든 자원들을 반납한다.\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어 블록: process table\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 테이블(계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– OS는 각 프로세스의 PCB를 가리키는 포인터들의 테이블\n– OS로 하여금 PCB를 빠르게 참조할 수 있게 해준다.\n– 프로세스가 종료될 때, OS는 프로세스 테이블에서 종료되는 프로\n세스에 해당하는 PCB 포인터를 지우고, 그 프로세스가 가지고 있\n던 모든 자원들을 반납한다.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "26\n"
+			}
+		]
+	},
+	"27": {
+		"page_id": 27,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "27\n프로세스 제어 블록: process table\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어 블록: process table\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "27\n"
+			}
+		]
+	},
+	"28": {
+		"page_id": 28,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n28\n• 프로세스는 어디에 위치하나?  그림 3.11 참조\n• 프로세스 속성이란?\n– 프로세스를 제어하기 위해 OS가 사용하는 정보\n– 프로세스 제어 블록 ≡ 속성들의 집합\n• PCB ≡ 태스크제어블록 ≡ 프로세스 디스크립터(descriptor)\n• 프로세스 이미지 (process image)\n– 프로그램 (code 또는 text)\n– 데이터\n– 스택/힙\n– PCB (Process Control Block)\n• 프로세스 식별\n• 처리기 상태 정보\n• 프로세스 제어 정보\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스는 어디에 위치하나?  그림 3.11 참조\n• 프로세스 속성이란?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스를 제어하기 위해 OS가 사용하는 정보\n– 프로세스 제어 블록 ≡ 속성들의 집합\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• PCB ≡ 태스크제어블록 ≡ 프로세스 디스크립터(descriptor)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 이미지 (process image)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로그램 (code 또는 text)\n– 데이터\n– 스택/힙\n– PCB (Process Control Block)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스 식별\n• 처리기 상태 정보\n• 프로세스 제어 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "28\n"
+			}
+		]
+	},
+	"29": {
+		"page_id": 29,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "29\n프로세스\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "29\n"
+			}
+		]
+	},
+	"30": {
+		"page_id": 30,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "30\n프로세스 기술: 프로세스 제어 구조\n• 프로세스 이미지\n프로세스제어블록(PCB)\n텍스트(코드, 명령어)\n데이터(전역변수)\n스택(지역변수,매개변수)\n힙(동적 메모리 할당)\nfree area\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 이미지\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "프로세스제어블록(PCB)\n텍스트(코드, 명령어)\n데이터(전역변수)\n힙(동적 메모리 할당)\nfree area\n스택(지역변수,매개변수)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "30\n"
+			}
+		]
+	},
+	"31": {
+		"page_id": 31,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "31\n프로세스 기술: 프로세스 제어 구조\n• PCB\n– 프로세스 제어 블록\n(Process Control Block)\n– OS에 의해 관리\n– 다수의 프로세스를 지원하고\n다중프로그래밍을 제공할 수\n있게 지원하는 주요 자료구조\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• PCB\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스 제어 블록\n(Process Control Block)\n– OS에 의해 관리\n– 다수의 프로세스를 지원하고\n다중프로그래밍을 제공할 수\n있게 지원하는 주요 자료구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "31\n"
+			}
+		]
+	},
+	"32": {
+		"page_id": 32,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "32\n프로세스 기술: 프로세스 제어 구조\n•\nPCB  (계속)\n– 프로세스 식별: 숫자로 된 식별자\n• PID, PPID, UID, … \n– 처리기 상태 정보\n• User-Visible Registers :사용자가 이용 가능\n• 제어 및 상태 레지스터\n– Program counter, Condition codes, Status information\n• 스택 포인터\n– 프로세스 제어 정보\n• 스케줄링 및 상태 정보\n– Process state, Priority, Scheduling-related information, Event\n• 다른 프로세스들 간의 포인터 정보\n• 프로세스간 통신\n• 프로세스 권한\n• 메모리 관리\n• 자원 소유권 및 이용률\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• PCB  (계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 프로세스 식별: 숫자로 된 식별자\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• PID, PPID, UID, … \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 처리기 상태 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• User-Visible Registers :사용자가 이용 가능\n• 제어 및 상태 레지스터\n– Program counter, Condition codes, Status information\n• 스택 포인터\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "– 프로세스 제어 정보\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "• 스케줄링 및 상태 정보\n– Process state, Priority, Scheduling-related information, Event\n• 다른 프로세스들 간의 포인터 정보\n• 프로세스간 통신\n• 프로세스 권한\n• 메모리 관리\n• 자원 소유권 및 이용률\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "32\n"
+			}
+		]
+	},
+	"33": {
+		"page_id": 33,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n33\n• PCB의 전형적인 구성요소\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• PCB의 전형적인 구성요소\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "33\n"
+			}
+		]
+	},
+	"34": {
+		"page_id": 34,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n34\n• PCB의 전형적인 구성요소 (계속)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• PCB의 전형적인 구성요소 (계속)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "34\n"
+			}
+		]
+	},
+	"35": {
+		"page_id": 35,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n• 프로그램 상태 워드 (PSW)\n– 예: x86 상에서 EFLAGS 레지스터\n35\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로그램 상태 워드 (PSW)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 예: x86 상에서 EFLAGS 레지스터\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "35\n"
+			}
+		]
+	},
+	"36": {
+		"page_id": 36,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n36\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "36\n"
+			}
+		]
+	},
+	"37": {
+		"page_id": 37,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "37\n프로세스 기술: 프로세스 제어 구조\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "37\n"
+			}
+		]
+	},
+	"38": {
+		"page_id": 38,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n• 가상 메모리에서 사용자 프로세스 (그림 3.13)\n38\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 가상 메모리에서 사용자 프로세스 (그림 3.13)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "38\n"
+			}
+		]
+	},
+	"39": {
+		"page_id": 39,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 기술: 프로세스 제어 구조\n• 프로세스 리스트 구조\n39\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 기술: 프로세스 제어 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 리스트 구조\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "39\n"
+			}
+		]
+	},
+	"40": {
+		"page_id": 40,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 제어\n• 모드 전환(mode switching) ≡ 모드 전이\n• 처리기 실행 모드\n– 대부분의 처리기는 최소한 두 가지의 수행 모드를 제공\n– 사용자 모드(user mode)\n– 시스템 모드(system mode, control mode, kernel mode)\n• 프로세스 교환 (Process switching)\n– 선점(preemption) 및 디스패치(dispatch)\n– 문맥 교환(context switch)\n40\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 모드 전환(mode switching) ≡ 모드 전이\n• 처리기 실행 모드\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 대부분의 처리기는 최소한 두 가지의 수행 모드를 제공\n– 사용자 모드(user mode)\n– 시스템 모드(system mode, control mode, kernel mode)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 교환 (Process switching)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 선점(preemption) 및 디스패치(dispatch)\n– 문맥 교환(context switch)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "40\n"
+			}
+		]
+	},
+	"41": {
+		"page_id": 41,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 제어: 모드 전환(Mode Switch)\n•\n수행 모드가 전환(switch)될 때는?\n41\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어: 모드 전환(Mode Switch)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "• 수행 모드가 전환(switch)될 때는?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "41\n"
+			}
+		]
+	},
+	"42": {
+		"page_id": 42,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 제어: 프로세스 교환\n• 프로세스 교환을 유발하는 사건들\n– Clock interrupt:  최대 허용된 시간단위(time slice)가 지나면 발\n생\n• 수행  준비\n– I/O interrupt\n• 블록  준비\n– 메모리 폴트 (페이지 부재)\n• 수행  블록\n– 트랩 (Trap)\n• 수행 중에 발생한 오류 및 예외상황(exception)\n• 해당 프로세스가 종료될 수도 있음  복구 불가능한 상황\n– 수퍼바이저 호출 (Supervisor call)\n• file open 등\n• 이 때 모드 전환 발생, 필요하면 프로세스 교환\n42\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어: 프로세스 교환\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 교환을 유발하는 사건들\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Clock interrupt:  최대 허용된 시간단위(time slice)가 지나면 발\n생\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행  준비\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– I/O interrupt\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 블록  준비\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 메모리 폴트 (페이지 부재)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행  블록\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 트랩 (Trap)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 수행 중에 발생한 오류 및 예외상황(exception)\n• 해당 프로세스가 종료될 수도 있음  복구 불가능한 상황\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 수퍼바이저 호출 (Supervisor call)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• file open 등\n• 이 때 모드 전환 발생, 필요하면 프로세스 교환\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "42\n"
+			}
+		]
+	},
+	"43": {
+		"page_id": 43,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 제어: 프로세스 교환\n•\n프로세스 상태 변경(change)\n1. 프로그램 카운터 및 다른 레지스터들을 포함하여 처리기의 문\n맥을 저장\n2. 현재 수행 상태에 있는 프로세스(예로 PA)의 PCB를 갱신\n3. 그 PCB를 준비큐, 블록큐, 또는 준비/보류큐 중의 하나에 삽입\n4. 실행할 다른 프로세스(예로 PB)를 선택\n5. 새로 선택된 프로세스(PB)의 PCB를 갱신\n6. 메모리 관리 자료구조를 갱신\n7. 선택된 프로세스(PB)의 문맥을 복원(restore)\n43\n context switch (문맥 교환)\n mode switch may occur without changing the state of \nthe current running process\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어: 프로세스 교환\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 상태 변경(change)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "1. 프로그램 카운터 및 다른 레지스터들을 포함하여 처리기의 문\n맥을 저장\n2. 현재 수행 상태에 있는 프로세스(예로 PA)의 PCB를 갱신\n3. 그 PCB를 준비큐, 블록큐, 또는 준비/보류큐 중의 하나에 삽입\n4. 실행할 다른 프로세스(예로 PB)를 선택\n5. 새로 선택된 프로세스(PB)의 PCB를 갱신\n6. 메모리 관리 자료구조를 갱신\n7. 선택된 프로세스(PB)의 문맥을 복원(restore)\n context switch (문맥 교환)\n mode switch may occur without changing the state of \nthe current running process\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "43\n"
+			}
+		]
+	},
+	"44": {
+		"page_id": 44,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "44\n프로세스 제어: 프로세스 교환\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어: 프로세스 교환\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "44\n"
+			}
+		]
+	},
+	"45": {
+		"page_id": 45,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "프로세스 제어: 프로세스 생성\n• 유일한 프로세스 식별자 할당\n• 프로세스의 주소공간 할당\n– 사용자 주소공간 및 사용자 스택\n– 공유 영역 (shared area)\n• PCB 초기화\n– PC, SP, 초기 상태, 우선순위, …\n• 적절한 연결 설정\n– 새로운 프로세스를 준비큐 또는 준비/보류큐에 삽입\n• 다른 자료구조를 생성하거나 확장\n– OS may maintain an accounting file\n45\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "프로세스 제어: 프로세스 생성\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 유일한 프로세스 식별자 할당\n• 프로세스의 주소공간 할당\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 사용자 주소공간 및 사용자 스택\n– 공유 영역 (shared area)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• PCB 초기화\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– PC, SP, 초기 상태, 우선순위, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 적절한 연결 설정\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 새로운 프로세스를 준비큐 또는 준비/보류큐에 삽입\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 다른 자료구조를 생성하거나 확장\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– OS may maintain an accounting file\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "45\n"
+			}
+		]
+	},
+	"46": {
+		"page_id": 46,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "운영체제의 실행(수행)\n• OS 실행(execution)\n– 비 프로세스 커널 (Non-process Kernel, 분리된 커널)\n• OS 코드가 특권 모드(privileged mode)에서 분리된 개체(separate \nentity)로 실행\n– 사용자 프로세스 내에서 실행\n• 사용자 프로세스 문맥 내에 OS 소프트웨어가 유지\n• 프로세스가 OS 코드를 실행 중일 때는 특권 모드를 가짐\n– 프로세스 기반 OS (Process-Based OS)\n• 시스템 프로세스들의 집합으로 OS를 구현\n• 다중 처리기(multi-processor) 또는 다중 컴퓨터 환경에 유용\n46\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "운영체제의 실행(수행)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS 실행(execution)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 비 프로세스 커널 (Non-process Kernel, 분리된 커널)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• OS 코드가 특권 모드(privileged mode)에서 분리된 개체(separate \nentity)로 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 사용자 프로세스 내에서 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 사용자 프로세스 문맥 내에 OS 소프트웨어가 유지\n• 프로세스가 OS 코드를 실행 중일 때는 특권 모드를 가짐\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스 기반 OS (Process-Based OS)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 시스템 프로세스들의 집합으로 OS를 구현\n• 다중 처리기(multi-processor) 또는 다중 컴퓨터 환경에 유용\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "46\n"
+			}
+		]
+	},
+	"47": {
+		"page_id": 47,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "운영체제의 실행\n47\n• OS와 사용자 프로세스와의 관계 (그림 3.15)\n 기능 = function = 함수\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "운영체제의 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• OS와 사용자 프로세스와의 관계 (그림 3.15)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": " 기능 = function = 함수\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "47\n"
+			}
+		]
+	},
+	"48": {
+		"page_id": 48,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "운영체제의 실행\n48\n• 사용자 프로세스 내에서 OS 실행\n– 프로세스 이미지 (그림 3.16)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "운영체제의 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 사용자 프로세스 내에서 OS 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 프로세스 이미지 (그림 3.16)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "48\n"
+			}
+		]
+	},
+	"49": {
+		"page_id": 49,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "UNIX SVR4의 프로세스 관리\n• 모델: OS가 사용자 프로세스 환경 내에서 실행\n– 9개의 프로세스 상태를 가짐\n49\n pid 0: swapper \n pid 1: init\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 모델: OS가 사용자 프로세스 환경 내에서 실행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 9개의 프로세스 상태를 가짐\n pid 0: swapper \n pid 1: init\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "49\n"
+			}
+		]
+	},
+	"50": {
+		"page_id": 50,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "UNIX SVR4의 프로세스 관리\n50\n• 프로세스 기술 (Process Description)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 기술 (Process Description)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "50\n"
+			}
+		]
+	},
+	"51": {
+		"page_id": 51,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "UNIX SVR4의 프로세스 관리\n51\n• 프로세스 테이블\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 테이블\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "51\n"
+			}
+		]
+	},
+	"52": {
+		"page_id": 52,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "52\nUNIX SVR4의 프로세스 관리\n• U 영역(U area)\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• U 영역(U area)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "52\n"
+			}
+		]
+	},
+	"53": {
+		"page_id": 53,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "UNIX SVR4의 프로세스 관리\n53\n• 프로세스 제어\n– fork()\n• 프로세스 테이블에 한 슬롯(slot, 엔트리)를 할당\n• 유일한 프로세스 ID (PID)를 할당\n• 부모의 프로세스 이미지를 복사\n• 부모가 소유하고 있는 모든 파일들의 참조계수(count)를 증가\n• 자식 프로세스를 준비 상태로 설정\n• 부모 프로세스에는 자식의 PID를, 자식 프로세스에는 0을 반환\n– 디스패처(Dispatcher)는 다음 중 하나를 수행\n• 제어를 부모 프로세스가 유지\n• 자식 프로세스에 제어를 넘김\n• 다른 프로세스에게 제어를 넘김\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "UNIX SVR4의 프로세스 관리\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "• 프로세스 제어\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– fork()\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 프로세스 테이블에 한 슬롯(slot, 엔트리)를 할당\n• 유일한 프로세스 ID (PID)를 할당\n• 부모의 프로세스 이미지를 복사\n• 부모가 소유하고 있는 모든 파일들의 참조계수(count)를 증가\n• 자식 프로세스를 준비 상태로 설정\n• 부모 프로세스에는 자식의 PID를, 자식 프로세스에는 0을 반환\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– 디스패처(Dispatcher)는 다음 중 하나를 수행\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• 제어를 부모 프로세스가 유지\n• 자식 프로세스에 제어를 넘김\n• 다른 프로세스에게 제어를 넘김\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 12,
+				"text": "53\n"
+			}
+		]
+	}
+}

@@ -1,0 +1,1917 @@
+{
+	"1": {
+		"page_id": 1,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Data Mining and Analysis\n2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\nProfessor \nDivision of Computer Science\nSookmyung Women’s University\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 40,
+				"text": "Data Mining and Analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "Sookmyung Women’s University\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"2": {
+		"page_id": 2,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\nData Mining\n2\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "Data Mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "2\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"3": {
+		"page_id": 3,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\nData Mining\nData\nInformation\nKnowledge\nTime\nPurchased Items\n23.03.01\nBeer, Diaper, Wine\n23.03.02\nWine, Cheese\n…\n…\n23.04.29 Diaper, Bread, Beer\n23.04.30\nWine, Beer\nItemsets\nCount\n{Beer, Diaper}\n{Beer, Wine}\n492\n127\n…\n{Wine, Diaper}\n27\n{Diaper} → {Beer}\n“We need to put the diapers\ncloser to the beer to make a \nfortune!\n“Men are often asked by their \nwives to pick up diapers on \ntheir way home from work”\nWisdom\nInsight\n3\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "Data Mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Data\nInformation\nKnowledge\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "Time\nPurchased Items\n23.03.01\nBeer, Diaper, Wine\n23.03.02\nWine, Cheese\n…\n…\n23.04.29 Diaper, Bread, Beer\n23.04.30\nWine, Beer\nItemsets\nCount\n{Beer, Diaper}\n{Beer, Wine}\n492\n127\n…\n{Wine, Diaper}\n27\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "{Diaper} → {Beer}\n“We need to put the diapers\ncloser to the beer to make a \nfortune!\n“Men are often asked by their \nwives to pick up diapers on \ntheir way home from work”\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Wisdom\nInsight\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "3\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"4": {
+		"page_id": 4,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\nhttps://smartercx.com/what-is-data-mining-how-can-it-help-cx/\n4\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "4\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"5": {
+		"page_id": 5,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ What is “data mining”?\n– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n• Computer science (esp. databases), statistics, machine learning, …\n5\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ What is “data mining”?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Computer science (esp. databases), statistics, machine learning, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "5\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"6": {
+		"page_id": 6,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ Four main tasks of data mining\n– Classification\n• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n– Association analysis\n• Discovering interesting relations between items (e.g., {diaper} → {beer})\n– Clustering\n• Grouping similar objects into groups (e.g., finding similar news or customers)\n– Anomaly detection\n• Identifying unusual or rare data (e.g., fraud detection, fault detection)\n6\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Four main tasks of data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Association analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Discovering interesting relations between items (e.g., {diaper} → {beer})\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Grouping similar objects into groups (e.g., finding similar news or customers)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Identifying unusual or rare data (e.g., fraud detection, fault detection)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "6\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"7": {
+		"page_id": 7,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ Classification\n– Identifying to which category an unseen data belongs (spam or non-spam)\n– Algorithms: decision tree, naïve Bayes, logistic regression, artificial \nneural network, ensemble methods, …\n7\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Identifying to which category an unseen data belongs (spam or non-spam)\n– Algorithms: decision tree, naïve Bayes, logistic regression, artificial \nneural network, ensemble methods, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "7\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"8": {
+		"page_id": 8,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ Association analysis\n– Discovering interesting relations between items ({diaper} → {beer})\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n– Algorithms: Apriori, FP-growth, sequential patterns, …\n8\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Association analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Discovering interesting relations between items ({diaper} → {beer})\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n– Algorithms: Apriori, FP-growth, sequential patterns, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "8\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"9": {
+		"page_id": 9,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ Clustering\n– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\n9\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "9\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"10": {
+		"page_id": 10,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Before the Lecture…\n▪ Anomaly detection\n– Identifying unusual or rare data (fraud detection, fault detection)\ny\nOutlier\n– Algorithms: statistical approaches, proximity-based approaches, \nclustering-based Approaches, reconstruction-based Approaches, …\nx\n10\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Identifying unusual or rare data (fraud detection, fault detection)\ny\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "Outlier\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Algorithms: statistical approaches, proximity-based approaches, \nclustering-based Approaches, reconstruction-based Approaches, …\nx\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "10\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"11": {
+		"page_id": 11,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Two Objectives of This Course\n1. Understanding existing data mining algorithms\n– Classification, association analysis, clustering, anomaly detection\n2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n– For a new problem you are facing\n11\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Two Objectives of This Course\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "1. Understanding existing data mining algorithms\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification, association analysis, clustering, anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– For a new problem you are facing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "11\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"12": {
+		"page_id": 12,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Course Information (1/3)\n▪ Instructor\n– Ki Yong Lee (Professor, Division of Computer Science)\n• Office: Saehim Hall 406\n• Phone:  02-2077-7583, 010-… (upon request)\n• Email: kiyonglee@sookmyung.ac.kr (most preferred)\n• Homepage: http://cs.sookmyung.ac.kr/~kylee\n• Office hour: You are always welcome! (but prior appointment is recommended)\n▪ Course homepage\n– Snowboard → 데이터마이닝및분석 (001)\n▪ Other communications\n– Slack → Please refer to the invitation link in the Snowboard\n12\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Course Information (1/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Instructor\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Ki Yong Lee (Professor, Division of Computer Science)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Office: Saehim Hall 406\n• Phone:  02-2077-7583, 010-… (upon request)\n• Email: kiyonglee@sookmyung.ac.kr (most preferred)\n• Homepage: http://cs.sookmyung.ac.kr/~kylee\n• Office hour: You are always welcome! (but prior appointment is recommended)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Course homepage\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Snowboard → 데이터마이닝및분석 (001)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Other communications\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Slack → Please refer to the invitation link in the Snowboard\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "12\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"13": {
+		"page_id": 13,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Course Information (2/3)\n▪ Main topics\n– Data\n• Types of data, data preprocessing, measures of similarity\n– Classification\n• Decision tree, k-NN classifier, naïve Bayes, logistic regression, artificial neural \nnetwork, ensemble methods, etc.\n• Model selection, model evaluation\n– Association analysis\n• Apriori algorithm, FP-growth algorithm, sequential patterns, etc.\n– Clustering\n• K-means, hierarchical clustering, DBSCAN, etc.\n– Anomaly detection\n• Statistical, proximity-based, clustering-based, reconstruction-based, etc.\n13\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Course Information (2/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Main topics\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Types of data, data preprocessing, measures of similarity\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Decision tree, k-NN classifier, naïve Bayes, logistic regression, artificial neural \nnetwork, ensemble methods, etc.\n• Model selection, model evaluation\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Association analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Apriori algorithm, FP-growth algorithm, sequential patterns, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• K-means, hierarchical clustering, DBSCAN, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Statistical, proximity-based, clustering-based, reconstruction-based, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "13\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"14": {
+		"page_id": 14,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Course Information (3/3)\n▪ Textbook\n– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n▪ Grading policy\n– Mid-term Exam : 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\n14\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Course Information (3/3)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Textbook\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Grading policy\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Mid-term Exam : 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "14\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"15": {
+		"page_id": 15,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Homework\n▪ Goal\n– Implement a simple data analysis program that uses data mining \nalgorithms covered in the class\n– You can use Python or Java\n▪ Deliverables\n– A program\n– A brief report\n▪ I will guide your progress as much as possible\n▪ Details will be announced in the class\n15\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Homework\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Implement a simple data analysis program that uses data mining \nalgorithms covered in the class\n– You can use Python or Java\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Deliverables\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– A program\n– A brief report\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ I will guide your progress as much as possible\n▪ Details will be announced in the class\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "15\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"16": {
+		"page_id": 16,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Chapter 1\nIntroduction\n16\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 40,
+				"text": "Chapter 1\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Introduction\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "16\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"17": {
+		"page_id": 17,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Introduction\n▪ The current age of big data\n– The amount of data being collected is growing explosively\n– Triggered by rapid advances in data collection and storage technology\n▪ Deriving actionable insights from these large data sets\n– Increasingly important in decision making across almost all areas of society\n– (ex) business, industry, science, engineering, …\n▪ However, data have become too great to analyze\n– 3Vs of big data: volume, velocity, and variety\n– Thus, there is a great need for methods and\ntechnology to extract useful information \nfrom these big data\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Introduction\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ The current age of big data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The amount of data being collected is growing explosively\n– Triggered by rapid advances in data collection and storage technology\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Deriving actionable insights from these large data sets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Increasingly important in decision making across almost all areas of society\n– (ex) business, industry, science, engineering, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ However, data have become too great to analyze\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "from these big data\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"18": {
+		"page_id": 18,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Data Mining\n▪ The process of extracting useful information from large data sets\n▪ Data mining blends traditional data analysis methods with \nsophisticated algorithms for processing this abundance of data\n– (ex) traditional statistics + the latest big data technology\n▪ There are many applications that require more advanced \ntechniques for data mining\n18\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Data Mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ The process of extracting useful information from large data sets\n▪ Data mining blends traditional data analysis methods with \nsophisticated algorithms for processing this abundance of data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– (ex) traditional statistics + the latest big data technology\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ There are many applications that require more advanced \ntechniques for data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "18\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"19": {
+		"page_id": 19,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Applications: Business and Industry (1/2)\n▪ Examples of business intelligence applications\n– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n▪ Examples of business questions\n– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\n19\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Applications: Business and Industry (1/2)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Examples of business intelligence applications\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Examples of business questions\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "19\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"20": {
+		"page_id": 20,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Applications: Business and Industry (2/2)\n▪ Also, there are massive amounts of data on the Internet\n– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n• Product recommendation\n• Spam filtering\n• Social connection suggestion\n▪ Mobile sensors and devices also generate large amounts of data\n– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\n20\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Applications: Business and Industry (2/2)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Also, there are massive amounts of data on the Internet\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Product recommendation\n• Spam filtering\n• Social connection suggestion\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Mobile sensors and devices also generate large amounts of data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "20\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"21": {
+		"page_id": 21,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Applications: Science and Engineering\n▪ Examples of large science data\n– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n• Can be used to analyze the relationships between observations\n– The large amount of genomic data (microarray data)\n• Can be used to analyze the function of each gene or predict protein structures\n– Electronic health record data (electrocardiograms (ECGs), MRI images)\n• Can be used to provide more personalized patient care\n21\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Applications: Science and Engineering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Examples of large science data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to analyze the relationships between observations\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The large amount of genomic data (microarray data)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to analyze the function of each gene or predict protein structures\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Electronic health record data (electrocardiograms (ECGs), MRI images)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to provide more personalized patient care\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "21\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"22": {
+		"page_id": 22,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "What Is Data Mining?\n▪ Data mining\n– The process of automatically discovering useful information in large data\n– Find novel and useful patterns that might otherwise remain unknown\n• (ex) Predict the amount a customer will spend at an online store\n▪ Not all information discovery tasks are data mining\n– Simple queries or simple interactions with a database system\n– (ex) Find the names of employees in a database whose age is 28\nSELECT NAME\nFROM EMPLOYEES\nWHERE AGE = 28;\n▪ An integral part of knowledge discovery in databases (KDD)\n22\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "What Is Data Mining?\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The process of automatically discovering useful information in large data\n– Find novel and useful patterns that might otherwise remain unknown\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) Predict the amount a customer will spend at an online store\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Not all information discovery tasks are data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Simple queries or simple interactions with a database system\n– (ex) Find the names of employees in a database whose age is 28\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "SELECT NAME\nFROM EMPLOYEES\nWHERE AGE = 28;\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ An integral part of knowledge discovery in databases (KDD)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "22\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"23": {
+		"page_id": 23,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "The Process of KDD (1/2)\n(flat files,\nspreadsheets,\ndatabase tables)\n▪ Data preprocessing\n– Transforms the raw input data into an appropriate format for analysis\n– Examples\n• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n– Perhaps the most laborious and time-consuming step in the overall KDD\n23\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "The Process of KDD (1/2)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "(flat files,\nspreadsheets,\ndatabase tables)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data preprocessing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Transforms the raw input data into an appropriate format for analysis\n– Examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Perhaps the most laborious and time-consuming step in the overall KDD\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "23\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"24": {
+		"page_id": 24,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "The Process of KDD (2/2)\n(flat files,\nspreadsheets,\nDatabase tables)\n▪ Postprocessing\n– Ensures that only valid and useful results are incorporated into the \ndecision support system\n– Examples\n• Visualization\n• Hypothesis testing (to eliminate spurious data mining results)\n24\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "The Process of KDD (2/2)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "(flat files,\nspreadsheets,\nDatabase tables)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Postprocessing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Ensures that only valid and useful results are incorporated into the \ndecision support system\n– Examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Visualization\n• Hypothesis testing (to eliminate spurious data mining results)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "24\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"25": {
+		"page_id": 25,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Motivating Challenges (1/4)\n▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n25\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Motivating Challenges (1/4)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "25\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"26": {
+		"page_id": 26,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Motivating Challenges (2/4)\n2. High Dimensionality\n– It is common for data sets to have hundreds or thousands of attributes\n• (ex) In bioinformatics, gene expression data involve thousands of features\n– Problems\n• Curse of dimensionality\n– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n• The computational complexity increases rapidly \nAn example of many attributes (features)\n26\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Motivating Challenges (2/4)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "2. High Dimensionality\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– It is common for data sets to have hundreds or thousands of attributes\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) In bioinformatics, gene expression data involve thousands of features\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Problems\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Curse of dimensionality\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• The computational complexity increases rapidly \nAn example of many attributes (features)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "26\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"27": {
+		"page_id": 27,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Motivating Challenges (3/4)\n3. Heterogeneous data\n– Data sets often contain attributes of different types\n• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n– Problems\n• Data mining techniques should consider complex relationships in the data \nText data\nTable data\nSequence data\nGraph data\nExamples of heterogeneous data\n27\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Motivating Challenges (3/4)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "3. Heterogeneous data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Data sets often contain attributes of different types\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Problems\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Data mining techniques should consider complex relationships in the data \nText data\nTable data\nSequence data\nGraph data\nExamples of heterogeneous data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "27\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"28": {
+		"page_id": 28,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Motivating Challenges (4/4)\n4. Data distribution\n– Sometimes, the data is distributed across multiple locations\n– Key challenges\n• How to reduce the amount of communication needed to perform the \ncomputation\n• How to divide the task across multiple locations and merge the partial results \nobtained from each location\n28\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Motivating Challenges (4/4)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "4. Data distribution\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Sometimes, the data is distributed across multiple locations\n– Key challenges\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• How to reduce the amount of communication needed to perform the \ncomputation\n• How to divide the task across multiple locations and merge the partial results \nobtained from each location\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "28\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"29": {
+		"page_id": 29,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Disciplines Related to Data Mining\n▪ Data mining employs techniques from many disciplines\n– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\n29\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Disciplines Related to Data Mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data mining employs techniques from many disciplines\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "29\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"30": {
+		"page_id": 30,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Data Science and Data Mining\n▪ Data science\n– An interdisciplinary field that studies and applies tools \nand techniques for deriving useful insights from data\n– Emerged as a new field because none of the existing \nareas provides a complete set of tools for the data \nanalysis tasks\n• Programming skill + math/statistical skill + domain skill\n▪ Data mining\n– Emphasizes the direct discovery of patterns and \nrelationships from data, especially in large data sets\n• Often without the need for extensive domain knowledge\n– Mainly about finding useful information in a dataset\n30\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Data Science and Data Mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data science\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– An interdisciplinary field that studies and applies tools \nand techniques for deriving useful insights from data\n– Emerged as a new field because none of the existing \nareas provides a complete set of tools for the data \nanalysis tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Programming skill + math/statistical skill + domain skill\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Emphasizes the direct discovery of patterns and \nrelationships from data, especially in large data sets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Often without the need for extensive domain knowledge\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Mainly about finding useful information in a dataset\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "30\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"31": {
+		"page_id": 31,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Two Major Categories of Data Mining Tasks\n▪ Predictive tasks\n– The objective is to predict the value of a particular \nattribute based on the values of other attributes\n• Target (or dependent) attribute: the attribute to be \npredicted\n• Explanatory (or independent) attribute: the \nattributes used for prediction\n▪ Descriptive tasks\n– The objective is to derive patterns that summarize \nthe underlying relationships in data\n• (ex) frequent patterns, correlations, trends, clusters\n– Frequently require postprocessing techniques to \nvalidate and explain the results\n31\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Two Major Categories of Data Mining Tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Predictive tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The objective is to predict the value of a particular \nattribute based on the values of other attributes\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Target (or dependent) attribute: the attribute to be \npredicted\n• Explanatory (or independent) attribute: the \nattributes used for prediction\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Descriptive tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The objective is to derive patterns that summarize \nthe underlying relationships in data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) frequent patterns, correlations, trends, clusters\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Frequently require postprocessing techniques to \nvalidate and explain the results\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "31\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"32": {
+		"page_id": 32,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "Four Core Data Mining Tasks\n▪ In this course, we consider four of the core data mining tasks\n– Classification, association analysis, clustering, anomaly detection\n(we focus only on classification)\n32\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "Four Core Data Mining Tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ In this course, we consider four of the core data mining tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification, association analysis, clustering, anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "(we focus only on classification)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "32\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"33": {
+		"page_id": 33,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "1. Classification\n▪ Predictive modeling: the task of building a model y = f(x)\n– y: the target variable\n– x = (x1, x2, …, xn): the explanatory variables\n▪ Two types of predictive modeling\n– Classification: when y is categorical (e.g., ‘cat’(0), ‘dog’(1), ‘human’(2))\n• (ex) predicting whether a web user will make a purchase (y = 1(yes) or 0(no))\n– Regression: when y is numerical (e.g., any value from [-20, 50])\n• (ex) forecasting the future temperature of an area (y = 32.7C)\n▪ Goal\n– Learn a model f(x) that minimizes the error between the predicted and \ntrue values of the target variable\n33\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "1. Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Predictive modeling: the task of building a model y = f(x)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– y: the target variable\n– x = (x1, x2, …, xn): the explanatory variables\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Two types of predictive modeling\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification: when y is categorical (e.g., ‘cat’(0), ‘dog’(1), ‘human’(2))\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) predicting whether a web user will make a purchase (y = 1(yes) or 0(no))\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Regression: when y is numerical (e.g., any value from [-20, 50])\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) forecasting the future temperature of an area (y = 32.7C)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Learn a model f(x) that minimizes the error between the predicted and \ntrue values of the target variable\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "33\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"34": {
+		"page_id": 34,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "(Ex) Predicting the Type of a Flower\n▪ Consider the task of predicting a species of flower based on the \ncharacteristics of the flower\n– Species: y  {‘Setosa’, ‘Versicolour’, ‘Virginica’}\n– Petal length: x1  [0, 7]\n– Petal width: x2  [0, 2.5]\nThere can\nbe errors\n▪ We may build a model f(x1, x2)\nas follows:\n‘Setosa’           if\nx1  [0, 2.5)\nx2  [0, 0.75)\nf(x1, x2) =\n‘Verisicolour’  if\n‘Virginica’      if\nx1  [2.5, 5)\nx2  [0.75, 1.75) \nx1  [5, 7]\nx2  [1.75, 2.5]\n34\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "(Ex) Predicting the Type of a Flower\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Consider the task of predicting a species of flower based on the \ncharacteristics of the flower\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Species: y  {‘Setosa’, ‘Versicolour’, ‘Virginica’}\n– Petal length: x1  [0, 7]\n– Petal width: x2  [0, 2.5]\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "There can\nbe errors\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ We may build a model f(x1, x2)\nas follows:\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "‘Setosa’           if\nx1  [0, 2.5)\nx2  [0, 0.75)\nf(x1, x2) =\n‘Verisicolour’  if\n‘Virginica’      if\nx1  [2.5, 5)\nx2  [0.75, 1.75) \nx1  [5, 7]\nx2  [1.75, 2.5]\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "34\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"35": {
+		"page_id": 35,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "2. Association Analysis\n▪ Discover patterns that describe strongly associated items in the \ndata\n– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n▪ Goal\n– Extract the most interesting patterns in an efficient manner\n• Because of the exponential size of its search space\n35\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "2. Association Analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Discover patterns that describe strongly associated items in the \ndata\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Extract the most interesting patterns in an efficient manner\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Because of the exponential size of its search space\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "35\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"36": {
+		"page_id": 36,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "(Ex) Market Basket Analysis\n▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n– (ex) {Diapers} → {Milk}\n▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n36\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "(Ex) Market Basket Analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– (ex) {Diapers} → {Milk}\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "36\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"37": {
+		"page_id": 37,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "3. Cluster Analysis\n▪ Find groups of closely related observations so that\n– Observations in the same cluster are similar to each other\n– Observations in different clusters are dissimilar to each other\n▪ Application examples\n– Market research: group similar customers (customer segmentation)\n– Social networks: recognize communities within large groups of people\ncluster\ncluster\nCustomer segmentation\nCommunity detection\n37\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "3. Cluster Analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Find groups of closely related observations so that\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Observations in the same cluster are similar to each other\n– Observations in different clusters are dissimilar to each other\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Application examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Market research: group similar customers (customer segmentation)\n– Social networks: recognize communities within large groups of people\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "cluster\ncluster\nCustomer segmentation\nCommunity detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "37\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"38": {
+		"page_id": 38,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "(Ex) Document Clustering\n▪ We are given a collection of news articles \n– Each article is represented as a set of word-frequency pairs (i.e., w: c)\n• w is a word and c is the number of times the word appears in the article\nArticle\nWord-frequency pairs\n1\n2\n3\n4\n5\n6\n7\n8\ndollar: 1, industry: 4, country: 2, loan: 3, deal: 2, government: 2\nmachinery: 2, labor: 3, market: 4, industry: 2, work: 3, country: 1\njob: 5, inflation: 3, rise: 2, jobless: 2, market: 3, country: 2, index: 3\nCluster 1\n(economy)\ndomestic: 3, forecast: 2, gain: 1, market: 2, sale: 3, price: 2\npatient: 4, symptom: 2, drug: 3, health: 2, clinic: 2, doctor: 2\npharmaceutical: 2, company: 3, drug: 2, vaccine: 1, flu: 3\ndeath: 2, cancer: 4, drug: 3, public: 4, health: 3, director: 2\nmedical: 2, cost: 3, increase: 2, patient: 2, health: 3, care: 1\nCluster 2\n(healthcare)\n▪ Clustering can be applied to group similar new articles\n– A good clustering algorithm should be able to identify the two clusters\n38\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "(Ex) Document Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ We are given a collection of news articles \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Each article is represented as a set of word-frequency pairs (i.e., w: c)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• w is a word and c is the number of times the word appears in the article\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "Article\nWord-frequency pairs\n1\n2\n3\n4\n5\n6\n7\n8\ndollar: 1, industry: 4, country: 2, loan: 3, deal: 2, government: 2\nmachinery: 2, labor: 3, market: 4, industry: 2, work: 3, country: 1\njob: 5, inflation: 3, rise: 2, jobless: 2, market: 3, country: 2, index: 3\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Cluster 1\n(economy)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "domestic: 3, forecast: 2, gain: 1, market: 2, sale: 3, price: 2\npatient: 4, symptom: 2, drug: 3, health: 2, clinic: 2, doctor: 2\npharmaceutical: 2, company: 3, drug: 2, vaccine: 1, flu: 3\ndeath: 2, cancer: 4, drug: 3, public: 4, health: 3, director: 2\nmedical: 2, cost: 3, increase: 2, patient: 2, health: 3, care: 1\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Cluster 2\n(healthcare)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Clustering can be applied to group similar new articles\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– A good clustering algorithm should be able to identify the two clusters\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "38\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"39": {
+		"page_id": 39,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "4. Anomaly Detection\n▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n– Such observations are called anomalies or outliers\noutlier\n▪ Goal\n– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n• A high detection rate\n• A low false alarm rate\n▪ Application examples\n– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n39\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "4. Anomaly Detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Such observations are called anomalies or outliers\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "outlier\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• A high detection rate\n• A low false alarm rate\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Application examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "39\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	},
+	"40": {
+		"page_id": 40,
+		"full_text": {
+			"audio_url": "",
+			"full_text": "(Ex) Credit Card Fraud Detection\n▪ A credit card company records the transactions made by every \ncredit card holder\n– Along with personal information (e.g., credit limit, age, income, address)\n▪ Anomaly detection techniques\n① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\nanomaly\n40\n"
+		},
+		"text": [
+			{
+				"audio_url": "",
+				"font_size": 32,
+				"text": "(Ex) Credit Card Fraud Detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ A credit card company records the transactions made by every \ncredit card holder\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Along with personal information (e.g., credit limit, age, income, address)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Anomaly detection techniques\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "anomaly\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "40\n"
+			}
+		],
+		"image": {
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": ""
+		}
+	}
+}

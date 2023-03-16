@@ -3,13 +3,23 @@
 		"page_id": 1,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "4장 쓰레드(thread)\n"
+			"full_text": "Data Mining and Analysis\n2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\nProfessor \nDivision of Computer Science\nSookmyung Women’s University\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 40,
-				"text": "4장 쓰레드(thread)\n"
+				"text": "Data Mining and Analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "Sookmyung Women’s University\n"
 			}
 		]
 	},
@@ -17,22 +27,22 @@
 		"page_id": 2,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "4장의 학습 목표\n• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n설명할 수 있다. \n• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n• Android의 쓰레드 관리 기능을 설명할 수 있다.\n2\n"
+			"full_text": "Before the Lecture…\n2\nData Mining\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "4장의 학습 목표\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 프로세스와 쓰레드의 차이를 이해할 수 있다. \n• 쓰레드와 관련된 기본 설계 이슈를 설명할 수 있다. \n• 사용자 수준의 쓰레드와 커널 수준의 쓰레드의 차이를\n설명할 수 있다. \n• Windows의 쓰레드 관리 기능을 설명할 수 있다. \n• Solaris의 쓰레드 관리 기능을 설명할 수 있다. \n• Linux의 쓰레드 관리 기능을 설명할 수 있다. \n• Android의 쓰레드 관리 기능을 설명할 수 있다.\n"
+				"text": "Data Mining\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "2\n"
 			}
 		]
@@ -41,22 +51,42 @@
 		"page_id": 3,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "목 차\n4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n3\n"
+			"full_text": "Before the Lecture…\n3\nData\nInformation\nKnowledge\nInsight\nWisdom\nTime\nPurchased Items\n23.03.01\nBeer, Diaper, Wine\n23.03.02\nWine, Cheese\n…\n…\n23.04.29\nDiaper, Bread, Beer\n23.04.30\nWine, Beer\nItemsets\nCount\n{Beer, Diaper}\n492\n{Beer, Wine}\n127\n…\n{Wine, Diaper}\n27\n{Diaper} → {Beer}\n“Men are often asked by their \nwives to pick up diapers on \ntheir way home from work”\n“We need to put the diapers\ncloser to the beer to make a \nfortune!\nData Mining\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "목 차\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n"
+				"text": "Data Mining\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 18,
+				"text": "Data\nInformation\nKnowledge\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
+				"text": "Time\nPurchased Items\n23.03.01\nBeer, Diaper, Wine\n23.03.02\nWine, Cheese\n…\n…\n23.04.29 Diaper, Bread, Beer\n23.04.30\nWine, Beer\nItemsets\nCount\n{Beer, Diaper}\n{Beer, Wine}\n492\n127\n…\n{Wine, Diaper}\n27\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "{Diaper} → {Beer}\n“We need to put the diapers\ncloser to the beer to make a \nfortune!\n“Men are often asked by their \nwives to pick up diapers on \ntheir way home from work”\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Wisdom\nInsight\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "3\n"
 			}
 		]
@@ -65,42 +95,17 @@
 		"page_id": 4,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드(thread)\n• 프로세스\n– 실행 중인 프로그램(A program in execution)\n4\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
+			"full_text": "Before the Lecture…\n4\nhttps://smartercx.com/what-is-data-mining-how-can-it-help-cx/\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드(thread)\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 24,
-				"text": "• 프로세스\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 실행 중인 프로그램(A program in execution)\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 24,
-				"text": "• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": " 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "4\n"
 			}
 		]
@@ -109,27 +114,32 @@
 		"page_id": 5,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n"
+			"full_text": "▪ What is “data mining”?\n– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n• Computer science (esp. databases), statistics, machine learning, …\nBefore the Lecture…\n5\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n"
+				"text": "▪ What is “data mining”?\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n"
+				"text": "– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 18,
+				"text": "• Computer science (esp. databases), statistics, machine learning, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "5\n"
 			}
 		]
@@ -138,27 +148,62 @@
 		"page_id": 6,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 사례\n– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n멀티 쓰레드를 지원한다.\n– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n멀티 프로세스를 사용한다.\n6\n"
+			"full_text": "▪ Four main tasks of data mining\n– Classification\n• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n– Association analysis\n• Discovering interesting relations between items (e.g., {diaper} → {beer})\n– Clustering\n• Grouping similar objects into groups (e.g., finding similar news or customers)\n– Anomaly detection\n• Identifying unusual or rare data (e.g., fraud detection, fault detection)\nBefore the Lecture…\n6\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 사례\n"
+				"text": "▪ Four main tasks of data mining\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– MS-DOS는 단일 사용자 프로세스와 단일 쓰레드를 지원한다.\n– UNIX 계열의 여러 운영체제는 다중 사용자 프로세스를 지원하\n지만, 프로세스 당 하나의 쓰레드만을 지원한다.\n– Java 수행시간환경(run-time environment)은 하나의 프로세스가\n멀티 쓰레드를 지원한다.\n– 최신 버전의 UNIX, Windows, Solaris는 멀티쓰레드를 지원하는\n멀티 프로세스를 사용한다.\n"
+				"text": "– Classification\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 18,
+				"text": "• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Association analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Discovering interesting relations between items (e.g., {diaper} → {beer})\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Grouping similar objects into groups (e.g., finding similar news or customers)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Identifying unusual or rare data (e.g., fraud detection, fault detection)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "6\n"
 			}
 		]
@@ -167,47 +212,27 @@
 		"page_id": 7,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 멀티쓰레딩 환경\n– 태스크 (또는 프로세스) 관련 사항\n• 프로세스 이미지를 유지하는 가상 주소 공간\n• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n제어\n– 쓰레드 관련 사항\n• 실행 상태 (수행, 준비, 블록, …)\n• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n• 실행 스택\n• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n(storage)\n• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n유\n7\n"
+			"full_text": "▪ Classification\n– Identifying to which category an unseen data belongs (spam or non-spam)\n– Algorithms: decision tree, naïve Bayes, logistic regression, artificial \nneural network, ensemble methods, …\nBefore the Lecture…\n7\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 멀티쓰레딩 환경\n"
+				"text": "▪ Classification\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 태스크 (또는 프로세스) 관련 사항\n"
+				"text": "– Identifying to which category an unseen data belongs (spam or non-spam)\n– Algorithms: decision tree, naïve Bayes, logistic regression, artificial \nneural network, ensemble methods, …\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "• 프로세스 이미지를 유지하는 가상 주소 공간\n• 처리기, (IPC를 위한) 다른 프로세스, 파일, I/O 자원들에 대한 접근\n제어\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 쓰레드 관련 사항\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 실행 상태 (수행, 준비, 블록, …)\n• 수행 중이 아닐 때 저장되는 쓰레드 문맥\n• 실행 스택\n• 지역 변수 저장을 위해 각 쓰레드가 사용하는 어떤 정적 저장소\n(storage)\n• 자신이 속한 프로세스의 메모리 및 자원들에 대한 접근 공유\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 한 프로세스 내의 모든 쓰레드들은 그 프로세스의 자원들을 공\n유\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "7\n"
 			}
 		]
@@ -216,22 +241,27 @@
 		"page_id": 8,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드 모델 (그림 4.2)\n8\n"
+			"full_text": "▪ Association analysis\n– Discovering interesting relations between items ({diaper} → {beer})\n– Algorithms: Apriori, FP-growth, sequential patterns, …\nBefore the Lecture…\n8\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 쓰레드 모델 (그림 4.2)\n"
+				"text": "▪ Association analysis\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Discovering interesting relations between items ({diaper} → {beer})\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n– Algorithms: Apriori, FP-growth, sequential patterns, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "8\n"
 			}
 		]
@@ -240,27 +270,27 @@
 		"page_id": 9,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드의 장점(benefits)\n– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n9\n"
+			"full_text": "▪ Clustering\n– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\nBefore the Lecture…\n9\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 쓰레드의 장점(benefits)\n"
+				"text": "▪ Clustering\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 프로세스에 비해 새로운 쓰레드 생성 시간/비용이 절약됨: (쓰레\n드 생성시간은 프로세스보다 수십 배 빠르다.)\n– 프로세스 종료 시간보다 쓰레드 종료 시간이 짧다.\n– 한 프로세스 내의 두 쓰레드들 사이의 교환/교체 시간이 짧다.\n– 동일 프로세스 내의 쓰레드들은 메모리 및 파일을 공유하기 때\n문에, 이들 쓰레드들은 커널의 개입 없이 서로 통신 가능\n– 한 프로그램의 구조(structure)를 단순화\n– 다중처리기(multiprocessor)의 효율적 사용\n– 빠른 IPC (메시지 전송이 아닌 공유 메모리 사용 가능)\n– 병행 서버 (listening thread and responding threads)\n"
+				"text": "– Grouping similar objects into groups (finding similar news or customers)\n– Algorithms: k-means, hierarchical clustering, DBSCAN, …\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "9\n"
 			}
 		]
@@ -269,62 +299,37 @@
 		"page_id": 10,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n•\n단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n-\n전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n•\n예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n-\n비동기(asynchronous) 처리: \n•\n프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n-\n빠른 수행: \n•\n멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n–\n모듈 프로그램 구조: \n•\n다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n10\n"
+			"full_text": "▪ Anomaly detection\n– Identifying unusual or rare data (fraud detection, fault detection)\n– Algorithms: statistical approaches, proximity-based approaches, \nclustering-based Approaches, reconstruction-based Approaches, …\nBefore the Lecture…\n10\nOutlier\nx\ny\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Before the Lecture…\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Anomaly detection\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "• 단일사용자 멀티프로세싱 시스템에서의 쓰레드의 사용\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 17,
-				"text": "- 전면(foreground)과 후면(background) 작업: 응용의 속도 향상\n"
+				"text": "– Identifying unusual or rare data (fraud detection, fault detection)\ny\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 14,
-				"text": "• 예를 들어, 스프레드시트 프로그램에서 하나의 쓰레드가 메뉴를 나타내고 사용자 입력을\n읽는 중에, 다른 쓰레드는 사용자 명령을 수행하고 스프레드시트를 갱신할 수 있다. \n"
+				"text": "Outlier\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 17,
-				"text": "- 비동기(asynchronous) 처리: \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 14,
-				"text": "• 프로그램의 비동기적 요소들을 쓰레드를 통해 구현할 수 있다. 예) 정전으로부터 보호하\n기 위해 1분마다 메모리(RAM) 버퍼의 내용을 디스크로 기록하는 워드 프로세서를 설계\n할 수 있다. 이를 위한 쓰레드가 생성될 수 있는데, 유일한 업무는 주기적인 백업이며 운\n영체제를 통해 직접 자신을 스케줄 한다. 이때 시간을 검사하거나 또는 입력 및 출력을\n조정하기 위해 주 프로그램 내에 복잡한 코드를 작성할 필요는 없다. \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 17,
-				"text": "- 빠른 수행: \n"
+				"font_size": 20,
+				"text": "– Algorithms: statistical approaches, proximity-based approaches, \nclustering-based Approaches, reconstruction-based Approaches, …\nx\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 14,
-				"text": "• 멀티쓰레드 프로세스는 어떤 데이터 묶음(batch)을 계산하면서 동시에 어떤 장치로부터\n다음 데이터 묶음을 읽어 들일 수 있다. 멀티프로세스시스템에서 한 프로세스 내의 여러\n쓰레드들은 실제적으로 동시에 수행될 수 있다. 따라서 한 쓰레드가 특정 데이터 묶음을\n읽기 위해 입출력 작업 완료를 기다리면서 블록(block)될지라도, 또 다른 쓰레드가 수행\n될 수 있다. \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 17,
-				"text": "– 모듈 프로그램 구조: \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 14,
-				"text": "• 다양한 활동 혹은 입출력 연산에 대한 다양한 출발ㆍ목적지를 포함하고 있는 프로그램의\n경우, 쓰레드들을 사용하여 설계하고 구현하는 것이 편리하다. \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
 				"text": "10\n"
 			}
 		]
@@ -333,22 +338,37 @@
 		"page_id": 11,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n11\n"
+			"full_text": "1. Understanding existing data mining algorithms\n– Classification, association analysis, clustering, anomaly detection\n2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n– For a new problem you are facing\nTwo Objectives of This Course\n11\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Two Objectives of This Course\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 쓰레드의 장점: 예 (그림 4.3: RPC(Remote Procedure Call) )\n"
+				"text": "1. Understanding existing data mining algorithms\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Classification, association analysis, clustering, anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "2. Having the ability to develop new algorithms based on the \nunderstanding of the existing algorithms\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– For a new problem you are facing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "11\n"
 			}
 		]
@@ -357,37 +377,52 @@
 		"page_id": 12,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드의 기능(thread functionality)\n– 쓰레드 상태\n• 수행, 준비, 블록\n• 기본적인 쓰레드 연산:\n– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n종료(Finish)\n• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n12\n 보류(Suspended)고 가능 ?\n단일처리기\n환경\n"
+			"full_text": "▪ Instructor\n– Ki Yong Lee (Professor, Division of Computer Science)\n• Office: Saehim Hall 406\n• Phone:  02-2077-7583, 010-… (upon request)\n• Email: kiyonglee@sookmyung.ac.kr (most preferred)\n• Homepage: http://cs.sookmyung.ac.kr/~kylee\n• Office hour: You are always welcome! (but prior appointment is recommended)\n▪ Course homepage\n– Snowboard → 데이터마이닝및분석 (001)\n▪ Other communications\n– Slack → Please refer to the invitation link in the Snowboard\nCourse Information (1/3)\n12\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Course Information (1/3)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 쓰레드의 기능(thread functionality)\n"
+				"text": "▪ Instructor\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 쓰레드 상태\n"
+				"text": "– Ki Yong Lee (Professor, Division of Computer Science)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• 수행, 준비, 블록\n• 기본적인 쓰레드 연산:\n 보류(Suspended)고 가능 ?\n– 생성(Spawn), 디스패치(Dispatch), 블록(Block), 비블록(Unblock), \n종료(Finish)\n• 그림 4.4: 단일 처리기 상에서 다중 쓰레딩의 예\n"
+				"text": "• Office: Saehim Hall 406\n• Phone:  02-2077-7583, 010-… (upon request)\n• Email: kiyonglee@sookmyung.ac.kr (most preferred)\n• Homepage: http://cs.sookmyung.ac.kr/~kylee\n• Office hour: You are always welcome! (but prior appointment is recommended)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 16,
-				"text": "단일처리기\n환경\n"
+				"font_size": 24,
+				"text": "▪ Course homepage\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Snowboard → 데이터마이닝및분석 (001)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Other communications\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Slack → Please refer to the invitation link in the Snowboard\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "12\n"
 			}
 		]
@@ -396,37 +431,72 @@
 		"page_id": 13,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드 기능\n– 쓰레드 동기화(synchronization)\n• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n을 공유\n• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n법 필요\n– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n연산은 한 순간에 하나만 가능\n– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n13\n"
+			"full_text": "▪ Main topics\n– Data\n• Types of data, data preprocessing, measures of similarity\n– Classification\n• Decision tree, k-NN classifier, naïve Bayes, logistic regression, artificial neural \nnetwork, ensemble methods, etc.\n• Model selection, model evaluation\n– Association analysis\n• Apriori algorithm, FP-growth algorithm, sequential patterns, etc.\n– Clustering\n• K-means, hierarchical clustering, DBSCAN, etc.\n– Anomaly detection\n• Statistical, proximity-based, clustering-based, reconstruction-based, etc.\nCourse Information (2/3)\n13\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 28,
-				"text": "• 쓰레드 기능\n"
+				"text": "Course Information (2/3)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "– 쓰레드 동기화(synchronization)\n"
+				"text": "▪ Main topics\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "• 한 프로세스 내의 모든 쓰레드들은 동일 주소 공간 및 자원들\n을 공유\n• 공유 자원: 전역 변수, 파일, 힙(heap) 영역\n• 공유 자원에 대해 동시 접근 시(특히, 갱신 시), 일관성 유지 기\n법 필요\n"
+				"text": "– Data\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "– 예) 한 공유 변수에 대해 읽기 연산은 동시 접근이 가능하나, 쓰기\n연산은 한 순간에 하나만 가능\n– 동기화 관련 내용은 제 5장 및 제 6장에서 다룸\n"
+				"text": "• Types of data, data preprocessing, measures of similarity\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Decision tree, k-NN classifier, naïve Bayes, logistic regression, artificial neural \nnetwork, ensemble methods, etc.\n• Model selection, model evaluation\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Association analysis\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Apriori algorithm, FP-growth algorithm, sequential patterns, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Clustering\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• K-means, hierarchical clustering, DBSCAN, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Anomaly detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Statistical, proximity-based, clustering-based, reconstruction-based, etc.\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "13\n"
 			}
 		]
@@ -435,22 +505,42 @@
 		"page_id": 14,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "쓰레드의 유형\n• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n14\n"
+			"full_text": "▪ Textbook\n– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n▪\nGrading policy\n– Mid-term Exam\n: 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\nCourse Information (3/3)\n14\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "쓰레드의 유형\n"
+				"text": "Course Information (3/3)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n"
+				"text": "▪ Textbook\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Pan-Ning Tan et al, “Introduction to Data Mining,” 2/E, Pearson, 2019\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (Translation) 용환승 외, “데이터 마이닝 (2판),” 휴먼싸이언스, 2020\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Grading policy\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Mid-term Exam : 35%\n– Final Exam\n: 35%\n– Homework #1\n: 10% (a simple(?) data mining program)\n– Homework #2\n: 10% (a simple(?) data mining program)\n– Homework #3\n: 10% (a simple(?) data mining program)\n– Total\n: 100%\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "14\n"
 			}
 		]
@@ -459,52 +549,42 @@
 		"page_id": 15,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n– 사용자 수준 쓰레드\n• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n• 커널은 쓰레드의 존재를 모름\n• 이러한 접근 방법의 예로 cthread 및 pthread 등이 있음.\n– 커널 수준 쓰레드\n• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n• 이러한 접근 방법의 예로 Windows가 있음\n– 결합된 접근 방법 (Combined approach)\n• 대표적인 예로 Solaris가 있음\n15\n"
+			"full_text": "▪ Goal\n– Implement a simple data analysis program that uses data mining \nalgorithms covered in the class\n– You can use Python or Java\n▪ Deliverables\n– A program\n– A brief report\n▪ I will guide your progress as much as possible\n▪ Details will be announced in the class\nHomework\n15\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Homework\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드\n"
+				"text": "▪ Goal\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 사용자 수준 쓰레드\n"
+				"text": "– Implement a simple data analysis program that uses data mining \nalgorithms covered in the class\n– You can use Python or Java\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "• 응용이 모든 쓰레드 관리를 책임짐 (쓰레드 라이브러리가 쓰레드 생\n성, 제거, 데이터 전송, 동기화, 스케줄, 문맥교환을 수행)\n• 커널은 쓰레드의 존재를 모름\n• 이러한 접근 방법의 예로 cthread및 pthread등이 있음.\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 커널 수준 쓰레드\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 커널이 프로세스 및 쓰레드에 대한 문맥 정보를 관리\n• 쓰레드에 대한 스케줄링이 커널 수준에서 수행됨\n• 이러한 접근 방법의 예로 Windows가 있음\n"
+				"font_size": 24,
+				"text": "▪ Deliverables\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 결합된 접근 방법 (Combined approach)\n"
+				"text": "– A program\n– A brief report\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "• 대표적인 예로 Solaris가 있음\n"
+				"font_size": 24,
+				"text": "▪ I will guide your progress as much as possible\n▪ Details will be announced in the class\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "15\n"
 			}
 		]
@@ -513,42 +593,22 @@
 		"page_id": 16,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n•\n사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n– 사용자 수준 쓰레드의 장점\n• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n헤드를 절약 가능)\n• 특정 응용에 적합한 스케줄링 적용 가능\n• 모든 OS에서 수행 가능\n– 사용자 수준 쓰레드의 단점\n• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n• 다중처리기의 장점을 살리지 못함.\n• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n16\n"
+			"full_text": "Introduction\nChapter 1\n16\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
+				"font_size": 40,
+				"text": "Chapter 1\n"
+			},
+			{
+				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Introduction\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 20,
-				"text": "• 사용자 수준 쓰레드 및 커널 수준 쓰레드(계속)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "– 사용자 수준 쓰레드의 장점\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 16,
-				"text": "• 쓰레드 교환/교체 시에 커널 모드 권한이 불필요 (두 번의 모드 전이 오버\n헤드를 절약 가능)\n• 특정 응용에 적합한 스케줄링 적용 가능\n• 모든 OS에서 수행 가능\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "– 사용자 수준 쓰레드의 단점\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 16,
-				"text": "• 한 쓰레드가 블록 상태를 유발하는 시스템 호출을 수행할 경우, 자신뿐만\n아니라 그 프로세스 내의 모든 다른 쓰레드들도 블록됨\n• 다중처리기의 장점을 살리지 못함.\n• 커널 루틴 자체는 다중쓰레딩 될 수 없다\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "16\n"
 			}
 		]
@@ -557,23 +617,43 @@
 		"page_id": 17,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 사용자 수준 쓰레드 상태들의 예\n17\n"
+			"full_text": "▪ The current age of big data\n– The amount of data being collected is growing explosively\n– Triggered by rapid advances in data collection and storage technology\n▪ Deriving actionable insights from these large data sets\n– Increasingly important in decision making across almost all areas of society\n– (ex) business, industry, science, engineering, …\n▪ However, data have become too great to analyze\n– 3Vs of big data: volume, velocity, and variety\n– Thus, there is a great need for methods and\ntechnology to extract useful information \nfrom these big data\nIntroduction\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Introduction\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 사용자 수준 쓰레드 상태들의 예\n"
+				"text": "▪ The current age of big data\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
-				"text": "17\n"
+				"font_size": 20,
+				"text": "– The amount of data being collected is growing explosively\n– Triggered by rapid advances in data collection and storage technology\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Deriving actionable insights from these large data sets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Increasingly important in decision making across almost all areas of society\n– (ex) business, industry, science, engineering, …\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ However, data have become too great to analyze\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "from these big data\n"
 			}
 		]
 	},
@@ -581,22 +661,32 @@
 		"page_id": 18,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 쓰레드와 프로세스 간의 관계\n18\n"
+			"full_text": "▪ The process of extracting useful information from large data sets\n▪ Data mining blends traditional data analysis methods with \nsophisticated algorithms for processing this abundance of data\n– (ex) traditional statistics + the latest big data technology\n▪ There are many applications that require more advanced \ntechniques for data mining\nData Mining\n18\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
+				"text": "Data Mining\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 쓰레드와 프로세스 간의 관계\n"
+				"text": "▪ The process of extracting useful information from large data sets\n▪ Data mining blends traditional data analysis methods with \nsophisticated algorithms for processing this abundance of data\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– (ex) traditional statistics + the latest big data technology\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ There are many applications that require more advanced \ntechniques for data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "18\n"
 			}
 		]
@@ -605,22 +695,37 @@
 		"page_id": 19,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "멀티코어와 멀티쓰레딩\n• Amdahl의 법칙\n19\n"
+			"full_text": "▪ Examples of business intelligence applications\n– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n▪ Examples of business questions\n– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\nApplications: Business and Industry (1/2)\n19\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "멀티코어와 멀티쓰레딩\n"
+				"text": "Applications: Business and Industry (1/2)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• Amdahl의 법칙\n"
+				"text": "▪ Examples of business intelligence applications\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Examples of business questions\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "19\n"
 			}
 		]
@@ -629,22 +734,47 @@
 		"page_id": 20,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n20\n"
+			"full_text": "▪ Also, there are massive amounts of data on the Internet\n– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n• Product recommendation\n• Spam filtering\n• Social connection suggestion\n▪ Mobile sensors and devices also generate large amounts of data\n– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\nApplications: Business and Industry (2/2)\n20\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "멀티코어와 멀티쓰레딩\n"
+				"text": "Applications: Business and Industry (2/2)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 멀티코어가 성능에 미치는 영향\n"
+				"text": "▪ Also, there are massive amounts of data on the Internet\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Web browsing, online shopping, messaging, social media postings, …\n– Can be used for\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Product recommendation\n• Spam filtering\n• Social connection suggestion\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Mobile sensors and devices also generate large amounts of data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– A variety of information about our physical world\n– Collected by smart phones, wearable devices, and physical sensors\n– Can be used for\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Design of convenient, safe, and energy-efficient home systems (smart home)\n• Urban planning of smart cities\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "20\n"
 			}
 		]
@@ -653,22 +783,52 @@
 		"page_id": 21,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어가 성능에 미치는 영향\n21\n"
+			"full_text": "▪ Examples of large science data\n– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n• Can be used to analyze the relationships between observations\n– The large amount of genomic data (microarray data)\n• Can be used to analyze the function of each gene or predict protein structures\n– Electronic health record data (electrocardiograms (ECGs), MRI images)\n• Can be used to provide more personalized patient care\nApplications: Science and Engineering\n21\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "멀티코어와 멀티쓰레딩\n"
+				"text": "Applications: Science and Engineering\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 멀티코어가 성능에 미치는 영향\n"
+				"text": "▪ Examples of large science data\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to analyze the relationships between observations\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The large amount of genomic data (microarray data)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to analyze the function of each gene or predict protein structures\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Electronic health record data (electrocardiograms (ECGs), MRI images)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Can be used to provide more personalized patient care\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "21\n"
 			}
 		]
@@ -677,57 +837,52 @@
 		"page_id": 22,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어 성능 향상이 많은 응용\n– 멀티쓰레드화된 네이티브 응용: \n• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n– 자바 응용: \n• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n– 멀티인스턴스 응용: \n• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n22\n"
+			"full_text": "▪ Data mining\n– The process of automatically discovering useful information in large data\n– Find novel and useful patterns that might otherwise remain unknown\n• (ex) Predict the amount a customer will spend at an online store\n▪ Not all information discovery tasks are data mining\n– Simple queries or simple interactions with a database system\n– (ex) Find the names of employees in a database whose age is 28\n▪ An integral part of knowledge discovery in databases (KDD)\nWhat Is Data Mining?\n22\nSELECT NAME\nFROM EMPLOYEES\nWHERE AGE = 28;\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "멀티코어와 멀티쓰레딩\n"
+				"text": "What Is Data Mining?\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 멀티코어 성능 향상이 많은 응용\n"
+				"text": "▪ Data mining\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 멀티쓰레드화된 네이티브 응용: \n"
+				"text": "– The process of automatically discovering useful information in large data\n– Find novel and useful patterns that might otherwise remain unknown\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n"
+				"text": "• (ex) Predict the amount a customer will spend at an online store\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Not all information discovery tasks are data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Simple queries or simple interactions with a database system\n– (ex) Find the names of employees in a database whose age is 28\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 16,
-				"text": "• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n"
+				"text": "SELECT NAME\nFROM EMPLOYEES\nWHERE AGE = 28;\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "– 자바 응용: \n"
+				"font_size": 24,
+				"text": "▪ An integral part of knowledge discovery in databases (KDD)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 16,
-				"text": "• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "– 멀티인스턴스 응용: \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 16,
-				"text": "• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "22\n"
 			}
 		]
@@ -736,17 +891,42 @@
 		"page_id": 23,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "응용 예제: Valve 게임 소프트웨어\n23\n"
+			"full_text": "▪ Data preprocessing\n– Transforms the raw input data into an appropriate format for analysis\n– Examples\n• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n– Perhaps the most laborious and time-consuming step in the overall KDD\nThe Process of KDD (1/2)\n23\n(flat files,\nspreadsheets,\ndatabase tables)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "응용 예제: Valve 게임 소프트웨어\n"
+				"text": "The Process of KDD (1/2)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 16,
+				"text": "(flat files,\nspreadsheets,\ndatabase tables)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data preprocessing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Transforms the raw input data into an appropriate format for analysis\n– Examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Perhaps the most laborious and time-consuming step in the overall KDD\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "23\n"
 			}
 		]
@@ -755,22 +935,37 @@
 		"page_id": 24,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Windows 8의 프로세스와 쓰레드 관리\n•\n응용은 하나 또는 그 이\n상의 프로세스로 구성\n•\n각 프로세스는 프로그램\n실행을 위한 자원을 제공\n•\n쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n•\n작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n•\n쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n•\n파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n•\n사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n24\n"
+			"full_text": "▪ Postprocessing\n– Ensures that only valid and useful results are incorporated into the \ndecision support system\n– Examples\n• Visualization\n• Hypothesis testing (to eliminate spurious data mining results)\nThe Process of KDD (2/2)\n24\n(flat files,\nspreadsheets,\nDatabase tables)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Windows 8의 프로세스와 쓰레드 관리\n"
+				"text": "The Process of KDD (2/2)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 응용은 하나 또는 그 이\n상의 프로세스로 구성\n• 각 프로세스는 프로그램\n실행을 위한 자원을 제공\n• 쓰레드는 실행을 위해 스\n케줄링 될 수 있는 프로\n세스 내의 개체\n• 작업 객체는 프로세스들\n의 그룹을 하나의 단위로\n써 관리할 수 있게 함\n• 쓰레드 풀은 응용을 대신\n하여 비동기적인 콜백을\n효과적으로 실행하는 작\n업 쓰레드의 집합\n• 파이버는 응용 프로그램\n에 의해 수동으로 스케줄\n링되는 실행 단위\n• 사용자모드 스케줄링 (U\nMS) 은 응용이 자신의\n쓰레드를 통해 스케줄링\n하는 경량화 기법\n"
+				"font_size": 16,
+				"text": "(flat files,\nspreadsheets,\nDatabase tables)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Postprocessing\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Ensures that only valid and useful results are incorporated into the \ndecision support system\n– Examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Visualization\n• Hypothesis testing (to eliminate spurious data mining results)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "24\n"
 			}
 		]
@@ -779,37 +974,32 @@
 		"page_id": 25,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Windows 8의 프로세스와 쓰레드 관리\n• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n25\n"
+			"full_text": "▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\nMotivating Challenges (1/4)\n25\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Windows 8의 프로세스와 쓰레드 관리\n"
+				"text": "Motivating Challenges (1/4)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n"
+				"text": "▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n"
+				"font_size": 20,
+				"text": "– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 24,
-				"text": "• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n"
+				"font_size": 18,
+				"text": "• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "25\n"
 			}
 		]
@@ -818,47 +1008,52 @@
 		"page_id": 26,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Metro 인터페이스\n• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n• 응용 개발자가 이를 처리해야 함\n• Windows 8은 후면 응용을 종료시킴\n• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n26\n"
+			"full_text": "2. High Dimensionality\n– It is common for data sets to have hundreds or thousands of attributes\n• (ex) In bioinformatics, gene expression data involve thousands of features\n– Problems\n• Curse of dimensionality\n– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n• The computational complexity increases rapidly \nMotivating Challenges (2/4)\n26\nAn example of many attributes (features)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Metro 인터페이스\n"
+				"text": "Motivating Challenges (2/4)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n"
+				"text": "2. High Dimensionality\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n"
+				"font_size": 20,
+				"text": "– It is common for data sets to have hundreds or thousands of attributes\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 24,
-				"text": "• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n"
+				"font_size": 18,
+				"text": "• (ex) In bioinformatics, gene expression data involve thousands of features\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 응용 개발자가 이를 처리해야 함\n"
+				"font_size": 20,
+				"text": "– Problems\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 24,
-				"text": "• Windows 8은 후면 응용을 종료시킴\n"
+				"font_size": 18,
+				"text": "• Curse of dimensionality\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 22,
-				"text": "• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n"
+				"font_size": 16,
+				"text": "– i.e., traditional data analysis techniques don’t work well for high-dimensional data\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 18,
+				"text": "• The computational complexity increases rapidly \nAn example of many attributes (features)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "26\n"
 			}
 		]
@@ -867,22 +1062,42 @@
 		"page_id": 27,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "윈도우 프로세스\nWindows 커널에 의해 제공되는 프로세스와 서비스는\n상대적으로 단순하고 범용성을 가짐\n• 객체로 구현되어 있음\n• 새로운 프로세스로 생성되거나 기존의\n프로세스를 복사\n• 수행 가능한 프로세스는 하나 이상의\n쓰레드를 가지고 있음\n• 프로세스와 쓰레드 객체는 동기화\n능력을 내장하고 있음\n27\n"
+			"full_text": "3. Heterogeneous data\n– Data sets often contain attributes of different types\n• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n– Problems\n• Data mining techniques should consider complex relationships in the data \nMotivating Challenges (3/4)\n27\nExamples of heterogeneous data\nText data\nTable data\nSequence data\nGraph data\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "윈도우 프로세스\n"
+				"text": "Motivating Challenges (3/4)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "3. Heterogeneous data\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "Windows 커널에 의해 제공되는 프로세스와 서비스는\n상대적으로 단순하고 범용성을 가짐\n• 객체로 구현되어 있음\n• 새로운 프로세스로 생성되거나 기존의\n프로세스를 복사\n• 수행 가능한 프로세스는 하나 이상의\n쓰레드를 가지고 있음\n• 프로세스와 쓰레드 객체는 동기화\n능력을 내장하고 있음\n"
+				"text": "– Data sets often contain attributes of different types\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 18,
+				"text": "• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Problems\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Data mining techniques should consider complex relationships in the data \nText data\nTable data\nSequence data\nGraph data\nExamples of heterogeneous data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "27\n"
 			}
 		]
@@ -891,17 +1106,32 @@
 		"page_id": 28,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "윈도우 프로세스와 자원\n28\n"
+			"full_text": "4. Data distribution\n– Sometimes, the data is distributed across multiple locations\n– Key challenges\n• How to reduce the amount of communication needed to perform the \ncomputation\n• How to divide the task across multiple locations and merge the partial results \nobtained from each location\nMotivating Challenges (4/4)\n28\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "윈도우 프로세스와 자원\n"
+				"text": "Motivating Challenges (4/4)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "4. Data distribution\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Sometimes, the data is distributed across multiple locations\n– Key challenges\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• How to reduce the amount of communication needed to perform the \ncomputation\n• How to divide the task across multiple locations and merge the partial results \nobtained from each location\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "28\n"
 			}
 		]
@@ -910,17 +1140,27 @@
 		"page_id": 29,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "윈도우 프로세스 객체 속성\n29\n"
+			"full_text": "▪ Data mining employs techniques from many disciplines\n– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\nDisciplines Related to Data Mining\n29\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "윈도우 프로세스 객체 속성\n"
+				"text": "Disciplines Related to Data Mining\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Data mining employs techniques from many disciplines\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Statistics (sampling, estimation, hypothesis testing, …)\n– AI (machine learning, modeling, learning theories, …)\n– Database (efficient storage, indexing, query processing, …)\n– Parallel/distributed computing (processing data of massive size)\n– Others (optimization, information theory, visualization, IR, …)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "29\n"
 			}
 		]
@@ -929,17 +1169,52 @@
 		"page_id": 30,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "윈도우 쓰레드 객체 속성\n30\n"
+			"full_text": "▪ Data science\n– An interdisciplinary field that studies and applies tools \nand techniques for deriving useful insights from data\n– Emerged as a new field because none of the existing \nareas provides a complete set of tools for the data \nanalysis tasks\n• Programming skill + math/statistical skill + domain skill\n▪ Data mining\n– Emphasizes the direct discovery of patterns and \nrelationships from data, especially in large data sets\n• Often without the need for extensive domain knowledge\n– Mainly about finding useful information in a dataset\nData Science and Data Mining\n30\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "윈도우 쓰레드 객체 속성\n"
+				"text": "Data Science and Data Mining\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Data science\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– An interdisciplinary field that studies and applies tools \nand techniques for deriving useful insights from data\n– Emerged as a new field because none of the existing \nareas provides a complete set of tools for the data \nanalysis tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Programming skill + math/statistical skill + domain skill\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Data mining\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Emphasizes the direct discovery of patterns and \nrelationships from data, especially in large data sets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Often without the need for extensive domain knowledge\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Mainly about finding useful information in a dataset\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "30\n"
 			}
 		]
@@ -948,17 +1223,52 @@
 		"page_id": 31,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "윈도우 쓰레드 상태\n31\n"
+			"full_text": "▪ Predictive tasks\n– The objective is to predict the value of a particular \nattribute based on the values of other attributes\n• Target (or dependent) attribute: the attribute to be \npredicted\n• Explanatory (or independent) attribute: the \nattributes used for prediction\n▪ Descriptive tasks\n– The objective is to derive patterns that summarize \nthe underlying relationships in data\n• (ex) frequent patterns, correlations, trends, clusters\n– Frequently require postprocessing techniques to \nvalidate and explain the results\nTwo Major Categories of Data Mining Tasks\n31\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "윈도우 쓰레드 상태\n"
+				"text": "Two Major Categories of Data Mining Tasks\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Predictive tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The objective is to predict the value of a particular \nattribute based on the values of other attributes\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• Target (or dependent) attribute: the attribute to be \npredicted\n• Explanatory (or independent) attribute: the \nattributes used for prediction\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Descriptive tasks\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– The objective is to derive patterns that summarize \nthe underlying relationships in data\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) frequent patterns, correlations, trends, clusters\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Frequently require postprocessing techniques to \nvalidate and explain the results\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "31\n"
 			}
 		]
@@ -967,67 +1277,32 @@
 		"page_id": 32,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 다단계 쓰레드 구조\n– 프로세스: 보통의 UNIX 프로세스\n• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n– 사용자 수준 쓰레드 (ULT)\n• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n– 경량 프로세스 (Lightweight processes ≡ LWP)\n• ULT와 커널 쓰레드 사이의 사상(mapping)\n– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n• 처리기에 수행되는 기본 개체\n 그림 4.15 참조\n32\n"
+			"full_text": "▪ In this course, we consider four of the core data mining tasks\n– Classification, association analysis, clustering, anomaly detection\nFour Core Data Mining Tasks\n32\n(we focus only on classification)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "Four Core Data Mining Tasks\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 다단계 쓰레드 구조\n"
+				"text": "▪ In this course, we consider four of the core data mining tasks\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 프로세스: 보통의 UNIX 프로세스\n"
+				"text": "– Classification, association analysis, clustering, anomaly detection\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "• 사용자 주소공간, 스택, 프로세스 제어 블록(PCB) 등을 포함\n"
+				"font_size": 16,
+				"text": "(we focus only on classification)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 20,
-				"text": "– 사용자 수준 쓰레드 (ULT)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 프로세스 주소공간에서 쓰레드 라이브러리를 통해 구현\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 경량 프로세스 (Lightweight processes ≡ LWP)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• ULT와 커널 쓰레드 사이의 사상(mapping)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 커널 쓰레드 ≡ 커널 수준 쓰레드 (KLT)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 처리기에 수행되는 기본 개체\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": " 그림 4.15 참조\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "32\n"
 			}
 		]
@@ -1036,22 +1311,62 @@
 		"page_id": 33,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n•\n프로세스와 쓰레드 관계\n33\n"
+			"full_text": "▪ Predictive modeling: the task of building a model y = f(x)\n– y: the target variable\n– x = (x1, x2, …, xn): the explanatory variables\n▪ Two types of predictive modeling\n– Classification: when y is categorical (e.g., ‘cat’(0), ‘dog’(1), ‘human’(2))\n• (ex) predicting whether a web user will make a purchase (y = 1(yes) or 0(no))\n– Regression: when y is numerical (e.g., any value from [-20, 50])\n• (ex) forecasting the future temperature of an area (y = 32.7C)\n▪ Goal\n– Learn a model f(x) that minimizes the error between the predicted and \ntrue values of the target variable\n1. Classification\n33\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "1. Classification\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Predictive modeling: the task of building a model y = f(x)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "• 프로세스와 쓰레드 관계\n"
+				"text": "– y: the target variable\n– x = (x1, x2, …, xn): the explanatory variables\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Two types of predictive modeling\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Classification: when y is categorical (e.g., ‘cat’(0), ‘dog’(1), ‘human’(2))\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) predicting whether a web user will make a purchase (y = 1(yes) or 0(no))\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Regression: when y is numerical (e.g., any value from [-20, 50])\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "• (ex) forecasting the future temperature of an area (y = 32.7C)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Learn a model f(x) that minimizes the error between the predicted and \ntrue values of the target variable\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "33\n"
 			}
 		]
@@ -1060,22 +1375,42 @@
 		"page_id": 34,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• Solaris 다중쓰레드 구조의 예\n34\n"
+			"full_text": "▪ Consider the task of predicting a species of flower based on the \ncharacteristics of the flower\n– Species: y  {‘Setosa’, ‘Versicolour’, ‘Virginica’}\n– Petal length: x1  [0, 7]\n– Petal width: x2  [0, 2.5]\n(Ex) Predicting the Type of a Flower\n34\n‘Setosa’           if\n‘Verisicolour’  if\n‘Virginica’      if\nThere can\nbe errors\n▪ We may build a model f(x1, x2)\nas follows:\nx1  [0, 2.5)\nx2  [0, 0.75)\nx1  [2.5, 5)\nx2  [0.75, 1.75) \nx1  [5, 7]\nx2  [1.75, 2.5]\nf(x1, x2) =\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "(Ex) Predicting the Type of a Flower\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• Solaris 다중쓰레드 구조의 예\n"
+				"text": "▪ Consider the task of predicting a species of flower based on the \ncharacteristics of the flower\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Species: y  {‘Setosa’, ‘Versicolour’, ‘Virginica’}\n– Petal length: x1  [0, 7]\n– Petal width: x2  [0, 2.5]\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "There can\nbe errors\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ We may build a model f(x1, x2)\nas follows:\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "‘Setosa’           if\nx1  [0, 2.5)\nx2  [0, 0.75)\nf(x1, x2) =\n‘Verisicolour’  if\n‘Virginica’      if\nx1  [2.5, 5)\nx2  [0.75, 1.75) \nx1  [5, 7]\nx2  [1.75, 2.5]\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "34\n"
 			}
 		]
@@ -1084,57 +1419,52 @@
 		"page_id": 35,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 동기 (motivations)\n– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n• 예: 병렬 배열 계산 (parallel array computation)\n– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n– 순수 커널 쓰레드\n35\n"
+			"full_text": "▪ Discover patterns that describe strongly associated items in the \ndata\n– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n▪ Goal\n– Extract the most interesting patterns in an efficient manner\n• Because of the exponential size of its search space\n2. Association Analysis\n35\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "2. Association Analysis\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 동기 (motivations)\n"
+				"text": "▪ Discover patterns that describe strongly associated items in the \ndata\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n"
+				"text": "– (ex) find groups of products that are bought together\n– (ex) identify web pages that are accessed sequentially\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ The discovered patterns are typically represented in the form of \nimplication rules or item subsets\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– (ex) {Diapers} → {Beer} (association rule)\n– (ex) {Milk, Ham, Bread} (frequent itemset)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Extract the most interesting patterns in an efficient manner\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n"
+				"text": "• Because of the exponential size of its search space\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 20,
-				"text": "– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 예: 병렬 배열 계산 (parallel array computation)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 순수 커널 쓰레드\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "35\n"
 			}
 		]
@@ -1143,22 +1473,32 @@
 		"page_id": 36,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n36\n"
+			"full_text": "▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n– (ex) {Diapers} → {Milk}\n▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n(Ex) Market Basket Analysis\n36\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "(Ex) Market Basket Analysis\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n"
+				"text": "▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– (ex) {Diapers} → {Milk}\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "36\n"
 			}
 		]
@@ -1167,22 +1507,42 @@
 		"page_id": 37,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• Solaris thread state\n37\n"
+			"full_text": "▪ Find groups of closely related observations so that\n– Observations in the same cluster are similar to each other\n– Observations in different clusters are dissimilar to each other\n▪ Application examples\n– Market research: group similar customers (customer segmentation)\n– Social networks: recognize communities within large groups of people\n3. Cluster Analysis\n37\nCustomer segmentation\nCommunity detection\ncluster\ncluster\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "3. Cluster Analysis\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• Solaris thread state\n"
+				"text": "▪ Find groups of closely related observations so that\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 20,
+				"text": "– Observations in the same cluster are similar to each other\n– Observations in different clusters are dissimilar to each other\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Application examples\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "– Market research: group similar customers (customer segmentation)\n– Social networks: recognize communities within large groups of people\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "cluster\ncluster\nCustomer segmentation\nCommunity detection\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "37\n"
 			}
 		]
@@ -1191,52 +1551,62 @@
 		"page_id": 38,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Solaris 쓰레드 및 SMP 관리\n• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n– 동기화 필요: 수면(sleeping) 상태로 전이\n• 예: 5장에서 기술될 상호배제 필요\n– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n– 양보(yielding): \n• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n38\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
+			"full_text": "▪ We are given a collection of news articles \n– Each article is represented as a set of word-frequency pairs (i.e., w: c)\n• w is a word and c is the number of times the word appears in the article\n▪ Clustering can be applied to group similar new articles\n– A good clustering algorithm should be able to identify the two clusters\n(Ex) Document Clustering\n38\nArticle\nWord-frequency pairs\n1\ndollar: 1, industry: 4, country: 2, loan: 3, deal: 2, government: 2\n2\nmachinery: 2, labor: 3, market: 4, industry: 2, work: 3, country: 1\n3\njob: 5, inflation: 3, rise: 2, jobless: 2, market: 3, country: 2, index: 3\n4\ndomestic: 3, forecast: 2, gain: 1, market: 2, sale: 3, price: 2\n5\npatient: 4, symptom: 2, drug: 3, health: 2, clinic: 2, doctor: 2\n6\npharmaceutical: 2, company: 3, drug: 2, vaccine: 1, flu: 3\n7\ndeath: 2, cancer: 4, drug: 3, public: 4, health: 3, director: 2\n8\nmedical: 2, cost: 3, increase: 2, patient: 2, health: 3, care: 1\nCluster 1\n(economy)\nCluster 2\n(healthcare)\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Solaris 쓰레드 및 SMP 관리\n"
+				"text": "(Ex) Document Clustering\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n"
+				"text": "▪ We are given a collection of news articles \n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 동기화 필요: 수면(sleeping) 상태로 전이\n"
+				"text": "– Each article is represented as a set of word-frequency pairs (i.e., w: c)\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• 예: 5장에서 기술될 상호배제 필요\n"
+				"text": "• w is a word and c is the number of times the word appears in the article\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "Article\nWord-frequency pairs\n1\n2\n3\n4\n5\n6\n7\n8\ndollar: 1, industry: 4, country: 2, loan: 3, deal: 2, government: 2\nmachinery: 2, labor: 3, market: 4, industry: 2, work: 3, country: 1\njob: 5, inflation: 3, rise: 2, jobless: 2, market: 3, country: 2, index: 3\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Cluster 1\n(economy)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "domestic: 3, forecast: 2, gain: 1, market: 2, sale: 3, price: 2\npatient: 4, symptom: 2, drug: 3, health: 2, clinic: 2, doctor: 2\npharmaceutical: 2, company: 3, drug: 2, vaccine: 1, flu: 3\ndeath: 2, cancer: 4, drug: 3, public: 4, health: 3, director: 2\nmedical: 2, cost: 3, increase: 2, patient: 2, health: 3, care: 1\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 18,
+				"text": "Cluster 2\n(healthcare)\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Clustering can be applied to group similar new articles\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n"
+				"text": "– A good clustering algorithm should be able to identify the two clusters\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 양보(yielding): \n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": "• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "38\n"
 			}
 		]
@@ -1245,67 +1615,57 @@
 		"page_id": 39,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Linux 프로세스와 쓰레드 관리\n• Linux 태스크 (task_struct 자료구조)\n– 상태\n• Running, Interruptable, Uninterruptable, Stopped, Zombie\n– 스케줄링 정보\n• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n39\n Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
+			"full_text": "▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n– Such observations are called anomalies or outliers\n▪ Application examples\n– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n4. Anomaly Detection\n39\n▪ Goal\n– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n• A high detection rate\n• A low false alarm rate\noutlier\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Linux 프로세스와 쓰레드 관리\n"
+				"text": "4. Anomaly Detection\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• Linux 태스크 (task_struct 자료구조)\n"
+				"text": "▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 상태\n"
+				"text": "– Such observations are called anomalies or outliers\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• Running, Interruptable, Uninterruptable, Stopped, Zombie\n"
+				"text": "outlier\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Goal\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 스케줄링 정보\n"
+				"text": "– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 18,
-				"text": "• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n"
+				"text": "• A high detection rate\n• A low false alarm rate\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 24,
+				"text": "▪ Application examples\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n"
+				"text": "– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 18,
-				"text": "– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 18,
-				"text": " Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
+				"font_size": 14,
 				"text": "39\n"
 			}
 		]
@@ -1314,177 +1674,43 @@
 		"page_id": 40,
 		"full_text": {
 			"audio_url": "",
-			"full_text": "Linux 프로세스와 쓰레드 관리\n• 프로세스/쓰레드 모델\n– 정지(stopped)\n– 수행 중(executing)\n– 좀비 (zombie)\n 시그널(signal)\n 사건(event)\n40\n"
+			"full_text": "▪ A credit card company records the transactions made by every \ncredit card holder\n– Along with personal information (e.g., credit limit, age, income, address)\n(Ex) Credit Card Fraud Detection\n40\n▪ Anomaly detection techniques\n① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\nanomaly\n"
 		},
 		"text": [
 			{
 				"audio_url": "",
 				"font_size": 32,
-				"text": "Linux 프로세스와 쓰레드 관리\n"
+				"text": "(Ex) Credit Card Fraud Detection\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 24,
-				"text": "• 프로세스/쓰레드 모델\n"
+				"text": "▪ A credit card company records the transactions made by every \ncredit card holder\n"
 			},
 			{
 				"audio_url": "",
 				"font_size": 20,
-				"text": "– 정지(stopped)\n– 수행 중(executing)\n– 좀비 (zombie)\n 시그널(signal)\n 사건(event)\n"
+				"text": "– Along with personal information (e.g., credit limit, age, income, address)\n"
 			},
 			{
 				"audio_url": "",
-				"font_size": 12,
+				"font_size": 24,
+				"text": "▪ Anomaly detection techniques\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 20,
+				"text": "① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 16,
+				"text": "anomaly\n"
+			},
+			{
+				"audio_url": "",
+				"font_size": 14,
 				"text": "40\n"
-			}
-		]
-	},
-	"41": {
-		"page_id": 41,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "Android 프로세스와 쓰레드 관리\n• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n41\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "Android 프로세스와 쓰레드 관리\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 24,
-				"text": "• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 20,
-				"text": "• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "41\n"
-			}
-		]
-	},
-	"42": {
-		"page_id": 42,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "Android 프로세스와 쓰레드 관리\n42\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "Android 프로세스와 쓰레드 관리\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "42\n"
-			}
-		]
-	},
-	"43": {
-		"page_id": 43,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "Android 프로세스와 쓰레드 관리\n43\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "Android 프로세스와 쓰레드 관리\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "43\n"
-			}
-		]
-	},
-	"44": {
-		"page_id": 44,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "프로세스와 쓰레드\n• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n44\n전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "프로세스와 쓰레드\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 26,
-				"text": "• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 19,
-				"text": "전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "44\n"
-			}
-		]
-	},
-	"45": {
-		"page_id": 45,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 가용 쓰레드 풀을 제공\n• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n량에 따라 결정됨\n45\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 28,
-				"text": "• 가용 쓰레드 풀을 제공\n• 설계자는 독립적으로 디스패치 할 수 있고 병렬\n적으로 실행 가능한 ‘블록’으로 응용을 구분\n• 병행성은 시스템의 가용 코어 개수와 쓰레드 용\n량에 따라 결정됨\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "45\n"
-			}
-		]
-	},
-	"46": {
-		"page_id": 46,
-		"full_text": {
-			"audio_url": "",
-			"full_text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 블록\n– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n46\n"
-		},
-		"text": [
-			{
-				"audio_url": "",
-				"font_size": 32,
-				"text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 28,
-				"text": "• 블록\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 24,
-				"text": "– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n"
-			},
-			{
-				"audio_url": "",
-				"font_size": 12,
-				"text": "46\n"
 			}
 		]
 	}
