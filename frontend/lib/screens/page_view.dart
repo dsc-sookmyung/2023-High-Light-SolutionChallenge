@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:leturn/check/t2.dart';
+//import 'package:leturn/check/t2.dart';
 
 //import 'package:just_audio/just_audio.dart';
 import 'package:leturn/component/UnitWidgets.dart';
@@ -38,7 +38,6 @@ class UnitList {
 
   factory UnitList.fromJson(Map<String, dynamic> json) {
     List<dynamic> jsonResponse = json["text"];
-    //logger.e('jsonresponse: ${jsonResponse.toString()}');
     List<dynamic> jsonResponse2 = json["image"];
 
     List<TextUnit> textList = <TextUnit>[];
@@ -57,7 +56,7 @@ class UnitList {
 
 
 class ViewPage extends StatefulWidget {
-  final double fileId;
+  final int fileId;
   final int pageId;
 
   const ViewPage({
@@ -74,25 +73,28 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
   @override
   bool get wantKeepAlive => true; // 탭 이동해도 다시 로딩X
 
-  int fontBase = 0;
+  num fontBase = 0;
 
   //오디오 관련
   bool isPlaying = false;
   final player = AudioPlayer();
+
+
+
 
   late UnitList unitList;
   late List<TextUnit> _allTexts;
   late List<ImageUnit> _allImages;
 
   Future<UnitList> getList() async {
-    /*final routeFromJsonFile = await rootBundle.loadString("sample.json");
-    unitList = UnitList.fromJson(routeFromJsonFile);*/
+
     String url = '${serverHttp}/file/${widget.fileId}/page/${widget.pageId}';
+
     final response = await http.get(Uri.parse(url));
     if(response.statusCode != 200){
-      logger.e('error>>> statusCode : ${response.statusCode}');
+      //logger.e('error>>> statusCode : ${response.statusCode}');
     }
-    var data = json.decode(response.body);
+    var data = json.decode(utf8.decode(response.bodyBytes));
     unitList = UnitList.fromJson(data);
 
     _allTexts = unitList.textList ?? <TextUnit>[];
@@ -107,15 +109,20 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
     player.setUrl(url.path, isLocal: true);
   }
 
+  void _onScaleUpdate(ScaleUpdateDetails details) {
+    setState(() {
+      fontBase = details.scale.clamp(1.0, 5.0);
+    });
+  }
   @override
   void initState() {
     super.initState();
     getList();
-    player.onPlayerStateChanged.listen((state) {
+    /*player.onPlayerStateChanged.listen((state) {
       setState(() {
         isPlaying = state == PlayerState.PLAYING;
       });
-    });
+    });*/
   }
 
   @override
@@ -133,41 +140,44 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
             children: [
               _FixedTop(),
               Expanded(
-                child: Container(
-                    height: double.infinity,
-                    color: Colors.white,
-                    padding:
-                        EdgeInsets.only(left: 30.w, top: 10.w, right: 10.w),
-                    child: FutureBuilder(
-                        future: getList(),
-                        builder: (BuildContext ctx, AsyncSnapshot snapshot) {
-                          if (snapshot.data == null) {
-                            //print(snapshot.data);
-                            return Container(
-                              child: const Center(
-                                child: CircularProgressIndicator(),
-                              ),
-                            );
-                          } else {
-                            if (_allImages.isEmpty) {
-                              return textListView(
-                                  _allTexts, fontBase, unitList.imgExist);
-                            } else {
-                              return Stack(
-                                children: [
-                                  textListView(
-                                      _allTexts, fontBase, unitList.imgExist),
-                                  Positioned(
-                                      bottom: 0,
-                                      left: 0,
-                                      right: 0,
-                                      height: 120.h,
-                                      child: imgWidget(_allImages)),
-                                ],
+                child: GestureDetector(
+                  onScaleUpdate: _onScaleUpdate,
+                  child: Container(
+                      height: double.infinity,
+                      color: Colors.white,
+                      padding:
+                          EdgeInsets.only(left: 30.w, top: 10.w, right: 10.w),
+                      child: FutureBuilder(
+                          future: getList(),
+                          builder: (BuildContext ctx, AsyncSnapshot snapshot) {
+                            if (snapshot.data == null) {
+                              //print(snapshot.data);
+                              return Container(
+                                child: const Center(
+                                  child: CircularProgressIndicator(),
+                                ),
                               );
+                            } else {
+                              if (_allImages.isEmpty) {
+                                return textListView(
+                                    _allTexts, fontBase, unitList.imgExist);
+                              } else {
+                                return Stack(
+                                  children: [
+                                    textListView(
+                                        _allTexts, fontBase, unitList.imgExist),
+                                    Positioned(
+                                        bottom: 0,
+                                        left: 0,
+                                        right: 0,
+                                        height: 120.h,
+                                        child: imgWidget(_allImages)),
+                                  ],
+                                );
+                              }
                             }
-                          }
-                        })),
+                          })),
+                ),
               ),
             ],
           ),
@@ -189,16 +199,16 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
             iconSize: 44.w,
           ),
           CircleAvatar(
-            radius: 30.w,
+            radius: 35.w,
             child: IconButton(
               icon: Icon(//재생, 일시정지 변환
                   isPlaying ? Icons.pause : Icons.play_arrow),
               iconSize: 50.w,
               onPressed: () async {
-                /*if(isPlaying){
+                if(isPlaying){
                   await player.pause();
                 }else{
-                  await player.resume();}*/
+                  await player.resume();}
               },
             ),
           ),
@@ -242,7 +252,7 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
     );
   }
 
-  Widget textBlock(List<dynamic> _allTexts, int fontBase, int idx) {
+  Widget textBlock(List<TextUnit> _allTexts, num fontBase, int idx) {
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -252,11 +262,9 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
           if (isPlaying) {
             await player.pause();
             await player.dispose();
-            setAudio(idx);
+            await player.setUrl(_allTexts[idx].audioUrl);
           } else {
-            setAudio(idx);
             await player.resume();
-            //await player.resume();
           }
         },
         child: Container(
@@ -271,7 +279,7 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
     );
   }
 
-  Widget textListView(List<dynamic> _allTexts, int fontBase, bool spacer) {
+  Widget textListView(List<TextUnit> _allTexts, num fontBase, bool spacer) {
     return Container(
       //height: double.infinity,
       child: ListView.builder(
@@ -310,7 +318,7 @@ class _ViewPageState extends State<ViewPage> with AutomaticKeepAliveClientMixin 
             return Container(
                 margin: EdgeInsets.fromLTRB(20.w, 10.h, 30.w, 10.h),
                 child: Image.asset(
-                  allImages![idx].imgUrl,
+                  "assets/${allImages![idx].imgUrl}",
                   width: 100.w,
                   height: 100.h,
                   fit: BoxFit.fill,
