@@ -31,7 +31,7 @@ var logger = Logger();
 
 class BasePage extends StatefulWidget {
 
-  final double fileId;
+  final int fileId;
 
   const BasePage({
     Key? key,
@@ -45,13 +45,15 @@ class BasePage extends StatefulWidget {
 
 }
 
-class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin{
+class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin{ //스와이퍼를 적용 vsync
 
 
   late int totalPage;
   late List<int> pagesList = [];
 
-  Future<void> getTotalPage(double fileId) async {
+  Future<List> getTotalPage(int fileId) async {
+    List<int> resPageList = [];
+
 /*    late var url;
 
     Map<String, String> _params = <String,String> {
@@ -79,17 +81,19 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
       }
       setState((){
         pagesList = List.generate(totalPage, (i) => i+1);
-      });*/
+      });
       setState(() {
         pagesList = List<int>.from(data["pages"]);
-      });
+      });*/
+      resPageList = List<int>.from(data["pages"]);
 
     }
+    print(pagesList);
     //statusCode 이상한 경우 -> token 체크하는 코드 삽입
     /*else{
       logger.e("http통신 이상해 : ${response.statusCode}");
-    }
-    return pagesList;*/
+    }*/
+    return resPageList;
   }
 
   @override
@@ -102,17 +106,27 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pagesList.isEmpty
-        ? Container(child: CircularProgressIndicator(),)
-        : Swiper(
-          loop: false,
-          itemBuilder: (BuildContext context, int idx){
-            return ViewPage(fileId: widget.fileId, pageId: idx+1);
-          },
-          itemCount: pagesList.length,
-          //pagination: SwiperPagination(),
-          //control: SwiperControl(),
-        ),
+      body: FutureBuilder(
+        future: getTotalPage(widget.fileId),
+        builder: (BuildContext cotext, AsyncSnapshot snapshot) {
+          if (snapshot.data == null) {
+            print(snapshot.data);
+            return Container(
+              child: CircularProgressIndicator(),
+            );
+          }else{
+            return Swiper(
+              loop: false,
+              itemCount: snapshot.data.length,
+              itemBuilder: (BuildContext context, int idx){
+                return ViewPage(fileId: widget.fileId, pageId: idx+1);
+              },
+              //pagination: SwiperPagination(),
+              //control: SwiperControl(),
+            );
+          }
+        }
+      ),
 
     );
   }
