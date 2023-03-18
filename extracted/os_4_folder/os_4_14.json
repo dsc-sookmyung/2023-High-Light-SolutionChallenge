@@ -1,0 +1,29 @@
+{
+	"page_id": 14,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "쓰레드의 유형\n• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n14\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "쓰레드의 유형\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "14\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

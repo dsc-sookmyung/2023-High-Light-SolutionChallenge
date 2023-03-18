@@ -1,0 +1,29 @@
+{
+	"page_id": 19,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "멀티코어와 멀티쓰레딩\n• Amdahl의 법칙\n19\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "멀티코어와 멀티쓰레딩\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• Amdahl의 법칙\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "19\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}

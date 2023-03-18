@@ -1,0 +1,29 @@
+{
+	"page_id": 36,
+	"full_text": {
+		"audio_url": "",
+		"full_text": "Solaris 쓰레드 및 SMP 관리\n• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n36\n"
+	},
+	"text": [
+		{
+			"audio_url": "",
+			"font_size": 32,
+			"text": "Solaris 쓰레드 및 SMP 관리\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 24,
+			"text": "• 전통적인 UNIX 및 Solaris에서 프로세스 구조 (그림 4.16)\n"
+		},
+		{
+			"audio_url": "",
+			"font_size": 12,
+			"text": "36\n"
+		}
+	],
+	"image": {
+		"img_idx": 1,
+		"audio_url": "",
+		"img_url": ""
+	}
+}
