@@ -1,0 +1,36 @@
+{
+	"page_id": 8,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/8/data_1_full_audio_8.mp3",
+		"full_text": "Before the Lecture…\n▪ Association analysis\n– Discovering interesting relations between items ({diaper} → {beer})\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n– Algorithms: Apriori, FP-growth, sequential patterns, …\n8\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/8/data_1_audio_8_1.mp3",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/8/data_1_audio_8_2.mp3",
+			"font_size": 24,
+			"text": "▪ Association analysis\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/8/data_1_audio_8_3.mp3",
+			"font_size": 20,
+			"text": "– Discovering interesting relations between items ({diaper} → {beer})\n{Bread, Butter} → {Jam}\n(Support = 33.3%)\n(Confidence = 66.7%)\n– Algorithms: Apriori, FP-growth, sequential patterns, …\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/8/data_1_audio_8_4.mp3",
+			"font_size": 14,
+			"text": "8\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_image_folder/8/data_1_image_1.jpeg"
+		}
+	]
+}

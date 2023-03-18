@@ -1,0 +1,46 @@
+{
+	"page_id": 19,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_full_audio_19.mp3",
+		"full_text": "Applications: Business and Industry (1/2)\n▪ Examples of business intelligence applications\n– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n▪ Examples of business questions\n– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\n19\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_1.mp3",
+			"font_size": 32,
+			"text": "Applications: Business and Industry (1/2)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_2.mp3",
+			"font_size": 24,
+			"text": "▪ Examples of business intelligence applications\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_3.mp3",
+			"font_size": 20,
+			"text": "– Point-of-sale data analysis (barcode scanners, RFID, smart cards, etc.)\n– Automated buying and selling (e.g., high-speed stock trading)\n– Customer profiling\n– Targeted marketing\n– Store layout\n– Fraud detection\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_4.mp3",
+			"font_size": 24,
+			"text": "▪ Examples of business questions\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_5.mp3",
+			"font_size": 20,
+			"text": "– “Who are the most profitable customers?”\n– “What products can be cross-sold or up-sold?”\n– “What is the revenue outlook of the company for the next year?”\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_audio_folder/19/data_1_audio_19_6.mp3",
+			"font_size": 14,
+			"text": "19\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/data_1_image_folder/19/data_1_image_1.jpeg"
+		}
+	]
+}

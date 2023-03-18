@@ -15,8 +15,8 @@ from google.cloud import texttospeech
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./tts_api_key.json"
 #! 다운받은 파일명을 어떻게 받지?
-downloaded = 'StallingsOS8e-Chap04.pdf'
-# downloaded = 'data_1.pdf'
+# downloaded = 'StallingsOS8e-Chap04.pdf'
+downloaded = 'data_1.pdf'
 cloud_bucket = 'cloud_storage_leturn'
 split_file = list(downloaded.split('.'))
 filename = split_file[0]
