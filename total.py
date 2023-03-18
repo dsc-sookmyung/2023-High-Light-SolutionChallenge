@@ -14,6 +14,19 @@ from google.cloud import storage
 from google.cloud import texttospeech
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./tts_api_key.json"
+#! 다운받은 파일명을 어떻게 받지?
+downloaded = 'StallingsOS8e-Chap04.pdf'
+# downloaded = 'data_1.pdf'
+cloud_bucket = 'cloud_storage_leturn'
+split_file = list(downloaded.split('.'))
+filename = split_file[0]
+json_folder_path = filename + '_json_folder/'
+json_filename = filename + '_json'
+audio_folder_path = filename + '_audio_folder/'
+audio_full_filename = filename + '_full_audio'
+audio_one_filename = filename + '_audio'
+image_folder_path = filename + '_image_folder/'
+path = r'./' + filename + '.pdf'
 
 # full-text, line-text 뽑기
 
@@ -47,7 +60,6 @@ def get_text(path):
 
 
 # 정확도 높이기
-
 def get_detailed(data):
     cur_size = 0
     text = ""
@@ -100,11 +112,12 @@ def get_image(data, path, image_path):
     pdf = fitz.open(path)
     page_id = 1
     for i in range(len(pdf)):
+        image_count = 1
+        each_page = []
         local_image_path = image_path
         local_image_path += str(page_id)
         page = pdf[i]  # load page
         images = page.get_images()
-
         for image in images:
             if not os.path.exists(local_image_path):
                 os.makedirs(local_image_path)
@@ -113,9 +126,11 @@ def get_image(data, path, image_path):
             img = PIL.Image.open(io.BytesIO(image_data))
             extension = base_img['ext']
             img.save(
-                open(local_image_path + f"/image{page_id}.{extension}", "wb"))
-        data[str(page_id)]["image"] = {
-            "img_idx": 1, "audio_url": "", "img_url": ""}
+                open(f"{local_image_path}/{filename}_image_{image_count}.{extension}", "wb"))
+            each_page.append({
+                "img_idx": image_count, "audio_url": "", "img_url": ""})
+            image_count += 1
+        data[str(page_id)]["image"] = each_page
         page_id += 1
     return data
 
@@ -153,31 +168,36 @@ def upload_folder(folder):
         "./backend_test.json")
 
     # GCP에 파일 올리기
-    bucket = storage_client.get_bucket('cloud_storage_leturn')
+    bucket = storage_client.get_bucket(
+        'cloud_storage_leturn')  # ! 버킷 이름 넣기 버킷 이름에 따라 수정 필요
 
-    for filename in os.listdir(folder):
+    for each_page in os.listdir(folder):
         # GCP에 올릴 파일 이름
-        if os.path.isfile(filename):
-            blob = bucket.blob(folder + filename)
-            with open(folder + '/' + filename, 'rb') as f:
+        each_folder = folder
+        each_folder += str(each_page) + '/'
+        print("fin")
+        for file in os.listdir(each_folder):
+            blob = bucket.blob(each_folder + file)
+            with open(each_folder + file, 'rb') as f:
                 blob.upload_from_file(f)
-        else:
-            for file in os.listdir(filename):
-                blob = bucket.blob(folder + filename)
-                with open(folder + '/' + filename, 'rb') as f:
-                    blob.upload_from_file(f)
+
+#! 수정 필요
 
 
 def upload_file(path):
     storage_client = storage.Client.from_service_account_json(
         "./backend_test.json")
-    bucket = storage_client.get_bucket('cloud_storage_leturn')  # 버킷 이름 넣기
+    bucket = storage_client.get_bucket(
+        'cloud_storage_leturn')  # ! 버킷 이름 넣기 버킷 이름에 따라 수정 필요
+    #! 파일 이름에 따라 수정 필요
     filename = 'StallingsOS8e-Chap04.pdf'
     blob = bucket.blob(filename)
 
     with open(filename, 'rb') as f:
         blob.upload_from_file(f)
     blob = bucket.blob(filename)
+
+#! 수정 필요
 
 
 def download_file():
@@ -206,27 +226,31 @@ def download_file():
     blob.download_to_filename(destination_file_name)
 
 
-# 다운받은 파일명을 어떻게 받지?
-downloaded = 'StallingsOS8e-Chap04.pdf'
-split_file = list(downloaded.split('.'))
-filename = split_file[0]
-json_folder_path = filename + '_json_folder/'
-json_file_path = json_folder_path + filename + '_json'
-audio_folder_path = filename + '_audio_folder/'
-audio_full_filename = filename + '_full_audio'
-audio_one_filename = filename + '_audio'
-image_folder_path = filename + '_image_folder/'
-image_file_path = './' + image_folder_path + '/'
-path = r'./' + filename + '.pdf'
-
-
 # 텍스트 추출
 extract_data = get_text(path)
 extract_data = get_detailed(extract_data)
+# text/audio url 생성
+for i in range(1, len(extract_data) + 1):
+    page = extract_data[str(i)]
+    count = str(i)
+    page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}{count}/{filename}_full_audio_{count}.mp3"
+    for j in range(len(page["text"])):
+        line_count = str(j + 1)
+        one_text_audio_url = page["text"][j]["audio_url"]
+        page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}{count}/{filename}_audio_{count}_{line_count}.mp3"
+
+
 # 이미지 추출 및 폴더 저장
 if not os.path.exists(image_folder_path):
     os.makedirs(image_folder_path)
-get_image(extract_data, path, image_file_path)
+get_image(extract_data, path, image_folder_path)
+# 이미지 url 생성 및 저장
+for each_page in os.listdir(image_folder_path):
+    img_idx = 0
+    for img in os.listdir(image_folder_path + each_page):
+        extract_data[each_page]["image"][img_idx][
+            "img_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{image_folder_path}{each_page}/{img}"
+        img_idx += 1
 
 # 텍스트 파일 저장
 if not os.path.exists(json_folder_path):
@@ -234,7 +258,11 @@ if not os.path.exists(json_folder_path):
 
 for i in range(1, len(extract_data) + 1):
     each_page = extract_data[str(i)]
-    with open(json_file_path + '_' + str(i) + '.json', 'w', encoding='utf-8') as make_file:
+    json_file_path = json_folder_path + str(i)
+    if not os.path.exists(json_file_path):
+        os.makedirs(json_file_path)
+    count = str(i)
+    with open(f"{json_file_path}/{filename}_{count}.json", 'w', encoding='utf-8') as make_file:
         json.dump(each_page, make_file, indent="\t", ensure_ascii=False)
 print("text/image fin")
 
@@ -247,22 +275,19 @@ for i in range(1, len(extract_data) + 1):
     full_text = extract_data[str(i)]['full_text']['full_text']
     if not os.path.exists(local_audio_path):
         os.makedirs(local_audio_path)
-    text_to_speech(full_text, local_audio_path + '/' +
-                   audio_full_filename + '_' + str(i) + ".mp3")
+    text_to_speech(
+        full_text, f"{local_audio_path}/{audio_full_filename}_{count}.mp3")
     line = len(extract_data[str(i)]['text'])
     for j in range(line):
         text = extract_data[str(i)]['text'][j]['text']
-        print(text)
-        fileName = local_audio_path + '/' + audio_one_filename + '_' + \
-            str(i) + "_" + str(j + 1) + ".mp3"
+        line_count = str(j + 1)
+        fileName = f"{local_audio_path}/{audio_one_filename}_{count}_{line_count}.mp3"
         text_to_speech(text, fileName)
 
 print("audio fin")
 
-'''
 # 서버에 업로드
 upload_folder(json_folder_path)
 upload_folder(audio_folder_path)
 upload_folder(image_folder_path)
 print("fin")
-'''

@@ -1,0 +1,46 @@
+{
+	"page_id": 19,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/19/StallingsOS8e-Chap04_full_audio_19.mp3",
+		"full_text": "멀티코어와 멀티쓰레딩\n• Amdahl의 법칙\n19\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/19/StallingsOS8e-Chap04_audio_19_1.mp3",
+			"font_size": 32,
+			"text": "멀티코어와 멀티쓰레딩\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/19/StallingsOS8e-Chap04_audio_19_2.mp3",
+			"font_size": 24,
+			"text": "• Amdahl의 법칙\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/19/StallingsOS8e-Chap04_audio_19_3.mp3",
+			"font_size": 12,
+			"text": "19\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/19/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/19/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/19/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/19/StallingsOS8e-Chap04_image_4.png"
+		}
+	]
+}

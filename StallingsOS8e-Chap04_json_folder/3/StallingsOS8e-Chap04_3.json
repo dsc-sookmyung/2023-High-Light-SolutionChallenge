@@ -1,0 +1,41 @@
+{
+	"page_id": 3,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/3/StallingsOS8e-Chap04_full_audio_3.mp3",
+		"full_text": "목 차\n4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n3\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/3/StallingsOS8e-Chap04_audio_3_1.mp3",
+			"font_size": 32,
+			"text": "목 차\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/3/StallingsOS8e-Chap04_audio_3_2.mp3",
+			"font_size": 24,
+			"text": "4.1 프로세스 및 쓰레드(Thread)\n4.2 쓰레드의 유형\n4.3 멀티코어와 멀티쓰레딩\n4.4 Windows의 프로세스와 쓰레드 관리\n4.5 Solaris 쓰레드 및 SMP 관리\n4.6 Linux 프로세스 및 쓰레드 관리\n4.7 ANDROID의 프로세스와 쓰레드 관리\n4.8 Mac OS X의 Grand Central Dispatch\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/3/StallingsOS8e-Chap04_audio_3_3.mp3",
+			"font_size": 12,
+			"text": "3\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/3/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/3/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/3/StallingsOS8e-Chap04_image_3.png"
+		}
+	]
+}

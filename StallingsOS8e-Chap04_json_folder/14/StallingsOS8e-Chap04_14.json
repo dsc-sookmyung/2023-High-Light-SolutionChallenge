@@ -1,0 +1,46 @@
+{
+	"page_id": 14,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/14/StallingsOS8e-Chap04_full_audio_14.mp3",
+		"full_text": "쓰레드의 유형\n• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n14\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/14/StallingsOS8e-Chap04_audio_14_1.mp3",
+			"font_size": 32,
+			"text": "쓰레드의 유형\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/14/StallingsOS8e-Chap04_audio_14_2.mp3",
+			"font_size": 24,
+			"text": "• 사용자 수준 쓰레드(User-level thread, ULT)\n• 커널 수준 쓰레드(Kernel-level thread, KLT)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/14/StallingsOS8e-Chap04_audio_14_3.mp3",
+			"font_size": 12,
+			"text": "14\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/14/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/14/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/14/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/14/StallingsOS8e-Chap04_image_4.png"
+		}
+	]
+}

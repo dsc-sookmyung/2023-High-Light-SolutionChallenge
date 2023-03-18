@@ -1,0 +1,51 @@
+{
+	"page_id": 5,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/5/StallingsOS8e-Chap04_full_audio_5.mp3",
+		"full_text": "프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/5/StallingsOS8e-Chap04_audio_5_1.mp3",
+			"font_size": 32,
+			"text": "프로세스와 쓰레드\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/5/StallingsOS8e-Chap04_audio_5_2.mp3",
+			"font_size": 24,
+			"text": "• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/5/StallingsOS8e-Chap04_audio_5_3.mp3",
+			"font_size": 20,
+			"text": "– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/5/StallingsOS8e-Chap04_audio_5_4.mp3",
+			"font_size": 12,
+			"text": "5\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/5/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/5/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/5/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/5/StallingsOS8e-Chap04_image_4.png"
+		}
+	]
+}

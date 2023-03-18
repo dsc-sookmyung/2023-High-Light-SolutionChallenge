@@ -1,0 +1,66 @@
+{
+	"page_id": 4,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_full_audio_4.mp3",
+		"full_text": "프로세스와 쓰레드(thread)\n• 프로세스\n– 실행 중인 프로그램(A program in execution)\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n4\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_1.mp3",
+			"font_size": 32,
+			"text": "프로세스와 쓰레드(thread)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_2.mp3",
+			"font_size": 24,
+			"text": "• 프로세스\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_3.mp3",
+			"font_size": 20,
+			"text": "– 실행 중인 프로그램(A program in execution)\n– 메모리 (코드, 데이터, 스택), 파일, signal, IPC, accounting, …\n– CPU 레지스터 정보, 스케줄링 정보\n 자원 소유권 (resource ownership)\n 수행/스케줄링\n(execution/scheduling) 개체\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_4.mp3",
+			"font_size": 24,
+			"text": "• 현대 OS에서 프로세스는 태스크(task) 및 쓰레드(thread)\n라는 두 객체(특성)로 분리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_5.mp3",
+			"font_size": 20,
+			"text": "– 태스크: Resource Container (사용자 문맥, 시스템 문맥)\n– 쓰레드: 제어 흐름 (실행 정보, 레지스터 문맥)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_6.mp3",
+			"font_size": 18,
+			"text": " 쓰레드를 경량 프로세스(lightweight process)라고 부르기도 함\n 프로세스 및 태스크를 서로 혼용하여 사용하기도 함\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/4/StallingsOS8e-Chap04_audio_4_7.mp3",
+			"font_size": 12,
+			"text": "4\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/4/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/4/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/4/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/4/StallingsOS8e-Chap04_image_4.png"
+		}
+	]
+}

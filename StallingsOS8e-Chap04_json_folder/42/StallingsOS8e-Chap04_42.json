@@ -1,0 +1,51 @@
+{
+	"page_id": 42,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/42/StallingsOS8e-Chap04_full_audio_42.mp3",
+		"full_text": "Android 프로세스와 쓰레드 관리\n42\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/42/StallingsOS8e-Chap04_audio_42_1.mp3",
+			"font_size": 32,
+			"text": "Android 프로세스와 쓰레드 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_audio_folder/42/StallingsOS8e-Chap04_audio_42_2.mp3",
+			"font_size": 12,
+			"text": "42\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/StallingsOS8e-Chap04_image_folder/42/StallingsOS8e-Chap04_image_6.png"
+		}
+	]
+}
