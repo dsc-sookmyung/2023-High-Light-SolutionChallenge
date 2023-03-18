@@ -3,10 +3,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:leturn/api/google_signin_api.dart';
+//import 'package:leturn/api/google_signin_api.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
+import 'package:leturn/models/MClient.dart';
+import 'package:leturn/models/authProvider.dart';
+import 'package:leturn/screens/menu_page.dart';
 import 'package:leturn/screens/page_view.dart';
 import 'package:leturn/screens/login/login_page.dart';
 import 'package:leturn/screens/user_folder.dart';
@@ -15,9 +18,11 @@ import '../../const/Server.dart';
 
 var token;
 
+AuthProvider client = AuthProvider();
+
 class HomeScreen extends StatelessWidget{
   const HomeScreen({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,10 +105,9 @@ class _Buttons extends StatelessWidget{
                 ],
               ),
               onPressed: () async {
-                //bool result = nextPage();
-                if(await nextPage()) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => FolderPage()));
-                }
+                await signIn();
+                await Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen()));
+
               },
             ),
           ),
@@ -156,31 +160,30 @@ class _Buttons extends StatelessWidget{
     if(googleAuth == null) {
       print("google login error >>> googleAuth is null");
     }else{
-      String url = '$serverHttp/login/google';
-      //final req = jsonEncode(<String,String>{'access_token':googleAuth!.accessToken.toString()});
-      final req = jsonEncode(<String,String>{'access_token':'accessToken'});
+      String url = '$serverHttp2/login/google';
+      final req = jsonEncode(<String,String>{
+        'access_token':googleAuth!.accessToken.toString()
+        /*'id_token' : googleAuth!.idToken.toString()*/
+      }
+      );
+      print(googleAuth!.accessToken.toString());
+
+      //final req = jsonEncode(<String,String>{'access_token':'accessToken'});
 
       http.Response response = await http.post(Uri.parse(url),body: req);
 
       if(response.statusCode == 200){
         token = jsonDecode(response.body)["token"];
-        print("token : $token");
-        //저장소에 토큰 저장
+        //print("token_home_screen: $token");
+        client.setClientHeader({'Authorizaiton': token});
+
       }else{
-        print(response.statusCode.toString());
+        print("mockserver_error: ${response.statusCode.toString()}");
       }
     }
 
   }
 
-  Future<bool> nextPage() async{
-    await signIn();
-    if(token == null){
-      return false;
-    }else{
-      return true;
-    }
-  }
 
 
 }
