@@ -73,9 +73,9 @@ def get_detailed(data):
 
     # 글씨 크기 같은 애들은 묶기
     concat_text = ""
-    for i in range(1, len(extract_data) + 1):
-        each_page_size = len(extract_data[str(i)]["text"])
-        each_page = extract_data[str(i)]["text"]
+    for i in range(1, len(data) + 1):
+        each_page_size = len(data[str(i)]["text"])
+        each_page = data[str(i)]["text"]
         concat_text = each_page[0]["text"]
         to_del_list = []
         for j in range(each_page_size - 1):
@@ -219,7 +219,7 @@ image_folder_path = filename + '_image_folder/'
 image_file_path = './' + image_folder_path + '/'
 path = r'./' + filename + '.pdf'
 
-'''
+
 # 텍스트 추출
 extract_data = get_text(path)
 extract_data = get_detailed(extract_data)
@@ -258,10 +258,11 @@ for i in range(1, len(extract_data) + 1):
         text_to_speech(text, fileName)
 
 print("audio fin")
-'''
 
+'''
 # 서버에 업로드
 upload_folder(json_folder_path)
 upload_folder(audio_folder_path)
 upload_folder(image_folder_path)
 print("fin")
+'''
