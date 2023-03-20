@@ -273,6 +273,7 @@ for i in range(1, len(extract_data) + 1):
     local_audio_path = audio_folder_path
     local_audio_path += str(i)
     full_text = extract_data[str(i)]['full_text']['full_text']
+    count = str(i)
     if not os.path.exists(local_audio_path):
         os.makedirs(local_audio_path)
     text_to_speech(
