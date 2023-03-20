@@ -7,8 +7,6 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 public class TokenDto {
+    private Long user_id;
     private String token;
-    private String name;
-    private String email;
-    private String profile_pic;
 }
