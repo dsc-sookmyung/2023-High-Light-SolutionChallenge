@@ -4,6 +4,8 @@ import static org.springframework.http.HttpStatus.*;
 
 import org.springframework.http.HttpStatus;
 
+import com.google.api.Http;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -17,4 +19,16 @@ public enum Success {
 
 	private final HttpStatus status;
 	private final String message;
+
+	// Success(HttpStatus status, String message){
+	// 	this.status = status;
+	// 	this.message=message;
+	// }
+	// public HttpStatus getStatus(){
+	// 	return status;
+	// }
+	//
+	// public String getMessage(){
+	// 	return message;
+	// }
 }
