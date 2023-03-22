@@ -24,6 +24,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @Entity
+@Table(name = "Member")
 public class User  {
 
 	@Id
