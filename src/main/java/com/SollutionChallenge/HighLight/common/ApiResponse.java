@@ -1,5 +1,7 @@
 package com.SollutionChallenge.HighLight.common;
 
+import com.SollutionChallenge.HighLight.Folder.FolderResponseDto;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +12,6 @@ public class ApiResponse<T> {
 	private ApiHeader header;
 	private ApiBody body;
 	private static int SUCCESS = 200;
-
 
 	private ApiResponse(ApiHeader header, ApiBody body){
 		this.header = header;
@@ -24,5 +25,4 @@ public class ApiResponse<T> {
 	public static <T> ApiResponse<T> successCode(Success success, T data) {
 		return new ApiResponse<T>(new ApiHeader(success.getStatus(), success.getMessage()), new ApiBody(data, success.getMessage()));
 	}
-
 }

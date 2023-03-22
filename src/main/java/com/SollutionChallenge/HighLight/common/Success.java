@@ -1,9 +1,8 @@
 package com.SollutionChallenge.HighLight.common;
 
 import static org.springframework.http.HttpStatus.*;
-
 import org.springframework.http.HttpStatus;
-
+import com.google.api.Http;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
