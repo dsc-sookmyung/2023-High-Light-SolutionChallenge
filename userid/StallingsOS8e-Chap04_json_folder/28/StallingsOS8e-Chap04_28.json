@@ -1,0 +1,46 @@
+{
+	"page_id": 28,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/28/StallingsOS8e-Chap04_full_audio_28.mp3",
+		"full_text": "윈도우 프로세스와 자원\n28\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/28/StallingsOS8e-Chap04_audio_28_1.mp3",
+			"font_size": 32,
+			"text": "윈도우 프로세스와 자원\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/28/StallingsOS8e-Chap04_audio_28_2.mp3",
+			"font_size": 12,
+			"text": "28\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/28/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/28/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/28/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/28/StallingsOS8e-Chap04_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/28/StallingsOS8e-Chap04_image_5.png"
+		}
+	]
+}

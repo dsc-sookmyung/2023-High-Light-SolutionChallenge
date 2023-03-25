@@ -1,0 +1,71 @@
+{
+	"page_id": 25,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_full_audio_25.mp3",
+		"full_text": "Windows 8의 프로세스와 쓰레드 관리\n• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n25\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_1.mp3",
+			"font_size": 32,
+			"text": "Windows 8의 프로세스와 쓰레드 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_2.mp3",
+			"font_size": 24,
+			"text": "• 후면 작업과 응용의 생명주기 측면에서 전통적인 Wind\nows 접근 방법과 차이가 있음\n• 개발자들은 자신이 개발한 개별 응용프로그램의 상태를\n관리해야 할 책임이 있음\n• 새로운 Metro 인터페이스에서는 Windows 8이 응용\n프로그램의 프로세스 생명주기를 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_3.mp3",
+			"font_size": 22,
+			"text": "• 제한된 숫자의 응용 프로그램이 SnapView 기능을 사용하\n는 Metro 사용자 인터페이스에서 메임 앱과 동시에 수행\n• 하나의 Store 응용 프로그램만이 차례대로 수행\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_4.mp3",
+			"font_size": 24,
+			"text": "• Live Tiles은 시스템 상에서 지속적으로 수행되는 응용\n프로그램의 외관을 보여줌\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_5.mp3",
+			"font_size": 22,
+			"text": "• 실제적으로 푸시 알림을 받을 뿐이지 제공된 동적 콘\n텐트를 보여주기 위해 시스템 자원을 사용하지 않음\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/25/StallingsOS8e-Chap04_audio_25_6.mp3",
+			"font_size": 12,
+			"text": "25\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/25/StallingsOS8e-Chap04_image_6.png"
+		}
+	]
+}

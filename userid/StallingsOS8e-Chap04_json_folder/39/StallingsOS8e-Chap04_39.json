@@ -1,0 +1,96 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_full_audio_39.mp3",
+		"full_text": "Linux 프로세스와 쓰레드 관리\n• Linux 태스크 (task_struct 자료구조)\n– 상태\n• Running, Interruptable, Uninterruptable, Stopped, Zombie\n– 스케줄링 정보\n• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_1.mp3",
+			"font_size": 32,
+			"text": "Linux 프로세스와 쓰레드 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_2.mp3",
+			"font_size": 24,
+			"text": "• Linux 태스크 (task_struct 자료구조)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_3.mp3",
+			"font_size": 20,
+			"text": "– 상태\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_4.mp3",
+			"font_size": 18,
+			"text": "• Running, Interruptable, Uninterruptable, Stopped, Zombie\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_5.mp3",
+			"font_size": 20,
+			"text": "– 스케줄링 정보\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_6.mp3",
+			"font_size": 18,
+			"text": "• 정책: SCHED_RR, SCHED_FIFO, SCHED_OTHER\n• O(1) scheduler in Linux 2.6.*\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_7.mp3",
+			"font_size": 20,
+			"text": "– 식별자(pid, uid, gid)\n– 프로세스간 통신 (IPC) \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_8.mp3",
+			"font_size": 18,
+			"text": "– 링크: 부모 프로세스, 준비 상태의 프로세스들, 블록상태의 프로세스들\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_9.mp3",
+			"font_size": 20,
+			"text": "– 시간과 타이머\n– 파일 시스템\n– 주소 공간\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_10.mp3",
+			"font_size": 18,
+			"text": " Linux: 다른 플래그(flag)를 갖는 clone()\n 쓰레드를 위해 별도의 분리된 자료구조가 없다.\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_11.mp3",
+			"font_size": 20,
+			"text": "– 처리기 의존 문맥(processor-specific context) : 레지스터 및 스택 정\n보\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/39/StallingsOS8e-Chap04_audio_39_12.mp3",
+			"font_size": 12,
+			"text": "39\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/39/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/39/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/39/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/39/StallingsOS8e-Chap04_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/39/StallingsOS8e-Chap04_image_5.png"
+		}
+	]
+}

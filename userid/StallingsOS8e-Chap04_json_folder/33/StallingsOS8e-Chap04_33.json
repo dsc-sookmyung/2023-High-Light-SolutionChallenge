@@ -1,0 +1,61 @@
+{
+	"page_id": 33,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/33/StallingsOS8e-Chap04_full_audio_33.mp3",
+		"full_text": "Solaris 쓰레드 및 SMP 관리\n• 프로세스와 쓰레드 관계\n33\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/33/StallingsOS8e-Chap04_audio_33_1.mp3",
+			"font_size": 32,
+			"text": "Solaris 쓰레드 및 SMP 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/33/StallingsOS8e-Chap04_audio_33_2.mp3",
+			"font_size": 20,
+			"text": "• 프로세스와 쓰레드 관계\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/33/StallingsOS8e-Chap04_audio_33_3.mp3",
+			"font_size": 12,
+			"text": "33\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_6.png"
+		},
+		{
+			"img_idx": 7,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/33/StallingsOS8e-Chap04_image_7.png"
+		}
+	]
+}

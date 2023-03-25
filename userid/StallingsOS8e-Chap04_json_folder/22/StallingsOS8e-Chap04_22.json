@@ -1,0 +1,76 @@
+{
+	"page_id": 22,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_full_audio_22.mp3",
+		"full_text": "멀티코어와 멀티쓰레딩\n• 멀티코어 성능 향상이 많은 응용\n– 멀티쓰레드화된 네이티브 응용: \n• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n– 자바 응용: \n• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n– 멀티인스턴스 응용: \n• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n22\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_1.mp3",
+			"font_size": 32,
+			"text": "멀티코어와 멀티쓰레딩\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_2.mp3",
+			"font_size": 24,
+			"text": "• 멀티코어 성능 향상이 많은 응용\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_3.mp3",
+			"font_size": 20,
+			"text": "– 멀티쓰레드화된 네이티브 응용: \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_4.mp3",
+			"font_size": 18,
+			"text": "• 멀티쓰레드화된 응용은 소수의 고도로 쓰레드화된 프로세스를 의미\n– 멀티프로세스 응용: \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_5.mp3",
+			"font_size": 16,
+			"text": "• 다수의 단일 쓰레드화된 프로세스들이 존재한다는 의미\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_6.mp3",
+			"font_size": 18,
+			"text": "– 자바 응용: \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_7.mp3",
+			"font_size": 16,
+			"text": "• 기본적인 쓰레딩을 지원. 멀티쓰레드화된 응용을 개발하는데 매우 용이\n• 자바 가상 머신도 자바 응용에 대한 스케줄링과 메모리 관리를 지원하는 멀\n티쓰레드화된 프로세스임\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_8.mp3",
+			"font_size": 18,
+			"text": "– 멀티인스턴스 응용: \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_9.mp3",
+			"font_size": 16,
+			"text": "• 개별적인 응용이 많은 수의 쓰레드를 사용해서 속도를 향상시키지 못할지라\n도 다수의 응용 인스턴스를 멀티코어 구조상에서 병렬적으로 실행함으로써\n속도를 향상 시킬 수 있다. \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/22/StallingsOS8e-Chap04_audio_22_10.mp3",
+			"font_size": 12,
+			"text": "22\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/22/StallingsOS8e-Chap04_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/22/StallingsOS8e-Chap04_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/22/StallingsOS8e-Chap04_image_3.png"
+		}
+	]
+}
