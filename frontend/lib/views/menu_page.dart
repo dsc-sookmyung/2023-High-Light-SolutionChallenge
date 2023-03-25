@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leturn/const/colors.dart';
-import 'package:leturn/const/Server.dart';
-import 'package:leturn/screens/home_screen/home_screen.dart';
+import 'package:leturn/views/home_screen.dart';
+import 'package:leturn/views/library_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,12 +29,12 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: PRIMARY_COLOR,
       body: SafeArea(
-          child: MenuButtons(),
+          child: MenuButtons(context),
       ),
     );
   }
 
-  Widget MenuButtons(){
+  Widget MenuButtons(context){
     return Container(
       //alignment: Alignment.center,
       child: Center(
@@ -74,7 +74,9 @@ class MenuScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryView()));
+                },
               ),
             ),
             //2. 파일 추가
