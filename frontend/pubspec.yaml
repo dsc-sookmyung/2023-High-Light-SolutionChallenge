@@ -36,13 +36,15 @@ dependencies:
   flutter_screenutil: ^5.6.1
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
-  audioplayers: ^0.20.1
   just_audio: ^0.9.31
   http: ^0.13.5
   card_swiper : ^2.0.1
   logger: ^1.2.2
   google_sign_in: ^5.4.1
   shared_preferences: ^2.0.18
+  fluttertoast: ^8.2.1
+  dio: ^5.0.3
+  extended_image: ^4.0.0
 
 dev_dependencies:
   flutter_test:
