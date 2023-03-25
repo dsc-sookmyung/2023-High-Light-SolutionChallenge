@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leturn/const/colors.dart';
-import 'package:leturn/screens/home_screen/home_screen.dart';
+import 'package:leturn/views/home_screen.dart';
 
 void main() {
   runApp(MyApp());
