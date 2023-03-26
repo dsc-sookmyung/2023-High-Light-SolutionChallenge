@@ -29,23 +29,23 @@
 	"image": [
 		{
 			"img_idx": 1,
-			"audio_url": "",
-			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_1.png"
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
 		},
 		{
 			"img_idx": 2,
-			"audio_url": "",
-			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_2.png"
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
 		},
 		{
 			"img_idx": 3,
-			"audio_url": "",
-			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_3.png"
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
 		},
 		{
 			"img_idx": 4,
-			"audio_url": "",
-			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_4.png"
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
 		}
 	]
 }
