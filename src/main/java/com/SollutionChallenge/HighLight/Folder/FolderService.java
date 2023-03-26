@@ -2,6 +2,7 @@ package com.SollutionChallenge.HighLight.Folder;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,6 +64,12 @@ public class FolderService {
 		return FolderViewResponseDto.of(folderNames);
 	}
 
+	public FolderResponseDto viewOneFolder(Long folder_id) {
+		Optional<Folder> folder = folderRepository.findById(folder_id);
+		if(folder.isPresent()){
+			String folderName = folder.get().getName();
+		}
+		return FolderResponseDto.from(folder_id,folder.get().getName());
 
-
+	}
 }

@@ -2,6 +2,7 @@ package com.SollutionChallenge.HighLight.Folder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +30,9 @@ public class FolderController {
 		return ApiResponse.successCode(Success.GET_FOLDER_SUCCESS,response);
 	}
 
-	// @GetMapping("/folder")
-	// private Folder getFolder(){
-	// 	return folderService.getFolder();
-	// }
+	@GetMapping("/folder/{folder_id}")
+	private ApiResponse getOneFolder(@PathVariable Long folder_id){
+		FolderResponseDto response = folderService.viewOneFolder(folder_id);
+		return ApiResponse.successCode(Success.GET_FOLDER_SUCCESS,response);
+	}
 }
