@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class FolderRequestDto {
 
-	private User userId;
+	private Long userId;
 	private String folderName;
 
 }
