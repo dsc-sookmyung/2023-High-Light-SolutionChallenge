@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class ApiResponse<T> {
 	private ApiHeader header;
 	private ApiBody body;
+
 	private static int SUCCESS =200;
 
 	// private int status;
@@ -32,12 +33,7 @@ public class ApiResponse<T> {
 		this.header = header;
 	}
 
-	// public static <T> ApiResponse<T> successCode(Success success, T data){
-	// 	return new ApiResponse<>(success.getStatus().value(), success.getMessage(),null);
-	// }
-
-	public static <T> ApiResponse<T> successCode(Success success, T data){
+	public static <T> ApiResponse<T> successCode(Success success, T data) {
 		return new ApiResponse<T>(new ApiHeader(success.getStatus(), success.getMessage()), new ApiBody(data, success.getMessage()));
 	}
-
 }

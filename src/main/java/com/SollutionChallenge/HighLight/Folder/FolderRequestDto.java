@@ -12,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FolderRequestDto {
-
 	private Long userId;
 	private String folderName;
 
