@@ -12,4 +12,5 @@ import lombok.Setter;
 public class FullTextInfoDto {
     private String full_text;
     private String audio_url;
+
 }
