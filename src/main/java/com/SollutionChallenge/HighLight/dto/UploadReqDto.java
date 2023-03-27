@@ -10,5 +10,5 @@ import org.springframework.web.multipart.MultipartFile;
 @Builder
 public class UploadReqDto {
     private String userName;
-    private MultipartFile image;
+    private MultipartFile uploadedfile;
 }

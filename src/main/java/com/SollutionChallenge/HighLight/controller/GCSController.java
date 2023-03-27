@@ -1,6 +1,5 @@
 package com.SollutionChallenge.HighLight.controller;
 
-import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.Storage;
 import com.SollutionChallenge.HighLight.dto.UploadReqDto;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.SollutionChallenge.HighLight.service.GCSService;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 @RestController
@@ -21,13 +19,10 @@ public class GCSController {
     @Autowired
     private Storage storage;
 
-
     @PostMapping("/upload")
-    public ResponseEntity<Void> uploadNewImage(UploadReqDto dto) throws IOException {
-
-        gcsService.uploadNewImage(dto);
-
-        return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity<Void> uploadNewFile(UploadReqDto dto) throws IOException {
+        gcsService.uploadNewFile(dto);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

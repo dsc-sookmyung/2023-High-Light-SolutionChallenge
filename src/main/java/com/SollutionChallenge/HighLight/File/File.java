@@ -39,13 +39,13 @@ public class File {
 	@Column(nullable = false)
 	private String fileUrl;
 
-	private static File createFile(Long id, User userId, String fileName, String fileUrl) {
+	public static File createFile(Long id, User userId, String fileName, String fileUrl) {
 		File file= new File();
 		file.id=id;
 		file.userId=userId;
 		file.fileName=fileName;
 		file.fileUrl=fileUrl;
-		return new File();
+		return file;
 	}
 
 }
