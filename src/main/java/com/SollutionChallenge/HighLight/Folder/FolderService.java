@@ -2,7 +2,9 @@ package com.SollutionChallenge.HighLight.Folder;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -51,19 +53,32 @@ public class FolderService {
 		Folder savedFolder = folderRepository.save(Folder.createFolder(userId, folderName));
 		return FolderResponseDto.from(savedFolder.getId(), savedFolder.getName());
 	}
-
-
-	public List<FolderResponseDto> viewFolder() {
+	public Map<String, List<FolderResponseDto>> viewFolder() {
 		List<Folder> folders = folderRepository.findAll();
-		List<FolderResponseDto> folderResponseDtos =new ArrayList<>();
+		List<FolderResponseDto> folderResponseDtos = new ArrayList<>();
 		if (folders != null && !folders.isEmpty()) {
 			folderResponseDtos = folders.stream()
 				.filter(f -> f.getName() != null)
 				.map(f-> new FolderResponseDto(f.getId(),f.getName()))
 				.collect(Collectors.toList());
 		}
-		return folderResponseDtos;
+
+		Map<String, List<FolderResponseDto>> response = new HashMap<>();
+		response.put("folder", folderResponseDtos);
+		return response;
 	}
+
+	// public List<FolderResponseDto> viewFolder() {
+	// 	List<Folder> folders = folderRepository.findAll();
+	// 	List<FolderResponseDto> folderResponseDtos =new ArrayList<>();
+	// 	if (folders != null && !folders.isEmpty()) {
+	// 		folderResponseDtos = folders.stream()
+	// 			.filter(f -> f.getName() != null)
+	// 			.map(f-> new FolderResponseDto(f.getId(),f.getName()))
+	// 			.collect(Collectors.toList());
+	// 	}
+	// 	return folderResponseDtos;
+	// }
 
 	public FolderResponseDto viewOneFolder(Long folder_id) {
 		Optional<Folder> folder = folderRepository.findById(folder_id);

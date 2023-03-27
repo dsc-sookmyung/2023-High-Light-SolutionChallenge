@@ -1,6 +1,7 @@
 package com.SollutionChallenge.HighLight.Folder;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,8 +26,8 @@ public class FolderController {
 	}
 
 	@GetMapping("/folder")
-	private ApiResponse<List<FolderResponseDto>> getFolder(){
-		List<FolderResponseDto> response = folderService.viewFolder();
+	private ApiResponse<Map<String, List<FolderResponseDto>>> getFolder(){
+		Map<String, List<FolderResponseDto>> response = folderService.viewFolder();
 		return ApiResponse.successCode(Success.GET_FOLDER_SUCCESS,response);
 	}
 
