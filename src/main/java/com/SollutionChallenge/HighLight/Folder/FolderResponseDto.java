@@ -1,9 +1,5 @@
 package com.SollutionChallenge.HighLight.Folder;
 
-import java.util.List;
-
-import com.SollutionChallenge.HighLight.User.User;
-
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +10,18 @@ public class FolderResponseDto {
 	private Long id;
 	private String folderName;
 
+	public FolderResponseDto(Long id, String folderName) {
+		this.id = id;
+		this.folderName = folderName;
+	}
+
 	public static FolderResponseDto from(Long id, String folderName){
-		FolderResponseDto folderResponseDto  = new FolderResponseDto();
+		FolderResponseDto folderResponseDto  = new FolderResponseDto(id, folderName);
 		folderResponseDto.id = id;
 		folderResponseDto.folderName = folderName;
 		return folderResponseDto;
 	}
+
+
 }
 

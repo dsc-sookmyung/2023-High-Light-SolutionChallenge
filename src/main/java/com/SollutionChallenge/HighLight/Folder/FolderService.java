@@ -1,5 +1,6 @@
 package com.SollutionChallenge.HighLight.Folder;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -52,16 +53,16 @@ public class FolderService {
 	}
 
 
-	public FolderViewResponseDto viewFolder() {
+	public List<FolderResponseDto> viewFolder() {
 		List<Folder> folders = folderRepository.findAll();
-		List<String> folderNames = Collections.emptyList();
+		List<FolderResponseDto> folderResponseDtos =new ArrayList<>();
 		if (folders != null && !folders.isEmpty()) {
-			folderNames = folders.stream()
+			folderResponseDtos = folders.stream()
 				.filter(f -> f.getName() != null)
-				.map(Folder::getName)
+				.map(f-> new FolderResponseDto(f.getId(),f.getName()))
 				.collect(Collectors.toList());
 		}
-		return FolderViewResponseDto.of(folderNames);
+		return folderResponseDtos;
 	}
 
 	public FolderResponseDto viewOneFolder(Long folder_id) {

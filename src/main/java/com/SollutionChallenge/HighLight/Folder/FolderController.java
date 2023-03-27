@@ -1,11 +1,11 @@
 package com.SollutionChallenge.HighLight.Folder;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SollutionChallenge.HighLight.common.ApiResponse;
@@ -25,8 +25,8 @@ public class FolderController {
 	}
 
 	@GetMapping("/folder")
-	private ApiResponse <FolderViewResponseDto>getFolder(){
-		FolderViewResponseDto response = folderService.viewFolder();
+	private ApiResponse<List<FolderResponseDto>> getFolder(){
+		List<FolderResponseDto> response = folderService.viewFolder();
 		return ApiResponse.successCode(Success.GET_FOLDER_SUCCESS,response);
 	}
 

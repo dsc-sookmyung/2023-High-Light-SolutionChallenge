@@ -9,11 +9,14 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class FolderViewResponseDto {
+	private List<Long> id;
 	private List<String> folderName;
 
-	public static FolderViewResponseDto of(List<String >folderName){
+	public static FolderViewResponseDto of(List <Long> id,List<String >folderName){
 		FolderViewResponseDto folderViewResponseDto = new FolderViewResponseDto();
+		folderViewResponseDto.id= id;
 		folderViewResponseDto.folderName = folderName;
+
 		return folderViewResponseDto;
 	}
 }
