@@ -30,7 +30,6 @@ public class PageService {
     @Transactional
     public SendPageResDto getPageContents(Long userId, Long fileId, Long pageId) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-//        User user = userRepository.findById(1L).get(); // api 테스트용 파일생성 코드 - 유저 정보 임의로 가져옴
         User user = userRepository.findById(userId).get();
         System.out.println("userid: "+userId);
 //        File testfile = File.createFile(1L, user, "StallingsOS8e-Chap04", "파일링크"); // api 테스트용 파일 생성 코드

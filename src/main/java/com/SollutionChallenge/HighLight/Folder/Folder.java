@@ -11,9 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
-import com.SollutionChallenge.HighLight.User.User;
-
-
+import com.SollutionChallenge.HighLight.User.Entity.User;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

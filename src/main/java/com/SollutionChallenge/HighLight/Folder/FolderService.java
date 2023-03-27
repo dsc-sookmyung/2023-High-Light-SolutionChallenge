@@ -8,12 +8,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.SollutionChallenge.HighLight.User.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.SollutionChallenge.HighLight.User.User;
+
 import com.SollutionChallenge.HighLight.User.UserRepository;
 import com.SollutionChallenge.HighLight.auth.ConfigUtils;
 
