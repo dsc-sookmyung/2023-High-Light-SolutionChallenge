@@ -29,5 +29,19 @@ public class GoogleController {
 				.status(HttpStatus.OK)
 				.body(authService.googleLogin(accessToken));
 	}
-
+	/* ResponseEntity 사용해서 헤더에 status code 담는 버전 */
+//	@PostMapping(value = "/login")
+//	public ResponseEntity<TokenDto> googleLogin(@RequestBody GoogleLoginResponse googleLoginResponse) throws IOException {
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.set("Status-Code", String.valueOf(HttpStatus.OK));
+//
+//		String accessToken = googleLoginResponse.getAccess_token();
+//		String idToken = googleLoginResponse.getId_token();
+//		System.out.println(accessToken);
+//
+//		return ResponseEntity
+//				.status(HttpStatus.OK)
+//				.headers(headers)
+//				.body(authService.googleLogin(accessToken));
+//	}
 }
