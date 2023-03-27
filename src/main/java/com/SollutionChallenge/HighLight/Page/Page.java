@@ -35,8 +35,8 @@ public class Page {
 
 	private static Page createPage(Long id, File fileId) {
 		Page page = new Page();
-		page.id=id;
-		page.fileId=fileId;
-		return new Page();
+		page.id = id;
+		page.fileId = fileId;
+		return page;
 	}
 }
