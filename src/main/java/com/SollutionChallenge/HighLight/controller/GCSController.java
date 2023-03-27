@@ -19,7 +19,6 @@ public class GCSController {
     @Autowired
     private Storage storage;
 
-
     @PostMapping("/upload")
     public ResponseEntity<Void> uploadNewFile(UploadReqDto dto) throws IOException {
         gcsService.uploadNewFile(dto);
