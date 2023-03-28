@@ -39,7 +39,7 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
 
   late FToast fToast;
   AudioPlayer player = AudioPlayer();
-  num fontBase = 0;
+  num fontBase = 20;
   bool isPlaying = false;
   double playSpeed = 1.0;
 
@@ -81,7 +81,7 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
 
   onScaleUpdate(ScaleUpdateDetails details) {
     setState(() {
-      fontBase = details.scale.clamp(1.0, 5.0);
+      fontBase = 10*details.scale.clamp(0.8, 2.0);
     });
   }
   isPlayingTrue(){

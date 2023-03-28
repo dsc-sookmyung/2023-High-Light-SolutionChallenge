@@ -91,10 +91,10 @@ class _ViewPageState extends State<ViewPage>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              //_FixedTop(),
               Expanded(
                 child: GestureDetector(
-                  onScaleUpdate: (details) => widget.onScaleUpdate,
+                  onScaleUpdate: (details) {
+                    widget.onScaleUpdate(details);},
                   child: Container(
                       height: double.infinity,
                       color: Colors.white,
@@ -143,7 +143,6 @@ class _ViewPageState extends State<ViewPage>
           //widget.isPlayingTrue();
         },
         child: Container(
-          //color: Colors.orange,
           child: Text(
             _allTexts[idx].textLine,
             style: TextStyle(
@@ -156,14 +155,15 @@ class _ViewPageState extends State<ViewPage>
 
   Widget textListView(List<TextUnit> _allTexts, num fontBase, bool spacer) {
     return Container(
-      //height: double.infinity,
+      //width: double.infinity,
       child: ListView.builder(
           itemCount: _allTexts.length,
           itemBuilder: (ctx, int idx) {
             if ((idx == _allTexts.length - 1) && spacer) {
               //print(spacer);
               return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   textBlock(_allTexts, fontBase, idx),
                   Container(
