@@ -30,16 +30,8 @@ public class FileService {
 
     @Transactional
     public FilePostResponseDto addFile(Long userId, Long folderId, FileRequestDto fileRequestDto) throws IOException {
-        // 받아온 파일을 multipartfile로 변환
-        File file = fileRequestDto.getFile();
+        MultipartFile multipartFile = fileRequestDto.getFile();
         String filename = fileRequestDto.getFile_name();
-        Path path = Paths.get(file.getPath());
-//        String name = file.getName();
-        String originalFileName = file.getName();
-        String contentType = Files.probeContentType(path);
-
-        byte[] content = Files.readAllBytes(path);
-        MultipartFile multipartFile =  new MockMultipartFile(filename, originalFileName, contentType, content);
 
         // 파일 gcs에 업로드
         User currentUser = userRepository.findById(userId).get();
@@ -47,7 +39,7 @@ public class FileService {
         String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, folderId);
 
         // 후 createFile(User user, String fileName, String fileUrl)로 filerepository에 저장
-        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, multipartFile.getName(),uploadedFileUrl);
+        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, multipartFile.getOriginalFilename(),uploadedFileUrl);
         fileRepository.save(newFile);
 
         /* ml에서 변환 예상 시간 받아오는 코드 작성 */
