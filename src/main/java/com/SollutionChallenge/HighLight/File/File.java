@@ -31,7 +31,7 @@ public class File {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id", nullable = false)
-	private User userId;
+	private User user;
 
 	@Column(nullable = false)
 	private String fileName;
@@ -42,12 +42,11 @@ public class File {
 	@Column(nullable = false)
 	private boolean converted = false; //반환 여부 저장
 
-	public static File createFile(Long id, User userId, String fileName, String fileUrl) {
+	public static File createFile(Long id, User user, String fileName, String fileUrl) {
 		File file= new File();
-		file.id=id;
-		file.userId=userId;
-		file.fileName=fileName;
-		file.fileUrl=fileUrl;
+		file.user = user;
+		file.fileName = fileName;
+		file.fileUrl = fileUrl;
 		return file;
 	}
 	// 변환 여부 확인 메소드

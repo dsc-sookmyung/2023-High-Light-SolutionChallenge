@@ -1,6 +1,8 @@
 package com.SollutionChallenge.HighLight.service;
 
 
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.BlobId;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Storage;
 import com.SollutionChallenge.HighLight.dto.UploadReqDto;
@@ -9,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 @Service
@@ -19,17 +22,20 @@ public class GCSService {
     @Value("${spring.cloud.gcp.storage.bucket}")
     private String bucketName;
 
-    public void uploadNewFile(UploadReqDto dto) throws IOException {
-        String uuid = UUID.randomUUID().toString(); // Google Cloud Storage에 저장될 파일 이름
-        String ext = dto.getUploadedfile().getContentType(); // 파일의 형식 ex) JPG
-
+    public String uploadNewFile(UploadReqDto dto, String filename, Long folderId) throws IOException {
+//        String uuid = UUID.randomUUID().toString(); // Google Cloud Storage에 저장될 파일 이름
+        String ext = dto.getUploaded_file().getContentType(); // 파일의 형식 ex) JPG
+        Long user_id = dto.getUser_id();
+        String uploadFilePath = user_id+"/"+folderId+"/"+filename;
         // Cloud에 이미지 업로드
         BlobInfo blobInfo = storage.create(
-                BlobInfo.newBuilder(bucketName, uuid)
+                BlobInfo.newBuilder(bucketName, uploadFilePath)
                         .setContentType(ext)
                         .build(),
-                dto.getUploadedfile().getInputStream()
+                dto.getUploaded_file().getInputStream()
         );
+        System.out.println("업로드 경로: " + uploadFilePath);
+        return "https://storage.googleapis.com/"+bucketName+"/"+uploadFilePath;
     }
 
 
