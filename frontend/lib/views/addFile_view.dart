@@ -115,7 +115,7 @@ class _AddFileViewState extends State<AddFileView>{
         Text(
           check ? '변환 명을 입력해주세요':'',
           style: TextStyle(
-            fontSize: 40.sp,
+            fontSize: 37.sp,
             fontWeight: FontWeight.w800,
             color: Colors.redAccent,
             ),

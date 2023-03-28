@@ -43,7 +43,6 @@ class _LibraryViewState extends State<LibraryView> {
     super.initState();
     _folders = _fetchData();
     fToast = FToast();
-    fToast.init(context);
   }
 
   Future<List<Folders>> _fetchData() async {
@@ -83,27 +82,61 @@ class _LibraryViewState extends State<LibraryView> {
         context: context,
         barrierDismissible: true,
         builder: (BuildContext context1) {
+          fToast.init(context1);
           String? input;
           return AlertDialog(
-            insetPadding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.h),
+            backgroundColor: Colors.white,
+            insetPadding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.w),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0.w),
             ),
             title: Text(
               "폴더 추가",
-              style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: Colors.black,
+                  fontSize: 44.sp, fontWeight: FontWeight.bold),
             ),
             content: Container(
-              child: TextField(
-                onChanged: (text) {
-                  input = text;
-                },
-                decoration: InputDecoration(hintText: '폴더명을 입력하세요'),
+              height: 100.w,
+              child: Column(
+                children: [
+                  SizedBox(height: 3.h,),
+                  Container(
+                    child: TextField(
+                      onChanged: (text) {
+                        input = text;
+                      },
+                      decoration: const InputDecoration(
+                          hintText: '폴더명을 입력하세요',
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color:MAIN_YELLOW),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: MAIN_YELLOW),
+                        ),
+                      ),
+                      autofocus: true,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 37.sp
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             actions: [
               ElevatedButton(
-                child: const Text('확인'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: MAIN_YELLOW,
+                  padding: EdgeInsets.all(5.w)
+              ),
+                child: Text('확인',
+                  style:TextStyle(
+                    color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                      fontSize: 37.sp)
+                ),
                 onPressed: () async {
                   if (input == null ||
                       input!.replaceAll(RegExp('\\s'), "").isEmpty) {
