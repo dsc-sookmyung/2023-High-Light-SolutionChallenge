@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         ],
         theme: ThemeData(
           scaffoldBackgroundColor: PRIMARY_COLOR,
+          fontFamily: 'OnGothic'
         ),
         home: HomeScreen(),
       ),
