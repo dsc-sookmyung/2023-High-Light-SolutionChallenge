@@ -20,8 +20,8 @@ public class GCSController {
     private Storage storage;
 
     //@PostMapping("/upload")
-    public String uploadNewFile(UploadReqDto dto, Long folderId) throws IOException {
-        return gcsService.uploadNewFile(dto, folderId);
+    public String uploadNewFile(UploadReqDto dto, String filename, Long folderId) throws IOException {
+        return gcsService.uploadNewFile(dto, filename, folderId);
     }
 
 }

@@ -36,10 +36,10 @@ public class FileService {
         // 파일 gcs에 업로드
         User currentUser = userRepository.findById(userId).get();
         UploadReqDto uploadReqDto = new UploadReqDto(currentUser.getName(), userId, multipartFile);
-        String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, folderId);
+        String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, filename, folderId);
 
         // 후 createFile(User user, String fileName, String fileUrl)로 filerepository에 저장
-        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, multipartFile.getOriginalFilename(),uploadedFileUrl);
+        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl);
         fileRepository.save(newFile);
 
         /* ml에서 변환 예상 시간 받아오는 코드 작성 */

@@ -22,11 +22,11 @@ public class GCSService {
     @Value("${spring.cloud.gcp.storage.bucket}")
     private String bucketName;
 
-    public String uploadNewFile(UploadReqDto dto, Long folderId) throws IOException {
+    public String uploadNewFile(UploadReqDto dto, String filename, Long folderId) throws IOException {
 //        String uuid = UUID.randomUUID().toString(); // Google Cloud Storage에 저장될 파일 이름
         String ext = dto.getUploaded_file().getContentType(); // 파일의 형식 ex) JPG
         Long user_id = dto.getUser_id();
-        String uploadFilePath = user_id+"/"+folderId+"/"+dto.getUploaded_file().getOriginalFilename();
+        String uploadFilePath = user_id+"/"+folderId+"/"+filename;
         // Cloud에 이미지 업로드
         BlobInfo blobInfo = storage.create(
                 BlobInfo.newBuilder(bucketName, uploadFilePath)
