@@ -45,6 +45,7 @@ dependencies:
   fluttertoast: ^8.2.1
   dio: ^5.0.3
   extended_image: ^4.0.0
+  file_picker : ^5.2.6
 
 dev_dependencies:
   flutter_test:
