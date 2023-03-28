@@ -46,6 +46,7 @@ dependencies:
   dio: ^5.0.3
   extended_image: ^4.0.0
   file_picker : ^5.2.6
+  photo_view: ^0.14.0
 
 dev_dependencies:
   flutter_test:

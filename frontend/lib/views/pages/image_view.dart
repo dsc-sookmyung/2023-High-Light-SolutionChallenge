@@ -1,6 +1,8 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:photo_view/photo_view.dart';
 
 class ImageView extends StatefulWidget {
   final String url;
@@ -17,39 +19,50 @@ class _ImageViewState extends State<ImageView> {
   Widget build(BuildContext context) {
     print("image ${widget.url}");
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Container(
-              padding: EdgeInsets.only(right: 40.w, bottom: 20.h),
-              child: FloatingActionButton(
-                backgroundColor: Colors.black,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                child: Icon(
-                  Icons.cancel_outlined,
-                  color: Colors.white,
-                  size: 80.w,
-                ),
-              ),
-            ),
-            SizedBox(height: 10.h,),
-            Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  //color: Colors.redAccent,
-                  child: InteractiveViewer(
-                    child: ExtendedImage.network(
-                      widget.url,
-                      cache: true,
-                    ),
-                  ),
-                )
-              ),
-          ],
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          ImageViewer(widget.url),
+          Positioned(
+            top: 10.h,
+              right: 10.w,
+              child: exitButton()
+          )
+        ],
+      )
+    );
+  }
+
+  Widget ImageViewer(String imageUrl){
+    return Container(
+      child: PhotoView(
+        imageProvider: ExtendedNetworkImageProvider(imageUrl, cache: true,),
+      ),
+    );
+  }
+
+  Widget exitButton(){
+    return Container(
+      width: 70.w,
+      height: 70.w,
+      child: FloatingActionButton(
+        backgroundColor: Colors.white,
+        shape: StadiumBorder(
+          side: BorderSide(color: Colors.black, width: 8),
         ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: SvgPicture.asset(
+          'assets/cancel_icon.svg',
+          height: 40.h,
+        )
+        /*Icon(
+          Icons.add,
+          color: Colors.black,
+          semanticLabel: "나가기",
+          size: 64.w,
+        ),*/
       ),
     );
   }
