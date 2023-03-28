@@ -1,0 +1,51 @@
+{
+	"page_id": 40,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_full_audio_40.mp3",
+		"full_text": "(Ex) Credit Card Fraud Detection\n▪ A credit card company records the transactions made by every \ncredit card holder\n– Along with personal information (e.g., credit limit, age, income, address)\n▪ Anomaly detection techniques\n① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\nanomaly\n40\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_1.mp3",
+			"font_size": 32,
+			"text": "(Ex) Credit Card Fraud Detection\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_2.mp3",
+			"font_size": 24,
+			"text": "▪ A credit card company records the transactions made by every \ncredit card holder\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_3.mp3",
+			"font_size": 20,
+			"text": "– Along with personal information (e.g., credit limit, age, income, address)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_4.mp3",
+			"font_size": 24,
+			"text": "▪ Anomaly detection techniques\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_5.mp3",
+			"font_size": 20,
+			"text": "① Build a profile of legitimate \ntransactions for the users\n② When a new transaction arrives, \ncompare it against the user’s profile\n③ If the characteristics of the \ntransaction are very different from \nthe previously created profile, then \nflag it as potentially fraudulent\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_6.mp3",
+			"font_size": 16,
+			"text": "anomaly\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/40/data_1_audio_40_7.mp3",
+			"font_size": 14,
+			"text": "40\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_image_folder/40/data_1_image_1.png",
+			"audio_url": ""
+		}
+	]
+}

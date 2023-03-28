@@ -1,0 +1,66 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_full_audio_39.mp3",
+		"full_text": "4. Anomaly Detection\n▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n– Such observations are called anomalies or outliers\noutlier\n▪ Goal\n– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n• A high detection rate\n• A low false alarm rate\n▪ Application examples\n– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_1.mp3",
+			"font_size": 32,
+			"text": "4. Anomaly Detection\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_2.mp3",
+			"font_size": 24,
+			"text": "▪ Identify observations whose characteristics are significantly \ndifferent from the rest of the data\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_3.mp3",
+			"font_size": 20,
+			"text": "– Such observations are called anomalies or outliers\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_4.mp3",
+			"font_size": 18,
+			"text": "outlier\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_5.mp3",
+			"font_size": 24,
+			"text": "▪ Goal\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_6.mp3",
+			"font_size": 20,
+			"text": "– Discover the real anomalies and \navoid falsely labeling normal objects \nas anomalous\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_7.mp3",
+			"font_size": 18,
+			"text": "• A high detection rate\n• A low false alarm rate\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_8.mp3",
+			"font_size": 24,
+			"text": "▪ Application examples\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_9.mp3",
+			"font_size": 20,
+			"text": "– The detection of fraud, network intrusions, unusual patterns of disease, \nand ecosystem disturbances (e.g., droughts, floods, fires, hurricanes)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/39/data_1_audio_39_10.mp3",
+			"font_size": 14,
+			"text": "39\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_image_folder/39/data_1_image_1.png",
+			"audio_url": ""
+		}
+	]
+}

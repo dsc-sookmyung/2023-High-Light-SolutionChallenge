@@ -1,0 +1,71 @@
+{
+	"page_id": 21,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_full_audio_21.mp3",
+		"full_text": "Applications: Science and Engineering\n▪ Examples of large science data\n– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n• Can be used to analyze the relationships between observations\n– The large amount of genomic data (microarray data)\n• Can be used to analyze the function of each gene or predict protein structures\n– Electronic health record data (electrocardiograms (ECGs), MRI images)\n• Can be used to provide more personalized patient care\n21\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_1.mp3",
+			"font_size": 32,
+			"text": "Applications: Science and Engineering\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_2.mp3",
+			"font_size": 24,
+			"text": "▪ Examples of large science data\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_3.mp3",
+			"font_size": 20,
+			"text": "– Earth’s data collected by satellites (land surface, ocean, atmosphere)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_4.mp3",
+			"font_size": 18,
+			"text": "• Can be used to analyze the relationships between observations\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_5.mp3",
+			"font_size": 20,
+			"text": "– The large amount of genomic data (microarray data)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_6.mp3",
+			"font_size": 18,
+			"text": "• Can be used to analyze the function of each gene or predict protein structures\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_7.mp3",
+			"font_size": 20,
+			"text": "– Electronic health record data (electrocardiograms (ECGs), MRI images)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_8.mp3",
+			"font_size": 18,
+			"text": "• Can be used to provide more personalized patient care\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/21/data_1_audio_21_9.mp3",
+			"font_size": 14,
+			"text": "21\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_image_folder/21/data_1_image_1.jpeg",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_image_folder/21/data_1_image_2.jpeg",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_image_folder/21/data_1_image_3.jpeg",
+			"audio_url": ""
+		}
+	]
+}

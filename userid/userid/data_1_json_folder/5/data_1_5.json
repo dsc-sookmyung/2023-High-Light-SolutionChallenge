@@ -1,0 +1,46 @@
+{
+	"page_id": 5,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/_5/data_1_full_audio_5.mp3",
+		"full_text": "Before the Lecture…\n▪ What is “data mining”?\n– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n• Computer science (esp. databases), statistics, machine learning, …\n5\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/5/data_1_audio_5_1.mp3",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/5/data_1_audio_5_2.mp3",
+			"font_size": 24,
+			"text": "▪ What is “data mining”?\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/5/data_1_audio_5_3.mp3",
+			"font_size": 20,
+			"text": "– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/5/data_1_audio_5_4.mp3",
+			"font_size": 18,
+			"text": "• Computer science (esp. databases), statistics, machine learning, …\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/5/data_1_audio_5_5.mp3",
+			"font_size": 14,
+			"text": "5\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/5/data_1_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/5/data_1_image_2.jpeg"
+		}
+	]
+}

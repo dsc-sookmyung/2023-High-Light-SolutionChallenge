@@ -1,0 +1,51 @@
+{
+	"page_id": 23,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/_23/data_1_full_audio_23.mp3",
+		"full_text": "The Process of KDD (1/2)\n(flat files,\nspreadsheets,\ndatabase tables)\n▪ Data preprocessing\n– Transforms the raw input data into an appropriate format for analysis\n– Examples\n• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n– Perhaps the most laborious and time-consuming step in the overall KDD\n23\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_1.mp3",
+			"font_size": 32,
+			"text": "The Process of KDD (1/2)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_2.mp3",
+			"font_size": 16,
+			"text": "(flat files,\nspreadsheets,\ndatabase tables)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_3.mp3",
+			"font_size": 24,
+			"text": "▪ Data preprocessing\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_4.mp3",
+			"font_size": 20,
+			"text": "– Transforms the raw input data into an appropriate format for analysis\n– Examples\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_5.mp3",
+			"font_size": 18,
+			"text": "• Fusing data from multiple sources\n• Cleaning data (e.g., remove noise and duplicate observations)\n• Selecting records and features that are relevant to the data mining task\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_6.mp3",
+			"font_size": 20,
+			"text": "– Perhaps the most laborious and time-consuming step in the overall KDD\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/23/data_1_audio_23_7.mp3",
+			"font_size": 14,
+			"text": "23\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/23/data_1_image_1.png"
+		}
+	]
+}

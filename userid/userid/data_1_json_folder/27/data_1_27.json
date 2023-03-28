@@ -1,0 +1,66 @@
+{
+	"page_id": 27,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/_27/data_1_full_audio_27.mp3",
+		"full_text": "Motivating Challenges (3/4)\n3. Heterogeneous data\n– Data sets often contain attributes of different types\n• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n– Problems\n• Data mining techniques should consider complex relationships in the data \nText data\nTable data\nSequence data\nGraph data\nExamples of heterogeneous data\n27\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_1.mp3",
+			"font_size": 32,
+			"text": "Motivating Challenges (3/4)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_2.mp3",
+			"font_size": 24,
+			"text": "3. Heterogeneous data\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_3.mp3",
+			"font_size": 20,
+			"text": "– Data sets often contain attributes of different types\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_4.mp3",
+			"font_size": 18,
+			"text": "• (ex) Web and social media data (text, hyperlinks, images, audio, videos)\n• (ex) climate data (temperature, pressure, times, locations, etc.)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_5.mp3",
+			"font_size": 20,
+			"text": "– Problems\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_6.mp3",
+			"font_size": 18,
+			"text": "• Data mining techniques should consider complex relationships in the data \nText data\nTable data\nSequence data\nGraph data\nExamples of heterogeneous data\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/27/data_1_audio_27_7.mp3",
+			"font_size": 14,
+			"text": "27\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/27/data_1_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/27/data_1_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/27/data_1_image_3.jpeg"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/27/data_1_image_4.jpeg"
+		}
+	]
+}

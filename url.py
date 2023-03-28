@@ -17,10 +17,10 @@ from google.cloud import texttospeech
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./tts_api_key.json"
 
 #! 다운받은 파일명을 어떻게 받지?
-downloaded = 'StallingsOS8e-Chap04.pdf'
-# downloaded = 'data_1.pdf'
+# downloaded = 'StallingsOS8e-Chap04.pdf'
+downloaded = 'data_1.pdf'
 cloud_bucket = 'cloud_storage_leturn'
-userid = "userid"
+userid = "userid_2"
 split_file = list(downloaded.split('.'))
 filename = split_file[0]
 json_folder_path = f'{userid}/{filename}_json_folder'
@@ -172,7 +172,7 @@ def text_to_speech(text, fileName):
 
 def upload_folder(folder):
     storage_client = storage.Client.from_service_account_json(
-        "./backend_test.json")
+        "./vision_api_key.json")
 
     # GCP에 파일 올리기
     bucket = storage_client.get_bucket(
@@ -180,16 +180,16 @@ def upload_folder(folder):
 
     for each_page in os.listdir(folder):
         # GCP에 올릴 파일 이름
-        each_folder = folder
-        each_folder += str(each_page) + '/'
+        count = str(each_page)
         print("fin")
-        for file in os.listdir(f"{each_folder}"):
-            blob = bucket.blob(f"{each_folder}" + file)
-            with open(f"{each_folder}" + file, 'rb') as f:
+        for file in os.listdir(f"{folder}/{count}/"):
+            blob = bucket.blob(f"{folder}/{count}/{file}")
+            with open(f"{folder}/{count}/{file}", 'rb') as f:
                 blob.upload_from_file(f)
 
 
 if __name__ == "__main__":
+    '''
     # 텍스트 추출
     extract_data = get_text(path)
     extract_data = get_detailed(extract_data)
@@ -241,10 +241,10 @@ if __name__ == "__main__":
             text_to_speech(text, fileName)
 
     print("audio fin")
-
+    '''
     # 서버에 업로드
-    upload_folder(f"{userid}/{json_folder_path}")
-    upload_folder(f"{userid}/{audio_folder_path}")
-    upload_folder(f"{userid}/{image_folder_path}")
+    upload_folder(f"{json_folder_path}")
+    upload_folder(f"{audio_folder_path}")
+    upload_folder(f"{image_folder_path}")
     print("fin")
 # if __name__ == "__main__"

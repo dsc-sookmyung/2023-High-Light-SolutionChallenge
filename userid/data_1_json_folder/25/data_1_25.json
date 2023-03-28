@@ -1,0 +1,46 @@
+{
+	"page_id": 25,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_full_audio_25.mp3",
+		"full_text": "Motivating Challenges (1/4)\n▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n25\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_audio_25_1.mp3",
+			"font_size": 32,
+			"text": "Motivating Challenges (1/4)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_audio_25_2.mp3",
+			"font_size": 24,
+			"text": "▪ Traditional data analysis techniques have practical difficulties in \nmeeting the challenges posed by big data applications\n1. Scalability\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_audio_25_3.mp3",
+			"font_size": 20,
+			"text": "– Data mining algorithms must handle massive data sets (TB, PB, or EB)\n– Techniques\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_audio_25_4.mp3",
+			"font_size": 18,
+			"text": "• Special search strategies to handle exponential search problems\n• Novel data structures to access individual records efficiently\n• Out-of-core (disk-based) algorithms\n• Sampling\n• Parallel and distributed algorithms\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/25/data_1_audio_25_5.mp3",
+			"font_size": 14,
+			"text": "25\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_image_folder/25/data_1_image_1.jpeg",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_image_folder/25/data_1_image_2.png",
+			"audio_url": ""
+		}
+	]
+}
