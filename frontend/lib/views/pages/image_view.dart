@@ -15,6 +15,7 @@ class _ImageViewState extends State<ImageView> {
 
   @override
   Widget build(BuildContext context) {
+    print("image ${widget.url}");
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -41,7 +42,8 @@ class _ImageViewState extends State<ImageView> {
                   //color: Colors.redAccent,
                   child: InteractiveViewer(
                     child: ExtendedImage.network(
-                      widget.url
+                      widget.url,
+                      cache: true,
                     ),
                   ),
                 )

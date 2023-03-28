@@ -193,14 +193,14 @@ class _ViewPageState extends State<ViewPage>
             return GestureDetector(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ImageView(url: 'assets/${allImages![idx].imgUrl}')
+                    builder: (context) => ImageView(url: allImages![idx].imgUrl)
                   ),
                 );
               },
               child: Container(
                   margin: EdgeInsets.fromLTRB(20.w, 10.h, 30.w, 10.h),
                   child: ExtendedImage.network(
-                    "assets/${allImages![idx].imgUrl}",
+                    allImages![idx].imgUrl,
                     width: 100.w,
                     height: 100.h,
                     fit: BoxFit.fill,
