@@ -39,6 +39,9 @@ public class File {
 	@Column(nullable = false)
 	private String fileUrl;
 
+	@Column(nullable = false)
+	private boolean converted = false; //반환 여부 저장
+
 	public static File createFile(Long id, User userId, String fileName, String fileUrl) {
 		File file= new File();
 		file.id=id;
@@ -46,6 +49,15 @@ public class File {
 		file.fileName=fileName;
 		file.fileUrl=fileUrl;
 		return file;
+	}
+	// 변환 여부 확인 메소드
+	public boolean isConverted() {
+		return converted;
+	}
+
+	// 변환 여부 설정 메소드
+	public void setConverted(boolean converted) {
+		this.converted = converted;
 	}
 
 }
