@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leturn/component/button_semantics.dart';
 import 'package:leturn/const/colors.dart';
+import 'package:leturn/views/addFile_view.dart';
 import 'package:leturn/views/open_file.dart';
 
 import '../models/simpleFile.dart';
@@ -88,6 +89,8 @@ class _FolderViewState extends State<FolderView>{
             padding: EdgeInsets.all(5.h),
             child: ElevatedButton.icon(
               onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                => AddFileView(folderId: widget.folderId)));
 
               },
               style: ElevatedButton.styleFrom(
