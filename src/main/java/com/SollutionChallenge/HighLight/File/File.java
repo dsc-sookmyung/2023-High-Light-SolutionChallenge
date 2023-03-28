@@ -42,7 +42,7 @@ public class File {
 	@Column(nullable = false)
 	private boolean converted = false; //반환 여부 저장
 
-	public static File createFile(Long id, User user, String fileName, String fileUrl) {
+	public static File createFile(User user, String fileName, String fileUrl) {
 		File file= new File();
 		file.user = user;
 		file.fileName = fileName;
