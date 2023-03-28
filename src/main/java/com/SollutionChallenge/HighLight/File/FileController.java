@@ -3,10 +3,7 @@ package com.SollutionChallenge.HighLight.File;
 import com.SollutionChallenge.HighLight.auth.JwtTokenUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -26,4 +23,14 @@ public class FileController {
         return ResponseEntity.ok(map);
     }
 
+
+    // 특정 파일 조회
+    @GetMapping("/files/{file_id}")
+    public ResponseEntity<HashMap<String, GetFileResponseDto>> getFile(@RequestHeader("token") String jwtToken, @PathVariable Long file_id) {
+        System.out.println("jwtToken: " + jwtToken);
+        Long user_id = Long.valueOf(jwtTokenUtil.getUserIdFromToken(jwtToken));
+        HashMap<String, GetFileResponseDto> map = new HashMap<>();
+        map.put("data", fileService.getFile(user_id, file_id));
+        return ResponseEntity.ok(map);
     }
+}
