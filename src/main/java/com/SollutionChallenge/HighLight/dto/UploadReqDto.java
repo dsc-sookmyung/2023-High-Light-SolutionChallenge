@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Setter
 @Builder
 public class UploadReqDto {
-    private String userName;
-    private MultipartFile uploadedfile;
+    private String user_name;
+    private Long user_id;
+    private MultipartFile uploaded_file;
 }
