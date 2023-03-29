@@ -162,8 +162,8 @@ class _ViewPageState extends State<ViewPage>
             if ((idx == _allTexts.length - 1) && spacer) {
               //print(spacer);
               return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   textBlock(_allTexts, fontBase, idx),
                   Container(
