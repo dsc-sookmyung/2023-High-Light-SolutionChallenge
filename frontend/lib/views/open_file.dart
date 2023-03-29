@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:card_swiper/card_swiper.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
@@ -9,6 +11,8 @@ import 'package:leturn/const/colors.dart';
 import 'package:leturn/views/home_screen.dart';
 import 'package:leturn/views/pages/page_view.dart';
 import 'package:logger/logger.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,8 +39,11 @@ class BasePage extends StatefulWidget {
   _BasePageState createState() => _BasePageState();
 }
 
-class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin { //스와이퍼를 적용 vsync
+class _BasePageState extends State<BasePage>
+    with SingleTickerProviderStateMixin {
+  //스와이퍼를 적용 vsync
 
+  SwiperController swiperController = SwiperController();
   late FToast fToast;
   AudioPlayer player = AudioPlayer();
   num fontBase = 20;
@@ -44,7 +51,7 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
   double playSpeed = 1.0;
 
   Future<int>? totalPage;
-  int totalItems = 0;
+  late int totalItems;
   int pageIdx = 0;
 
   showLastPageToast() {
@@ -54,8 +61,11 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
         borderRadius: BorderRadius.circular(25.0),
         color: MAIN_YELLOW,
       ),
-      child: Text("마지막 페이지 입니다.", semanticsLabel: "마지막 페이지 입니다.",
-        style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),),
+      child: Text(
+        "마지막 페이지 입니다.",
+        semanticsLabel: "마지막 페이지 입니다.",
+        style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),
+      ),
     );
 
     fToast.showToast(
@@ -72,7 +82,7 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
       setState(() {
         isPlaying = false;
         pageIdx = idx;
-        if (pageIdx == totalItems - 1){
+        if (pageIdx == totalItems - 1) {
           showLastPageToast();
         }
       });
@@ -81,10 +91,11 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
 
   onScaleUpdate(ScaleUpdateDetails details) {
     setState(() {
-      fontBase = 10*details.scale.clamp(0.8, 2.0);
+      fontBase = 10 * details.scale.clamp(0.8, 2.0);
     });
   }
-  isPlayingTrue(){
+
+  isPlayingTrue() {
     setState(() {
       isPlaying = true;
     });
@@ -121,30 +132,43 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
     return Scaffold(
       body: Column(
         children: [
-          _FixedTop(),
           Expanded(
             child: FutureBuilder(
                 future: totalPage,
                 builder: (context, AsyncSnapshot snapshot) {
-                  print(snapshot.data);
-                  print(totalPage);
+                  //print(snapshot.data);
+                  //print(totalPage);
                   if (snapshot.hasData) {
                     //print(snapshot.data);
-                    return Swiper(
-                      loop: false,
-                      itemCount: snapshot.data!,
-                      itemBuilder: (BuildContext context, int idx) {
-                        return ViewPage(
-                            fileId: widget.fileId, pageId: idx + 1, player: player,
-                        fontBase: fontBase, onScaleUpdate: onScaleUpdate, isPlayingTrue: isPlayingTrue,);
-                      },
-                      onIndexChanged: onPageChanged,
+                    return Column(
+                      children: [
+                        _FixedTop(),
+                        Expanded(
+                          child: Swiper(
+                            controller: swiperController,
+                            loop: false,
+                            itemCount: snapshot.data!,
+                            itemBuilder: (BuildContext context, int idx) {
+                              return ViewPage(
+                                fileId: widget.fileId,
+                                pageId: idx + 1,
+                                player: player,
+                                fontBase: fontBase,
+                                onScaleUpdate: onScaleUpdate,
+                                isPlayingTrue: isPlayingTrue,
+                              );
+                            },
+                            onIndexChanged: onPageChanged,
+                          ),
+                        ),
+                      ],
                     );
                   } else if (snapshot.hasError) {
                     return Text("snapshot Error>>> ${snapshot.error}");
                   } else {
                     return const Center(
-                        child: CircularProgressIndicator(color: MAIN_YELLOW, strokeWidth: 5));
+                        child: CircularProgressIndicator(
+                            color: MAIN_YELLOW, strokeWidth: 5));
                   }
                 }),
           ),
@@ -161,7 +185,9 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: () {Navigator.of(context).pop();},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: const Icon(Icons.arrow_back_ios_new_outlined),
             iconSize: 60.w,
           ),
@@ -197,13 +223,28 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
                     });
                     await player.setSpeed(playSpeed);
                   },
-                  icon: Icon(Icons.remove_circle, size: 64.w, color: Colors.black,),
+                  icon: Icon(
+                    Icons.remove_circle,
+                    size: 64.w,
+                    color: Colors.black,
+                  ),
                 ),
               ),
-              SizedBox(width: 30.w,),
-              Text(
-                '${playSpeed.toStringAsFixed(1)}x',
-                style: TextStyle(fontSize: 50.sp, fontWeight: FontWeight.w700, backgroundColor: Colors.white),
+              SizedBox(
+                width: 30.w,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0.w),
+                    color: Colors.white
+                ),
+                child: Text(
+                  '${playSpeed.toStringAsFixed(1)}x',
+                  style: TextStyle(
+                      fontSize: 50.sp,
+                      fontWeight: FontWeight.w700,
+                      backgroundColor: Colors.white),
+                ),
               ),
               SizedBox(
                 height: double.infinity,
@@ -214,7 +255,11 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
                     });
                     await player.setSpeed(playSpeed);
                   },
-                  icon: Icon(Icons.add_circle, size: 64.w, color: Colors.black,),
+                  icon: Icon(
+                    Icons.add_circle,
+                    size: 64.w,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ],
@@ -222,38 +267,65 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
           Container(
             child: Row(
               children: [
-                ButtonSemantics(
-                  excludeSemantics: false,
-                  label: '페이지 이동',
+                SizedBox(
+                  height: 75.h,
+                  width: 70.w,
                   child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.search),
-                    iconSize: 60.w,
+                    icon: SvgPicture.asset(
+                      'assets/left_icon.svg',
+                    ),
+                    onPressed: (){
+                      setState(() {
+                        if(pageIdx >= 5){
+                          pageIdx -= 5;
+                        }else{
+                          pageIdx = 0;
+                        }
+                        swiperController.move(pageIdx);
+                      });
+                    },
                   ),
                 ),
-                ButtonSemantics(
-                  excludeSemantics: false,
-                  label: '북마크 모음',
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.bookmarks),
-                    iconSize: 60.w,
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0.w),
+                    color: Colors.white
+                  ),
+                  child: Text(
+                    '${pageIdx+1} / $totalItems pages',
+                    style: TextStyle(
+                        fontSize: 50.sp,
+                        fontWeight: FontWeight.w700,
+                       ),
                   ),
                 ),
-                ButtonSemantics(
-                  excludeSemantics: false,
-                  label: '북마크 등록',
+                SizedBox(
+                  height: 75.h,
+                  width: 70.w,
                   child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.bookmark_border),
-                    iconSize: 60.w,
+                    icon: SvgPicture.asset('assets/right_icon.svg',
+                        height: 64.w,
+                    ),
+                    onPressed: (){
+                      setState(() {
+                        if(pageIdx <= (totalItems! - 5)){
+                          pageIdx += 5;
+                        }else{
+                          pageIdx = totalItems-1;
+                        }
+                        swiperController.move(pageIdx);
+                      });
+                    },
                   ),
-                )
+                ),
               ],
             ),
-          )
+
+          ),
         ],
       ),
     );
   }
+
 }
+

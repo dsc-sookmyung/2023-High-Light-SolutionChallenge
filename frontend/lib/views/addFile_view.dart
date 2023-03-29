@@ -32,10 +32,11 @@ class _AddFileViewState extends State<AddFileView>{
          Text('파일 선택',
            style: TextStyle(
              fontSize: 40.sp,
-             fontWeight: FontWeight.w800,
+             fontWeight: FontWeight.w600,
              color: Colors.white,
            ),
            semanticsLabel: "파일 선택",),
+         SizedBox(height: 10.h,),
          InkWell(
            onTap: () async{
              FilePickerResult? result = await FilePicker.platform.pickFiles(
@@ -75,10 +76,11 @@ class _AddFileViewState extends State<AddFileView>{
          Text('저장명',
            style: TextStyle(
              fontSize: 40.sp,
-             fontWeight: FontWeight.w800,
+             fontWeight: FontWeight.w600,
              color: Colors.white,
            ),
            semanticsLabel: "변환 파일 저장명",),
+         SizedBox(height: 10.h,),
          Container(
              width: 700.w,
              height: 100.h,
@@ -166,26 +168,31 @@ class _AddFileViewState extends State<AddFileView>{
           },
           icon: Icon(Icons.arrow_back_ios_new, size: 64.h, color: Colors.black),
         ),
-        title: Center(
-          child: Text('파일 변환',
-            style: TextStyle(
-              fontSize: 40.sp,
-              fontWeight: FontWeight.w800,
-              color: FONT_BLACK,
-            ),
-            semanticsLabel: "파일 변환 페이지",),
+        title: Row(
+            children: [
+              SizedBox(width: 430.w,),
+              Text('파일 변환',
+                style: TextStyle(
+                  fontSize: 40.sp,
+                  fontWeight: FontWeight.w800,
+                  color: FONT_BLACK,
+                ),
+                semanticsLabel: "파일 변환 페이지",),
+            ],
+          ),
         ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 20.h,),
             Container(child: makeFilePicker()),
             FloatingActionButton(
               backgroundColor: Colors.transparent,
+
                 child: Icon(
                   Icons.change_circle,
                   color: MAIN_YELLOW,
-                  size: 64.w,
+                  size: 80.w,
                 ),
                 onPressed: (){
                 if(savedFileName.isEmpty){
