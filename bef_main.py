@@ -189,62 +189,61 @@ def upload_folder(folder):
                 blob.upload_from_file(f)
 
 
-if __name__ == "__main__":
-    # 텍스트 추출
-    extract_data = get_text(path)
-    extract_data = get_detailed(extract_data)
-    if not os.path.exists(f"{json_folder_path}"):
-        os.makedirs(f"{json_folder_path}")
+# 텍스트 추출
+extract_data = get_text(path)
+extract_data = get_detailed(extract_data)
+if not os.path.exists(f"{json_folder_path}"):
+    os.makedirs(f"{json_folder_path}")
 
-    # text/audio url 생성
-    for i in range(1, len(extract_data) + 1):
-        count = str(i)
-        page = extract_data[count]
-        page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}/{count}/{filename}_full_audio_{count}.mp3"
-        for j in range(len(page["text"])):
-            line_count = str(j + 1)
-            one_text_audio_url = page["text"][j]["audio_url"]
-            page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}/{count}/{filename}_audio_{count}_{line_count}.mp3"
+# text/audio url 생성
+for i in range(1, len(extract_data) + 1):
+    count = str(i)
+    page = extract_data[count]
+    page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}/{count}/{filename}_full_audio_{count}.mp3"
+    for j in range(len(page["text"])):
+        line_count = str(j + 1)
+        one_text_audio_url = page["text"][j]["audio_url"]
+        page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{cloud_bucket}/{audio_folder_path}/{count}/{filename}_audio_{count}_{line_count}.mp3"
 
-    # 이미지 추출 및 폴더 저장
-    if not os.path.exists(f"{image_folder_path}"):
-        os.makedirs(f"{image_folder_path}")
-    get_image(extract_data, path, image_folder_path)
+# 이미지 추출 및 폴더 저장
+if not os.path.exists(f"{image_folder_path}"):
+    os.makedirs(f"{image_folder_path}")
+get_image(extract_data, path, image_folder_path)
 
-    # 텍스트 파일 저장
-    if not os.path.exists(f"{json_folder_path}"):
-        os.makedirs(f"{json_folder_path}")
-    for i in range(1, len(extract_data) + 1):
-        each_page = extract_data[str(i)]
-        count = str(i)
-        if not os.path.exists(f"{json_folder_path}/{count}"):
-            os.makedirs(f"{json_folder_path}/{count}")
-        with open(f"{json_folder_path}/{count}/{filename}_{count}.json", 'w', encoding='utf-8') as make_file:
-            json.dump(each_page, make_file, indent="\t", ensure_ascii=False)
-    print("text/image fin")
+# 텍스트 파일 저장
+if not os.path.exists(f"{json_folder_path}"):
+    os.makedirs(f"{json_folder_path}")
+for i in range(1, len(extract_data) + 1):
+    each_page = extract_data[str(i)]
+    count = str(i)
+    if not os.path.exists(f"{json_folder_path}/{count}"):
+        os.makedirs(f"{json_folder_path}/{count}")
+    with open(f"{json_folder_path}/{count}/{filename}_{count}.json", 'w', encoding='utf-8') as make_file:
+        json.dump(each_page, make_file, indent="\t", ensure_ascii=False)
+print("text/image fin")
 
-    # 오디오 파일 생성 및 파일 저장
-    if not os.path.exists(f"{audio_folder_path}"):
-        os.makedirs(f"{audio_folder_path}")
-    for i in range(1, len(extract_data) + 1):
-        full_text = extract_data[str(i)]['full_text']['full_text']
-        count = str(i)
-        if not os.path.exists(f"{audio_folder_path}/{count}"):
-            os.makedirs(f"{audio_folder_path}/{count}")
-        text_to_speech(
-            full_text, f"{audio_folder_path}/{count}/{audio_full_filename}_{count}.mp3")
-        line = len(extract_data[str(i)]['text'])
-        for j in range(line):
-            text = extract_data[str(i)]['text'][j]['text']
-            line_count = str(j + 1)
-            fileName = f"{audio_folder_path}/{count}/{audio_one_filename}_{count}_{line_count}.mp3"
-            text_to_speech(text, fileName)
+# 오디오 파일 생성 및 파일 저장
+if not os.path.exists(f"{audio_folder_path}"):
+    os.makedirs(f"{audio_folder_path}")
+for i in range(1, len(extract_data) + 1):
+    full_text = extract_data[str(i)]['full_text']['full_text']
+    count = str(i)
+    if not os.path.exists(f"{audio_folder_path}/{count}"):
+        os.makedirs(f"{audio_folder_path}/{count}")
+    text_to_speech(
+        full_text, f"{audio_folder_path}/{count}/{audio_full_filename}_{count}.mp3")
+    line = len(extract_data[str(i)]['text'])
+    for j in range(line):
+        text = extract_data[str(i)]['text'][j]['text']
+        line_count = str(j + 1)
+        fileName = f"{audio_folder_path}/{count}/{audio_one_filename}_{count}_{line_count}.mp3"
+        text_to_speech(text, fileName)
 
-    print("audio fin")
+print("audio fin")
 
-    # 서버에 업로드
-    upload_folder(f"{json_folder_path}")
-    upload_folder(f"{audio_folder_path}")
-    upload_folder(f"{image_folder_path}")
-    print("fin")
+# 서버에 업로드
+upload_folder(f"{json_folder_path}")
+upload_folder(f"{audio_folder_path}")
+upload_folder(f"{image_folder_path}")
+print("fin")
 # if __name__ == "__main__"

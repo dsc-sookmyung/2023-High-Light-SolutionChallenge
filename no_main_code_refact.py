@@ -4,17 +4,12 @@ from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTChar
 from flask import abort
 import re
-import os
-import fitz
-import PIL.Image
-import io
 
 
 BUCKET = ""
 FILE_NAME = ""
 USER_ID = ""
 file_no_extension = ''
-file_path = ''
 json_folder_path = ''
 json_filename = ''
 audio_folder_path = ''
@@ -33,7 +28,7 @@ def download_pdf(event, context):
     print("in CF")
     print("event", event)
 
-    global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension, file_path
+    global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension
 
     BUCKET = event['bucket']
     FILE_NAME = event['name'].split('/')[-1]
@@ -172,29 +167,17 @@ def get_text_audio_url(data):
             line_count = str(j + 1)
             page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_audio_{count}_{line_count}.mp3"
 
-    print(data)
-    print("FIN get_datailed()")
     # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
-    client = storage.Client()
-    bucket = client.get_bucket(BUCKET)
-
-    pdf = tempfile.NamedTemporaryFile()
-    try:
-        # Download blob into temporary file, extract, and uplaod.
-        bucket.blob(file_path).download_to_filename(pdf.name)
-        print(bucket, file_path, pdf.name)
-        return get_image(data, pdf.name)
-    except Exception as err:
-        print("Exception while extracting text", err)
+    get_image(data)
 
     return data
 
+# 추가 모듈: fitz, os, PIL. io
+
 
 def get_image(data, path):
-    print("Success in get_image")
     # 이미지 추출
     pdf = fitz.open(path)
-    print("success fitz.open")  # 여기까지 성공
     page_id = 1
     for i in range(len(pdf)):
         image_count = 1
@@ -202,26 +185,22 @@ def get_image(data, path):
         count = str(page_id)
         page = pdf[i]  # load page
         images = page.get_images()
-        print("After images = page.get_images()")
         for image in images:
-            # if not os.path.exists(f"{image_folder_path}/{count}"):
-            #     os.makedirs(f"{image_folder_path}/{count}")
+            if not os.path.exists(f"{image_folder_path}/{count}"):
+                os.makedirs(f"{image_folder_path}/{count}")
             base_img = pdf.extract_image(image[0])
             image_data = base_img['image']
             img = PIL.Image.open(io.BytesIO(image_data))
             extension = base_img['ext']
-            print("SUCCESS PIL.image")
-            # #! 이미지 파일 저장 -> 수정 필요
-            # img.save(
-            #     open(f"{image_folder_path}/{count}/{filename}_image_{image_count}.{extension}", "wb"))
-            # #! ---
+            #! 이미지 파일 저장 -> 수정 필요
+            img.save(
+                open(f"{image_folder_path}/{count}/{filename}_image_{image_count}.{extension}", "wb"))
+            #! ---
             each_page.append({
-                "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}"})
+                "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}", "audio_url": ""})
             image_count += 1
         data[str(page_id)]["image"] = each_page
         page_id += 1
-    print("fin get_image")
     return data
 
-
-# 2. get_image에 사용된 모듈들 맞게 사용됐나 확인
+# upload_json -> 진짜 경로에 따라 json 파일 하나만 추가될 수 있게끔

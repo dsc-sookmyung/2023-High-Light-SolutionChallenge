@@ -5,4 +5,5 @@ temp
 pdfminer
 pdfminer.six
 flask
-fitz
+PyMuPDF
+Pillow
