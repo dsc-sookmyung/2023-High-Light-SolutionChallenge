@@ -68,6 +68,37 @@ def download_pdf(event, context):
     except Exception as err:
         print("Exception while extracting text", err)
 
+# json 파일 업로드
+
+
+def upload_json(json_file, destination_file_name):
+    # destination_file_name : 폴더 경로까지 다 입력해야됨
+    """Uploads a file to the bucket."""
+    print("SUCCESS in upload_blob")
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(BUCKET)
+    blob = bucket.blob(destination_file_name)
+
+    blob.upload_from_string(json_file, content_type="application/json")
+
+    print('File uploaded to {}.'.format(
+        destination_file_name))
+
+# img 파일 업로드
+
+
+def upload_image(image_data, image_file_name, destination_file_name):
+    print("SUCCESS in upload_image")
+    image = PIL.Image.open(io.BytesIO(image_data))
+    extension = image_file_name.split('.')[-1]
+    # image_file_name: 딱 파일 이름만
+    bucket = storage.bucket()
+    # 여기에 image_file_name 부분에는 최종 경로를 적어야되나?
+    blob = bucket.blob(image_file_name)
+
+    blob.upload_from_string(image.getvalue(), content_type="image/jpeg")
+    print("DONE upload_image")
+
 
 def get_text(path):
     print("Success in get_text()")
@@ -215,6 +246,8 @@ def get_image(data, path):
             # img.save(
             #     open(f"{image_folder_path}/{count}/{filename}_image_{image_count}.{extension}", "wb"))
             # #! ---
+            upload_image(
+                img, f"{file_no_extension}_image_{image_count}.{extension}", f"{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}")
             each_page.append({
                 "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}"})
             image_count += 1
@@ -224,4 +257,5 @@ def get_image(data, path):
     return data
 
 
-# 2. get_image에 사용된 모듈들 맞게 사용됐나 확인
+# 2. upload_json 함수를 통해서 이미지도 올려지는지 -> 이미지는 안올라감 <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=403x7 at 0x3E0809920D50> could not be converted to bytes
+# 지금 배포 중인 extract-data는 안될 가능성이 높음 -> image_file 자체가 바이트가 아닌 것 같음.
