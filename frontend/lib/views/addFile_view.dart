@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:leturn/views/home_screen.dart';
+import 'package:leturn/views/loading_view.dart';
 
 class AddFileView extends StatefulWidget{
   final int folderId;
@@ -24,6 +25,7 @@ class _AddFileViewState extends State<AddFileView>{
   FilePickerResult? finalFile;
   late String savedFileName = "";
   bool check = false;
+  late int fileId;
 
   Widget makeFilePicker(){
     return Center(
@@ -141,10 +143,10 @@ class _AddFileViewState extends State<AddFileView>{
       final response = await dio.post('/folder/${widget.folderId}/files', formData);
 
       if(response.statusCode == 200){
-        var data = jsonDecode(response.data);
-        var fileId = data["data"]["file_id"];
-        print("duratiorn = ${data["duration"]}");
-        print("duratiorn = $savedFileName");
+        var data = response.data;
+        fileId = data["data"]["file_id"];
+        print("fileId = ${data["file_id"]}");
+        print("saveFileName = $savedFileName");
 
       }
     }
@@ -199,7 +201,9 @@ class _AddFileViewState extends State<AddFileView>{
                   print("비었음~~~~~");
                 }else{
                   sendFile(savedFileName!, widget.folderId);
-                }
+                  Navigator.of(context).pop();
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> LoadingView(fileId: fileId)));
+                  }
                 }
             ),
           ],
@@ -207,4 +211,5 @@ class _AddFileViewState extends State<AddFileView>{
       ),
     );
   }
+
 }

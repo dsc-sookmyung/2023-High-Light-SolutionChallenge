@@ -17,9 +17,10 @@ class ViewPage extends StatefulWidget {
   final fontBase;
   final onScaleUpdate;
   final isPlayingTrue;
+  final updateFullUrl;
 
   const ViewPage({Key? key, required this.fileId, required this.pageId, required this.player,
-  required this.fontBase, required this.onScaleUpdate, required this.isPlayingTrue}) : super(key: key);
+  required this.fontBase, required this.onScaleUpdate, required this.isPlayingTrue, required this.updateFullUrl}) : super(key: key);
 
   @override
   _ViewPageState createState() => _ViewPageState();
@@ -34,6 +35,7 @@ class _ViewPageState extends State<ViewPage>
   late Future<UnitList> unitList;
   late List<TextUnit> _allTexts;
   late List<ImageUnit> _allImages;
+  late String fullAudio = "";
 
   final List<String> _audioUrls = [];
 
@@ -41,10 +43,11 @@ class _ViewPageState extends State<ViewPage>
     final response = await dio.get('/files/${widget.fileId}/page/${widget.pageId}');
 
     if(response.statusCode == 200) {
-      var data = jsonDecode(response.data)["data"];
+      var data = response.data["data"];
+      fullAudio = data['full_audio_url'];
+      widget.updateFullUrl(fullAudio);
       final unit = UnitList.fromJson(data);
       //print("data>>> $data");
-
       _allTexts = unit.textList ?? <TextUnit>[];
       _allImages = unit.imgList ?? <ImageUnit>[];
       _audioUrls.addAll(_allTexts.map((e) => e.audioUrl));
@@ -52,7 +55,7 @@ class _ViewPageState extends State<ViewPage>
       return unit;
     }else{
 
-      print("page_view>>> error StatusCode : ${response.statusCode}");
+      print("pages_view>>> error StatusCode : ${response.statusCode}");
       throw Exception('페이지 로드에 실패했습니다.');
     }
   }
@@ -74,6 +77,7 @@ class _ViewPageState extends State<ViewPage>
   void initState() {
     super.initState();
     unitList = getList();
+
 
   }
 
@@ -157,6 +161,7 @@ class _ViewPageState extends State<ViewPage>
     return Container(
       //width: double.infinity,
       child: ListView.builder(
+        shrinkWrap: true,
           itemCount: _allTexts.length,
           itemBuilder: (ctx, int idx) {
             if ((idx == _allTexts.length - 1) && spacer) {

@@ -1,13 +1,14 @@
 import 'package:dio/dio.dart';
 
 class AuthDio{
-  static const serverUrl = 'https://4cde304b-5a97-42e0-8233-5db2d54e8848.mock.pstmn.io';
+  static const serverUrl = 'http://34.64.38.177:8080';
+  //static const serverUrl = 'https://4cde304b-5a97-42e0-8233-5db2d54e8848.mock.pstmn.io';
 
   final dio = Dio(
     BaseOptions(
       baseUrl: serverUrl,
-      connectTimeout: const Duration(seconds: 5000),
-      receiveTimeout: const Duration(seconds: 3000)
+      connectTimeout: const Duration(seconds: 500000),
+      receiveTimeout: const Duration(seconds: 300000)
     )
   );
 
