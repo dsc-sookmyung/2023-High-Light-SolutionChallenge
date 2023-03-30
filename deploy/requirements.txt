@@ -5,3 +5,4 @@ temp
 pdfminer
 pdfminer.six
 flask
+fitz
