@@ -9,9 +9,11 @@ import fitz
 import PIL.Image
 import io
 from google.cloud import texttospeech
+import json
 
 
 BUCKET = ""
+LOAD_BUCKET = "leturn-file-bucket"
 FILE_NAME = ""
 USER_ID = ""
 file_no_extension = ''
@@ -72,30 +74,22 @@ def download_pdf(event, context):
 # json 파일 업로드
 
 
-def upload_json(json_file, destination_file_name):
-    # destination_file_name : 폴더 경로까지 다 입력해야됨
-    """Uploads a file to the bucket."""
-    print("SUCCESS in upload_blob")
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(BUCKET)
-    blob = bucket.blob(destination_file_name)
-
-    blob.upload_from_string(json_file)
-
-    print('File uploaded to {}.'.format(
-        destination_file_name))
-
-
-def prepare_upload_json(data):
-    print("SUCCESS in prepare_upload_json")
+def upload_json(data):
+    print("SUCCESS in upload_json")
+    print(len(data))
     for i in range(1, len(data) + 1):
-        print("after for")
-        each_page = data[str(i)]
         count = str(i)
-        print("after count")
+        storage_client = storage.Client()
+        bucket = storage_client.get_bucket(LOAD_BUCKET)
+        blob = bucket.blob(
+            f"{json_folder_path}/{count}/{file_no_extension}_{count}.json")
 
-        upload_json(
-            data[str(i)], f"{json_folder_path}/{count}/{file_no_extension}_{count}.json")
+        blob.upload_from_string(json.dumps(data[str(i)]).encode(
+            'utf-8'), content_type="application/json")
+
+        print('File uploaded to {}.'.format(
+            f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
+
     print("fin prepare_upload_json")
     # with open(f"{json_folder_path}/{count}/{filename}_{count}.json", 'w', encoding='utf-8') as make_file:
     #     json.dump(each_page, make_file, indent="\t", ensure_ascii=False)
@@ -255,7 +249,7 @@ def get_image(data, path):
         data[str(page_id)]["image"] = each_page
         page_id += 1
     print("fin get_image")
-    return prepare_upload_json(data)
+    return upload_json(data)
 
 
 def text_to_speech(text, fileName):

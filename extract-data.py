@@ -7,10 +7,11 @@ import re
 import os
 import fitz
 import PIL.Image
+from PIL import Image
 import io
 
-
 BUCKET = ""
+LOAD_BUCKET = "leturn-file-bucket"
 FILE_NAME = ""
 USER_ID = ""
 file_no_extension = ''
@@ -68,35 +69,25 @@ def download_pdf(event, context):
     except Exception as err:
         print("Exception while extracting text", err)
 
-# json 파일 업로드
-
-
-def upload_json(json_file, destination_file_name):
-    # destination_file_name : 폴더 경로까지 다 입력해야됨
-    """Uploads a file to the bucket."""
-    print("SUCCESS in upload_blob")
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(BUCKET)
-    blob = bucket.blob(destination_file_name)
-
-    blob.upload_from_string(json_file, content_type="application/json")
-
-    print('File uploaded to {}.'.format(
-        destination_file_name))
 
 # img 파일 업로드
 
 
 def upload_image(image_data, image_file_name, destination_file_name):
     print("SUCCESS in upload_image")
-    image = PIL.Image.open(io.BytesIO(image_data))
+    print(image_data)
+    bs = io.BytesIO()
     extension = image_file_name.split('.')[-1]
     # image_file_name: 딱 파일 이름만
-    bucket = storage.bucket()
-    # 여기에 image_file_name 부분에는 최종 경로를 적어야되나?
-    blob = bucket.blob(image_file_name)
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(LOAD_BUCKET)
+    blob = bucket.blob(destination_file_name)
+    Image.save(bs, extension)
+    print("after PIL.Image.save")
+    bs.seek(0)
 
-    blob.upload_from_string(image.getvalue(), content_type="image/jpeg")
+    blob.upload_from_string(bs.getvalue())
+    blob.make_public()
     print("DONE upload_image")
 
 
@@ -257,5 +248,5 @@ def get_image(data, path):
     return data
 
 
-# 2. upload_json 함수를 통해서 이미지도 올려지는지 -> 이미지는 안올라감 <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=403x7 at 0x3E0809920D50> could not be converted to bytes
-# 지금 배포 중인 extract-data는 안될 가능성이 높음 -> image_file 자체가 바이트가 아닌 것 같음.
+# 왜 storage에 폴더 생성이 안되지?
+# 왜 upload_image/upload_json으로 들어가면 왜 반복문을 안돌지?

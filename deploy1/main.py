@@ -4,12 +4,17 @@ from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTChar
 from flask import abort
 import re
-
+import os
+import fitz
+import PIL.Image
+import io
+import json
 
 BUCKET = ""
 FILE_NAME = ""
 USER_ID = ""
 file_no_extension = ''
+file_path = ''
 json_folder_path = ''
 json_filename = ''
 audio_folder_path = ''
@@ -28,7 +33,7 @@ def download_pdf(event, context):
     print("in CF")
     print("event", event)
 
-    global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension
+    global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension, file_path
 
     BUCKET = event['bucket']
     FILE_NAME = event['name'].split('/')[-1]
@@ -63,6 +68,30 @@ def download_pdf(event, context):
     except Exception as err:
         print("Exception while extracting text", err)
 
+# json upload
+
+
+def upload_json(data, path, load_bucket):
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(load_bucket)
+    blob = bucket.blob(path)
+
+    blob.upload_from_string(data, content_type="application/json")
+
+
+def prepare_upload_json(data, load_bucket):
+    print("SUCCESS in upload_json")
+    print(len(data))
+    for i in range(1, len(data) + 1):
+        count = str(i)
+        path = f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"
+        upload_json(json.dumps(data[str(i)]).encode(
+            'utf-8'), path, load_bucket)
+        print('File uploaded to {}.'.format(
+            f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
+
+    print("fin prepare_upload_json")
+
 
 def get_text(path):
     print("Success in get_text()")
@@ -87,7 +116,6 @@ def get_text(path):
                     info.append(
                         {"audio_url": "", "font_size": cur_size, "text": text})
                 full_text += text
-                # full_text = full_text.decode('utf-8')
                 print(full_text)
         each_page["page_id"] = int(page_layout.pageid)
         each_page["full_text"] = {"audio_url": "", "full_text": full_text}
@@ -169,7 +197,9 @@ def get_text_audio_url(data):
 
     print(data)
     print("FIN get_datailed()")
-    # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
-    # get_image(data)
 
-    return data
+    upload_json(data, f'{USER_ID}/temp_{FILE_NAME}', "temporay")
+
+
+# 2. upload_json 함수를 통해서 이미지도 올려지는지 -> 이미지는 안올라감 <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=403x7 at 0x3E0809920D50> could not be converted to bytes
+# 지금 배포 중인 extract-data는 안될 가능성이 높음 -> image_file 자체가 바이트가 아닌 것 같음.
