@@ -1,7 +1,6 @@
 package com.SollutionChallenge.HighLight.Folder;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,13 +9,11 @@ import java.util.stream.Collectors;
 
 import com.SollutionChallenge.HighLight.User.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
 import com.SollutionChallenge.HighLight.User.UserRepository;
-import com.SollutionChallenge.HighLight.auth.ConfigUtils;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,11 +24,12 @@ public class FolderService {
 	private final FolderRepository folderRepository;
 	// private final
 	private final Folder folder;
-	// private final UserRepository userRepository;
+	private final UserRepository userRepository;
 
 	@Autowired
-	public FolderService(FolderRepository folderRepository) {
+	public FolderService(FolderRepository folderRepository, UserRepository userRepository) {
 		this.folderRepository = folderRepository;
+		this.userRepository = userRepository;
 		this.folder = Folder.createFolder(null, null);
 	}
 
@@ -48,10 +46,11 @@ public class FolderService {
 	// }
 
 	@Transactional
-	public FolderResponseDto save(FolderRequestDto folderRequestDto) {
-		User userId = folder.getUserId(); // 해당 폴더를 생성한 유저 정보
+	public FolderResponseDto save(Long user_id, FolderRequestDto folderRequestDto) {
+//		User userId = folder.getUserId(); // 해당 폴더를 생성한 유저 정보
+		User user = userRepository.findById(user_id).get();
 		String folderName = folderRequestDto.getFolderName();
-		Folder savedFolder = folderRepository.save(Folder.createFolder(userId, folderName));
+		Folder savedFolder = folderRepository.save(Folder.createFolder(user, folderName));
 		return FolderResponseDto.from(savedFolder.getId(), savedFolder.getName());
 	}
 	public Map<String, List<FolderResponseDto>> viewFolder() {

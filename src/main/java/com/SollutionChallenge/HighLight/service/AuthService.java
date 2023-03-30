@@ -52,7 +52,7 @@ public class AuthService {
 
             userRepository.save(user);
         }
-
+        user = userRepository.findByEmail(googleUser.getEmail()).get();
         String jwt = jwtTokenUtil.generateToken(user);
         System.out.println("googleUser email: "+googleUser.getEmail());
         System.out.println("token: "+jwt+", googleUserName: "+googleUser.getName());

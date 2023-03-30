@@ -3,11 +3,8 @@ package com.SollutionChallenge.HighLight.Folder;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import com.SollutionChallenge.HighLight.auth.JwtTokenUtil;
+import org.springframework.web.bind.annotation.*;
 
 import com.SollutionChallenge.HighLight.common.ApiResponse;
 import com.SollutionChallenge.HighLight.common.Success;
@@ -18,10 +15,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class FolderController {
 	private final FolderService folderService;
+	private final JwtTokenUtil jwtTokenUtil;
 
 	@PostMapping("/folder")
-	private ApiResponse createFolder(@RequestBody FolderRequestDto folderRequestDto){
-		FolderResponseDto response = folderService.save(folderRequestDto);
+	private ApiResponse createFolder(@RequestHeader("token") String jwtToken, @RequestBody FolderRequestDto folderRequestDto){
+		System.out.println("jwtToken: " + jwtToken);
+		Long user_id = Long.valueOf(jwtTokenUtil.getUserIdFromToken(jwtToken));
+		FolderResponseDto response = folderService.save(user_id, folderRequestDto);
 		return ApiResponse.successCode(Success.CREATE_FOLDER_SUCCESS,response);
 	}
 
