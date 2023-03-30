@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:leturn/component/button_semantics.dart';
@@ -28,7 +29,10 @@ class _LibraryViewState extends State<LibraryView> {
         borderRadius: BorderRadius.circular(25.0),
         color: Colors.redAccent,
       ),
-      child: Text("폴더명을 입력하세요", style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),),
+      child: Text(
+        "폴더명을 입력하세요",
+        style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),
+      ),
     );
 
     fToast.showToast(
@@ -46,11 +50,10 @@ class _LibraryViewState extends State<LibraryView> {
   }
 
   Future<List<Folders>> _fetchData() async {
-
     final response = await dio.get('/folders');
 
     if (response.statusCode == 200) {
-      var data = jsonDecode(response.data)["data"];
+      var data = response.data["data"];
       //print(data);
       final List<dynamic> folders = data["folder"];
       return folders.map((element) => Folders.fromJson(element)).toList();
@@ -61,7 +64,6 @@ class _LibraryViewState extends State<LibraryView> {
   }
 
   Future<List<Folders>> _sendData(String folderName) async {
-
     Map<String, String> body = {'folder_name': folderName};
     final response = await dio.post('/folders', body);
 
@@ -71,7 +73,7 @@ class _LibraryViewState extends State<LibraryView> {
       print("error StatusCode : ${response.statusCode}");
       throw Exception('폴더 생성에 실패했습니다.');
     } else {
-      var data = jsonDecode(response.data)["data"];
+      var data = response.data["data"];
       final List<dynamic> folders = data["folder"];
       return folders.map((element) => Folders.fromJson(element)).toList();
     }
@@ -86,30 +88,34 @@ class _LibraryViewState extends State<LibraryView> {
           String? input;
           return AlertDialog(
             backgroundColor: Colors.white,
-            insetPadding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.w),
+            insetPadding:
+                EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.w),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0.w),
             ),
             title: Text(
               "폴더 추가",
               style: TextStyle(
-                color: Colors.black,
-                  fontSize: 44.sp, fontWeight: FontWeight.bold),
+                  color: Colors.black,
+                  fontSize: 44.sp,
+                  fontWeight: FontWeight.bold),
             ),
             content: Container(
               height: 100.w,
               child: Column(
                 children: [
-                  SizedBox(height: 3.h,),
+                  SizedBox(
+                    height: 3.h,
+                  ),
                   Container(
                     child: TextField(
                       onChanged: (text) {
                         input = text;
                       },
                       decoration: const InputDecoration(
-                          hintText: '폴더명을 입력하세요',
+                        hintText: '폴더명을 입력하세요',
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color:MAIN_YELLOW),
+                          borderSide: BorderSide(color: MAIN_YELLOW),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: MAIN_YELLOW),
@@ -117,9 +123,7 @@ class _LibraryViewState extends State<LibraryView> {
                       ),
                       autofocus: true,
                       style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 37.sp
-                      ),
+                          fontWeight: FontWeight.w500, fontSize: 37.sp),
                     ),
                   ),
                 ],
@@ -128,15 +132,12 @@ class _LibraryViewState extends State<LibraryView> {
             actions: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: MAIN_YELLOW,
-                  padding: EdgeInsets.all(5.w)
-              ),
+                    backgroundColor: MAIN_YELLOW, padding: EdgeInsets.all(5.w)),
                 child: Text('확인',
-                  style:TextStyle(
-                    color: Colors.black,
-                  fontWeight: FontWeight.w600,
-                      fontSize: 37.sp)
-                ),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 37.sp)),
                 onPressed: () async {
                   if (input == null ||
                       input!.replaceAll(RegExp('\\s'), "").isEmpty) {
@@ -160,27 +161,65 @@ class _LibraryViewState extends State<LibraryView> {
 
   @override
   Widget build(BuildContext context) {
+    return FutureBuilder(
+        future: _folders,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return buildListView(snapshot);
+          } else if (snapshot.hasError) {
+            //print("error???? ${snapshot.error}");
+            return Text("error? ${snapshot},${snapshot.error}");
+          } else {
+            return Scaffold(
+              body: Center(
+                child: Container(
+                  color: PRIMARY_COLOR,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: Center(
+                            child: SpinKitCircle(
+                          color: MAIN_YELLOW,
+                          size: 80.w,
+                        )),
+                      ),
+                      Text(
+                        "서재룰 로딩 중입니다...",
+                        style: TextStyle(
+                            fontSize: 48.sp, fontWeight: FontWeight.w700),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            );
+          }
+        });
+  }
+
+  Widget buildListView(snapshot) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: MAIN_YELLOW,
         toolbarHeight: 100.h,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: Icon(Icons.arrow_back_ios_new, size: 64.h, color: Colors.black),
+        leading: SizedBox(
+          width: 10.w,
         ),
         //중간 부분
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(width: 380.w,),
+            SizedBox(
+              width: 380.w,
+            ),
             SvgPicture.asset(
               'assets/bookshelf.svg',
               height: 64.h,
             ),
-            SizedBox(width: 30.w,),
+            SizedBox(
+              width: 30.w,
+            ),
             Text(
               "내 서재",
               style: TextStyle(
@@ -206,7 +245,11 @@ class _LibraryViewState extends State<LibraryView> {
                 ),
                 primary: PRIMARY_COLOR,
               ),
-              icon: Icon(Icons.add_circle,color: MAIN_YELLOW, size: 64.w,),
+              icon: Icon(
+                Icons.add_circle,
+                color: MAIN_YELLOW,
+                size: 64.w,
+              ),
               label: Text(
                 '폴더 추가',
                 style: TextStyle(
@@ -222,54 +265,46 @@ class _LibraryViewState extends State<LibraryView> {
       body: SafeArea(
         child: Container(
           color: PRIMARY_COLOR,
-          child: FutureBuilder(
-            future: _folders,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return buildListView(snapshot);
-              } else if (snapshot.hasError) {
-                //print("error???? ${snapshot.error}");
-                return Text("error? ${snapshot},${snapshot.error}");
-              } else {
-                return const Center(child: CircularProgressIndicator(color: MAIN_YELLOW,strokeWidth: 5,));
-              }
-            }),
+          child: ListView.separated(
+              scrollDirection: Axis.vertical,
+              padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
+              separatorBuilder: (BuildContext context, int idx) =>
+                  const Divider(color: Colors.grey, thickness: 2),
+              itemCount: snapshot.data!.length,
+              itemBuilder: (BuildContext context, int idx) {
+                return TextButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.folder,
+                        size: 80.w,
+                        color: MAIN_YELLOW,
+                      ),
+                      SizedBox(
+                        width: 30.w,
+                      ),
+                      Expanded(
+                        child: Text(
+                          snapshot.data![idx].folderName,
+                          style: TextStyle(fontSize: 65.sp, color: MAIN_YELLOW),
+                          maxLines: 1,
+                          softWrap: false,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      )
+                    ],
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => FolderView(
+                            folderId: snapshot.data![idx].folderId,
+                            folderName: snapshot.data![idx].folderName)));
+                  },
+                );
+              }),
         ),
       ),
     );
   }
-
-
-  Widget buildListView(snapshot){
-    return ListView.separated(
-      scrollDirection: Axis.vertical,
-        padding: EdgeInsets.only(top: 15.h,left: 15.w, right: 15.w),
-        separatorBuilder: (BuildContext context, int idx) => const Divider(color: Colors.grey, thickness: 2),
-        itemCount: snapshot.data!.length,
-        itemBuilder: (BuildContext context, int idx){
-          return TextButton(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Icon(Icons.folder, size: 80.w, color: MAIN_YELLOW,),
-                SizedBox(width: 30.w,),
-                Expanded(
-                  child: Text(
-                    snapshot.data![idx].folderName,
-                    style: TextStyle(fontSize: 65.sp, color: MAIN_YELLOW),
-                    maxLines: 1,
-                    softWrap: false,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                )
-              ],
-            ),
-            onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => FolderView(folderId: snapshot.data![idx].folderId, folderName: snapshot.data![idx].folderName)));},
-          );
-        }
-    );
-  }
-
 }

@@ -1,11 +1,13 @@
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leturn/models/auth_dio.dart';
+import 'package:leturn/views/library_view.dart';
 import 'package:leturn/views/menu_page.dart';
 
 
@@ -97,13 +99,13 @@ class _Buttons extends StatelessWidget{
               ),
               onPressed: () async {
                 await signIn();
-                await Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen()));
+                await Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryView()));
 
               },
             ),
           ),
           //2. 카카오 로그인
-          Container(
+          /*Container(
             //color: Colors.lightBlue,
             width: 500.w,
             height: 90.h,
@@ -138,7 +140,7 @@ class _Buttons extends StatelessWidget{
               ),
               onPressed: (){},
             ),
-          ),
+          ),*/
         ],
       ),
     );
@@ -152,11 +154,13 @@ class _Buttons extends StatelessWidget{
       print("google login error >>> googleAuth is null");
     }else{
       final body = {'access_token' : googleAuth!.accessToken.toString()};
-      final response = await dio.post('/login/google', body);
+      print(body.toString());
+      final response = await dio.post('/google/login', body);
 
+      print("response?? ${response.data}");
       if(response.statusCode == 200){
-        print(jsonDecode(response.data));
-        var data = jsonDecode(response.data);
+        print(response.data);
+        var data = response.data;
         //print("token_home_screen: $token");
 
         dio.setAuthToken(data["token"]);

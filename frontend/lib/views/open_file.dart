@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,10 +10,8 @@ import 'package:just_audio/just_audio.dart';
 import 'package:leturn/component/button_semantics.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:leturn/views/home_screen.dart';
-import 'package:leturn/views/pages/page_view.dart';
+import 'package:leturn/views/pages/pages_view.dart';
 import 'package:logger/logger.dart';
-import 'package:syncfusion_flutter_sliders/sliders.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,8 +46,11 @@ class _BasePageState extends State<BasePage>
   late FToast fToast;
   AudioPlayer player = AudioPlayer();
   num fontBase = 20;
-  bool isPlaying = false;
+  bool? isPlaying = false;
   double playSpeed = 1.0;
+  Map<int, String> fullAudio = {};
+  //StreamSubscription? _playerSubscription;
+  //late Timer? _timer;
 
   Future<int>? totalPage;
   late int totalItems;
@@ -95,6 +97,10 @@ class _BasePageState extends State<BasePage>
     });
   }
 
+  updateFullUrl(String url) async {
+    fullAudio[pageIdx] = url;
+  }
+
   isPlayingTrue() {
     setState(() {
       isPlaying = true;
@@ -104,7 +110,7 @@ class _BasePageState extends State<BasePage>
   Future<int> getTotalPage(int fileId) async {
     final response = await dio.get('/files/$fileId');
     if (response.statusCode == 200) {
-      var data = jsonDecode(response.data)["data"];
+      var data = response.data["data"];
       print("pages>>>> ${data["page_num"]}");
       totalItems = data["page_num"];
       return data["page_num"];
@@ -125,6 +131,14 @@ class _BasePageState extends State<BasePage>
     totalPage = getTotalPage(widget.fileId);
     fToast = FToast();
     fToast.init(context);
+
+  }
+
+  @override
+  void dispose(){
+    //_playerSubscription!.cancel();
+    //_timer.cancel();
+    super.dispose();
   }
 
   @override
@@ -156,6 +170,7 @@ class _BasePageState extends State<BasePage>
                                 fontBase: fontBase,
                                 onScaleUpdate: onScaleUpdate,
                                 isPlayingTrue: isPlayingTrue,
+                                updateFullUrl: updateFullUrl,
                               );
                             },
                             onIndexChanged: onPageChanged,
@@ -191,24 +206,58 @@ class _BasePageState extends State<BasePage>
             icon: const Icon(Icons.arrow_back_ios_new_outlined),
             iconSize: 60.w,
           ),
-          IconButton(
-            iconSize: 64.w,
-            onPressed: () async {
-              if (player.playing) {
-                setState(() {
-                  isPlaying = false;
-                });
-                await player.pause();
-              } else {
-                setState(() {
-                  isPlaying = true;
-                });
-                await player.play();
-              }
-              //print("isPlaying: $isPlaying");
-            },
-            icon: Icon(isPlaying ? Icons.pause_circle : Icons.play_circle,
-                color: Colors.black),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(5.h),
+                child: ElevatedButton.icon(
+                  onPressed: () async {
+                    isPlayingTrue();
+                    await player.setUrl(fullAudio[pageIdx]!);
+                    await player.play();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    //padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0.w),
+                    ),
+                    primary: PRIMARY_COLOR,
+                  ),
+                  icon: SvgPicture.asset(
+                    'assets/loop_icon.svg',
+                    height: 64.w,
+                  ),
+                  label: Text(
+                    '전체 듣기',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 40.sp,
+                      color: MAIN_YELLOW,
+                    ),
+                  ),
+                ),
+              ),
+              playButton(),
+              /*IconButton(
+                iconSize: 64.w,
+                onPressed: () async {
+                  if (player.playing) {
+                    *//*setState(() {
+                      isPlaying = false;
+                    });*//*
+                    await player.pause();
+                  } else {
+                    *//*setState(() {
+                      isPlaying = true;
+                    });*//*
+                    await player.play();
+                  }
+                  //print("isPlaying: $isPlaying");
+                },
+                icon: Icon(isPlaying! ? Icons.pause_circle : Icons.play_circle,
+                    color: Colors.black),
+              ),*/
+            ],
           ),
           //재생 속도 조절바
           Row(
@@ -323,6 +372,38 @@ class _BasePageState extends State<BasePage>
 
           ),
         ],
+      ),
+    );
+  }
+
+  Widget playButton(){
+    return Container(
+      child: StreamBuilder<PlayerState>(
+        stream: player.playerStateStream,
+        builder: (context, snapshot){
+          final playerState = snapshot.data;
+          final processingState = playerState?.processingState;
+          isPlaying = playerState?.playing;
+          if(isPlaying != true){
+            return IconButton(
+              icon: const Icon(Icons.play_arrow),
+              iconSize: 64.0,
+              onPressed: player.play,
+            );
+          }else if (processingState != ProcessingState.completed) {
+            return IconButton(
+              icon: const Icon(Icons.pause),
+              iconSize: 64.0,
+              onPressed: player.pause,
+            );
+          }else{
+            return IconButton(
+              icon: const Icon(Icons.pause),
+              iconSize: 64.0,
+              onPressed: player.pause,
+            );
+          }
+        },
       ),
     );
   }

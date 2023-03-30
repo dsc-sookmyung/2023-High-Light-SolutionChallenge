@@ -34,7 +34,7 @@ class _FolderViewState extends State<FolderView>{
     final response = await dio.get('/folders/${widget.folderId}/files');
 
     if (response.statusCode == 200) {
-      var data = jsonDecode(response.data)["data"];
+      var data = response.data["data"];
       //파일 정보 파싱
       final List<dynamic> files = data["files"];
       return files.map((e) => SimpleFile.fromJson(e)).toList();
