@@ -17,9 +17,9 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./tts_api_key.json"
 
 #! 다운받은 파일명을 어떻게 받지?
 # downloaded = 'StallingsOS8e-Chap04.pdf'
-downloaded = 'data_1.pdf'
+downloaded = 'os_5.pdf'
 cloud_bucket = 'cloud_storage_leturn'
-userid = "userid2"
+userid = "userid3"
 split_file = list(downloaded.split('.'))
 filename = split_file[0]
 json_folder_path = f'{userid}/{filename}_json_folder/'

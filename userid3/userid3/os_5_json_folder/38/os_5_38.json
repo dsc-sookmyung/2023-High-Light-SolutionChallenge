@@ -1,0 +1,51 @@
+{
+	"page_id": 38,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_38/os_5_full_audio_38.mp3",
+		"full_text": "신호 기반 모니터\n• 모니터를 이용한 생산자/소비자 문제 해결 방법(계속)\n38\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/38/os_5_audio_38_1.mp3",
+			"font_size": 32,
+			"text": "신호 기반 모니터\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/38/os_5_audio_38_2.mp3",
+			"font_size": 24,
+			"text": "• 모니터를 이용한 생산자/소비자 문제 해결 방법(계속)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/38/os_5_audio_38_3.mp3",
+			"font_size": 12,
+			"text": "38\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/38/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/38/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/38/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/38/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/38/os_5_image_5.png"
+		}
+	]
+}

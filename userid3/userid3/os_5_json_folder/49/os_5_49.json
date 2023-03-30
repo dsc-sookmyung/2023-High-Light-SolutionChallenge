@@ -1,0 +1,81 @@
+{
+	"page_id": 49,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_49/os_5_full_audio_49.mp3",
+		"full_text": "메시지 전달을 이용한 판독자/기록자 문제\n• 기록자 우선이라고 가정\n– 기록자나 판독자는 제어기에게 요청 메시지를 보내고\n– 제어기로부터 OK를 받으면 임계영역으로 진입\n– 빠져나올 때 finished 메시지를 보내 나왔음을 알림.\n– 제어기는 쓰기 요청 메시지를 먼저 처리\n• count: 상호배제 구현에 활용되는 변수\n– 최대 가능한 판독자의 수보다 큰 수로 초기화되어 있음\n– 다음의 예에서는 100으로 초기화 되어 있음\n– count > 0: 현재 대기 중인 writer는 없는 상태\n– count = 100: 현재 활동 중인 reader가 없는 상태\n– 0 < count < 100: 현재 활동 중인 reader가 있는 상태\n– count < 0: writer가 요청을 했고, 활동 중인 모든 reader가 수행을\n마칠 때까지 기다리는 중. 따라서 reader의 완료 메시지만 서비스.\n– count = 0: 대기하던 writer 요청을 재개시킬 수 있는 상태\n49\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_1.mp3",
+			"font_size": 32,
+			"text": "메시지 전달을 이용한 판독자/기록자 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_2.mp3",
+			"font_size": 22,
+			"text": "• 기록자 우선이라고 가정\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_3.mp3",
+			"font_size": 19,
+			"text": "– 기록자나 판독자는 제어기에게 요청 메시지를 보내고\n– 제어기로부터 OK를 받으면 임계영역으로 진입\n– 빠져나올 때 finished 메시지를 보내 나왔음을 알림.\n– 제어기는 쓰기 요청 메시지를 먼저 처리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_4.mp3",
+			"font_size": 22,
+			"text": "• count: 상호배제 구현에 활용되는 변수\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_5.mp3",
+			"font_size": 19,
+			"text": "– 최대 가능한 판독자의 수보다 큰 수로 초기화되어 있음\n– 다음의 예에서는 100으로 초기화 되어 있음\n– count > 0: 현재 대기 중인 writer는 없는 상태\n– count = 100: 현재 활동 중인 reader가 없는 상태\n– 0 < count < 100: 현재 활동 중인 reader가 있는 상태\n– count < 0: writer가 요청을 했고, 활동 중인 모든 reader가 수행을\n마칠 때까지 기다리는 중. 따라서 reader의 완료 메시지만 서비스.\n– count = 0: 대기하던 writer 요청을 재개시킬 수 있는 상태\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/49/os_5_audio_49_6.mp3",
+			"font_size": 12,
+			"text": "49\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_6.png"
+		},
+		{
+			"img_idx": 7,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_7.png"
+		},
+		{
+			"img_idx": 8,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/49/os_5_image_8.png"
+		}
+	]
+}

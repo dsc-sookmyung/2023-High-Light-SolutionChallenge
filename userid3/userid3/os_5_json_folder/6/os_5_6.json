@@ -1,0 +1,61 @@
+{
+	"page_id": 6,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_6/os_5_full_audio_6.mp3",
+		"full_text": "병행성 원리\n• 병행 처리의 문제점\n– 전역 자원의 공유가 어렵다.\n– 운영체제가 자원을 최적으로 할당하기 어렵다.\n– 프로그래밍 오류를 찾아내는 것이 어렵다.\n• 인터리빙이나 오버래핑으로 인해 발생하는 문제점은\n단일처리기 시스템에서나 다중처리기 시스템에서 동일\n– 단일처리기: 프로세스 수행의 상대적인 속도 예측이 어려움\n• 다른 프로세스의 행동에 종속\n• OS의 스케줄링 정책에 의존\n• OS의 인터럽트 처리 방법에 따라 달라짐\n6\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_1.mp3",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_2.mp3",
+			"font_size": 24,
+			"text": "• 병행 처리의 문제점\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_3.mp3",
+			"font_size": 20,
+			"text": "– 전역 자원의 공유가 어렵다.\n– 운영체제가 자원을 최적으로 할당하기 어렵다.\n– 프로그래밍 오류를 찾아내는 것이 어렵다.\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_4.mp3",
+			"font_size": 24,
+			"text": "• 인터리빙이나 오버래핑으로 인해 발생하는 문제점은\n단일처리기 시스템에서나 다중처리기 시스템에서 동일\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_5.mp3",
+			"font_size": 20,
+			"text": "– 단일처리기: 프로세스 수행의 상대적인 속도 예측이 어려움\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_6.mp3",
+			"font_size": 18,
+			"text": "• 다른 프로세스의 행동에 종속\n• OS의 스케줄링 정책에 의존\n• OS의 인터럽트 처리 방법에 따라 달라짐\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/6/os_5_audio_6_7.mp3",
+			"font_size": 12,
+			"text": "6\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/6/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/6/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/6/os_5_image_3.png"
+		}
+	]
+}

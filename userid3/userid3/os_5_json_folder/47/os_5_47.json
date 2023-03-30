@@ -1,0 +1,61 @@
+{
+	"page_id": 47,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_47/os_5_full_audio_47.mp3",
+		"full_text": "판독자/기록자 문제\n• 세마포어를 이용한 해결\n방법: 기록자 우선\n– x: readcount 보호\n– rsem: writer가 먼저 들어가\n있을 때 첫 번째 reader가 기\n다리는 세마포어\n– z: writer가 먼저 들어가 있을\n때 두 번째 이후의 reader가\n기다리는 세마포어\n– y: writecount 보호\n– wsem: reader건 writer건 먼\n저 들어온 프로세스가 갖는\n세마포어\n47\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/47/os_5_audio_47_1.mp3",
+			"font_size": 32,
+			"text": "판독자/기록자 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/47/os_5_audio_47_2.mp3",
+			"font_size": 24,
+			"text": "• 세마포어를 이용한 해결\n방법: 기록자 우선\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/47/os_5_audio_47_3.mp3",
+			"font_size": 20,
+			"text": "– x: readcount 보호\n– rsem: writer가 먼저 들어가\n있을 때 첫 번째 reader가 기\n다리는 세마포어\n– z: writer가 먼저 들어가 있을\n때 두 번째 이후의 reader가\n기다리는 세마포어\n– y: writecount 보호\n– wsem: reader건 writer건 먼\n저 들어온 프로세스가 갖는\n세마포어\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/47/os_5_audio_47_4.mp3",
+			"font_size": 12,
+			"text": "47\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/47/os_5_image_6.png"
+		}
+	]
+}

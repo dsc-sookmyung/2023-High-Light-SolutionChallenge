@@ -1,0 +1,41 @@
+{
+	"page_id": 33,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_33/os_5_full_audio_33.mp3",
+		"full_text": "세마포어 구현\n• semWait와 semSignal은 원자적으로 구현되어야 함\n• 하드웨어 또는 펌웨어로 구현 가능\n• Dekker’s 또는 Peterson’s 알고리즘 같은 소프트웨어적\n인 기법으로도 구현 가능\n• 상호 배제를 위해 하드웨어 지원 기법 중에 하나를 사용\n33\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/33/os_5_audio_33_1.mp3",
+			"font_size": 32,
+			"text": "세마포어 구현\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/33/os_5_audio_33_2.mp3",
+			"font_size": 24,
+			"text": "• semWait와 semSignal은 원자적으로 구현되어야 함\n• 하드웨어 또는 펌웨어로 구현 가능\n• Dekker’s 또는 Peterson’s 알고리즘 같은 소프트웨어적\n인 기법으로도 구현 가능\n• 상호 배제를 위해 하드웨어 지원 기법 중에 하나를 사용\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/33/os_5_audio_33_3.mp3",
+			"font_size": 12,
+			"text": "33\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/33/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/33/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/33/os_5_image_3.png"
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{
+	"page_id": 14,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_full_audio_14.mp3",
+		"full_text": "상호배제\n• entercritical(), exitcritical() 구현 방법\n– 소프트웨어적 접근방법\n• 수행 부하가 높고, 논리적 오류의 위험성이 크다.\n– 하드웨어 지원\n• 인터럽트 금지(오버헤드가 크다.)\n• 특별한 기계 명령어: Test and Set, Exchange\n– 세마포어\n– 모니터\n– 메시지 전달\n14\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_1.mp3",
+			"font_size": 32,
+			"text": "상호배제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_2.mp3",
+			"font_size": 24,
+			"text": "• entercritical(), exitcritical() 구현 방법\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_3.mp3",
+			"font_size": 20,
+			"text": "– 소프트웨어적 접근방법\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_4.mp3",
+			"font_size": 18,
+			"text": "• 수행 부하가 높고, 논리적 오류의 위험성이 크다.\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_5.mp3",
+			"font_size": 20,
+			"text": "– 하드웨어 지원\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_6.mp3",
+			"font_size": 18,
+			"text": "• 인터럽트 금지(오버헤드가 크다.)\n• 특별한 기계 명령어: Test and Set, Exchange\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_7.mp3",
+			"font_size": 20,
+			"text": "– 세마포어\n– 모니터\n– 메시지 전달\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/14/os_5_audio_14_8.mp3",
+			"font_size": 12,
+			"text": "14\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/14/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/14/os_5_image_2.png",
+			"audio_url": ""
+		}
+	]
+}

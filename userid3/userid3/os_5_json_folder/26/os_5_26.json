@@ -1,0 +1,71 @@
+{
+	"page_id": 26,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_26/os_5_full_audio_26.mp3",
+		"full_text": "생산자/소비자 문제\n• 생산자/소비자 (producer/consumer) 문제 정의\n– 병행 수행되는 생산자와 소비자, 생산된 item을 버퍼에 저장\n• 한 순간에 하나의 생산자 또는 소비자만 버퍼에 접근 가능\n• 생산자는 가득 찬 버퍼에 저장하면 안됨. \n• 또한 소비자는 빈 버퍼에서 꺼내면 안됨\n– 버전 1: 무한 공유 버퍼\n// 생산자 의사 코드\nproducer:\nwhile (true) {\n/* produce item v */\nb[in] = v;\nin++; \n}\n// 소비자 의사 코드\nconsumer:\nwhile (true) {\nwhile (in <= out) \n/*do  nothing */;\nw = b[out];\nout++; \n/* consume item w */\n}\n26\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_1.mp3",
+			"font_size": 32,
+			"text": "생산자/소비자 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_2.mp3",
+			"font_size": 24,
+			"text": "• 생산자/소비자 (producer/consumer) 문제 정의\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_3.mp3",
+			"font_size": 20,
+			"text": "– 병행 수행되는 생산자와 소비자, 생산된 item을 버퍼에 저장\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_4.mp3",
+			"font_size": 18,
+			"text": "• 한 순간에 하나의 생산자 또는 소비자만 버퍼에 접근 가능\n• 생산자는 가득 찬 버퍼에 저장하면 안됨. \n• 또한 소비자는 빈 버퍼에서 꺼내면 안됨\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_5.mp3",
+			"font_size": 20,
+			"text": "– 버전 1: 무한 공유 버퍼\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/26/os_5_audio_26_6.mp3",
+			"font_size": 12,
+			"text": "26\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/26/os_5_image_6.jpeg"
+		}
+	]
+}

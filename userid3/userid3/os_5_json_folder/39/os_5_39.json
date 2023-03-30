@@ -1,0 +1,51 @@
+{
+	"page_id": 39,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_39/os_5_full_audio_39.mp3",
+		"full_text": "Mesa 모니터\n• 변경 사항\n– csignal()  cnotify()\n– if  while\n39\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/39/os_5_audio_39_1.mp3",
+			"font_size": 32,
+			"text": "Mesa 모니터\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/39/os_5_audio_39_2.mp3",
+			"font_size": 24,
+			"text": "• 변경 사항\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/39/os_5_audio_39_3.mp3",
+			"font_size": 20,
+			"text": "– csignal()  cnotify()\n– if  while\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/39/os_5_audio_39_4.mp3",
+			"font_size": 12,
+			"text": "39\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/39/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/39/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/39/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/39/os_5_image_4.png"
+		}
+	]
+}
