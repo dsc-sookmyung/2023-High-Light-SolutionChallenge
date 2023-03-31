@@ -50,11 +50,11 @@ class _LibraryViewState extends State<LibraryView> {
   }
 
   Future<List<Folders>> _fetchData() async {
-    final response = await dio.get('/folders');
+    final response = await dio.get('/folder');
 
     if (response.statusCode == 200) {
       var data = response.data["data"];
-      //print(data);
+      print("data>>>>>>>>$data");
       final List<dynamic> folders = data["folder"];
       return folders.map((element) => Folders.fromJson(element)).toList();
     } else {
@@ -64,8 +64,8 @@ class _LibraryViewState extends State<LibraryView> {
   }
 
   Future<List<Folders>> _sendData(String folderName) async {
-    Map<String, String> body = {'folder_name': folderName};
-    final response = await dio.post('/folders', body);
+    Map<String, String> body = {'folderName': folderName};
+    final response = await dio.post('/folder', body);
 
     //final response = await client.post(Uri.parse(url), body: jsonEncode(body));
     if (response.statusCode != 200) {
@@ -73,7 +73,9 @@ class _LibraryViewState extends State<LibraryView> {
       print("error StatusCode : ${response.statusCode}");
       throw Exception('폴더 생성에 실패했습니다.');
     } else {
+      print("data>>>>>>>>${response.data}");
       var data = response.data["data"];
+
       final List<dynamic> folders = data["folder"];
       return folders.map((element) => Folders.fromJson(element)).toList();
     }
@@ -167,7 +169,7 @@ class _LibraryViewState extends State<LibraryView> {
           if (snapshot.hasData) {
             return buildListView(snapshot);
           } else if (snapshot.hasError) {
-            //print("error???? ${snapshot.error}");
+            print("error???? ${snapshot.error}");
             return Text("error? ${snapshot},${snapshot.error}");
           } else {
             return Scaffold(

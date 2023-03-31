@@ -14,7 +14,7 @@ class AuthDio{
 
 
   void setAuthToken (String token) {
-    dio.options.headers["Authorization"] = "Bearer $token";
+    dio.options.headers["token"] = token;
     print("header >>>> ${dio.options.headers.toString()}");
   }
 
@@ -24,6 +24,13 @@ class AuthDio{
 
   Future <Response> post(String url, Object data){
     return dio.post(url, data: data);
+  }
+
+  Future <Response> postFile(String url, Object data){
+    //dio.options.contentType = Headers.multipartFormDataContentType;
+    return dio.post(url, data: data, options: Options(
+      contentType: Headers.multipartFormDataContentType
+    ));
   }
 
 

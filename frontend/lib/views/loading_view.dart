@@ -35,8 +35,8 @@ class _LoadingViewState extends State<LoadingView>{
 
   Future<void> _checkComplete() async{
     try{
-      final response = await dio.get('files/check/');
-      if(response.data['message'] == 'success'){
+      final response = await dio.get('/conversion/status/${widget.fileId}');
+      if(response.data['message'] == "Success"){
         setState(() {
           _isCompleted = true;
         });
@@ -59,20 +59,25 @@ class _LoadingViewState extends State<LoadingView>{
   Widget loading() {
     return Container(
       color: PRIMARY_COLOR,
-      child: Column(
-        children: [
-          Center(
-              child: SpinKitCubeGrid(
-                color: MAIN_YELLOW,
-                size: 80.w,
-              )
-          ),
-          Text("변환 중입니다...",
-            style: TextStyle(
-                fontSize: 48.sp,
-                fontWeight: FontWeight.w700
-            ),)
-        ],
+      child: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 300.h,),
+            Center(
+                child: SpinKitCubeGrid(
+                  color: MAIN_YELLOW,
+                  size: 80.w,
+                )
+            ),
+            SizedBox(height: 100.h,),
+            Text("변환 중입니다...",
+              style: TextStyle(
+                  fontSize: 48.sp,
+                  fontWeight: FontWeight.w700,
+                color: MAIN_YELLOW
+              ),)
+          ],
+        ),
       ),
     );
   }
