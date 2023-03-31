@@ -25,7 +25,7 @@ class _AddFileViewState extends State<AddFileView>{
   FilePickerResult? finalFile;
   late String savedFileName = "";
   bool check = false;
-  late int fileId;
+  late int fileId = -1;
 
   Widget makeFilePicker(){
     return Center(
@@ -136,11 +136,10 @@ class _AddFileViewState extends State<AddFileView>{
       
       var formData = FormData.fromMap({
         'file' : await MultipartFile.fromFile(filePath!),
-        'fileName' : changedName,
-        'folder_id' : folderId
+        'file_name' : changedName
       });
 
-      final response = await dio.post('/folder/${widget.folderId}/files', formData);
+      final response = await dio.postFile('/folder/${widget.folderId}/files', formData);
 
       if(response.statusCode == 200){
         var data = response.data;
@@ -183,30 +182,35 @@ class _AddFileViewState extends State<AddFileView>{
             ],
           ),
         ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 20.h,),
-            Container(child: makeFilePicker()),
-            FloatingActionButton(
-              backgroundColor: Colors.transparent,
+      body: GestureDetector(
+        onTap: (){
+          FocusScope.of(context).unfocus();
+        },
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20.h,),
+              Container(child: makeFilePicker()),
+              FloatingActionButton(
+                backgroundColor: Colors.transparent,
 
-                child: Icon(
-                  Icons.change_circle,
-                  color: MAIN_YELLOW,
-                  size: 80.w,
-                ),
-                onPressed: (){
-                if(savedFileName.isEmpty){
-                  print("비었음~~~~~");
-                }else{
-                  sendFile(savedFileName!, widget.folderId);
-                  Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> LoadingView(fileId: fileId)));
+                  child: Icon(
+                    Icons.change_circle,
+                    color: MAIN_YELLOW,
+                    size: 80.w,
+                  ),
+                  onPressed: (){
+                  if(savedFileName.isEmpty){
+                    print("비었음~~~~~");
+                  }else{
+                    sendFile(savedFileName!, widget.folderId);
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoadingView(fileId: fileId)));
+                    }
                   }
-                }
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -31,7 +31,7 @@ class _FolderViewState extends State<FolderView>{
 
 
   Future<List<SimpleFile>> _fetchData() async {
-    final response = await dio.get('/folders/${widget.folderId}/files');
+    final response = await dio.get('/folder/${widget.folderId}');
 
     if (response.statusCode == 200) {
       var data = response.data["data"];

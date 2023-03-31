@@ -197,7 +197,7 @@ class _BasePageState extends State<BasePage>
       color: Colors.amber,
       height: 90.h,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           IconButton(
             onPressed: () {
@@ -206,11 +206,12 @@ class _BasePageState extends State<BasePage>
             icon: const Icon(Icons.arrow_back_ios_new_outlined),
             iconSize: 60.w,
           ),
+          SizedBox(width: 10.w,),
           Row(
             children: [
               Padding(
                 padding: EdgeInsets.all(5.h),
-                child: ElevatedButton.icon(
+                child: ElevatedButton(
                   onPressed: () async {
                     isPlayingTrue();
                     await player.setUrl(fullAudio[pageIdx]!);
@@ -223,11 +224,11 @@ class _BasePageState extends State<BasePage>
                     ),
                     primary: PRIMARY_COLOR,
                   ),
-                  icon: SvgPicture.asset(
+                  /*icon: SvgPicture.asset(
                     'assets/loop_icon.svg',
                     height: 64.w,
-                  ),
-                  label: Text(
+                  ),*/
+                  child: Text(
                     '전체 듣기',
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
@@ -237,7 +238,13 @@ class _BasePageState extends State<BasePage>
                   ),
                 ),
               ),
-              playButton(),
+              StreamBuilder<PlayerState>(
+                stream: player.playerStateStream,
+                builder: (_, snapshot){
+                  final playerState = snapshot.data;
+                  return _playPauseButton(playerState);
+                },
+              ),
               /*IconButton(
                 iconSize: 64.w,
                 onPressed: () async {
@@ -259,6 +266,7 @@ class _BasePageState extends State<BasePage>
               ),*/
             ],
           ),
+          SizedBox(width: 50.w,),
           //재생 속도 조절바
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -313,6 +321,7 @@ class _BasePageState extends State<BasePage>
               ),
             ],
           ),
+          SizedBox(width: 120.w,),
           Container(
             child: Row(
               children: [
@@ -369,14 +378,42 @@ class _BasePageState extends State<BasePage>
                 ),
               ],
             ),
-
           ),
         ],
       ),
     );
   }
 
-  Widget playButton(){
+  Widget _playPauseButton(PlayerState? playerState) {
+    final processingState = playerState?.processingState;
+    if (processingState == ProcessingState.loading ||
+        processingState == ProcessingState.buffering) {
+      return IconButton(
+        icon: Icon(Icons.pause_circle),
+        iconSize: 64.w,
+        onPressed: player.pause,
+      );
+    } else if (player.playing != true) {
+      return IconButton(
+        icon: Icon(Icons.play_circle),
+        iconSize: 64.w,
+        onPressed: player.play,
+      );
+    } else if (processingState != ProcessingState.completed) {
+      return IconButton(
+        icon: Icon(Icons.pause_circle),
+        iconSize: 64.w,
+        onPressed: player.pause,
+      );
+    } else {
+      return IconButton(
+        icon: Icon(Icons.play_arrow),
+        iconSize: 64.w,
+        onPressed: player.play,
+      );
+    }
+  }
+  /*Widget playButton(PlayerState playerState){
     return Container(
       child: StreamBuilder<PlayerState>(
         stream: player.playerStateStream,
@@ -406,7 +443,7 @@ class _BasePageState extends State<BasePage>
         },
       ),
     );
-  }
+  }*/
 
 }
 
