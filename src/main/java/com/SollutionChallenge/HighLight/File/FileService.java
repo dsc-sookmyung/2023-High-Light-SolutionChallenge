@@ -68,7 +68,9 @@ public class FileService {
         // GCS에서 파일 폴더 찾아서 페이지 몇갠지 세어보기
         if (wantedFile.isPresent()) {
             File target = wantedFile.get();
-            String fileName = target.getFileName();
+            int fileNamelen = target.getFileName().length(); //ex. abc.pdf면 len은 7. substring은 0,3 해야됨
+            String fileName = target.getFileName();// substring(0,len-4)
+            fileName = fileName.substring(0,fileNamelen-4);
             int pageId = 1;
             boolean isExist = true;
             while (isExist) {
