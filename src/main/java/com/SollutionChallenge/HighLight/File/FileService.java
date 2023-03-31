@@ -49,24 +49,10 @@ public class FileService {
         Folder currentFolder = folderRepository.findById(folderId).get();
         UploadReqDto uploadReqDto = new UploadReqDto(currentUser.getName(), userId, multipartFile);
         String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, filename, folderId);
-
-
-//        File target = wantedFile.get();
-//        String fileName = target.getFileName();
-////            String downloadFileName = "userid/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // api 테스트용 파일 생성 코드
-//        String downloadFileName = userId+"/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // 실제 코드
-//
-//        System.out.println("다운로드 경로: " + downloadFileName);
-//        BlobId blobId = BlobId.of("cloud_storage_leturn", downloadFileName);
-//        Blob blob = storage.get(blobId);
-//        byte[] content = blob.getContent();
-//        String targetJson = new String(content, StandardCharsets.UTF_8);
-
-
-        String uploadedFileImage = "https://storage.googleapis.com/"+bucketName+"/"+userId+"/"+filename+"_thumbnail.png"; // 업로드 된 파일 썸네일, 받아오는 코드는 추후에 작성
+        String uploadedFileImage = "https://storage.googleapis.com/cloud_storage_leturn/"+userId+"/"+filename+"_thumbnail.png"; // 업로드 된 파일 썸네일, 받아오는 코드는 추후에 작성
 
         // 후 createFile(User user, String fileName, String fileUrl)로 filerepository에 저장
-        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, currentFolder, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl, uploadedFileImage);
+        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, currentFolder, filename+".pdf"/*multipartFile.getOriginalFilename()*/,uploadedFileUrl, uploadedFileImage);
         fileRepository.save(newFile);
 
 
