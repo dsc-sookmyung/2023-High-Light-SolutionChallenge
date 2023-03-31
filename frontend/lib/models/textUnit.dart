@@ -13,8 +13,8 @@ class TextUnit {
     //logger.e("TextUnit>>> ${json["text"]}");
     //logger.e("TextUnit>>> ${json["idx"]}");
     return TextUnit(
-        audioUrl: json['audio_url'],
-        fontSize: json['font_size'],
-        textLine: json['text']);
+        audioUrl: json["audio_url"],
+        fontSize: json["font_size"],
+        textLine: json["text_content"]);
   }
 }

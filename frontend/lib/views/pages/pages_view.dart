@@ -41,13 +41,14 @@ class _ViewPageState extends State<ViewPage>
 
   Future<UnitList> getList() async {
     final response = await dio.get('/files/${widget.fileId}/page/${widget.pageId}');
+    print('res>>> $response');
 
     if(response.statusCode == 200) {
       var data = response.data["data"];
-      fullAudio = data['full_audio_url'];
+      fullAudio = data["full_audio_url"];
       widget.updateFullUrl(fullAudio);
       final unit = UnitList.fromJson(data);
-      //print("data>>> $data");
+      print("page data>>> $data");
       _allTexts = unit.textList ?? <TextUnit>[];
       _allImages = unit.imgList ?? <ImageUnit>[];
       _audioUrls.addAll(_allTexts.map((e) => e.audioUrl));
