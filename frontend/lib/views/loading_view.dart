@@ -24,19 +24,20 @@ class _LoadingViewState extends State<LoadingView>{
   @override
   void initState(){
     super.initState();
-    _subscription = Stream.periodic(Duration(seconds: 10)).listen((_) => _checkComplete());
+    //_subscription = Stream.periodic(Duration(seconds: 10)).listen((_) => _checkComplete());
   }
 
   @override
   void dispose(){
-    _subscription.cancel();
+    //_subscription.cancel();
     super.dispose();
   }
 
   Future<void> _checkComplete() async{
     try{
       final response = await dio.get('/conversion/status/${widget.fileId}');
-      if(response.data['message'] == "Success"){
+      print("??? $response");
+      if(response == "true"){
         setState(() {
           _isCompleted = true;
         });
@@ -47,12 +48,22 @@ class _LoadingViewState extends State<LoadingView>{
       print(e);
     }
   }
+  
+  Widget _pass() {
+    Future.delayed(const Duration(minutes: 5),(){
+      print("loading <> ${widget.fileId}");
+      Navigator.pop(context);
+      Navigator.push(context, MaterialPageRoute(builder: (context) => BasePage(fileId: widget.fileId)));
+    });
+    return loading();
+  }
+
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: loading(),
+      body: _pass(),
     );
   }
 
@@ -66,16 +77,21 @@ class _LoadingViewState extends State<LoadingView>{
             Center(
                 child: SpinKitCubeGrid(
                   color: MAIN_YELLOW,
-                  size: 80.w,
+                  size: 90.w,
                 )
             ),
             SizedBox(height: 100.h,),
-            Text("변환 중입니다...",
-              style: TextStyle(
-                  fontSize: 48.sp,
-                  fontWeight: FontWeight.w700,
-                color: MAIN_YELLOW
-              ),)
+            Center(
+              child: Text("변환 중입니다...\n평균 10분가량 소요 됩니다.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 48.sp,
+                    fontWeight: FontWeight.w700,
+                  color: MAIN_YELLOW
+                ),
+                semanticsLabel: "변환 중입니다...  평균 10분가량 소요 됩니다.",
+              ),
+            )
           ],
         ),
       ),

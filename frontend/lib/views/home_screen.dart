@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:leturn/component/button_semantics.dart';
 import 'package:leturn/const/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:leturn/models/auth_dio.dart';
@@ -58,90 +59,55 @@ class _Buttons extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          //1. 구글 로그인
-          Container(
-            //color: Colors.lightBlue,
-            width: 500.w,
-            height: 90.h,
-            margin: EdgeInsets.symmetric(vertical: 20.0.h),
-            child: ElevatedButton (
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0.w),
-                ),
-                primary: Colors.white,
-                onPrimary: FONT_BLACK,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    'assets/Google.svg',
-                    height: 80.h,
+    return ButtonSemantics(
+      label: "구글 로그인 버튼",
+      child: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            //1. 구글 로그인
+            Container(
+              //color: Colors.lightBlue,
+              width: 500.w,
+              height: 90.h,
+              margin: EdgeInsets.symmetric(vertical: 20.0.h),
+              child: ElevatedButton (
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0.w),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16.0.w),
-                    child: Text(
-                      'Google로 로그인',
-                      style: TextStyle(
-                        color: FONT_BLACK,
-                        fontSize: 40.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              onPressed: () async {
-                await signIn();
-                await Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryView()));
-
-              },
-            ),
-          ),
-          //2. 카카오 로그인
-          /*Container(
-            //color: Colors.lightBlue,
-            width: 500.w,
-            height: 90.h,
-            margin: EdgeInsets.symmetric(vertical: 20.0.h),
-            child: ElevatedButton (
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0.w),
+                  primary: Colors.white,
+                  onPrimary: FONT_BLACK,
                 ),
-                primary: Color(0xffFEE500),
-                onPrimary: FONT_BLACK,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/Kakao.png',
-                    height: 100.h,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16.0.w),
-                    child: Text(
-                      'Kakao로 로그인 ',
-                      style: TextStyle(
-                        color: FONT_BLACK,
-                        fontSize: 40.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      'assets/Google.svg',
+                      height: 80.h,
                     ),
-                  )
-                ],
+                    Container(
+                      margin: EdgeInsets.only(left: 16.0.w),
+                      child: Text(
+                        'Google로 로그인',
+                        style: TextStyle(
+                          color: FONT_BLACK,
+                          fontSize: 40.sp,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                onPressed: () async {
+                  await signIn();
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryView()));
+                },
               ),
-              onPressed: (){},
             ),
-          ),*/
-        ],
+          ],
+        ),
       ),
     );
   }

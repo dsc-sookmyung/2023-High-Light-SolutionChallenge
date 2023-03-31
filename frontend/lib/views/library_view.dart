@@ -32,6 +32,7 @@ class _LibraryViewState extends State<LibraryView> {
       child: Text(
         "폴더명을 입력하세요",
         style: TextStyle(fontSize: 44.sp, fontWeight: FontWeight.bold),
+        semanticsLabel: "폴더명을 입력하세요",
       ),
     );
 
@@ -54,7 +55,7 @@ class _LibraryViewState extends State<LibraryView> {
 
     if (response.statusCode == 200) {
       var data = response.data["data"];
-      print("data>>>>>>>>$data");
+      //print("data>>>>>>>>$data");
       final List<dynamic> folders = data["folder"];
       return folders.map((element) => Folders.fromJson(element)).toList();
     } else {
@@ -73,7 +74,7 @@ class _LibraryViewState extends State<LibraryView> {
       print("error StatusCode : ${response.statusCode}");
       throw Exception('폴더 생성에 실패했습니다.');
     } else {
-      print("data>>>>>>>>${response.data}");
+      //print("data>>>>>>>>${response.data}");
       var data = response.data["data"];
 
       final List<dynamic> folders = data["folder"];
@@ -97,64 +98,71 @@ class _LibraryViewState extends State<LibraryView> {
             ),
             title: Text(
               "폴더 추가",
+              semanticsLabel: "폴더 추가",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 44.sp,
                   fontWeight: FontWeight.bold),
             ),
-            content: Container(
-              height: 100.w,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 3.h,
-                  ),
-                  Container(
-                    child: TextField(
-                      onChanged: (text) {
-                        input = text;
-                      },
-                      decoration: const InputDecoration(
-                        hintText: '폴더명을 입력하세요',
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: MAIN_YELLOW),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: MAIN_YELLOW),
-                        ),
-                      ),
-                      autofocus: true,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 37.sp),
+            content: Semantics(
+              label: "폴더 명을 입력하는 칸입니다.",
+              child: SizedBox(
+                height: 100.w,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 3.h,
                     ),
-                  ),
-                ],
+                    Container(
+                      child: TextField(
+                        onChanged: (text) {
+                          input = text;
+                        },
+                        decoration: const InputDecoration(
+                          hintText: '폴더명을 입력하세요',
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: MAIN_YELLOW),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: MAIN_YELLOW),
+                          ),
+                        ),
+                        autofocus: true,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 37.sp),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             actions: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: MAIN_YELLOW, padding: EdgeInsets.all(5.w)),
-                child: Text('확인',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 37.sp)),
-                onPressed: () async {
-                  if (input == null ||
-                      input!.replaceAll(RegExp('\\s'), "").isEmpty) {
-                    showCustomToast();
-                    return;
-                  } else {
-                    List<Folders> folders = await _sendData(input!);
-                    //print("input: $input");
-                    //print("renew List : ${folders.toString()}");
-                    setState(() {
-                      _folders = Future.value(folders);
-                    });
-                    Navigator.of(context).pop();
-                  }
-                },
+              ButtonSemantics(
+                label: "폴더 생성 확인 버튼입니다.",
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: MAIN_YELLOW, padding: EdgeInsets.all(5.w)),
+                  child: Text('확인',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 37.sp)),
+                  onPressed: () async {
+                    if (input == null ||
+                        input!.replaceAll(RegExp('\\s'), "").isEmpty) {
+                      showCustomToast();
+                      return;
+                    } else {
+                      List<Folders> folders = await _sendData(input!);
+                      //print("input: $input");
+                      //print("renew List : ${folders.toString()}");
+                      setState(() {
+                        _folders = Future.value(folders);
+                      });
+                      Navigator.of(context).pop();
+                    }
+                  },
+                ),
               )
             ],
           );
@@ -179,17 +187,24 @@ class _LibraryViewState extends State<LibraryView> {
                   child: Column(
                     children: [
                       Expanded(
-                        child: Center(
-                            child: SpinKitCircle(
-                          color: MAIN_YELLOW,
-                          size: 80.w,
-                        )),
+                        child: Column(
+                          children: [
+                            SizedBox(height: 300.h,),
+                            Center(
+                                child: SpinKitCircle(
+                              color: MAIN_YELLOW,
+                              size: 80.w,
+                            )),
+                            Text(
+                              "서재를 로딩 중입니다...",
+                              semanticsLabel: "서재를 로딩 중입니다...",
+                              style: TextStyle(
+                                  fontSize: 48.sp, fontWeight: FontWeight.w700, color: MAIN_YELLOW),
+                            )
+                          ],
+                        ),
                       ),
-                      Text(
-                        "서재룰 로딩 중입니다...",
-                        style: TextStyle(
-                            fontSize: 48.sp, fontWeight: FontWeight.w700),
-                      )
+
                     ],
                   ),
                 ),
@@ -236,28 +251,31 @@ class _LibraryViewState extends State<LibraryView> {
         actions: [
           Padding(
             padding: EdgeInsets.all(5.h),
-            child: ElevatedButton.icon(
-              onPressed: () {
-                folderDialog();
-              },
-              style: ElevatedButton.styleFrom(
-                //padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0.w),
+            child: ButtonSemantics(
+              label: '파일 추가 버튼',
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  folderDialog();
+                },
+                style: ElevatedButton.styleFrom(
+                  //padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0.w),
+                  ),
+                  primary: PRIMARY_COLOR,
                 ),
-                primary: PRIMARY_COLOR,
-              ),
-              icon: Icon(
-                Icons.add_circle,
-                color: MAIN_YELLOW,
-                size: 64.w,
-              ),
-              label: Text(
-                '폴더 추가',
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 40.sp,
+                icon: Icon(
+                  Icons.add_circle,
                   color: MAIN_YELLOW,
+                  size: 64.w,
+                ),
+                label: Text(
+                  '폴더 추가',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 40.sp,
+                    color: MAIN_YELLOW,
+                  ),
                 ),
               ),
             ),
@@ -274,35 +292,38 @@ class _LibraryViewState extends State<LibraryView> {
                   const Divider(color: Colors.grey, thickness: 2),
               itemCount: snapshot.data!.length,
               itemBuilder: (BuildContext context, int idx) {
-                return TextButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.folder,
-                        size: 80.w,
-                        color: MAIN_YELLOW,
-                      ),
-                      SizedBox(
-                        width: 30.w,
-                      ),
-                      Expanded(
-                        child: Text(
-                          snapshot.data![idx].folderName,
-                          style: TextStyle(fontSize: 65.sp, color: MAIN_YELLOW),
-                          maxLines: 1,
-                          softWrap: false,
-                          overflow: TextOverflow.ellipsis,
+                return ButtonSemantics(
+                  label: "${snapshot.data![idx].folderName}",
+                  child: TextButton(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.folder,
+                          size: 80.w,
+                          color: MAIN_YELLOW,
                         ),
-                      )
-                    ],
+                        SizedBox(
+                          width: 30.w,
+                        ),
+                        Expanded(
+                          child: Text(
+                            snapshot.data![idx].folderName,
+                            style: TextStyle(fontSize: 65.sp, color: MAIN_YELLOW),
+                            maxLines: 1,
+                            softWrap: false,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        )
+                      ],
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => FolderView(
+                              folderId: snapshot.data![idx].folderId,
+                              folderName: snapshot.data![idx].folderName)));
+                    },
                   ),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => FolderView(
-                            folderId: snapshot.data![idx].folderId,
-                            folderName: snapshot.data![idx].folderName)));
-                  },
                 );
               }),
         ),
