@@ -8,11 +8,10 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class FilePostResponseDto {
     private Long file_id;
-    private int expected_sec;
+
 
     @Builder
-    public FilePostResponseDto(Long file_id, int expected_sec) {
+    public FilePostResponseDto(Long file_id) {
         this.file_id = file_id;
-        this.expected_sec = expected_sec;
     }
 }

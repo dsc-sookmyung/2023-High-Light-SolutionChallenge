@@ -46,27 +46,35 @@ public class FolderService {
 	// }
 
 	@Transactional
-	public FolderResponseDto save(Long user_id, FolderRequestDto folderRequestDto) {
+	public Map<String, List<FolderResponseDto>> save(Long user_id, FolderRequestDto folderRequestDto) {
 //		User userId = folder.getUserId(); // 해당 폴더를 생성한 유저 정보
 		User user = userRepository.findById(user_id).get();
 		String folderName = folderRequestDto.getFolderName();
 		Folder savedFolder = folderRepository.save(Folder.createFolder(user, folderName));
-		return FolderResponseDto.from(savedFolder.getId(), savedFolder.getName());
-	}
-	public Map<String, List<FolderResponseDto>> viewFolder() {
-		List<Folder> folders = folderRepository.findAll();
+
+		List<Folder> folders = folderRepository.findAllByUserId(user);
 		List<FolderResponseDto> folderResponseDtos = new ArrayList<>();
 		if (folders != null && !folders.isEmpty()) {
 			folderResponseDtos = folders.stream()
-				.filter(f -> f.getName() != null)
-				.map(f-> new FolderResponseDto(f.getId(),f.getName()))
-				.collect(Collectors.toList());
+					.filter(f -> f.getName() != null)
+					.map(f-> new FolderResponseDto(f.getId(),f.getName()))
+					.collect(Collectors.toList());
 		}
 
 		Map<String, List<FolderResponseDto>> response = new HashMap<>();
 		response.put("folder", folderResponseDtos);
 		return response;
 	}
+	public Map<String, List<FolderResponseDto>> viewFolder(User current) {
+		List<Folder> folders = folderRepository.findAllByUserId(current);
+		List<FolderResponseDto> folderResponseDtos = folders.stream()
+				.map(f -> new FolderResponseDto(f.getId(), f.getName()))
+				.collect(Collectors.toList());
+		Map<String, List<FolderResponseDto>> response = new HashMap<>();
+		response.put("folder", folderResponseDtos);
+		return response;
+	}
+
 
 	// public List<FolderResponseDto> viewFolder() {
 	// 	List<Folder> folders = folderRepository.findAll();
@@ -80,13 +88,5 @@ public class FolderService {
 	// 	return folderResponseDtos;
 	// }
 
-	public FolderResponseDto viewOneFolder(Long folder_id) {
-		Optional<Folder> folder = folderRepository.findById(folder_id);
-		if(folder.isPresent()){
-			String folderName = folder.get().getName();
-		}
-		return FolderResponseDto.from(folder_id,folder.get().getName());
-
-	}
 
 }

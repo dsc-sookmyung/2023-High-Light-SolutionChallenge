@@ -1,5 +1,7 @@
 package com.SollutionChallenge.HighLight.File;
 
+import com.SollutionChallenge.HighLight.Folder.FileResponseDto;
+import com.SollutionChallenge.HighLight.Folder.FolderResponseDto;
 import com.SollutionChallenge.HighLight.User.Entity.User;
 import com.SollutionChallenge.HighLight.User.UserRepository;
 import com.SollutionChallenge.HighLight.controller.GCSController;
@@ -15,7 +17,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -35,17 +41,14 @@ public class FileService {
         User currentUser = userRepository.findById(userId).get();
         UploadReqDto uploadReqDto = new UploadReqDto(currentUser.getName(), userId, multipartFile);
         String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, filename, folderId);
-
+        String uploadedFileImage = ""; // 업로드 된 파일 썸네일, 받아오는 코드는 추후에 작성
         // 후 createFile(User user, String fileName, String fileUrl)로 filerepository에 저장
-        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl);
+        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl, uploadedFileImage);
         fileRepository.save(newFile);
 
-        /* ml에서 변환 예상 시간 받아오는 코드 작성 */
-        int expected_sec = 300; // 임의로 지정
 
         return FilePostResponseDto.builder()
                 .file_id(newFile.getId())
-                .expected_sec(expected_sec)
                 .build();
     }
 
@@ -78,6 +81,16 @@ public class FileService {
                 }
             }
         }
-            return new GetFileResponseDto();
+        return new GetFileResponseDto();
+    }
+
+    public Map<String, List<FileResponseDto>> viewFolderFile(Long user_id) {
+        List<File> files = fileRepository.findAllByUserId(user_id);
+        List<FileResponseDto> fileResponseDtos = files.stream()
+                .map(f -> new FileResponseDto(f.getId(), f.getFileName(),f.getFileImg()))
+                .collect(Collectors.toList());
+        Map<String, List<FileResponseDto>> response = new HashMap<>();
+        response.put("file", fileResponseDtos);
+        return response;
     }
 }

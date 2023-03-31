@@ -7,18 +7,18 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class FolderResponseDto {
-	private Long id;
-	private String folderName;
+	private Long folder_id;
+	private String folder_name;
 
-	public FolderResponseDto(Long id, String folderName) {
-		this.id = id;
-		this.folderName = folderName;
+	public FolderResponseDto(Long folder_id, String folder_name) {
+		this.folder_id = folder_id;
+		this.folder_name = folder_name;
 	}
 
-	public static FolderResponseDto from(Long id, String folderName){
-		FolderResponseDto folderResponseDto  = new FolderResponseDto(id, folderName);
-		folderResponseDto.id = id;
-		folderResponseDto.folderName = folderName;
+	public static FolderResponseDto from(Long folder_id, String folder_name){
+		FolderResponseDto folderResponseDto  = new FolderResponseDto(folder_id, folder_name);
+		folderResponseDto.folder_id = folder_id;
+		folderResponseDto.folder_name = folder_name;
 		return folderResponseDto;
 	}
 
