@@ -55,7 +55,7 @@ public class FolderController {
 		System.out.println("jwtToken: " + jwtToken);
 		Long user_id = Long.valueOf(jwtTokenUtil.getUserIdFromToken(jwtToken));
 		User currentUser = userRepository.findById(user_id).get();
-		Map<String, List<FileResponseDto>> fileMap = fileService.viewFolderFile(user_id);
+		Map<String, List<FileResponseDto>> fileMap = fileService.viewFolderFile(user_id, folderId);
 		Map<String, Map<String, List<FileResponseDto>>> response = new HashMap<>();
 		Map<String, List<FileResponseDto>> dataMap = new HashMap<>();
 		dataMap.put("files", fileMap.get("file"));

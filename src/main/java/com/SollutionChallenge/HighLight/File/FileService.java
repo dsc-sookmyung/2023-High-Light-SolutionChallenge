@@ -1,6 +1,8 @@
 package com.SollutionChallenge.HighLight.File;
 
 import com.SollutionChallenge.HighLight.Folder.FileResponseDto;
+import com.SollutionChallenge.HighLight.Folder.Folder;
+import com.SollutionChallenge.HighLight.Folder.FolderRepository;
 import com.SollutionChallenge.HighLight.Folder.FolderResponseDto;
 import com.SollutionChallenge.HighLight.User.Entity.User;
 import com.SollutionChallenge.HighLight.User.UserRepository;
@@ -13,10 +15,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,9 +32,12 @@ import java.util.stream.Collectors;
 public class FileService {
     private final FileRepository fileRepository;
     private final UserRepository userRepository;
+    private final FolderRepository folderRepository;
     private final GCSController gcsController;
     @Autowired
     private Storage storage;
+    @Value("${spring.cloud.gcp.storage.bucket}")
+    private String bucketName;
 
     @Transactional
     public FilePostResponseDto addFile(Long userId, Long folderId, FileRequestDto fileRequestDto) throws IOException {
@@ -39,11 +46,27 @@ public class FileService {
 
         // 파일 gcs에 업로드
         User currentUser = userRepository.findById(userId).get();
+        Folder currentFolder = folderRepository.findById(folderId).get();
         UploadReqDto uploadReqDto = new UploadReqDto(currentUser.getName(), userId, multipartFile);
         String uploadedFileUrl = gcsController.uploadNewFile(uploadReqDto, filename, folderId);
-        String uploadedFileImage = ""; // 업로드 된 파일 썸네일, 받아오는 코드는 추후에 작성
+
+
+//        File target = wantedFile.get();
+//        String fileName = target.getFileName();
+////            String downloadFileName = "userid/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // api 테스트용 파일 생성 코드
+//        String downloadFileName = userId+"/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // 실제 코드
+//
+//        System.out.println("다운로드 경로: " + downloadFileName);
+//        BlobId blobId = BlobId.of("cloud_storage_leturn", downloadFileName);
+//        Blob blob = storage.get(blobId);
+//        byte[] content = blob.getContent();
+//        String targetJson = new String(content, StandardCharsets.UTF_8);
+
+
+        String uploadedFileImage = "https://storage.googleapis.com/"+bucketName+"/"+userId+"/"+filename+"_thumbnail.png"; // 업로드 된 파일 썸네일, 받아오는 코드는 추후에 작성
+
         // 후 createFile(User user, String fileName, String fileUrl)로 filerepository에 저장
-        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl, uploadedFileImage);
+        com.SollutionChallenge.HighLight.File.File newFile = com.SollutionChallenge.HighLight.File.File.createFile(currentUser, currentFolder, filename/*multipartFile.getOriginalFilename()*/,uploadedFileUrl, uploadedFileImage);
         fileRepository.save(newFile);
 
 
@@ -84,8 +107,8 @@ public class FileService {
         return new GetFileResponseDto();
     }
 
-    public Map<String, List<FileResponseDto>> viewFolderFile(Long user_id) {
-        List<File> files = fileRepository.findAllByUserId(user_id);
+    public Map<String, List<FileResponseDto>> viewFolderFile(Long user_id, Long folder_id) {
+        List<File> files = fileRepository.findAllByUserIdAndFolderId(user_id, folder_id);
         List<FileResponseDto> fileResponseDtos = files.stream()
                 .map(f -> new FileResponseDto(f.getId(), f.getFileName(),f.getFileImg()))
                 .collect(Collectors.toList());

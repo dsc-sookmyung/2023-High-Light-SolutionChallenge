@@ -10,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.SollutionChallenge.HighLight.Folder.Folder;
 import com.SollutionChallenge.HighLight.User.Entity.User;
 
 import lombok.AccessLevel;
@@ -33,6 +34,10 @@ public class File {
 	@JoinColumn(name = "user_id", nullable = false)
 	private User user;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "folder_id", nullable = false)
+	private Folder folder;
+
 	@Column(nullable = false)
 	private String fileName;
 
@@ -45,9 +50,10 @@ public class File {
 	@Column(nullable = false)
 	private boolean converted = false; //반환 여부 저장
 
-	public static File createFile(User user, String fileName, String fileUrl,String fileImg) {
+	public static File createFile(User user, Folder folder, String fileName, String fileUrl,String fileImg) {
 		File file= new File();
 		file.user = user;
+		file.folder = folder;
 		file.fileName = fileName;
 		file.fileUrl = fileUrl;
 		file.fileImg =fileImg;
