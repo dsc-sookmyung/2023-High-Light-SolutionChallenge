@@ -7,6 +7,7 @@ import re
 import os
 import fitz
 import PIL.Image
+from PIL import Image
 import io
 import json
 
@@ -68,30 +69,6 @@ def download_pdf(event, context):
     except Exception as err:
         print("Exception while extracting text", err)
 
-# json upload
-
-
-def upload_json(data, path, load_bucket):
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(load_bucket)
-    blob = bucket.blob(path)
-
-    blob.upload_from_string(data, content_type="application/json")
-
-
-def prepare_upload_json(data, load_bucket):
-    print("SUCCESS in upload_json")
-    print(len(data))
-    for i in range(1, len(data) + 1):
-        count = str(i)
-        path = f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"
-        upload_json(json.dumps(data[str(i)]).encode(
-            'utf-8'), path, load_bucket)
-        print('File uploaded to {}.'.format(
-            f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
-
-    print("fin prepare_upload_json")
-
 
 def get_text(path):
     print("Success in get_text()")
@@ -122,84 +99,79 @@ def get_text(path):
         each_page["text"] = info
         extract_data[str(page_layout.pageid)] = each_page
     print(extract_data)
-    return get_detailed(extract_data)
+    # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
+    client = storage.Client()
+    bucket = client.get_bucket(BUCKET)
+
+    pdf = tempfile.NamedTemporaryFile()
+    try:
+        # Download blob into temporary file, extract, and uplaod.
+        bucket.blob(file_path).download_to_filename(pdf.name)
+        print(bucket, file_path, pdf.name)
+        return get_image(extract_data, pdf.name)
+    except Exception as err:
+        print("Exception while extracting text", err)
 
 
-def get_detailed(data):
-    # 정확도 높이기
-    print('SUCCESS in get_detailed')
-    cur_size = 0
-    text = ""
-    # 줄바꿈 기준 쪼개고 글씨크기 기준으로 정확히 나누기
-    for i in range(1, len(data) + 1):
-        each_page_size = len(data[str(i)]["text"])
-        each_page = data[str(i)]["text"]  # 리스트 형식
-        for j in range(each_page_size - 1):
-            cur_text = each_page[j]["text"]  # str인 바이트 코드
-            cur_text = str.encode(cur_text)
-            cur_text = cur_text.decode('utf-8')
-            print("cur_text: ", cur_text)
-            next_text = each_page[j + 1]["text"]
-            next_text = str.encode(next_text)
-            next_text = next_text.decode('utf-8')
-            if cur_text == next_text:
-                split_list = cur_text.split("\n")
-                print('if cur_text == next_text:', split_list)
-                for k in range(len(split_list)):
-                    text = str.encode(text)
-                    text = split_list[k] + "\n"
-                    text = re.sub(r"[^\w\s]]", "", text)  # import re
-                    if split_list[k] != '':
-                        font_size = each_page[j + k]["font_size"]
-                    if text == "\n":
-                        continue
-                    else:
-                        each_page[j + k] = {"audio_url": "",
-                                            "font_size": font_size, "text": text}
-
-    # 글씨 크기 같은 애들은 묶기
-    print("get_detailed first for fin")  # 헐,,, 여기까지 끝냄
+def get_image(data, path):
+    print("Success in get_image")
+    # 이미지 추출
+    pdf = fitz.open(path)
+    print("success fitz.open")  # 여기까지 성공
+    page_id = 1
+    for i in range(len(pdf)):
+        image_count = 1
+        each_page = []
+        count = str(page_id)
+        page = pdf[i]  # load page
+        images = page.get_images()
+        print("After images = page.get_images()")
+        for image in images:
+            # if not os.path.exists(f"{image_folder_path}/{count}"):
+            #     os.makedirs(f"{image_folder_path}/{count}")
+            base_img = pdf.extract_image(image[0])
+            image_data = base_img['image']
+            img = PIL.Image.open(io.BytesIO(image_data))
+            extension = base_img['ext']
+            print("SUCCESS PIL.image")
+            #! 이미지 업로드 다시 해야됨
+            upload_image(
+                img, f"{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}", "cloud_storage_leturn")
+            each_page.append({
+                "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}"})
+            image_count += 1
+        data[str(page_id)]["image"] = each_page
+        page_id += 1
     print(data)
-    concat_text = ""
-    for i in range(1, len(data) + 1):
-        each_page_size = len(data[str(i)]["text"])
-        each_page = data[str(i)]["text"]
-        concat_text = each_page[0]["text"]
-        to_del_list = []
-        for j in range(each_page_size - 1):
-            cur_size = each_page[j]["font_size"]
-            next_size = each_page[j + 1]["font_size"]
-            if cur_size == next_size:
-                concat_text += each_page[j + 1]["text"]
-                to_del_list.append(j)
-            else:
-                each_page[j]["text"] = concat_text
-                concat_text = each_page[j + 1]["text"]
-                j += 1
-        list_len = len(to_del_list)
-        for j in range(list_len - 1, -1, -1):
-            del(each_page[to_del_list[j]])
+    upload_json(data, f"{USER_ID}/{file_no_extension}.json",
+                "middle-temporary")
 
-    print("get_detailed second for fin")
+# json upload
+
+
+def upload_json(data, path, load_bucket):
+    print("SUCCESS in upload_json")
     print(data)
-    return get_text_audio_url(data)
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(load_bucket)
+    blob = bucket.blob(path)
+
+    blob.upload_from_string(json.dumps(data)).encode(
+        'utf-8', content_type="application/json")
+    print('File uploaded to {}.'.format(path))
 
 
-def get_text_audio_url(data):
-    # text/audio url 생성
-    for i in range(1, len(data) + 1):
-        count = str(i)
-        page = data[count]
-        page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_full_audio_{count}.mp3"
-        for j in range(len(page["text"])):
-            line_count = str(j + 1)
-            page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_audio_{count}_{line_count}.mp3"
+def upload_image(image_data, destination_blob_name, load_bucket):
+    print("SUCCESS in upload_image")
+    extension = destination_blob_name.split('.')[-1]
+    # Storage Client에 Bucket,
+    storage_client = storage.Client()
+    # get_bucket에 bucket_name 설정
+    bucket = storage_client.get_bucket(load_bucket)
+    # blob 객체 선언 및 생성 file name 설정
+    blob = bucket.blob(destination_blob_name)
+    Image.save(image_data, extension)
 
-    print(data)
-    print("FIN get_datailed()")
-
-    upload_json(data, f'{USER_ID}/temp_{FILE_NAME}', "temporay")
-
-
-# 2. upload_json 함수를 통해서 이미지도 올려지는지 -> 이미지는 안올라감 <PIL.PngImagePlugin.PngImageFile image mode=RGBA size=403x7 at 0x3E0809920D50> could not be converted to bytes
-# 지금 배포 중인 extract-data는 안될 가능성이 높음 -> image_file 자체가 바이트가 아닌 것 같음.
+    blob.upload_from_string(image_data.getvalue())
+    blob.make_public()
+    print("DONE upload_image")
