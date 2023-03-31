@@ -91,8 +91,6 @@ def upload_json(data):
             f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
 
     print("fin prepare_upload_json")
-    # with open(f"{json_folder_path}/{count}/{filename}_{count}.json", 'w', encoding='utf-8') as make_file:
-    #     json.dump(each_page, make_file, indent="\t", ensure_ascii=False)
 
 
 def get_text(path):

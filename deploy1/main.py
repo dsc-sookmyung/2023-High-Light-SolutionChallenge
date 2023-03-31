@@ -7,10 +7,11 @@ import re
 import os
 import fitz
 import PIL.Image
-from PIL import Image
 import io
 import json
+from PIL import Image
 
+FINAL_BUCKET = "cloud_storage_leturn"
 BUCKET = ""
 FILE_NAME = ""
 USER_ID = ""
@@ -136,9 +137,9 @@ def get_image(data, path):
             print("SUCCESS PIL.image")
             #! 이미지 업로드 다시 해야됨
             upload_image(
-                img, f"{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}", "cloud_storage_leturn")
+                img, f"{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}", f"{FINAL_BUCKET}")
             each_page.append({
-                "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}"})
+                "img_idx": image_count, "img_url": f"https://storage.googleapis.com/{FINAL_BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}"})
             image_count += 1
         data[str(page_id)]["image"] = each_page
         page_id += 1
@@ -156,22 +157,31 @@ def upload_json(data, path, load_bucket):
     bucket = storage_client.get_bucket(load_bucket)
     blob = bucket.blob(path)
 
-    blob.upload_from_string(json.dumps(data)).encode(
-        'utf-8', content_type="application/json")
+    blob.upload_from_string(json.dumps(data), content_type="application/json")
     print('File uploaded to {}.'.format(path))
 
 
 def upload_image(image_data, destination_blob_name, load_bucket):
     print("SUCCESS in upload_image")
+    image_name = destination_blob_name.split('/')[-1]
     extension = destination_blob_name.split('.')[-1]
+
     # Storage Client에 Bucket,
     storage_client = storage.Client()
     # get_bucket에 bucket_name 설정
     bucket = storage_client.get_bucket(load_bucket)
     # blob 객체 선언 및 생성 file name 설정
     blob = bucket.blob(destination_blob_name)
-    Image.save(image_data, extension)
+    print(type(image_data))
+    buffer = io.BytesIO()
+    image_data.save(buffer, format=extension.upper())
+    print("2")
+    print(type(buffer.getvalue()))  # -> bytes면 넣기,,,
+    bytes_img = buffer.getvalue()
+    blob.upload_from_string(bytes_img)
 
-    blob.upload_from_string(image_data.getvalue())
-    blob.make_public()
     print("DONE upload_image")
+
+# json 파일 업로드 확인 content-type 확인
+
+# 확인한다음 upload_image

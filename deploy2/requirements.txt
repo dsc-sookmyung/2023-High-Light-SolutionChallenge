@@ -1,0 +1,11 @@
+# Function dependencies, for example:
+# package>=version
+google-cloud-storage
+google-cloud-texttospeech
+temp
+pdfminer
+pdfminer.six
+flask
+PyMuPDF
+Pillow
+ndjson

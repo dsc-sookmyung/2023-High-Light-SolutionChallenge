@@ -10,6 +10,7 @@ import PIL.Image
 import io
 import json
 
+FINAL_BUCKET = "cloud_storage_leturn"
 BUCKET = ""
 FILE_NAME = ""
 USER_ID = ""
@@ -58,9 +59,10 @@ def download_json(event, context):
     print(image_folder_path)
     # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
     client = storage.Client()
-    bucket = client.bucket(BUCKET)
-    file_blob = bucket.blob(file_path)
-    download_data = file_blob.download_as_string().decode()
+    bucket = client.get_bucket(BUCKET)
+    file_blob = bucket.get_blob(file_path)
+    download_data = file_blob.download_as_string()
+    download_data = json.loads(download_data)
     print(download_data)
 
     get_detailed(download_data)
@@ -75,7 +77,7 @@ def get_detailed(data):
     # 줄바꿈 기준 쪼개고 글씨크기 기준으로 정확히 나누기
     print(type(data["1"]["text"]))
     for i in range(1, len(data) + 1):
-        each_page_size = int(len(data[str(i)]["text"]))
+        each_page_size = len(data[str(i)]["text"])
         each_page = data[str(i)]["text"]  # 리스트 형식
         for j in range(each_page_size - 1):
             cur_text = each_page[j]["text"]  # str인 바이트 코드
@@ -133,22 +135,26 @@ def get_text_audio_url(data):
     for i in range(1, len(data) + 1):
         count = str(i)
         page = data[count]
-        page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_full_audio_{count}.mp3"
+        page["full_text"]["audio_url"] = f"https://storage.googleapis.com/{FINAL_BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_full_audio_{count}.mp3"
         for j in range(len(page["text"])):
             line_count = str(j + 1)
-            page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_audio_{count}_{line_count}.mp3"
+            page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{FINAL_BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_audio_{count}_{line_count}.mp3"
 
     print("FIN get_datailed()")
-
-    prepare_upload_json(data, "middle-temporary-2")
+    prepare_upload_json(data, "cloud_storage_leturn")
+    upload_json(data, f"{USER_ID}/{file_no_extension}.json",
+                'middle-temporary-2')
 
 
 def upload_json(data, path, load_bucket):
+    print("SUCCESS in upload_json")
+    print(data)
     storage_client = storage.Client()
     bucket = storage_client.get_bucket(load_bucket)
     blob = bucket.blob(path)
 
-    blob.upload_from_string(data, content_type="application/json")
+    blob.upload_from_string(json.dumps(data), content_type="application/json")
+    print('File uploaded to {}.'.format(path))
 
 
 def prepare_upload_json(data, load_bucket):
@@ -157,12 +163,15 @@ def prepare_upload_json(data, load_bucket):
     for i in range(1, len(data) + 1):
         count = str(i)
         path = f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"
-        upload_json(json.dumps(data[str(i)]).encode(
-            'utf-8'), path, load_bucket)
+        upload_json(data[str(i)], path, load_bucket)
         print('File uploaded to {}.'.format(
             f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
 
     print("fin prepare_upload_json")
 
-# get_detailed가 json 파일인지 아닌지 보기
-# 파일을 a로 바꾸고 했는데 수정이 가능한지 확인하기
+# 그 전에 content-type: json인지 middle-temp 버킷에서 확인
+# json으로 json 형식으로 불러와졌는지 확인 -> 여기까지 완료가 다 된다면 이미지, json 파일 업로드까지 완료
+
+# 배포 후
+# upload_json 수정하였으므로 extract-data-2 는 다시 배포
+# extract-data-3 배포

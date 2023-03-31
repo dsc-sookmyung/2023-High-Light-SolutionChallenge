@@ -10,7 +10,9 @@ import fitz
 import PIL.Image
 import io
 import json
+from google.api_core import exceptions
 
+FINAL_BUCKET = "cloud_storage_leturn"
 BUCKET = ""
 FILE_NAME = ""
 USER_ID = ""
@@ -59,13 +61,16 @@ def download_json(event, context):
     print(image_folder_path)
     # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
     client = storage.Client()
-    bucket = client.bucket(BUCKET)
-    file_blob = bucket.blob(FILE_NAME)
-    download_data = file_blob.download_as_string(file_path).decode()
+    bucket = client.get_bucket(BUCKET)
+    file_blob = bucket.get_blob(file_path)
+    download_data = file_blob.download_as_string()
+    download_data = json.loads(download_data)
     print(download_data)
+    get_audio(download_data)
 
 
 def get_audio(data):
+    print("SUCCESS in get_audio")
 
     # 오디오 파일 생성 및 파일 저장
     # * 상대 경로 참조
@@ -79,11 +84,15 @@ def get_audio(data):
         # * 상대 경로 참조
         # if not os.path.exists(f"{audio_folder_path}/{count}"):
         #     os.makedirs(f"{audio_folder_path}/{count}")
+        print(full_text)
         text_to_speech(
             full_text, f"{audio_folder_path}/{count}/{audio_full_filename}_{count}.mp3")
         line = len(data[str(i)]['text'])
         for j in range(line):
             text = data[str(i)]['text'][j]['text']
+            text = str.encode(text)
+            text = text.decode('utf-8')
+            print(text)
             line_count = str(j + 1)
             fileName = f"{audio_folder_path}/{count}/{audio_one_filename}_{count}_{line_count}.mp3"
             text_to_speech(text, fileName)
@@ -92,6 +101,7 @@ def get_audio(data):
 
 
 def text_to_speech(text, path):
+    print("SUCCESS in text_to_speech")
     client = texttospeech.TextToSpeechClient()
     synthesis_input = texttospeech.SynthesisInput(text=text)
 
@@ -116,9 +126,17 @@ def text_to_speech(text, path):
     # with open(fileName, "wb") as out:
     #     # Write the response to the output file.
     #     out.write(response.audio_content)
-    #     print('Audio content written to file ' + fileName)
-    upload_audio(response.audio_content, path)
+
+    upload_audio(response.audio_content, path, f'{FINAL_BUCKET}')
 
 
-def upload_audio(mp3, path):
-    return
+def upload_audio(mp3, path, load_bucket):
+    """Uploads a file to the Cloud Storage bucket."""
+    print("SUCCESS in upload_audio")
+    print(type(mp3))
+    source_file_name = path.split('/')[-1]
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(load_bucket)
+    blob = bucket.blob(path)
+    blob.upload_from_string(mp3)
+    print(f'File {source_file_name} uploaded to {path}.')
