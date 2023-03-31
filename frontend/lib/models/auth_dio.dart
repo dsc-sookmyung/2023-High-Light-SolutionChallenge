@@ -27,10 +27,7 @@ class AuthDio{
   }
 
   Future <Response> postFile(String url, Object data){
-    //dio.options.contentType = Headers.multipartFormDataContentType;
-    return dio.post(url, data: data, options: Options(
-      contentType: Headers.multipartFormDataContentType
-    ));
+    return dio.post(url, data: data);
   }
 
 

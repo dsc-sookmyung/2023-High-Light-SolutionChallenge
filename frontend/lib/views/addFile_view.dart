@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
-
+import 'package:http_parser/http_parser.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -107,6 +107,7 @@ class _AddFileViewState extends State<AddFileView>{
                  hintText: savedFileName,
                  fillColor: FONT_BLACK
                ),
+               keyboardType: TextInputType.name,
                style: TextStyle(
                  fontWeight: FontWeight.w500,
                  fontSize: 40.sp
@@ -135,8 +136,8 @@ class _AddFileViewState extends State<AddFileView>{
       final filePath = finalFile!.files.single.path;
       
       var formData = FormData.fromMap({
-        'file' : await MultipartFile.fromFile(filePath!),
-        'file_name' : changedName
+        'file': await MultipartFile.fromFile(filePath!, contentType: MediaType('application', 'pdf')),
+        'file_name': changedName
       });
 
       final response = await dio.postFile('/folder/${widget.folderId}/files', formData);
