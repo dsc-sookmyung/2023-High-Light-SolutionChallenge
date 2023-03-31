@@ -11,6 +11,8 @@ import io
 import json
 from PIL import Image
 
+# 사용자 id/폴더 id/원본 파일
+# 2/21/os_3.pdf
 FINAL_BUCKET = "cloud_storage_leturn"
 BUCKET = ""
 FILE_NAME = ""
@@ -37,10 +39,16 @@ def download_pdf(event, context):
 
     global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension, file_path
 
+    # file_path = event['name']
+    # file_path += ".pdf"
+    # BUCKET = event['bucket']
+    # FILE_NAME = file_path.split('/')[-1]
+    # file_no_extension = FILE_NAME.split('.')[0]
+    # USER_ID = event['name'].split('/')[0]
     BUCKET = event['bucket']
     FILE_NAME = event['name'].split('/')[-1]
     file_path = event['name']
-    file_no_extension = FILE_NAME.split('.')[-2]
+    file_no_extension = FILE_NAME.split('.')[0]
     USER_ID = event['name'].split('/')[0]
     if not file_path.endswith(".pdf"):
         print("Skipping request to handle", file_path)
@@ -55,9 +63,9 @@ def download_pdf(event, context):
 
     print("Extracting text from", file_path)
     print("USER_ID : ", USER_ID)
-    print(json_folder_path)
-    print(audio_folder_path)
-    print(image_folder_path)
+    print(BUCKET)
+    print(FILE_NAME)
+    print(file_no_extension)
     client = storage.Client()
     bucket = client.get_bucket(BUCKET)
 
@@ -65,7 +73,7 @@ def download_pdf(event, context):
     try:
         # Download blob into temporary file, extract, and uplaod.
         bucket.blob(file_path).download_to_filename(pdf.name)
-        print(bucket, file_path, pdf.name)
+        print(BUCKET, file_path, pdf.name)
         return get_text(pdf.name)
     except Exception as err:
         print("Exception while extracting text", err)
@@ -118,6 +126,18 @@ def get_image(data, path):
     print("Success in get_image")
     # 이미지 추출
     pdf = fitz.open(path)
+    zoom = 4
+    mat = fitz.Matrix(zoom, zoom)
+    val = f"{file_no_extension}_thumbnail.png"
+    page = pdf.load_page(0)
+    pix = page.get_pixmap(matrix=mat)
+    img = pix.pil_tobytes(format="PNG", optimize=True)
+    client = storage.Client()
+    bucket = client.get_bucket(FINAL_BUCKET)
+    blob = bucket.blob(f"{USER_ID}/{file_no_extension}_thumbnail.png")
+    blob.upload_from_string(img)
+    # upload_image(
+    #     img, f"{USER_ID}/{file_no_extension}_sumnail.png", f"{FINAL_BUCKET}")
     print("success fitz.open")  # 여기까지 성공
     page_id = 1
     for i in range(len(pdf)):
@@ -135,7 +155,6 @@ def get_image(data, path):
             img = PIL.Image.open(io.BytesIO(image_data))
             extension = base_img['ext']
             print("SUCCESS PIL.image")
-            #! 이미지 업로드 다시 해야됨
             upload_image(
                 img, f"{image_folder_path}/{count}/{file_no_extension}_image_{image_count}.{extension}", f"{FINAL_BUCKET}")
             each_page.append({

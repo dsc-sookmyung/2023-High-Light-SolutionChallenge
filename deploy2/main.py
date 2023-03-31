@@ -106,7 +106,7 @@ def get_detailed(data):
     print("get_detailed first for fin")  # 헐,,, 여기까지 끝냄
     print(data)
     concat_text = ""
-    for i in range(1, len(data) + 1):
+    for i in range(1, len(data)):
         each_page_size = len(data[str(i)]["text"])
         each_page = data[str(i)]["text"]
         concat_text = each_page[0]["text"]
