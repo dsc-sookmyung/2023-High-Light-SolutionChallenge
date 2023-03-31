@@ -1,0 +1,81 @@
+{
+	"page_id": 4,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_4/os_5_full_audio_4.mp3",
+		"full_text": "5.1 병행성 원리\n• 멀티프로세스\n– 프로세스/쓰레드 관리를 위한 현대 운영체제의 설계 핵심 주제\n• Multiprogramming\n• Multiprocessing\n• Distributed Processing\n– Eg) 인터리빙, 오버랩핑\n• 동일한 문제 야기\n– Big Issue is Concurrency(병행성) \n• Managing the interaction of all of these processes\n4\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_1.mp3",
+			"font_size": 32,
+			"text": "5.1 병행성 원리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_2.mp3",
+			"font_size": 24,
+			"text": "• 멀티프로세스\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_3.mp3",
+			"font_size": 20,
+			"text": "– 프로세스/쓰레드 관리를 위한 현대 운영체제의 설계 핵심 주제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_4.mp3",
+			"font_size": 18,
+			"text": "• Multiprogramming\n• Multiprocessing\n• Distributed Processing\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_5.mp3",
+			"font_size": 20,
+			"text": "– Eg) 인터리빙, 오버랩핑\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_6.mp3",
+			"font_size": 18,
+			"text": "• 동일한 문제 야기\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_7.mp3",
+			"font_size": 20,
+			"text": "– Big Issue is Concurrency(병행성) \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_8.mp3",
+			"font_size": 18,
+			"text": "• Managing the interaction of all of these processes\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/4/os_5_audio_4_9.mp3",
+			"font_size": 12,
+			"text": "4\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/4/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/4/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/4/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/4/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/4/os_5_image_5.png"
+		}
+	]
+}

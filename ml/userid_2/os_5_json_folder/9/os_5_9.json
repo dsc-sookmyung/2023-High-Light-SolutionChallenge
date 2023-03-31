@@ -1,0 +1,101 @@
+{
+	"page_id": 9,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_full_audio_9.mp3",
+		"full_text": "병행성 원리\n• 경쟁상태(Race condition)\n– 다중 프로세스/쓰레드가 공유 데이터를 읽거나 쓸 때 발생\n– 최종 결과는 수행의 순서에 의해 결정됨\n• 경쟁(race)의 패자(loser)가 가장 마지막으로 데이터를 수정하며, 결국\n최종 결과를 결정함\n• 운영체제 고려사항\n다양한 프로세스의 행위를 추적할 수 있어야 함\n각 프로세스에게 자원을 할당하거나 반납 받을 수 있어야 함\n한 프로세스가 소유한 자원이나 데이터를 다른 프로세스의\n간섭으로부터 보호할 수 있어야 함\n수행 결과가 프로세스들의 수행 순서와 독립적일 수 있도록\n보장해야 함\n9\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_1.mp3",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_2.mp3",
+			"font_size": 24,
+			"text": "• 경쟁상태(Race condition)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_3.mp3",
+			"font_size": 20,
+			"text": "– 다중 프로세스/쓰레드가 공유 데이터를 읽거나 쓸 때 발생\n– 최종 결과는 수행의 순서에 의해 결정됨\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_4.mp3",
+			"font_size": 18,
+			"text": "• 경쟁(race)의 패자(loser)가 가장 마지막으로 데이터를 수정하며, 결국\n최종 결과를 결정함\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_5.mp3",
+			"font_size": 24,
+			"text": "• 운영체제 고려사항\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_6.mp3",
+			"font_size": 14,
+			"text": "다양한 프로세스의 행위를 추적할 수 있어야 함\n각 프로세스에게 자원을 할당하거나 반납 받을 수 있어야 함\n한 프로세스가 소유한 자원이나 데이터를 다른 프로세스의\n간섭으로부터 보호할 수 있어야 함\n수행 결과가 프로세스들의 수행 순서와 독립적일 수 있도록\n보장해야 함\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/9/os_5_audio_9_7.mp3",
+			"font_size": 12,
+			"text": "9\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_5.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 6,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_6.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 7,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_7.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 8,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_8.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 9,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_9.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 10,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_10.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 11,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/9/os_5_image_11.png",
+			"audio_url": ""
+		}
+	]
+}

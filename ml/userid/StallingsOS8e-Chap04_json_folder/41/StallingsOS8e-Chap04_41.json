@@ -1,0 +1,56 @@
+{
+	"page_id": 41,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/41/StallingsOS8e-Chap04_full_audio_41.mp3",
+		"full_text": "Android 프로세스와 쓰레드 관리\n• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n41\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/41/StallingsOS8e-Chap04_audio_41_1.mp3",
+			"font_size": 32,
+			"text": "Android 프로세스와 쓰레드 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/41/StallingsOS8e-Chap04_audio_41_2.mp3",
+			"font_size": 24,
+			"text": "• Android 응용은 앱을 구현한 소프트웨어\n• Android 응용은 네 가지 유형의 응용 컴포넌트들의\n여러 인스턴스로 구성\n• 각 컴포넌트는 한 응용과 다른 응용 내에서 구별된 역\n할을 수행\n• 네 가지 유형의 컴포넌트:\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/41/StallingsOS8e-Chap04_audio_41_3.mp3",
+			"font_size": 20,
+			"text": "• 엑티비티(Activity)\n• 서비스 (Service)\n• 콘텐트 프로바이더(Content provider)\n• 브로드캐스트 리시버(Broadcast receiver)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/41/StallingsOS8e-Chap04_audio_41_4.mp3",
+			"font_size": 12,
+			"text": "41\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/41/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/41/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/41/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/41/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/41/StallingsOS8e-Chap04_image_5.png",
+			"audio_url": ""
+		}
+	]
+}

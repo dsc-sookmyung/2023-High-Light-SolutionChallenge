@@ -1,0 +1,41 @@
+{
+	"page_id": 32,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/_32/data_1_full_audio_32.mp3",
+		"full_text": "Four Core Data Mining Tasks\n▪ In this course, we consider four of the core data mining tasks\n– Classification, association analysis, clustering, anomaly detection\n(we focus only on classification)\n32\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/32/data_1_audio_32_1.mp3",
+			"font_size": 32,
+			"text": "Four Core Data Mining Tasks\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/32/data_1_audio_32_2.mp3",
+			"font_size": 24,
+			"text": "▪ In this course, we consider four of the core data mining tasks\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/32/data_1_audio_32_3.mp3",
+			"font_size": 20,
+			"text": "– Classification, association analysis, clustering, anomaly detection\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/32/data_1_audio_32_4.mp3",
+			"font_size": 16,
+			"text": "(we focus only on classification)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_audio_folder/32/data_1_audio_32_5.mp3",
+			"font_size": 14,
+			"text": "32\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/userid/data_1_image_folder/32/data_1_image_1.png"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"page_id": 46,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/46/StallingsOS8e-Chap04_full_audio_46.mp3",
+		"full_text": "Mac OS X의 Grand Central Dispatch(GCD)\n• 블록\n– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n46\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/46/StallingsOS8e-Chap04_audio_46_1.mp3",
+			"font_size": 32,
+			"text": "Mac OS X의 Grand Central Dispatch(GCD)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/46/StallingsOS8e-Chap04_audio_46_2.mp3",
+			"font_size": 28,
+			"text": "• 블록\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/46/StallingsOS8e-Chap04_audio_46_3.mp3",
+			"font_size": 24,
+			"text": "– 프로그래밍 언어를 단순 확장한 것임\n– 하나의 블록은 자족적인(self-contained) 작업 단위를\n정의\n– 프로그래머가 복잡한 함수를 캡슐화할 수 있도록 해줌\n– 큐를 사용하여 스케줄링하고 디스패치 함\n– 선입 선출 기반으로 디스패치 됨\n– 타이머, 네트워크 소켓, 파일 디스크립터와\n같은 이벤트 소스와 연동\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/46/StallingsOS8e-Chap04_audio_46_4.mp3",
+			"font_size": 12,
+			"text": "46\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/46/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
+		}
+	]
+}

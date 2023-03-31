@@ -1,0 +1,61 @@
+{
+	"page_id": 48,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_48/os_5_full_audio_48.mp3",
+		"full_text": "판독자/기록자 문제\n• 세마포어를 이용한 해결 방법: 기록자 우선\n– 프로세스 대기 상태\n48\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/48/os_5_audio_48_1.mp3",
+			"font_size": 32,
+			"text": "판독자/기록자 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/48/os_5_audio_48_2.mp3",
+			"font_size": 24,
+			"text": "• 세마포어를 이용한 해결 방법: 기록자 우선\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/48/os_5_audio_48_3.mp3",
+			"font_size": 20,
+			"text": "– 프로세스 대기 상태\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/48/os_5_audio_48_4.mp3",
+			"font_size": 12,
+			"text": "48\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_3.png"
+		},
+		{
+			"img_idx": 4,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_4.png"
+		},
+		{
+			"img_idx": 5,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_5.png"
+		},
+		{
+			"img_idx": 6,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/48/os_5_image_6.png"
+		}
+	]
+}

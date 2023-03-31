@@ -1,0 +1,86 @@
+{
+	"page_id": 38,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_full_audio_38.mp3",
+		"full_text": "Solaris 쓰레드 및 SMP 관리\n• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n– 동기화 필요: 수면(sleeping) 상태로 전이\n• 예: 5장에서 기술될 상호배제 필요\n– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n– 양보(yielding): \n• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n38\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_1.mp3",
+			"font_size": 32,
+			"text": "Solaris 쓰레드 및 SMP 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_2.mp3",
+			"font_size": 24,
+			"text": "• 활성화(active, 수행 중) 상태의 ULT 쓰레드에 대한 상태\n전이의 예\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_3.mp3",
+			"font_size": 20,
+			"text": "– 동기화 필요: 수면(sleeping) 상태로 전이\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_4.mp3",
+			"font_size": 18,
+			"text": "• 예: 5장에서 기술될 상호배제 필요\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_5.mp3",
+			"font_size": 20,
+			"text": "– 보류(suspension): 쓰레드를 보류시켜 정지(stopped) 상태로 전\n이\n– 선점(preemption): \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_6.mp3",
+			"font_size": 18,
+			"text": "• 활성화 상태의 쓰레드가 수행가능(runnable) 상태로 전이\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_7.mp3",
+			"font_size": 20,
+			"text": "– 양보(yielding): \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_8.mp3",
+			"font_size": 18,
+			"text": "• thr_yield() 라이브러리 함수를 호출하면 수행가능 상태로 전이\n Solaris: Interrupts as Threads\n• 인터럽트 쓰레드 도입\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/38/StallingsOS8e-Chap04_audio_38_9.mp3",
+			"font_size": 12,
+			"text": "38\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_5.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 6,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/38/StallingsOS8e-Chap04_image_6.png",
+			"audio_url": ""
+		}
+	]
+}

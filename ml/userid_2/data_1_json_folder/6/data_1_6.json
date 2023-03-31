@@ -1,0 +1,65 @@
+{
+	"page_id": 6,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_full_audio_6.mp3",
+		"full_text": "Before the Lecture…\n▪ Four main tasks of data mining\n– Classification\n• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n– Association analysis\n• Discovering interesting relations between items (e.g., {diaper} → {beer})\n– Clustering\n• Grouping similar objects into groups (e.g., finding similar news or customers)\n– Anomaly detection\n• Identifying unusual or rare data (e.g., fraud detection, fault detection)\n6\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_1.mp3",
+			"font_size": 32,
+			"text": "Before the Lecture…\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_2.mp3",
+			"font_size": 24,
+			"text": "▪ Four main tasks of data mining\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_3.mp3",
+			"font_size": 20,
+			"text": "– Classification\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_4.mp3",
+			"font_size": 18,
+			"text": "• Identifying to which category an unseen data belongs (e.g., spam or non-spam)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_5.mp3",
+			"font_size": 20,
+			"text": "– Association analysis\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_6.mp3",
+			"font_size": 18,
+			"text": "• Discovering interesting relations between items (e.g., {diaper} → {beer})\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_7.mp3",
+			"font_size": 20,
+			"text": "– Clustering\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_8.mp3",
+			"font_size": 18,
+			"text": "• Grouping similar objects into groups (e.g., finding similar news or customers)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_9.mp3",
+			"font_size": 20,
+			"text": "– Anomaly detection\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_10.mp3",
+			"font_size": 18,
+			"text": "• Identifying unusual or rare data (e.g., fraud detection, fault detection)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/data_1_audio_folder/6/data_1_audio_6_11.mp3",
+			"font_size": 14,
+			"text": "6\n"
+		}
+	],
+	"image": []
+}

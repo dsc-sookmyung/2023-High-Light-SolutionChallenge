@@ -1,0 +1,56 @@
+{
+	"page_id": 32,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/32/os_5_full_audio_32.mp3",
+		"full_text": "생산자/소비자 문제\n• 유한 버퍼에서 범용 세마포어를 이용한 해결 방법\n32\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/32/os_5_audio_32_1.mp3",
+			"font_size": 32,
+			"text": "생산자/소비자 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/32/os_5_audio_32_2.mp3",
+			"font_size": 24,
+			"text": "• 유한 버퍼에서 범용 세마포어를 이용한 해결 방법\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/32/os_5_audio_32_3.mp3",
+			"font_size": 12,
+			"text": "32\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_5.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 6,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/32/os_5_image_6.jpeg",
+			"audio_url": ""
+		}
+	]
+}

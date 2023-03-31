@@ -1,0 +1,66 @@
+{
+	"page_id": 35,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_full_audio_35.mp3",
+		"full_text": "5.4 모니터\n• 모니터 (Monitor)의 정의\n– 상호배제를 위한 소프트웨어 모듈 (프로그래밍 언어 수준에서\n제공)\n• Concurrent-Pascal, Pascal-Plus, Module-2/3, Java 등에서 지원\n– 세마포어처럼 상호 배제 기능 제공, but 사용이 훨씬 쉽다.\n• 특징\n– 지역 변수는 모니터 내부에서만 접근 가능\n– 프로세스는 모니터 프로시저 중 하나를 호출함으로써 모니터 내\n부로 진입\n– 한 시점에 단 하나의 프로세스만 모니터 내부에서 수행 가능\n35\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_1.mp3",
+			"font_size": 32,
+			"text": "5.4 모니터\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_2.mp3",
+			"font_size": 24,
+			"text": "• 모니터 (Monitor)의 정의\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_3.mp3",
+			"font_size": 20,
+			"text": "– 상호배제를 위한 소프트웨어 모듈 (프로그래밍 언어 수준에서\n제공)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_4.mp3",
+			"font_size": 18,
+			"text": "• Concurrent-Pascal, Pascal-Plus, Module-2/3, Java 등에서 지원\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_5.mp3",
+			"font_size": 20,
+			"text": "– 세마포어처럼 상호 배제 기능 제공, but 사용이 훨씬 쉽다.\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_6.mp3",
+			"font_size": 24,
+			"text": "• 특징\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_7.mp3",
+			"font_size": 20,
+			"text": "– 지역 변수는 모니터 내부에서만 접근 가능\n– 프로세스는 모니터 프로시저 중 하나를 호출함으로써 모니터 내\n부로 진입\n– 한 시점에 단 하나의 프로세스만 모니터 내부에서 수행 가능\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/35/os_5_audio_35_8.mp3",
+			"font_size": 12,
+			"text": "35\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/35/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/35/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/35/os_5_image_3.png",
+			"audio_url": ""
+		}
+	]
+}

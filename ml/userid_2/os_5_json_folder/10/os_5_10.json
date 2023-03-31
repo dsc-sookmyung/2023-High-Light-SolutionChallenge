@@ -1,0 +1,46 @@
+{
+	"page_id": 10,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/10/os_5_full_audio_10.mp3",
+		"full_text": "병행성 원리\n• 프로세스 상호작용: 경쟁, 공유, 통신\n10\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/10/os_5_audio_10_1.mp3",
+			"font_size": 32,
+			"text": "병행성 원리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/10/os_5_audio_10_2.mp3",
+			"font_size": 24,
+			"text": "• 프로세스 상호작용: 경쟁, 공유, 통신\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/10/os_5_audio_10_3.mp3",
+			"font_size": 12,
+			"text": "10\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/10/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/10/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/10/os_5_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/10/os_5_image_4.png",
+			"audio_url": ""
+		}
+	]
+}

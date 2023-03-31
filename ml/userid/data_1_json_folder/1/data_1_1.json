@@ -1,0 +1,25 @@
+{
+	"page_id": 1,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/1/data_1_full_audio_1.mp3",
+		"full_text": "Data Mining and Analysis\n2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\nProfessor \nDivision of Computer Science\nSookmyung Women’s University\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/1/data_1_audio_1_1.mp3",
+			"font_size": 40,
+			"text": "Data Mining and Analysis\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/1/data_1_audio_1_2.mp3",
+			"font_size": 24,
+			"text": "2023 Spring\nInstructor: Ki Yong Lee, Ph.D.\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/1/data_1_audio_1_3.mp3",
+			"font_size": 20,
+			"text": "Sookmyung Women’s University\n"
+		}
+	],
+	"image": []
+}

@@ -1,0 +1,66 @@
+{
+	"page_id": 26,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_full_audio_26.mp3",
+		"full_text": "Metro 인터페이스\n• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n• 응용 개발자가 이를 처리해야 함\n• Windows 8은 후면 응용을 종료시킴\n• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n26\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_1.mp3",
+			"font_size": 32,
+			"text": "Metro 인터페이스\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_2.mp3",
+			"font_size": 24,
+			"text": "• Metro 인터페이스에서 전면 응용은 사용자가 사용할\n수 있는 모든 처리기, 네트워크, 디스크 자원을 접근함\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_3.mp3",
+			"font_size": 22,
+			"text": "• 다른 응용들은 보류 상태로 이러한 자원을 접근할 수 없음\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_4.mp3",
+			"font_size": 24,
+			"text": "• 응용이 보류 상태로 전환될 때 사용자 정보의 상태를 저\n장하기 위한 이벤트가 발생됨\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_5.mp3",
+			"font_size": 22,
+			"text": "• 응용 개발자가 이를 처리해야 함\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_6.mp3",
+			"font_size": 24,
+			"text": "• Windows 8은 후면 응용을 종료시킴\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_7.mp3",
+			"font_size": 22,
+			"text": "• 앱의 실행이 보류되거나 Windows에 의해 종료되었을\n때 이전의 상태를 복원하기 위해서 앱의 상태를 저장\n할 필요가 있음\n• 앱이 전면으로 전환되었을 때는 메모리로부터 사용자\n의 상태를 가져오는 이벤트가 발생\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/26/StallingsOS8e-Chap04_audio_26_8.mp3",
+			"font_size": 12,
+			"text": "26\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/26/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/26/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/26/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		}
+	]
+}

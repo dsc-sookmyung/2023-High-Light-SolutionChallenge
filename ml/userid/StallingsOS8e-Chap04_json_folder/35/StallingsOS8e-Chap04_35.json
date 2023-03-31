@@ -1,0 +1,91 @@
+{
+	"page_id": 35,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_full_audio_35.mp3",
+		"full_text": "Solaris 쓰레드 및 SMP 관리\n• 동기 (motivations)\n– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n• 예: 병렬 배열 계산 (parallel array computation)\n– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n– 순수 커널 쓰레드\n35\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_1.mp3",
+			"font_size": 32,
+			"text": "Solaris 쓰레드 및 SMP 관리\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_2.mp3",
+			"font_size": 24,
+			"text": "• 동기 (motivations)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_3.mp3",
+			"font_size": 20,
+			"text": "– 어떤 프로그램은 논리적인 병렬성(parallelism)을 가지지만 하드웨\n어 병렬성을 요구하지 않는다.  하나의 LWP에 ULT들의 집합 사\n상 가능\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_4.mp3",
+			"font_size": 18,
+			"text": "• 예: 다중 윈도우 환경에서 한 순간에 하나의 윈도우만이 활성화\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_5.mp3",
+			"font_size": 20,
+			"text": "– 어떤 응용이 (I/O 요청과 같이) 블록될 수 있는 쓰레드를 포함하는\n경우에는 다수의 LWP를 이용하는 것이 효과적\n– 어떤 응용에서는 ULT를 LWP에 일대일로 사상하는 것이 효과적\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_6.mp3",
+			"font_size": 18,
+			"text": "• 예: 병렬 배열 계산 (parallel array computation)\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_7.mp3",
+			"font_size": 20,
+			"text": "– 혼합 형태(Hybrids): bound and unbound ULTs가 공존\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_8.mp3",
+			"font_size": 18,
+			"text": "• 예: 어떤 쓰레드는 RT 스케줄링을 수행하고, 나머지 쓰레드는 후면 함\n수(background functions)을 수행\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_9.mp3",
+			"font_size": 20,
+			"text": "– 순수 커널 쓰레드\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/35/StallingsOS8e-Chap04_audio_35_10.mp3",
+			"font_size": 12,
+			"text": "35\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_5.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 6,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/35/StallingsOS8e-Chap04_image_6.png",
+			"audio_url": ""
+		}
+	]
+}

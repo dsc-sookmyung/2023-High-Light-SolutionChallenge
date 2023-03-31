@@ -1,0 +1,56 @@
+{
+	"page_id": 44,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/44/StallingsOS8e-Chap04_full_audio_44.mp3",
+		"full_text": "프로세스와 쓰레드\n• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n44\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/44/StallingsOS8e-Chap04_audio_44_1.mp3",
+			"font_size": 32,
+			"text": "프로세스와 쓰레드\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/44/StallingsOS8e-Chap04_audio_44_2.mp3",
+			"font_size": 26,
+			"text": "• 필요한 자원을 회수\n하기 위해서 어떤 프\n로세스를 종료 시킬\n것인지에 대한 결정\n은 우선순위 계층구\n조를 사용\n• 가장 낮은 우선순위\n를 갖는 프로세스부\n터 종료\n• 계층 구조상에서의\n우선순위는 다음과\n같음:\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/44/StallingsOS8e-Chap04_audio_44_3.mp3",
+			"font_size": 19,
+			"text": "전면 프로세스\n가시적인 프로세스\n서비스 프로세스\n후면 프로세스\n빈 프로세스\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_audio_folder/44/StallingsOS8e-Chap04_audio_44_4.mp3",
+			"font_size": 12,
+			"text": "44\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/44/StallingsOS8e-Chap04_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/44/StallingsOS8e-Chap04_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/44/StallingsOS8e-Chap04_image_3.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 4,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/44/StallingsOS8e-Chap04_image_4.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 5,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/StallingsOS8e-Chap04_image_folder/44/StallingsOS8e-Chap04_image_5.png",
+			"audio_url": ""
+		}
+	]
+}

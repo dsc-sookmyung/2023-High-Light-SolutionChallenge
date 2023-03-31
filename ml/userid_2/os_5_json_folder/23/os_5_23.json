@@ -1,0 +1,51 @@
+{
+	"page_id": 23,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_full_audio_23.mp3",
+		"full_text": "세마포어\n• 세마포어를 이용한 상호배제 동작 예 1\n– 가정: 3개의 프로세스 존재\n 세마포어 변수의 값과 블록된 프로세스 개수와의 관계는?\n23\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_audio_23_1.mp3",
+			"font_size": 32,
+			"text": "세마포어\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_audio_23_2.mp3",
+			"font_size": 24,
+			"text": "• 세마포어를 이용한 상호배제 동작 예 1\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_audio_23_3.mp3",
+			"font_size": 20,
+			"text": "– 가정: 3개의 프로세스 존재\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_audio_23_4.mp3",
+			"font_size": 18,
+			"text": " 세마포어 변수의 값과 블록된 프로세스 개수와의 관계는?\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/23/os_5_audio_23_5.mp3",
+			"font_size": 12,
+			"text": "23\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/23/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/23/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/23/os_5_image_3.png",
+			"audio_url": ""
+		}
+	]
+}

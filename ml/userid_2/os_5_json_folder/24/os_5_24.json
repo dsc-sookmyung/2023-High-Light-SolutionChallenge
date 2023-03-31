@@ -1,0 +1,51 @@
+{
+	"page_id": 24,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_full_audio_24.mp3",
+		"full_text": "세마포어\n• 세마포어를 이용한 상호배\n제 동작 예 2\n– 가정: 프로세스 A,B,C는 프로\n세스 D가 생산한 데이터를\n소비\n• strong semaphore vs. \nweak semaphore\n24\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_audio_24_1.mp3",
+			"font_size": 32,
+			"text": "세마포어\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_audio_24_2.mp3",
+			"font_size": 24,
+			"text": "• 세마포어를 이용한 상호배\n제 동작 예 2\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_audio_24_3.mp3",
+			"font_size": 20,
+			"text": "– 가정: 프로세스 A,B,C는 프로\n세스 D가 생산한 데이터를\n소비\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_audio_24_4.mp3",
+			"font_size": 24,
+			"text": "• strong semaphore vs. \nweak semaphore\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_audio_folder/24/os_5_audio_24_5.mp3",
+			"font_size": 12,
+			"text": "24\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/24/os_5_image_1.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 2,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/24/os_5_image_2.png",
+			"audio_url": ""
+		},
+		{
+			"img_idx": 3,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid_2/os_5_image_folder/24/os_5_image_3.png",
+			"audio_url": ""
+		}
+	]
+}

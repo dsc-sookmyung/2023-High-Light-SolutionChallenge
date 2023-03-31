@@ -1,0 +1,41 @@
+{
+	"page_id": 3,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/os_5_audio_folder/_3/os_5_full_audio_3.mp3",
+		"full_text": "목 차\n5.1 병행성 원리 (Principles of Concurrency) \n5.2 상호배제 (Mutual Exclusion): 하드웨어 지원\n5.3 세마포어 (Semaphore)\n5.4 모니터 (Monitor)\n5.5 메시지 전달 (Message Passing)\n5.6 판독자/기록자 (Readers/Writers) 문제\n3\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/3/os_5_audio_3_1.mp3",
+			"font_size": 32,
+			"text": "목 차\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/3/os_5_audio_3_2.mp3",
+			"font_size": 24,
+			"text": "5.1 병행성 원리 (Principles of Concurrency) \n5.2 상호배제 (Mutual Exclusion): 하드웨어 지원\n5.3 세마포어 (Semaphore)\n5.4 모니터 (Monitor)\n5.5 메시지 전달 (Message Passing)\n5.6 판독자/기록자 (Readers/Writers) 문제\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_audio_folder/3/os_5_audio_3_3.mp3",
+			"font_size": 12,
+			"text": "3\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/3/os_5_image_1.png"
+		},
+		{
+			"img_idx": 2,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/3/os_5_image_2.png"
+		},
+		{
+			"img_idx": 3,
+			"audio_url": "",
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid3/userid3/os_5_image_folder/3/os_5_image_3.png"
+		}
+	]
+}

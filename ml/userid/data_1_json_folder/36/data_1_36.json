@@ -1,0 +1,41 @@
+{
+	"page_id": 36,
+	"full_text": {
+		"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_full_audio_36.mp3",
+		"full_text": "(Ex) Market Basket Analysis\n▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n– (ex) {Diapers} → {Milk}\n▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n36\n"
+	},
+	"text": [
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_audio_36_1.mp3",
+			"font_size": 32,
+			"text": "(Ex) Market Basket Analysis\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_audio_36_2.mp3",
+			"font_size": 24,
+			"text": "▪ We are given point-of-sale \ndata collected at the checkout \ncounters of a grocery store\n▪ Association analysis can be \napplied to find items that are \nfrequently bought together\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_audio_36_3.mp3",
+			"font_size": 20,
+			"text": "– (ex) {Diapers} → {Milk}\n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_audio_36_4.mp3",
+			"font_size": 24,
+			"text": "▪ This types of rule can be used \nto identify potential cross-\nselling opportunities among \nrelated items \n"
+		},
+		{
+			"audio_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_audio_folder/36/data_1_audio_36_5.mp3",
+			"font_size": 14,
+			"text": "36\n"
+		}
+	],
+	"image": [
+		{
+			"img_idx": 1,
+			"img_url": "https://storage.googleapis.com/cloud_storage_leturn/userid/data_1_image_folder/36/data_1_image_1.png",
+			"audio_url": ""
+		}
+	]
+}
