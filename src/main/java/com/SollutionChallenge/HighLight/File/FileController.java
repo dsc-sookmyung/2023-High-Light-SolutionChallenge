@@ -16,6 +16,7 @@ public class FileController {
     private final FileService fileService;
     private final JwtTokenUtil jwtTokenUtil;
 
+    // 파일 등록
     @PostMapping(value = "/folder/{folder_id}/files", consumes = MediaType.MULTIPART_FORM_DATA_VALUE/*, produces = "application/json"*/)
     public ResponseEntity<HashMap<String, FilePostResponseDto>> addFile(@RequestHeader("token") String jwtToken, @RequestHeader("Content-Type") String contentType, @RequestPart String file_name, @RequestPart MultipartFile file,/*@ModelAttribute FileRequestDto fileRequestDto,*/ @PathVariable Long folder_id) throws IOException {
         System.out.println("jwtToken: " + jwtToken);

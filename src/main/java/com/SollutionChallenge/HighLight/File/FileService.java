@@ -76,7 +76,7 @@ public class FileService {
             while (isExist) {
 //                String filesPath = "userid/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // 테스트용 코드
                 String filesPath = userId+"/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // 실제 코드
-                System.out.println("파일 경로: " + filesPath);
+                System.out.println("====== 특정 파일 페이지 개수 조회 - 파일 경로: " + filesPath);
                 BlobId blobId = BlobId.of("cloud_storage_leturn", filesPath);
 
                 try {
