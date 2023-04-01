@@ -1,4 +1,4 @@
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/96654391/229308200-df9f00fb-f041-4edd-ae5d-7b8fd4ec1cb4.png">
+<center><img width="700" alt="image" src="https://user-images.githubusercontent.com/96654391/229308200-df9f00fb-f041-4edd-ae5d-7b8fd4ec1cb4.png"></center>
 
 ## ✨ Why LeTurn?
 
@@ -34,7 +34,7 @@
 
 📌각자 영어 이름, 깃헙 아이디, 포지션 적고 이 줄은 지워주세요!
 
-|     Name      |     Kim Minji      |     Seo Myojin     | Sohn SooKyoung |    Choi Gahui     |
+|     Name      |          |       | Sohn SooKyoung |        |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
-| **Github ID** |      @1914386      |      @nrj022       |   @sooking87   |   @cutehumanS2    |
-| **Position**  | Frontend Developer | Frontend Developer |  ML Developer  | Backend Developer |
+| **Github ID** |      @      |      @     |   @sooking87   |   @   |
+| **Position**  |  |  |  ML Developer  |  |
