@@ -46,6 +46,7 @@ public class FolderService {
 	// }
 
 	@Transactional
+
 	public Map<String, List<FolderResponseDto>> save(Long user_id, FolderRequestDto folderRequestDto) {
 //		User userId = folder.getUserId(); // 해당 폴더를 생성한 유저 정보
 		User user = userRepository.findById(user_id).get();
@@ -53,6 +54,7 @@ public class FolderService {
 		Folder savedFolder = folderRepository.save(Folder.createFolder(user, folderName));
 
 		List<Folder> folders = folderRepository.findAllByUserId(user);
+
 		List<FolderResponseDto> folderResponseDtos = new ArrayList<>();
 		if (folders != null && !folders.isEmpty()) {
 			folderResponseDtos = folders.stream()
