@@ -1,4 +1,4 @@
-<center><img width="500" alt="image" src="https://user-images.githubusercontent.com/96654391/229308200-df9f00fb-f041-4edd-ae5d-7b8fd4ec1cb4.png"></center>
+<center><img width="700" alt="image" src="https://user-images.githubusercontent.com/96654391/229308200-df9f00fb-f041-4edd-ae5d-7b8fd4ec1cb4.png"></center>
 
 ## ✨ Why LeTurn?
 
