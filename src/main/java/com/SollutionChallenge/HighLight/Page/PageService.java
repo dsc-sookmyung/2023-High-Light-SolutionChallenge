@@ -41,7 +41,9 @@ public class PageService {
         // GCS에서 해당하는 페이지 json 받아오기
         if (wantedFile.isPresent()) {
             File target = wantedFile.get();
-            String fileName = target.getFileName();
+            int fileNamelen = target.getFileName().length(); //ex. abc.pdf면 len은 7. substring은 0,3 해야됨
+            String fileName = target.getFileName();// substring(0,len-4)
+            fileName = fileName.substring(0,fileNamelen-4);
 //            String downloadFileName = "userid/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // api 테스트용 파일 생성 코드
             String downloadFileName = userId+"/"+fileName+"_json_folder/"+pageId+"/"+fileName+"_"+pageId+".json"; // 실제 코드
 

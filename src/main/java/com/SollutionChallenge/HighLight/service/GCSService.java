@@ -26,7 +26,7 @@ public class GCSService {
 //        String uuid = UUID.randomUUID().toString(); // Google Cloud Storage에 저장될 파일 이름
         String ext = dto.getUploaded_file().getContentType(); // 파일의 형식 ex) JPG
         Long user_id = dto.getUser_id();
-        String uploadFilePath = user_id+"/"+folderId+"/"+filename;
+        String uploadFilePath = user_id+"/"+folderId+"/"+filename+".pdf";
         // Cloud에 이미지 업로드
         BlobInfo blobInfo = storage.create(
                 BlobInfo.newBuilder(bucketName, uploadFilePath)
