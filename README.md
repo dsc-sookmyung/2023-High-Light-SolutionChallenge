@@ -37,4 +37,4 @@
 |     Name      |          |       | Sohn SooKyoung |        |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
 | **Github ID** |      @      |      @     |   @sooking87   |   @   |
-| **Position**  |  |  |  ML Developer  | Backend Developer |
+| **Position**  |  |  |  ML Developer  |  |
