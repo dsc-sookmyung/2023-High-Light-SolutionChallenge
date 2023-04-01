@@ -13,7 +13,7 @@ Therefore, we developed an app with various features to enable visually impaired
 
 
 # 💾 Project Architecture
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/77925036/229297478-4d7162ed-6e51-485f-a334-3f261cca95b6.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/66019792/229303905-4da0d7b3-45cb-4710-a5db-d38a7eebae51.png">
 
 # 📱 How to use Le-Turn?
 
