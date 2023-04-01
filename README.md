@@ -1,6 +1,6 @@
 <img width="749" alt="image" src="https://user-images.githubusercontent.com/77925036/229294628-9b700151-2e4e-4830-ae7c-d4854713fb30.png">
 
-# ✨Why Leurn?
+# ✨Why LeTurn?
   Leturn is an independent learning support app designed for low vision college students. The app converts lecture materials that do not support voice over functionality, enabling visually impaired students to learn independently and conveniently. Our goal is to provide visually impaired students with an equal educational environment, free from constraints and disparities in learning.
 
 # 💬 Introduction
