@@ -37,8 +37,6 @@
 
 ### ✨ Contributors
 
-📌각자 영어 이름, 깃헙 아이디, 포지션 적고 이 줄은 지워주세요!
-
 |     Name      | Cho Yong Eun |  Son Yujin | Sohn SooKyoung | Ryu HyunJi |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
 | **Github ID** |  [@gdakate1215](https://github.com/gdakate1215) |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |  [@Ryuuhj](https://github.com/Ryuuhj)   | 
