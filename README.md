@@ -26,7 +26,7 @@
 
 ## 🔗 Demo video link
 
-[![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)]()
+[![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)](https://youtu.be/4iIXU0UiHu0)
 
 ## 📱 How to use Le-Turn?
 
@@ -34,7 +34,7 @@
 
 📌각자 영어 이름, 깃헙 아이디, 포지션 적고 이 줄은 지워주세요!
 
-|     Name      |          |       | Sohn SooKyoung |        |
+|     Name      |          |  Son Yujin | Sohn SooKyoung |        |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
-| **Github ID** |      @      |      @     |   @sooking87   |   @   |
-| **Position**  |  |  |  ML Developer  |  |
+| **Github ID** |      @      |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |   @   |
+| **Position**  |  | Backend Developer  |  ML Developer  |  |
