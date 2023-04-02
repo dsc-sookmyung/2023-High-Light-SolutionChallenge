@@ -35,7 +35,7 @@
 <img width="1512" alt="스크린샷 2023-04-03 오전 1 17 10" src="https://user-images.githubusercontent.com/77925036/229365459-d3705d46-1d85-4bd6-9708-131426371367.png">
 <img width="1512" alt="스크린샷 2023-04-03 오전 1 17 14" src="https://user-images.githubusercontent.com/77925036/229365477-7d028759-ef82-4da3-9920-a715a0b6beb1.png">
 
-### ✨ Contributors
+## ✨ Contributors
 
 |     Name      | Cho Yong Eun |  Son Yujin | Sohn SooKyoung | Ryu HyunJi |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
