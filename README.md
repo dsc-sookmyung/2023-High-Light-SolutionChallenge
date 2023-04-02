@@ -29,12 +29,17 @@
 [![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)](https://www.youtube.com/watch?v=6Fq0GgznjZw)
 
 ## 📱 How to use Le-Turn?
+Simple UI, Easy way to use
+<img width="1512" alt="스크린샷 2023-04-03 오전 1 14 33" src="https://user-images.githubusercontent.com/77925036/229365316-ebdbed56-5467-4eef-9088-2091c10c6bd5.png">
+<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 05" src="https://user-images.githubusercontent.com/77925036/229365443-66d00ed3-ab02-4001-8789-1c3a833d30d8.png">
+<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 10" src="https://user-images.githubusercontent.com/77925036/229365459-d3705d46-1d85-4bd6-9708-131426371367.png">
+<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 14" src="https://user-images.githubusercontent.com/77925036/229365477-7d028759-ef82-4da3-9920-a715a0b6beb1.png">
 
 ### ✨ Contributors
 
 📌각자 영어 이름, 깃헙 아이디, 포지션 적고 이 줄은 지워주세요!
 
-|     Name      |          |  Son Yujin | Sohn SooKyoung |        |
+|     Name      | Cho Yong Eun |  Son Yujin | Sohn SooKyoung |        |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
-| **Github ID** |      @      |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |   @   |
+| **Github ID** |      @gdakate1215      |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |   @   |
 | **Position**  |  | Backend Developer  |  ML Developer  |  |
