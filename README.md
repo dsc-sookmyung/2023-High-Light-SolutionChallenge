@@ -26,7 +26,7 @@
 
 ## 🔗 Demo video link
 
-[![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)](https://youtu.be/4iIXU0UiHu0)(https://www.youtube.com/watch?v=6Fq0GgznjZw)
+[![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)](https://www.youtube.com/watch?v=6Fq0GgznjZw)
 
 ## 📱 How to use Le-Turn?
 
