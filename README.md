@@ -1,4 +1,5 @@
-<center><img width="700" alt="image" src="https://user-images.githubusercontent.com/96654391/229308200-df9f00fb-f041-4edd-ae5d-7b8fd4ec1cb4.png"></center>
+<center><img width="100%" alt="image" src="https://user-images.githubusercontent.com/97296543/229533600-3d575125-b284-4909-bea6-91be128f5c8c.png"></center>
+
 
 ## ✨ Why LeTurn?
 
@@ -41,3 +42,5 @@
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
 | **Github ID** |  [@gdakate1215](https://github.com/gdakate1215) |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |  [@Ryuuhj](https://github.com/Ryuuhj)   | 
 | **Position**  | Backend Developer  | Backend Developer  |  ML Developer  | Frontend Developer |
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=FFD600&height=200&section=footer)
