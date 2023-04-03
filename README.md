@@ -43,4 +43,3 @@
 | **Github ID** |  [@gdakate1215](https://github.com/gdakate1215) |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |  [@Ryuuhj](https://github.com/Ryuuhj)   | 
 | **Position**  | Backend Developer  | Backend Developer  |  ML Developer  | Frontend Developer |
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=FFD600&height=200&section=footer)
