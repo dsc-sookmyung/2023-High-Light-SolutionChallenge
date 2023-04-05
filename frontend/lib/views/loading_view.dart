@@ -24,12 +24,12 @@ class _LoadingViewState extends State<LoadingView>{
   @override
   void initState(){
     super.initState();
-    //_subscription = Stream.periodic(Duration(seconds: 10)).listen((_) => _checkComplete());
+    _subscription = Stream.periodic(Duration(seconds: 10)).listen((_) => _checkComplete());
   }
 
   @override
   void dispose(){
-    //_subscription.cancel();
+    _subscription.cancel();
     super.dispose();
   }
 
@@ -49,21 +49,21 @@ class _LoadingViewState extends State<LoadingView>{
     }
   }
   
-  Widget _pass() {
+/*  Widget _pass() {
     Future.delayed(const Duration(minutes: 5),(){
       print("loading <> ${widget.fileId}");
       Navigator.pop(context);
       Navigator.push(context, MaterialPageRoute(builder: (context) => BasePage(fileId: widget.fileId)));
     });
     return loading();
-  }
+  }*/
 
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pass(),
+      body: loading(),
     );
   }
 
