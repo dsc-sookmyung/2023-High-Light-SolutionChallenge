@@ -40,6 +40,6 @@
 
 |     Name      | Cho Yong Eun |  Son Yujin | Sohn SooKyoung | Ryu HyunJi |
 | :-----------: | :----------------: | :----------------: | :------------: | :---------------: |
-| **Github ID** |  [@gdakate1215](https://github.com/gdakate1215) |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |  [@Ryuuhj](https://github.com/Ryuuhj)   | 
+| **Github ID** |  [@gdakate](https://github.com/gdakate) |      [@kryptonite43](https://github.com/kryptonite43)     |   [@sooking87](https://github.com/sooking87)   |  [@Ryuuhj](https://github.com/Ryuuhj)   | 
 | **Position**  | Backend Developer  | Backend Developer  |  ML Developer  | Frontend Developer |
 
