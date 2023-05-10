@@ -1,1 +1,0 @@
-'프로세스와 쓰레드\n• 단일쓰레딩(Single threading) 대 멀티쓰레딩(Multi \nthreading)\n– 단일 프로세스 내에 멀티 쓰레드 실행을 지원 가능\n5\n Before the Lecture…\n▪ What is “data mining”?\n– The process of discovering hidden patterns or knowledge from large data\n– Involves methods from various fields\n• Computer science (esp. databases), statistics, machine learning, …\n5\n
