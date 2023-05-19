@@ -7,4 +7,5 @@ pdfminer
 pdfminer.six
 flask
 PyMuPDF
-Pillowa
+Pillow
+pdf2image

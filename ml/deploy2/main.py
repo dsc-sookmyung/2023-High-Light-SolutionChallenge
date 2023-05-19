@@ -1,14 +1,6 @@
 from google.cloud import storage
-import tempfile
-from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LTChar
-from flask import abort
-import re
-import os
-import fitz
-import PIL.Image
-import io
 import json
+import re
 
 FINAL_BUCKET = "cloud_storage_leturn"
 BUCKET = ""
@@ -25,14 +17,6 @@ image_folder_path = ''
 
 
 def download_json(event, context):
-    """
-    Triggered by a change to a Cloud Storage bucket.
-    Args:
-         event (dict): Event payload.
-         context (google.cloud.functions.Context): Metadata for the event.
-    """
-    print("in CF")
-    print("event", event)
 
     global BUCKET, FILE_NAME, USER_ID, json_folder_path, json_filename, audio_folder_path, audio_full_filename, audio_one_filename, image_folder_path, file_no_extension, file_path
 
@@ -53,11 +37,6 @@ def download_json(event, context):
     image_folder_path = f'{USER_ID}/{file_no_extension}_image_folder'
 
     print("Extracting text from", file_path)
-    print("USER_ID : ", USER_ID)
-    print(json_folder_path)
-    print(audio_folder_path)
-    print(image_folder_path)
-    # 이미지 추출 및 저장 -> 상대 경로 문제 해결 필요
     client = storage.Client()
     bucket = client.get_bucket(BUCKET)
     file_blob = bucket.get_blob(file_path)
@@ -69,31 +48,28 @@ def download_json(event, context):
 
 
 def get_detailed(data):
-    # 정확도 높이기
+    # improve detail
     print('SUCCESS in get_detailed')
     print("downloaded json data: ", data)
     cur_size = 0
     text = ""
     # 줄바꿈 기준 쪼개고 글씨크기 기준으로 정확히 나누기
-    print(type(data["1"]["text"]))
     for i in range(1, len(data) + 1):
         each_page_size = len(data[str(i)]["text"])
-        each_page = data[str(i)]["text"]  # 리스트 형식
+        each_page = data[str(i)]["text"]
         for j in range(each_page_size - 1):
-            cur_text = each_page[j]["text"]  # str인 바이트 코드
+            cur_text = each_page[j]["text"]
             cur_text = str.encode(cur_text)
             cur_text = cur_text.decode('utf-8')
-            print("cur_text: ", cur_text)
             next_text = each_page[j + 1]["text"]
             next_text = str.encode(next_text)
             next_text = next_text.decode('utf-8')
             if cur_text == next_text:
                 split_list = cur_text.split("\n")
-                print('if cur_text == next_text:', split_list)
                 for k in range(len(split_list)):
                     text = str.encode(text)
                     text = split_list[k] + "\n"
-                    text = re.sub(r"[^\w\s]]", "", text)  # import re
+                    text = re.sub(r"[^\w\s]]", "", text)
                     if split_list[k] != '':
                         font_size = each_page[j + k]["font_size"]
                     if text == "\n":
@@ -102,8 +78,7 @@ def get_detailed(data):
                         each_page[j + k] = {"audio_url": "",
                                             "font_size": font_size, "text": text}
 
-    # 글씨 크기 같은 애들은 묶기
-    print("get_detailed first for fin")  # 헐,,, 여기까지 끝냄
+    print("get_detailed first for fin")
     print(data)
     concat_text = ""
     for i in range(1, len(data)):
@@ -126,7 +101,6 @@ def get_detailed(data):
             del(each_page[to_del_list[j]])
 
     print("get_detailed second for fin")
-    print(data)
     return get_text_audio_url(data)
 
 
@@ -167,11 +141,5 @@ def prepare_upload_json(data, load_bucket):
         print('File uploaded to {}.'.format(
             f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
 
-    print("fin prepare_upload_json")
-
-# 그 전에 content-type: json인지 middle-temp 버킷에서 확인
-# json으로 json 형식으로 불러와졌는지 확인 -> 여기까지 완료가 다 된다면 이미지, json 파일 업로드까지 완료
-
-# 배포 후
-# upload_json 수정하였으므로 extract-data-2 는 다시 배포
-# extract-data-3 배포
+    print("DONE prepare_upload_json")
+    print("DONE extract-data-2")

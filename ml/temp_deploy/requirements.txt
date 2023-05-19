@@ -1,5 +1,0 @@
-google-cloud-storage
-pdfminer
-pdfminer.six
-temp
-requests
