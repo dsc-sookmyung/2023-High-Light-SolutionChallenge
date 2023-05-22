@@ -1,0 +1,12 @@
+requests
+google-cloud-storage
+google-cloud-texttospeech
+temp
+pdfminer
+pdfminer.six
+flask
+PyMuPDF
+Pillow
+pdf2image
+transformers
+googletrans
