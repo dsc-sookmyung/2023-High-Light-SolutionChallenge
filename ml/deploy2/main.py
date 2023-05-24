@@ -37,6 +37,10 @@ def download_json(event, context):
     image_folder_path = f'{USER_ID}/{file_no_extension}_image_folder'
 
     print("Extracting text from", file_path)
+    print("USER_ID : ", USER_ID)
+    print(json_folder_path)
+    print(audio_folder_path)
+    print(image_folder_path)
     client = storage.Client()
     bucket = client.get_bucket(BUCKET)
     file_blob = bucket.get_blob(file_path)
@@ -115,9 +119,8 @@ def get_text_audio_url(data):
             page["text"][j]["audio_url"] = f"https://storage.googleapis.com/{FINAL_BUCKET}/{audio_folder_path}/{count}/{file_no_extension}_audio_{count}_{line_count}.mp3"
 
     print("FIN get_datailed()")
-    prepare_upload_json(data, "cloud_storage_leturn")
     upload_json(data, f"{USER_ID}/{file_no_extension}.json",
-                'middle-temporary-2')
+                "middle-temporary-2")
 
 
 def upload_json(data, path, load_bucket):
@@ -129,17 +132,3 @@ def upload_json(data, path, load_bucket):
 
     blob.upload_from_string(json.dumps(data), content_type="application/json")
     print('File uploaded to {}.'.format(path))
-
-
-def prepare_upload_json(data, load_bucket):
-    print("SUCCESS in upload_json")
-    print(len(data))
-    for i in range(1, len(data) + 1):
-        count = str(i)
-        path = f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"
-        upload_json(data[str(i)], path, load_bucket)
-        print('File uploaded to {}.'.format(
-            f"{json_folder_path}/{count}/{file_no_extension}_{count}.json"))
-
-    print("DONE prepare_upload_json")
-    print("DONE extract-data-2")
