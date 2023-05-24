@@ -1,12 +1,13 @@
 requests
 google-cloud-storage
 google-cloud-texttospeech
-temp
+googletrans==4.0.0-rc1
+requests
+transformers
 pdfminer
 pdfminer.six
 flask
 PyMuPDF
 Pillow
-pdf2image
-transformers
-googletrans
+TensorFlow >= 2.0
+torch
