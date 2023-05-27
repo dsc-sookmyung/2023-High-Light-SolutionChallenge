@@ -8,4 +8,3 @@ pdfminer.six
 flask
 PyMuPDF
 Pillow
-pdf2image
