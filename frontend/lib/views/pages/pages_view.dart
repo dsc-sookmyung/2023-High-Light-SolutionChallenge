@@ -41,14 +41,14 @@ class _ViewPageState extends State<ViewPage>
 
   Future<UnitList> getList() async {
     final response = await dio.get('/files/${widget.fileId}/page/${widget.pageId}');
-    print('res>>> $response');
+    //print('res>>> $response');
 
     if(response.statusCode == 200) {
       var data = response.data["data"];
       fullAudio = data["full_audio_url"];
-      widget.updateFullUrl(fullAudio);
+      widget.updateFullUrl(fullAudio!);
+      //print("page data>>> $data");
       final unit = UnitList.fromJson(data);
-      print("page data>>> $data");
       _allTexts = unit.textList ?? <TextUnit>[];
       _allImages = unit.imgList ?? <ImageUnit>[];
       _audioUrls.addAll(_allTexts.map((e) => e.audioUrl));
@@ -121,7 +121,7 @@ class _ViewPageState extends State<ViewPage>
                                   ],
                                 );}
                             } else if (snapshot.hasError){
-                              return Text("snapshot error>>> ${snapshot.error}",);
+                              return Text("snapshot error!!!>>> ${snapshot.error}",);
                             } else{
                               return const Center(child: CircularProgressIndicator(color: MAIN_YELLOW,strokeWidth: 5,));
                             }
@@ -146,6 +146,8 @@ class _ViewPageState extends State<ViewPage>
           await widget.player.setUrl(_allTexts[idx].audioUrl);
           await widget.player.play();
           //widget.isPlayingTrue();
+
+
         },
         child: Container(
           child: Text(
@@ -197,9 +199,12 @@ class _ViewPageState extends State<ViewPage>
           itemCount: allImages!.length,
           itemBuilder: (ctx, int idx) {
             return GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ImageView(url: allImages![idx].imgUrl)
+              onTap: () async{
+                /*widget.isPlayingTrue();
+                await widget.player.setUrl(_allImages![idx].audioUrl);*/
+                await widget.player.stop();
+                await Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ImageView(url: allImages![idx].imgUrl, audioUrl: _allImages![idx].audioUrl,)
                   ),
                 );
               },
