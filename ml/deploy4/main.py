@@ -80,14 +80,19 @@ def for_making_caption(data):
             img_idx = image[j]["img_idx"]
             print("img_idx: ", img_idx)
             image_caption = gen_image_caption(image[j]["img_url"])
-            print("image_caption: ", image_caption)
             translator = Translator()
             text = image_caption
-            result = translator.translate(text, dest='ko')
-
+            translated_text = ''
+            try:
+                translator = Translator()
+                translation = translator.translate(text, dest='ko')
+                translated_text = translation.text
+            except Exception as e:
+                print("Translation error:", e)
+                translated_text = text
             text_to_speech(
-                result.text, f"{image_folder_path}/{count}/{file_no_extension}_image_audio_{img_idx}.mp3")
-            image[j]["img_text"] = image_caption
+                translated_text, f"{image_folder_path}/{count}/{file_no_extension}_image_audio_{img_idx}.mp3")
+            image[j]["img_text"] = translated_text
             image[j]["img_audio_url"] = f"https://storage.googleapis.com/{FINAL_BUCKET}/{image_folder_path}/{count}/{file_no_extension}_image_audio_{img_idx}.mp3"
 
     prepare_upload_json(data, FINAL_BUCKET)
