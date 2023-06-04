@@ -208,8 +208,6 @@ class _BasePageState extends State<BasePage>
                   child: IconButton(
                     onPressed: () {
                       Navigator.of(context).pop();
-                      Navigator.of(context).pop();
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> FolderView(folderId: 31, folderName: "dbms")));
                     },
                     icon: const Icon(Icons.arrow_back_ios_new_outlined),
                     iconSize: 60.w,
@@ -233,10 +231,6 @@ class _BasePageState extends State<BasePage>
                           ),
                           primary: PRIMARY_COLOR,
                         ),
-                        /*icon: SvgPicture.asset(
-                          'assets/loop_icon.svg',
-                          height: 64.w,
-                        ),*/
                         child: Text(
                           '전체 듣기',
                           style: TextStyle(

@@ -36,6 +36,8 @@ class _ViewPageState extends State<ViewPage>
   late List<TextUnit> _allTexts;
   late List<ImageUnit> _allImages;
   late String fullAudio = "";
+  late List<bool> _borders;
+
 
   final List<String> _audioUrls = [];
 
@@ -46,12 +48,13 @@ class _ViewPageState extends State<ViewPage>
     if(response.statusCode == 200) {
       var data = response.data["data"];
       fullAudio = data["full_audio_url"];
-      widget.updateFullUrl(fullAudio);
+      widget.updateFullUrl(fullAudio!);
+      //print("page data>>> $data");
       final unit = UnitList.fromJson(data);
-      print("page data>>> $data");
       _allTexts = unit.textList ?? <TextUnit>[];
       _allImages = unit.imgList ?? <ImageUnit>[];
       _audioUrls.addAll(_allTexts.map((e) => e.audioUrl));
+      _borders = List.filled(_allTexts.length, false, growable : true);
 
       return unit;
     }else{
@@ -78,8 +81,6 @@ class _ViewPageState extends State<ViewPage>
   void initState() {
     super.initState();
     unitList = getList();
-
-
   }
 
   @override
@@ -102,7 +103,7 @@ class _ViewPageState extends State<ViewPage>
                     widget.onScaleUpdate(details);},
                   child: Container(
                       height: double.infinity,
-                      color: Colors.white,
+                      color: PRIMARY_COLOR,
                       padding:
                           EdgeInsets.only(left: 30.w, top: 10.w, right: 10.w),
                       child: FutureBuilder(
@@ -121,7 +122,7 @@ class _ViewPageState extends State<ViewPage>
                                   ],
                                 );}
                             } else if (snapshot.hasError){
-                              return Text("snapshot error>>> ${snapshot.error}",);
+                              return Text("snapshot error!!!>>> ${snapshot.error}",);
                             } else{
                               return const Center(child: CircularProgressIndicator(color: MAIN_YELLOW,strokeWidth: 5,));
                             }
@@ -136,22 +137,50 @@ class _ViewPageState extends State<ViewPage>
   }
 
   Widget textBlock(List<TextUnit> _allTexts, num fontBase, int idx) {
+
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        highlightColor: Colors.amberAccent,
-        splashColor: Colors.amberAccent,
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        /*customBorder: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: BorderSide(color: MAIN_YELLOW)
+        ),*/
+        onTapDown: (_) {
+          print("border: ${_borders[idx]}");
+          setState(() {
+            _borders[idx] = true;
+          });
+        },
+        onTapUp: (_) {
+          setState(() {
+            _borders[idx] = false;
+          });
+        },
+        onTapCancel: () {
+          setState(() {
+            _borders[idx] = false;
+          });
+        },
         onTap: () async {
           widget.isPlayingTrue();
           await widget.player.setUrl(_allTexts[idx].audioUrl);
           await widget.player.play();
           //widget.isPlayingTrue();
+
+
         },
         child: Container(
+          decoration: BoxDecoration(
+              border: Border.all(color: _borders[idx] ? MAIN_YELLOW : Colors.transparent,
+               width: 7.0,),
+          ),
           child: Text(
             _allTexts[idx].textLine,
             style: TextStyle(
-                fontSize: _allTexts[idx].fontSize.toDouble() + fontBase),
+                fontSize: _allTexts[idx].fontSize.toDouble() + fontBase,
+            color: MAIN_YELLOW),
           ),
         ),
       ),
@@ -197,9 +226,12 @@ class _ViewPageState extends State<ViewPage>
           itemCount: allImages!.length,
           itemBuilder: (ctx, int idx) {
             return GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ImageView(url: allImages![idx].imgUrl)
+              onTap: () async{
+                /*widget.isPlayingTrue();
+                await widget.player.setUrl(_allImages![idx].audioUrl);*/
+                await widget.player.stop();
+                await Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ImageView(url: allImages![idx].imgUrl, audioUrl: _allImages![idx].audioUrl,)
                   ),
                 );
               },

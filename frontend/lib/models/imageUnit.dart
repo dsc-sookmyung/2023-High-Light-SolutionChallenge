@@ -1,8 +1,9 @@
 class ImageUnit{
   final String imgUrl;
+  final String audioUrl;
 
-  ImageUnit({required this.imgUrl});
+  ImageUnit({required this.imgUrl, required this.audioUrl});
 
   factory ImageUnit.fromJson(Map<String, dynamic> json) => ImageUnit(
-      imgUrl: json["img_url"]);
+      imgUrl: json["img_url"], audioUrl: json["img_audio_url"]);
 }
