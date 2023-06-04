@@ -13,7 +13,7 @@
 
 ![download1](https://user-images.githubusercontent.com/96654391/229252839-eed7910b-7433-49f7-b063-2e5d15fdc8bc.png) <br>
 
-&nbsp; We are dedicated to improving the educational experience of low vision college students. We developed an app with various features to enable low vision students to learn lecture materials independently. This app extracts texts and images from uploaded files and reorganizes them by page. It provides TTS files for each paragraph, allowing for pause, replay, and speed control, while enabling repetition of necessary parts and full-screen viewing of images. <br>
+&nbsp; We are dedicated to improving the educational experience of low vision college students. We developed an app with various features to enable low vision students to learn lecture materials independently. This app extracts texts and images from uploaded files and reorganizes them by page. It provides TTS files for each paragraph, allowing for pause, replay, and speed control, while enabling repetition of necessary parts and full-screen viewing of images and describing about image. <br>
 
 &nbsp; These features enhance the learning accessibility for low vision students, enabling them to participate in education and learning without difficulties.
 
@@ -23,18 +23,20 @@
 
 ## 💾 Project Architecture
 
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/66019792/229303905-4da0d7b3-45cb-4710-a5db-d38a7eebae51.png">
+<img width="816" alt="아키텍쳐" src="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/1f8fe3b4-b436-4bec-8197-73c96e2b85b8">
+
 
 ## 🔗 Demo video link
 
-[![thumbnail](https://user-images.githubusercontent.com/66019792/229306784-8863a3d1-9691-4b0e-85f0-ac9e34dda068.png)](https://www.youtube.com/watch?v=6Fq0GgznjZw)
+[![thumbnail](https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/11f11580-4f34-441f-baff-46698562a6f2)](https://www.youtube.com/watch?v=6Fq0GgznjZw)
+
 
 ## 📱 How to use Le-Turn?
 ### Simple UI, Easy to use
-<img width="1512" alt="스크린샷 2023-04-03 오전 1 14 33" src="https://user-images.githubusercontent.com/77925036/229365316-ebdbed56-5467-4eef-9088-2091c10c6bd5.png">
-<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 05" src="https://user-images.githubusercontent.com/77925036/229365443-66d00ed3-ab02-4001-8789-1c3a833d30d8.png">
-<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 10" src="https://user-images.githubusercontent.com/77925036/229365459-d3705d46-1d85-4bd6-9708-131426371367.png">
-<img width="1512" alt="스크린샷 2023-04-03 오전 1 17 14" src="https://user-images.githubusercontent.com/77925036/229365477-7d028759-ef82-4da3-9920-a715a0b6beb1.png">
+<img width="1000" alt="sub_1" src="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/86ec964f-e834-4131-92ea-167c04c1519c">
+<img width="1000" alt="sub_2" src="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/d1fc54c7-1883-4dd1-9a85-df0b8d893c88">
+<img width="1000" alt="sub_3" src="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/e8c32ff3-0fad-4e1c-a32b-67f5864e6d5d">
+<img width="1000" alt="sub_4" src="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge/assets/96654391/9587368c-447a-45c4-b09d-b6a97cbcbd15">
 
 ## ✨ Contributors
 
